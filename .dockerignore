@@ -27,8 +27,11 @@ artifacts-legacy-invalid
 # item parameters.
 artifacts/*
 !artifacts/models
+!artifacts/models/**
 !artifacts/evaluation
+!artifacts/evaluation/**
 !artifacts/datasets
+!artifacts/datasets/**
 artifacts/evaluation/*
 !artifacts/evaluation/decision-explanations.json
 !artifacts/evaluation/validation-gate.json

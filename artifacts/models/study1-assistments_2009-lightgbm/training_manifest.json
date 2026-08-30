@@ -1,0 +1,42 @@
+{
+  "seed": 20260821,
+  "dataset": "assistments_2009",
+  "dataset_rows": 249576,
+  "split_strategy": "learner-grouped; 5 CV folds for tuning, a disjoint learner set held out for test",
+  "rung": "L2",
+  "model_name": "lightgbm",
+  "hyperparameters": {
+    "num_leaves": 63,
+    "n_estimators": 200,
+    "min_child_samples": 100,
+    "learning_rate": 0.03
+  },
+  "split_sizes": {
+    "test": 47285,
+    "fold4": 44100,
+    "fold2": 43276,
+    "fold0": 41555,
+    "fold1": 38228,
+    "fold3": 35132,
+    "unassigned": 0
+  },
+  "git_sha": "unknown",
+  "phase": 6,
+  "name": "study1-assistments_2009-lightgbm",
+  "features": [
+    "correct",
+    "attempt_count",
+    "prior_accuracy",
+    "prior_attempts",
+    "skill_prior_accuracy",
+    "skill_prior_attempts",
+    "item_difficulty",
+    "log_response_time",
+    "log_rt_z_item",
+    "rt_drift",
+    "hint_count"
+  ],
+  "target": "next_correct",
+  "n_features": 11,
+  "run_id": "4cb332d20f14"
+}

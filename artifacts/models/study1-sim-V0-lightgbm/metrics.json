@@ -1,0 +1,29 @@
+{
+  "split": "held-out test, touched once",
+  "rung": "L4",
+  "rows": 27603,
+  "learners": 200,
+  "roc_auc": 0.62164,
+  "accuracy": 0.68467,
+  "precision": 0.69009,
+  "recall": 0.97005,
+  "f1": 0.80647,
+  "log_loss": 0.60751,
+  "brier": 0.2093,
+  "ece": 0.00566,
+  "auc": 0.62164,
+  "ci_low": 0.59899,
+  "ci_high": 0.64264,
+  "train_seconds": 1.67,
+  "features": 44,
+  "calibrated": {
+    "roc_auc": 0.62165,
+    "accuracy": 0.68369,
+    "precision": 0.6885,
+    "recall": 0.97336,
+    "f1": 0.80652,
+    "log_loss": 0.60741,
+    "brier": 0.20926,
+    "ece": 0.00528
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "seed": 20260821,
+  "dataset": "ednet_kt1",
+  "dataset_rows": 249223,
+  "split_strategy": "learner-grouped; 5 CV folds for tuning, a disjoint learner set held out for test",
+  "rung": "L3",
+  "model_name": "lightgbm",
+  "hyperparameters": {
+    "num_leaves": 31,
+    "n_estimators": 300,
+    "min_child_samples": 20,
+    "learning_rate": 0.03
+  },
+  "split_sizes": {
+    "fold3": 60543,
+    "fold0": 56096,
+    "fold1": 35498,
+    "fold4": 33371,
+    "test": 33093,
+    "fold2": 30622,
+    "unassigned": 0
+  },
+  "git_sha": "unknown",
+  "phase": 6,
+  "name": "study1-ednet_kt1-lightgbm",
+  "features": [
+    "correct",
+    "prior_accuracy",
+    "prior_attempts",
+    "skill_prior_accuracy",
+    "skill_prior_attempts",
+    "item_difficulty",
+    "log_response_time",
+    "log_rt_z_item",
+    "rt_drift",
+    "log_lag_time",
+    "question_number",
+    "session_duration",
+    "matched_difficulty_accuracy_slope",
+    "matched_difficulty_speed_slope"
+  ],
+  "target": "next_correct",
+  "n_features": 14,
+  "run_id": "b3165631d8dc"
+}

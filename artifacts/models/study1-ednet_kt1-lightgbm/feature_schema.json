@@ -1,0 +1,62 @@
+{
+  "target": "next_correct",
+  "n_features": 14,
+  "features": [
+    {
+      "name": "correct",
+      "dtype": "float64"
+    },
+    {
+      "name": "prior_accuracy",
+      "dtype": "float64"
+    },
+    {
+      "name": "prior_attempts",
+      "dtype": "float64"
+    },
+    {
+      "name": "skill_prior_accuracy",
+      "dtype": "float64"
+    },
+    {
+      "name": "skill_prior_attempts",
+      "dtype": "float64"
+    },
+    {
+      "name": "item_difficulty",
+      "dtype": "float64"
+    },
+    {
+      "name": "log_response_time",
+      "dtype": "float64"
+    },
+    {
+      "name": "log_rt_z_item",
+      "dtype": "float64"
+    },
+    {
+      "name": "rt_drift",
+      "dtype": "float64"
+    },
+    {
+      "name": "log_lag_time",
+      "dtype": "float64"
+    },
+    {
+      "name": "question_number",
+      "dtype": "float64"
+    },
+    {
+      "name": "session_duration",
+      "dtype": "float64"
+    },
+    {
+      "name": "matched_difficulty_accuracy_slope",
+      "dtype": "float64"
+    },
+    {
+      "name": "matched_difficulty_speed_slope",
+      "dtype": "float64"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "target": "next_correct",
+  "n_features": 44,
+  "features": [
+    {
+      "name": "correct",
+      "dtype": "float64"
+    },
+    {
+      "name": "attempt_count",
+      "dtype": "float64"
+    },
+    {
+      "name": "prior_accuracy",
+      "dtype": "float64"
+    },
+    {
+      "name": "prior_attempts",
+      "dtype": "float64"
+    },
+    {
+      "name": "skill_prior_accuracy",
+      "dtype": "float64"
+    },
+    {
+      "name": "skill_prior_attempts",
+      "dtype": "float64"
+    },
+    {
+      "name": "item_difficulty",
+      "dtype": "float64"
+    },
+    {
+      "name": "n_options",
+      "dtype": "float64"
+    },
+    {
+      "name": "log_response_time",
+      "dtype": "float64"
+    },
+    {
+      "name": "log_rt_z_item",
+      "dtype": "float64"
+    },
+    {
+      "name": "rt_drift",
+      "dtype": "float64"
+    },
+    {
+      "name": "log_lag_time",
+      "dtype": "float64"
+    },
+    {
+      "name": "reading_time",
+      "dtype": "float64"
+    },
+    {
+      "name": "decision_latency",
+      "dtype": "float64"
+    },
+    {
+      "name": "time_after_last_interaction",
+      "dtype": "float64"
+    },
+    {
+      "name": "response_time_vs_estimate",
+      "dtype": "float64"
+    },
+    {
+      "name": "option_changes",
+      "dtype": "float64"
+    },
+    {
+      "name": "option_change_entropy",
+      "dtype": "float64"
+    },
+    {
+      "name": "option_revisits",
+      "dtype": "float64"
+    },
+    {
+      "name": "first_selection_changed",
+      "dtype": "float64"
+    },
+    {
+      "name": "hint_count",
+      "dtype": "float64"
+    },
+    {
+      "name": "skipped",
+      "dtype": "float64"
+    },
+    {
+      "name": "idle_count",
+      "dtype": "float64"
+    },
+    {
+      "name": "idle_time",
+      "dtype": "float64"
+    },
+    {
+      "name": "visibility_changes",
+      "dtype": "float64"
+    },
+    {
+      "name": "question_number",
+      "dtype": "float64"
+    },
+    {
+      "name": "session_duration",
+      "dtype": "float64"
+    },
+    {
+      "name": "matched_difficulty_accuracy_slope",
+      "dtype": "float64"
+    },
+    {
+      "name": "matched_difficulty_speed_slope",
+      "dtype": "float64"
+    },
+    {
+      "name": "idle_fraction",
+      "dtype": "float64"
+    },
+    {
+      "name": "focus_fraction",
+      "dtype": "float64"
+    },
+    {
+      "name": "auc_toward_nonchosen",
+      "dtype": "float64"
+    },
+    {
+      "name": "max_deviation",
+      "dtype": "float64"
+    },
+    {
+      "name": "x_flips",
+      "dtype": "float64"
+    },
+    {
+      "name": "sample_entropy",
+      "dtype": "float64"
+    },
+    {
+      "name": "velocity_peak",
+      "dtype": "float64"
+    },
+    {
+      "name": "velocity_mean",
+      "dtype": "float64"
+    },
+    {
+      "name": "pause_count",
+      "dtype": "float64"
+    },
+    {
+      "name": "path_ratio",
+      "dtype": "float64"
+    },
+    {
+      "name": "time_to_first_movement",
+      "dtype": "float64"
+    },
+    {
+      "name": "time_to_first_selection",
+      "dtype": "float64"
+    },
+    {
+      "name": "hover_time_max",
+      "dtype": "float64"
+    },
+    {
+      "name": "hover_time_nonchosen",
+      "dtype": "float64"
+    },
+    {
+      "name": "cursor_samples",
+      "dtype": "float64"
+    }
+  ]
+}

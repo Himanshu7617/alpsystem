@@ -33,5 +33,4 @@ artifacts/benchmarks/*-predictions.parquet
 artifacts/datasets/logged-bandit-data.parquet
 artifacts/evaluation/*.parquet
 artifacts/evaluation/policy-per-learner-*.csv
-artifacts/models/study1-*-lightgbm/
 artifacts/models/rl/checkpoints/

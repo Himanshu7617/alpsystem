@@ -1,0 +1,6 @@
+{
+  "method": "isotonic",
+  "fitted_on": "training folds only, never the test set",
+  "uncalibrated_ece": 0.00789,
+  "calibrated_ece": 0.02517
+}
