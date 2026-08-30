@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Adaptive CSE Practice</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="topbar">
+            <button class="brand" type="button" onclick="goHome()">
+                <span class="brand-mark">AL</span>
+                <span>
+                    <strong>Adaptive CSE Practice</strong>
+                    <small>B.Tech CSE question trainer</small>
+                </span>
+            </button>
+
+            <nav class="nav-links" aria-label="Primary navigation">
+                <button type="button" onclick="goHome()">Home</button>
+                <button type="button" onclick="requireLogin('dashboard-page')">
+                    Dashboard
+                </button>
+                <button type="button" onclick="requireLogin('review-page')">
+                    Review
+                </button>
+            </nav>
+
+            <div class="session-area">
+                <span id="nav-user">Guest</span>
+                <button
+                    id="nav-logout"
+                    class="btn btn-secondary btn-small"
+                    type="button"
+                    onclick="logout()"
+                    hidden
+                >
+                    Logout
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section id="landing-page" class="page active">
+                <div class="hero">
+                    <div class="hero-copy">
+                        <p class="eyebrow">University project ready</p>
+                        <h1>Practice CSE questions that adjust after every answer.</h1>
+                        <p class="lead">
+                            A cleaner frontend for your handcoded adaptive backend:
+                            students log in, choose a CSE subject, answer MCQs, and
+                            get the next difficulty from the ML service.
+                        </p>
+                        <div class="hero-actions">
+                            <button
+                                class="btn"
+                                type="button"
+                                onclick="focusLogin()"
+                            >
+                                Start practice
+                            </button>
+                            <button
+                                class="btn btn-secondary"
+                                type="button"
+                                onclick="showQuestionPreview()"
+                            >
+                                View syllabus areas
+                            </button>
+                        </div>
+                    </div>
+
+                    <form
+                        id="login-form"
+                        class="login-panel"
+                        onsubmit="return handleLogin(event);"
+                    >
+                        <h2>Student login</h2>
+                        <p>Enter a display name to start a local practice session.</p>
+                        <div class="form-group">
+                            <label for="username">Name</label>
+                            <input
+                                type="text"
+                                id="username"
+                                required
+                                placeholder="e.g. Ishan"
+                                autocomplete="name"
+                            />
+                        </div>
+                        <button id="login-btn" type="submit" class="btn btn-full">
+                            Login
+                        </button>
+                        <p id="login-status" class="status-text" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <div class="landing-metrics" aria-label="Question bank summary">
+                    <div>
+                        <strong id="landing-question-count">0</strong>
+                        <span>CSE questions</span>
+                    </div>
+                    <div>
+                        <strong id="landing-subject-count">0</strong>
+                        <span>subject areas</span>
+                    </div>
+                    <div>
+                        <strong>3</strong>
+                        <span>adaptive levels</span>
+                    </div>
+                </div>
+
+                <section class="content-band">
+                    <div class="section-heading">
+                        <p class="eyebrow">Coverage</p>
+                        <h2>Core B.Tech CSE topics</h2>
+                    </div>
+                    <div id="subject-preview" class="subject-grid"></div>
+                </section>
+            </section>
+
+            <section id="consent-page" class="page">
+                <div class="page-shell">
+                    <div class="page-title">
+                        <div>
+                            <p class="eyebrow">Before you start</p>
+                            <h1>What this study records</h1>
+                        </div>
+                    </div>
+                    <section class="panel">
+                        <p>
+                            This is a research instrument. Each signal class below can be
+                            switched off on its own, and the practice session works
+                            exactly the same way with any of them off — measuring that
+                            difference is part of the study.
+                        </p>
+                        <ul class="consent-list">
+                            <li>
+                                <label><input type="checkbox" id="consent-correctness" checked disabled />
+                                <strong>Answers and outcomes</strong></label>
+                                <span>Which option you chose and whether it was right. Required: without it there is no adaptive practice to take part in.</span>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" id="consent-timing" checked />
+                                <strong>Timing</strong></label>
+                                <span>How long you took to read, to decide and to submit. Used to estimate pace and within-session fatigue.</span>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" id="consent-interaction" checked />
+                                <strong>Interaction</strong></label>
+                                <span>Option changes, idle gaps, and whether the tab was visible and focused. Used to estimate engagement and hesitation.</span>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" id="consent-motor" checked />
+                                <strong>Cursor movement</strong></label>
+                                <span>Summary numbers describing the shape of your cursor path — curvature, direction reversals, pauses, hover time per option. The raw path never leaves your browser; only these summaries are stored.</span>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" id="consent-probes" checked />
+                                <strong>Occasional questions</strong></label>
+                                <span>Now and then, how sure you were and how hard the item felt. Every one is skippable.</span>
+                            </li>
+                        </ul>
+                        <div class="button-row">
+                            <button class="btn" type="button" onclick="saveConsent()">Save and continue</button>
+                            <button class="btn btn-secondary" type="button" onclick="goHome()">Back</button>
+                        </div>
+                        <p id="consent-status" class="status-text" aria-live="polite"></p>
+                    </section>
+                </div>
+            </section>
+
+            <section id="dashboard-page" class="page">
+                <div class="page-shell">
+                    <div class="page-title">
+                        <div>
+                            <p class="eyebrow">Dashboard</p>
+                            <h1>Welcome, <span id="display-name"></span></h1>
+                        </div>
+                        <button class="btn" type="button" onclick="startQuiz()">
+                            Start adaptive quiz
+                        </button>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat-box">
+                            <h3>Questions</h3>
+                            <p id="total-questions">0</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>Correct</h3>
+                            <p id="correct-answers">0</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>Accuracy</h3>
+                            <p id="accuracy">0%</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>Current level</h3>
+                            <p id="current-level">MEDIUM</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <section class="panel">
+                            <div class="panel-heading">
+                                <h2>Practice setup</h2>
+                                <span id="question-bank-count">0 questions</span>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="subject-select">Subject</label>
+                                    <select id="subject-select" onchange="setSubject()">
+                                        <option value="all">All CSE topics</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="difficulty-select">Starting level</label>
+                                    <select
+                                        id="difficulty-select"
+                                        onchange="setStartingDifficulty()"
+                                    >
+                                        <option value="easy">Easy</option>
+                                        <option value="medium" selected>Medium</option>
+                                        <option value="hard">Hard</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="button-row">
+                                <button class="btn" type="button" onclick="startQuiz()">
+                                    Begin session
+                                </button>
+                                <button
+                                    class="btn btn-secondary"
+                                    type="button"
+                                    onclick="resetProgress()"
+                                >
+                                    Reset progress
+                                </button>
+                                <button
+                                    class="btn btn-secondary"
+                                    type="button"
+                                    onclick="openConsent()"
+                                >
+                                    Data settings
+                                </button>
+                            </div>
+                        </section>
+
+                        <section class="panel">
+                            <div class="panel-heading">
+                                <h2>Learning snapshot</h2>
+                                <span id="streak-label">0 streak</span>
+                            </div>
+                            <dl class="snapshot-list">
+                                <div>
+                                    <dt>Selected topic</dt>
+                                    <dd id="selected-topic">All CSE topics</dd>
+                                </div>
+                                <div>
+                                    <dt>Average time</dt>
+                                    <dd id="average-time">0s</dd>
+                                </div>
+                                <div>
+                                    <dt>Last backend suggestion</dt>
+                                    <dd id="last-suggestion">Not available yet</dd>
+                                </div>
+                            </dl>
+                        </section>
+                    </div>
+
+                    <section class="panel roadmap-panel">
+                        <div class="panel-heading">
+                            <h2>Learning Roadmap</h2>
+                            <span id="roadmap-progress">0 / 36 concepts</span>
+                        </div>
+                        <div id="roadmap-container" class="roadmap-grid">
+                            <p class="empty-state">Complete questions to see your personalized learning roadmap.</p>
+                        </div>
+                    </section>
+
+                    <section class="panel">
+                        <div class="panel-heading">
+                            <h2>Recent attempts</h2>
+                            <button
+                                class="btn btn-secondary btn-small"
+                                type="button"
+                                onclick="showPage('review-page')"
+                            >
+                                Full review
+                            </button>
+                        </div>
+                        <div id="recent-attempts" class="attempt-list empty-state">
+                            No attempts yet.
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <section id="quiz-page" class="page">
+                <div class="page-shell quiz-shell">
+                    <div class="quiz-header">
+                        <div>
+                            <p class="eyebrow" id="quiz-subject">Subject</p>
+                            <h1>Question <span id="question-number">1</span></h1>
+                        </div>
+                        <div class="quiz-meta">
+                            <span id="quiz-level">MEDIUM</span>
+                            <span id="quiz-progress-label">1 / 1</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-track" aria-hidden="true">
+                        <div id="quiz-progress" class="progress-fill"></div>
+                    </div>
+
+                    <section id="support-box" class="support-box" hidden>
+                        <h3 id="support-title"></h3>
+                        <p id="support-body"></p>
+                    </section>
+
+                    <section class="question-panel">
+                        <p id="question-topic" class="topic-label"></p>
+                        <h2 id="question-text"></h2>
+                        <div id="options-container" class="options-grid"></div>
+                    </section>
+
+                    <!-- Estimates, never diagnoses: every number here is a model
+                         output with its uncertainty, and a construct the
+                         validation gate rejected is shown as withheld rather
+                         than quietly omitted. -->
+                    <section id="state-panel" class="state-panel" hidden>
+                        <header class="state-panel-head">
+                            <h3>What the system currently estimates</h3>
+                            <span id="state-panel-source" class="state-source"></span>
+                        </header>
+                        <dl id="state-list" class="state-list"></dl>
+                        <p id="decision-explanation" class="decision-explanation"></p>
+                        <details id="roadmap-mini">
+                            <summary>Concept roadmap</summary>
+                            <div id="roadmap-mini-list" class="roadmap-mini-list"></div>
+                        </details>
+                    </section>
+
+                    <section id="probe-box" class="probe-box" hidden></section>
+
+                    <section id="result-box" class="result-box" hidden>
+                        <h2 id="result-message"></h2>
+                        <p id="answer-explanation"></p>
+                        <p id="next-difficulty"></p>
+                    </section>
+
+                    <div class="quiz-actions">
+                        <button id="submit-btn" class="btn" type="button" onclick="submitAnswer()">
+                            Submit answer
+                        </button>
+                        <button
+                            id="next-btn"
+                            class="btn"
+                            type="button"
+                            onclick="nextQuestion()"
+                            hidden
+                        >
+                            Next question
+                        </button>
+                        <button
+                            class="btn btn-secondary"
+                            type="button"
+                            onclick="backToDashboard()"
+                        >
+                            End session
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="review-page" class="page">
+                <div class="page-shell">
+                    <div class="page-title">
+                        <div>
+                            <p class="eyebrow">Review</p>
+                            <h1>Attempt history</h1>
+                        </div>
+                        <button class="btn" type="button" onclick="startQuiz()">
+                            Practice again
+                        </button>
+                    </div>
+                    <section class="panel">
+                        <div id="review-list" class="attempt-list empty-state">
+                            No attempts to review yet.
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+
+        <script src="telemetry.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,174 @@
+{
+  "ladder": {
+    "items_to_mastery": {
+      "model_L0": {
+        "mean": 187.17366666666666,
+        "ci": [
+          185.59855000000002,
+          188.66234166666666
+        ]
+      },
+      "model_L1": {
+        "mean": 187.496,
+        "ci": [
+          185.95558333333335,
+          188.968875
+        ]
+      },
+      "model_L3": {
+        "mean": 187.55066666666667,
+        "ci": [
+          186.0743,
+          189.07976666666667
+        ]
+      },
+      "model_L4": {
+        "mean": 187.644,
+        "ci": [
+          186.10033333333334,
+          189.26850000000002
+        ]
+      }
+    },
+    "knowledge_gain": {
+      "model_L0": {
+        "mean": 0.04022826778939141,
+        "ci": [
+          0.013368025994631716,
+          0.06759988066179534
+        ]
+      },
+      "model_L1": {
+        "mean": 0.03766758277355556,
+        "ci": [
+          0.009660850427601142,
+          0.06556685509964041
+        ]
+      },
+      "model_L3": {
+        "mean": 0.04023999299614886,
+        "ci": [
+          0.014527721930907912,
+          0.06745993549829651
+        ]
+      },
+      "model_L4": {
+        "mean": 0.03929444997941494,
+        "ci": [
+          0.013004094444407435,
+          0.06651451697579416
+        ]
+      }
+    }
+  },
+  "robustness": {
+    "ranks": {
+      "V0": {
+        "random": 3,
+        "fixed_order": 9,
+        "rule_legacy": 10,
+        "mastery_threshold_bkt": 8,
+        "irt_cat_maxinfo": 7,
+        "rule_improved": 6,
+        "model_L0": 2,
+        "model_L1": 5,
+        "model_L3": 1,
+        "model_L4": 4
+      },
+      "V1": {
+        "random": 2,
+        "fixed_order": 8,
+        "rule_legacy": 10,
+        "mastery_threshold_bkt": 6,
+        "irt_cat_maxinfo": 9,
+        "rule_improved": 7,
+        "model_L0": 1,
+        "model_L1": 3,
+        "model_L3": 4,
+        "model_L4": 5
+      },
+      "V2": {
+        "random": 5,
+        "fixed_order": 9,
+        "rule_legacy": 10,
+        "mastery_threshold_bkt": 8,
+        "irt_cat_maxinfo": 7,
+        "rule_improved": 6,
+        "model_L0": 2,
+        "model_L1": 3,
+        "model_L3": 4,
+        "model_L4": 1
+      },
+      "V3": {
+        "random": 1,
+        "fixed_order": 10,
+        "rule_legacy": 9,
+        "mastery_threshold_bkt": 6,
+        "irt_cat_maxinfo": 8,
+        "rule_improved": 7,
+        "model_L0": 2,
+        "model_L1": 3,
+        "model_L3": 4,
+        "model_L4": 5
+      },
+      "V4": {
+        "random": 3,
+        "fixed_order": 6,
+        "rule_legacy": 10,
+        "mastery_threshold_bkt": 8,
+        "irt_cat_maxinfo": 9,
+        "rule_improved": 7,
+        "model_L0": 2,
+        "model_L1": 1,
+        "model_L3": 4,
+        "model_L4": 5
+      }
+    },
+    "max_rank_range": {
+      "random": 4,
+      "fixed_order": 4,
+      "rule_legacy": 1,
+      "mastery_threshold_bkt": 2,
+      "irt_cat_maxinfo": 2,
+      "rule_improved": 1,
+      "model_L0": 1,
+      "model_L1": 4,
+      "model_L3": 3,
+      "model_L4": 4
+    }
+  },
+  "divergence": {
+    "shadow_of": "model_L0",
+    "shadow_policy": "model_L4",
+    "variant": "V0",
+    "decisions": 36967,
+    "identical_rate": 0.6065950712797901,
+    "same_difficulty_rate": 0.7376038088024455,
+    "same_intervention_rate": 0.7700922444342251,
+    "same_concept_move_rate": 0.9314794275975871,
+    "mean_absolute_difficulty_gap": 0.5609327237806693,
+    "note": "measured on model_L0's own trajectory: what model_L4 would have chosen at the same moment. Rarely diverging bounds any possible outcome difference."
+  },
+  "subgroups": {
+    "model_L0": {
+      "low": 0.8218868326682088,
+      "middle": -0.09097626211055365,
+      "high": -0.610225767189481
+    },
+    "model_L1": {
+      "low": 0.82024546125203,
+      "middle": -0.09544823806561319,
+      "high": -0.6117944748657503
+    },
+    "model_L3": {
+      "low": 0.8401898844397653,
+      "middle": -0.09650683032437188,
+      "high": -0.6229630751269467
+    },
+    "model_L4": {
+      "low": 0.836972042417016,
+      "middle": -0.0968569683989454,
+      "high": -0.6222317240798256
+    }
+  }
+}

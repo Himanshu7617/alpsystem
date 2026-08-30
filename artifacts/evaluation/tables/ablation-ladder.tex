@@ -1,0 +1,32 @@
+\begin{table}
+\caption{Ablation ladder: cross-validated ΔAUC per rung, Holm-corrected.}
+\label{tab:ablation-ladder}
+\begin{tabular}{lllrrrrrr}
+\toprule
+source & model & step & delta\_auc & ci\_low & ci\_high & p\_value & p\_holm & clears\_protocol\_band \\
+\midrule
+assistments\_2009 & lightgbm & L0->L1 & 0.0017 & 0.0012 & 0.0021 & 0.0000 & 0.0000 & False \\
+assistments\_2009 & lightgbm & L1->L2 & 0.0019 & 0.0015 & 0.0023 & 0.0000 & 0.0000 & False \\
+assistments\_2009 & logistic\_elasticnet & L0->L1 & -0.0006 & -0.0011 & -0.0001 & 0.0050 & 0.0050 & False \\
+assistments\_2009 & logistic\_elasticnet & L1->L2 & 0.0018 & 0.0014 & 0.0022 & 0.0000 & 0.0000 & False \\
+assistments\_2012 & lightgbm & L0->L1 & 0.0011 & 0.0005 & 0.0016 & 0.0000 & 0.0000 & False \\
+assistments\_2012 & lightgbm & L1->L2 & 0.0017 & 0.0013 & 0.0022 & 0.0000 & 0.0000 & False \\
+assistments\_2012 & lightgbm & L2->L3 & 0.0005 & 0.0002 & 0.0009 & 0.0100 & 0.0100 & False \\
+assistments\_2012 & logistic\_elasticnet & L0->L1 & -0.0001 & -0.0005 & 0.0003 & 0.5100 & 1.0000 & False \\
+assistments\_2012 & logistic\_elasticnet & L1->L2 & 0.0008 & 0.0005 & 0.0011 & 0.0000 & 0.0000 & False \\
+assistments\_2012 & logistic\_elasticnet & L2->L3 & -0.0000 & -0.0001 & 0.0001 & 0.5300 & 1.0000 & False \\
+ednet\_kt1 & lightgbm & L0->L1 & 0.0030 & 0.0014 & 0.0046 & 0.0000 & 0.0000 & False \\
+ednet\_kt1 & lightgbm & L1->L3 & 0.0010 & -0.0002 & 0.0026 & 0.1100 & 0.1100 & False \\
+ednet\_kt1 & logistic\_elasticnet & L0->L1 & 0.0003 & -0.0001 & 0.0008 & 0.1350 & 0.2700 & False \\
+ednet\_kt1 & logistic\_elasticnet & L1->L3 & 0.0001 & -0.0006 & 0.0007 & 0.6150 & 0.6150 & False \\
+sim-V0 & lightgbm & L0->L1 & 0.0021 & 0.0007 & 0.0036 & 0.0050 & 0.0200 & False \\
+sim-V0 & lightgbm & L1->L2 & 0.0001 & -0.0007 & 0.0009 & 0.7850 & 1.0000 & False \\
+sim-V0 & lightgbm & L2->L3 & -0.0003 & -0.0010 & 0.0005 & 0.4500 & 1.0000 & False \\
+sim-V0 & lightgbm & L3->L4 & 0.0004 & -0.0005 & 0.0013 & 0.3700 & 1.0000 & False \\
+sim-V0 & logistic\_elasticnet & L0->L1 & 0.0002 & -0.0002 & 0.0006 & 0.3750 & 1.0000 & False \\
+sim-V0 & logistic\_elasticnet & L1->L2 & -0.0001 & -0.0003 & 0.0002 & 0.6350 & 1.0000 & False \\
+sim-V0 & logistic\_elasticnet & L2->L3 & -0.0000 & -0.0002 & 0.0001 & 0.5700 & 1.0000 & False \\
+sim-V0 & logistic\_elasticnet & L3->L4 & -0.0002 & -0.0007 & 0.0004 & 0.4850 & 1.0000 & False \\
+\bottomrule
+\end{tabular}
+\end{table}

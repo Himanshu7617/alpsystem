@@ -1,0 +1,897 @@
+{
+  "version": "item-bank-v1",
+  "graph_version": "cse-prerequisite-graph-v1",
+  "seed": 20260821,
+  "bank_file": "data/items/item-bank-v1.json",
+  "item_count": 186,
+  "sources": {
+    "multitopic_cse.json": 126,
+    "question_bank.csv": 0,
+    "binary_trees.json": 30,
+    "recursion.json": 30,
+    "transportability_among_animals.json": 0
+  },
+  "duplicates_dropped": [
+    {
+      "item_id": "ds-e-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-e-1"
+    },
+    {
+      "item_id": "ds-e-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-e-2"
+    },
+    {
+      "item_id": "ds-e-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-e-3"
+    },
+    {
+      "item_id": "ds-e-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-e-4"
+    },
+    {
+      "item_id": "ds-e-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-e-5"
+    },
+    {
+      "item_id": "ds-e-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-e-6"
+    },
+    {
+      "item_id": "ds-e-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-e-7"
+    },
+    {
+      "item_id": "ds-m-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-m-1"
+    },
+    {
+      "item_id": "ds-m-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-m-2"
+    },
+    {
+      "item_id": "ds-m-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-m-3"
+    },
+    {
+      "item_id": "ds-m-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-m-4"
+    },
+    {
+      "item_id": "ds-m-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-m-5"
+    },
+    {
+      "item_id": "ds-m-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-m-6"
+    },
+    {
+      "item_id": "ds-m-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-m-7"
+    },
+    {
+      "item_id": "ds-h-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-h-1"
+    },
+    {
+      "item_id": "ds-h-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-h-2"
+    },
+    {
+      "item_id": "ds-h-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-h-3"
+    },
+    {
+      "item_id": "ds-h-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-h-4"
+    },
+    {
+      "item_id": "ds-h-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-h-5"
+    },
+    {
+      "item_id": "ds-h-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-h-6"
+    },
+    {
+      "item_id": "ds-h-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "ds-h-7"
+    },
+    {
+      "item_id": "algo-e-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-e-1"
+    },
+    {
+      "item_id": "algo-e-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-e-2"
+    },
+    {
+      "item_id": "algo-e-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-e-3"
+    },
+    {
+      "item_id": "algo-e-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-e-4"
+    },
+    {
+      "item_id": "algo-e-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-e-5"
+    },
+    {
+      "item_id": "algo-e-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-e-6"
+    },
+    {
+      "item_id": "algo-e-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-e-7"
+    },
+    {
+      "item_id": "algo-m-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-m-1"
+    },
+    {
+      "item_id": "algo-m-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-m-2"
+    },
+    {
+      "item_id": "algo-m-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-m-3"
+    },
+    {
+      "item_id": "algo-m-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-m-4"
+    },
+    {
+      "item_id": "algo-m-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-m-5"
+    },
+    {
+      "item_id": "algo-m-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-m-6"
+    },
+    {
+      "item_id": "algo-m-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-m-7"
+    },
+    {
+      "item_id": "algo-h-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-h-1"
+    },
+    {
+      "item_id": "algo-h-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-h-2"
+    },
+    {
+      "item_id": "algo-h-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-h-3"
+    },
+    {
+      "item_id": "algo-h-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-h-4"
+    },
+    {
+      "item_id": "algo-h-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-h-5"
+    },
+    {
+      "item_id": "algo-h-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-h-6"
+    },
+    {
+      "item_id": "algo-h-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "algo-h-7"
+    },
+    {
+      "item_id": "db-e-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-e-1"
+    },
+    {
+      "item_id": "db-e-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-e-2"
+    },
+    {
+      "item_id": "db-e-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-e-3"
+    },
+    {
+      "item_id": "db-e-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-e-4"
+    },
+    {
+      "item_id": "db-e-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-e-5"
+    },
+    {
+      "item_id": "db-e-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-e-6"
+    },
+    {
+      "item_id": "db-e-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-e-7"
+    },
+    {
+      "item_id": "db-m-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-m-1"
+    },
+    {
+      "item_id": "db-m-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-m-2"
+    },
+    {
+      "item_id": "db-m-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-m-3"
+    },
+    {
+      "item_id": "db-m-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-m-4"
+    },
+    {
+      "item_id": "db-m-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-m-5"
+    },
+    {
+      "item_id": "db-m-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-m-6"
+    },
+    {
+      "item_id": "db-m-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-m-7"
+    },
+    {
+      "item_id": "db-h-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-h-1"
+    },
+    {
+      "item_id": "db-h-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-h-2"
+    },
+    {
+      "item_id": "db-h-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-h-3"
+    },
+    {
+      "item_id": "db-h-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-h-4"
+    },
+    {
+      "item_id": "db-h-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-h-5"
+    },
+    {
+      "item_id": "db-h-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-h-6"
+    },
+    {
+      "item_id": "db-h-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "db-h-7"
+    },
+    {
+      "item_id": "os-e-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-e-1"
+    },
+    {
+      "item_id": "os-e-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-e-2"
+    },
+    {
+      "item_id": "os-e-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-e-3"
+    },
+    {
+      "item_id": "os-e-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-e-4"
+    },
+    {
+      "item_id": "os-e-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-e-5"
+    },
+    {
+      "item_id": "os-e-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-e-6"
+    },
+    {
+      "item_id": "os-e-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-e-7"
+    },
+    {
+      "item_id": "os-m-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-m-1"
+    },
+    {
+      "item_id": "os-m-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-m-2"
+    },
+    {
+      "item_id": "os-m-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-m-3"
+    },
+    {
+      "item_id": "os-m-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-m-4"
+    },
+    {
+      "item_id": "os-m-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-m-5"
+    },
+    {
+      "item_id": "os-m-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-m-6"
+    },
+    {
+      "item_id": "os-m-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-m-7"
+    },
+    {
+      "item_id": "os-h-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-h-1"
+    },
+    {
+      "item_id": "os-h-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-h-2"
+    },
+    {
+      "item_id": "os-h-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-h-3"
+    },
+    {
+      "item_id": "os-h-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-h-4"
+    },
+    {
+      "item_id": "os-h-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-h-5"
+    },
+    {
+      "item_id": "os-h-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-h-6"
+    },
+    {
+      "item_id": "os-h-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "os-h-7"
+    },
+    {
+      "item_id": "cn-e-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-e-1"
+    },
+    {
+      "item_id": "cn-e-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-e-2"
+    },
+    {
+      "item_id": "cn-e-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-e-3"
+    },
+    {
+      "item_id": "cn-e-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-e-4"
+    },
+    {
+      "item_id": "cn-e-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-e-5"
+    },
+    {
+      "item_id": "cn-e-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-e-6"
+    },
+    {
+      "item_id": "cn-e-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-e-7"
+    },
+    {
+      "item_id": "cn-m-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-m-1"
+    },
+    {
+      "item_id": "cn-m-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-m-2"
+    },
+    {
+      "item_id": "cn-m-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-m-3"
+    },
+    {
+      "item_id": "cn-m-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-m-4"
+    },
+    {
+      "item_id": "cn-m-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-m-5"
+    },
+    {
+      "item_id": "cn-m-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-m-6"
+    },
+    {
+      "item_id": "cn-m-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-m-7"
+    },
+    {
+      "item_id": "cn-h-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-h-1"
+    },
+    {
+      "item_id": "cn-h-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-h-2"
+    },
+    {
+      "item_id": "cn-h-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-h-3"
+    },
+    {
+      "item_id": "cn-h-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-h-4"
+    },
+    {
+      "item_id": "cn-h-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-h-5"
+    },
+    {
+      "item_id": "cn-h-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-h-6"
+    },
+    {
+      "item_id": "cn-h-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "cn-h-7"
+    },
+    {
+      "item_id": "oop-e-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-e-1"
+    },
+    {
+      "item_id": "oop-e-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-e-2"
+    },
+    {
+      "item_id": "oop-e-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-e-3"
+    },
+    {
+      "item_id": "oop-e-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-e-4"
+    },
+    {
+      "item_id": "oop-e-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-e-5"
+    },
+    {
+      "item_id": "oop-e-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-e-6"
+    },
+    {
+      "item_id": "oop-e-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-e-7"
+    },
+    {
+      "item_id": "oop-m-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-m-1"
+    },
+    {
+      "item_id": "oop-m-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-m-2"
+    },
+    {
+      "item_id": "oop-m-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-m-3"
+    },
+    {
+      "item_id": "oop-m-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-m-4"
+    },
+    {
+      "item_id": "oop-m-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-m-5"
+    },
+    {
+      "item_id": "oop-m-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-m-6"
+    },
+    {
+      "item_id": "oop-m-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-m-7"
+    },
+    {
+      "item_id": "oop-h-1",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-h-1"
+    },
+    {
+      "item_id": "oop-h-2",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-h-2"
+    },
+    {
+      "item_id": "oop-h-3",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-h-3"
+    },
+    {
+      "item_id": "oop-h-4",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-h-4"
+    },
+    {
+      "item_id": "oop-h-5",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-h-5"
+    },
+    {
+      "item_id": "oop-h-6",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-h-6"
+    },
+    {
+      "item_id": "oop-h-7",
+      "source": "question_bank.csv",
+      "duplicate_of": "oop-h-7"
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "tra-q1",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q2",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q3",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q4",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q5",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q6",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q7",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q8",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q9",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q10",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q11",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q12",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q13",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q14",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q15",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q16",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q17",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q18",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q19",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q20",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q21",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q22",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q23",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q24",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q25",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q26",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q27",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q28",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q29",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    },
+    {
+      "item_id": "tra-q30",
+      "source": "transportability_among_animals.json",
+      "reason": "no concept in cse-prerequisite-graph-v1"
+    }
+  ],
+  "concept_coverage": {
+    "arrays_and_lists": 3,
+    "stacks_and_queues": 2,
+    "hash_tables": 3,
+    "trees_and_bst": 30,
+    "heaps": 3,
+    "graphs": 1,
+    "advanced_ds": 6,
+    "sorting_searching": 8,
+    "complexity_analysis": 6,
+    "divide_and_conquer": 26,
+    "greedy_algorithms": 1,
+    "dynamic_programming": 3,
+    "graph_algorithms": 7,
+    "advanced_algorithms": 3,
+    "classes_and_objects": 7,
+    "inheritance_polymorphism": 7,
+    "solid_principles": 4,
+    "design_patterns": 3,
+    "sql_basics": 9,
+    "normalization": 2,
+    "transactions_acid": 2,
+    "indexing_optimization": 3,
+    "concurrency_control": 4,
+    "distributed_databases": 1,
+    "processes_threads": 6,
+    "scheduling": 3,
+    "synchronization": 3,
+    "memory_management": 7,
+    "deadlocks": 2,
+    "network_fundamentals": 6,
+    "ip_addressing": 3,
+    "transport_protocols": 3,
+    "application_protocols": 2,
+    "routing": 3,
+    "congestion_control_net": 1,
+    "network_security": 3
+  },
+  "keyword_concept_rules": [
+    [
+      "memoization",
+      "dynamic_programming"
+    ],
+    [
+      "dynamic programming",
+      "dynamic_programming"
+    ],
+    [
+      "backtracking",
+      "advanced_algorithms"
+    ],
+    [
+      "quick sort",
+      "sorting_searching"
+    ],
+    [
+      "dfs",
+      "graph_algorithms"
+    ],
+    [
+      "graph algorithms",
+      "graph_algorithms"
+    ],
+    [
+      "time complexity",
+      "complexity_analysis"
+    ],
+    [
+      "space complexity",
+      "complexity_analysis"
+    ]
+  ],
+  "topic_defaults": {
+    "binary_trees.json": "trees_and_bst",
+    "recursion.json": "divide_and_conquer"
+  },
+  "bank_sha256": "c95bec4ec987584b7a9ae649dd26596eac6a7dfe1ab5914c60054ebac39ad451",
+  "difficulty_bins": {
+    "n_bins": 10,
+    "method": "equal-width over the b range",
+    "edges": [
+      -1.1925504531752682,
+      -0.8744609919554788,
+      -0.5563715307356893,
+      -0.2382820695158998,
+      0.07980739170388973,
+      0.39789685292367905,
+      0.7159863141434686,
+      1.0340757753632581,
+      1.3521652365830477
+    ]
+  },
+  "calibration": {
+    "seed": 20260821,
+    "responses_file": null,
+    "items_fitted": 0,
+    "items_author_prior": 186,
+    "parameters_file": "artifacts/datasets/item-parameters-v1.csv"
+  }
+}

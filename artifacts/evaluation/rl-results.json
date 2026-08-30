@@ -1,0 +1,1004 @@
+{
+  "phase": 9,
+  "study": 3,
+  "run_profile": "dev",
+  "seed": 20260821,
+  "learners_per_variant": 250,
+  "budget": 200,
+  "train_variant": "V0",
+  "variants": [
+    "V0",
+    "V1",
+    "V2",
+    "V3",
+    "V4"
+  ],
+  "best_phase8_arm": "model_L0",
+  "reward_spec": {
+    "formula": "MASTERY_SCALE * delta_curriculum_success_probability - LAMBDA_TIME * minutes_on_task - MU_FRUSTRATION * frustrated",
+    "mastery_scale": 100.0,
+    "lambda_time": 0.002,
+    "mu_frustration": 0.005,
+    "frustration_streak": 3,
+    "preregistration": "docs/preregistration.md \u00a710.1",
+    "mastery_term_is_latent": true,
+    "note": "the mastery term is the simulator's response model and exists only in simulation; it is a reward, never an observation"
+  },
+  "training": {
+    "timesteps": 50000,
+    "resumed_from": 50000,
+    "trained_this_run": 0,
+    "seconds": 0.0,
+    "episodes": 0
+  },
+  "learning_curve": [],
+  "sample_efficiency": {
+    "reached": false,
+    "timesteps": null,
+    "baseline": 0.007731900841550132
+  },
+  "mean_reward": {
+    "V0": {
+      "model_L0": 0.007731900841550132,
+      "bandit_linucb": 0.0047238383107879815,
+      "bandit_lin_ts": 0.007447147265226809,
+      "rl_ppo": 0.00612608234263469
+    },
+    "V1": {
+      "model_L0": 0.006488645000443808,
+      "bandit_linucb": 0.003139095235480474,
+      "bandit_lin_ts": 0.00586168857277398,
+      "rl_ppo": 0.003489248803803464
+    },
+    "V2": {
+      "model_L0": 0.007920377599871386,
+      "bandit_linucb": 0.0045578240364436765,
+      "bandit_lin_ts": 0.00777234993444642,
+      "rl_ppo": 0.006204041101213345
+    },
+    "V3": {
+      "model_L0": 0.007137610389597956,
+      "bandit_linucb": 0.004659967036665042,
+      "bandit_lin_ts": 0.007689341641288048,
+      "rl_ppo": 0.006809339428975444
+    },
+    "V4": {
+      "model_L0": 0.006522781940228898,
+      "bandit_linucb": 0.0040645814019021,
+      "bandit_lin_ts": 0.007371027340452176,
+      "rl_ppo": 0.006730360134525351
+    }
+  },
+  "summary": {
+    "V0": {
+      "bandit_lin_ts": {
+        "learners": 250,
+        "mastery_rate": 0.148,
+        "mean_items_to_mastery": 181.896,
+        "mean_knowledge_gain": 0.12186282726508155,
+        "knowledge_gain_95_ci": [
+          0.04367221371198466,
+          0.20516877975570252
+        ],
+        "mean_reward": 0.007447147265226809,
+        "mean_difficulty": 4.81968507016706,
+        "interventions_per_learner": {
+          "hint": 36.632,
+          "worked_example": 51.684,
+          "break_suggestion": 59.488,
+          "no_intervention": 34.092
+        }
+      },
+      "bandit_linucb": {
+        "learners": 250,
+        "mastery_rate": 0.112,
+        "mean_items_to_mastery": 183.3,
+        "mean_knowledge_gain": 0.04798308814455331,
+        "knowledge_gain_95_ci": [
+          -0.03971460044212981,
+          0.1420338729251916
+        ],
+        "mean_reward": 0.0047238383107879815,
+        "mean_difficulty": 4.642813861850289,
+        "interventions_per_learner": {
+          "hint": 45.416,
+          "worked_example": 45.716,
+          "break_suggestion": 47.292,
+          "no_intervention": 44.876
+        }
+      },
+      "model_L0": {
+        "learners": 250,
+        "mastery_rate": 0.132,
+        "mean_items_to_mastery": 182.376,
+        "mean_knowledge_gain": 0.04116188390434762,
+        "knowledge_gain_95_ci": [
+          -0.051046966180901404,
+          0.1360908619921229
+        ],
+        "mean_reward": 0.007731900841550132,
+        "mean_difficulty": 3.374855144902749,
+        "interventions_per_learner": {
+          "hint": 0.0,
+          "worked_example": 4.1,
+          "break_suggestion": 0.0,
+          "no_intervention": 178.276
+        }
+      },
+      "rl_ppo": {
+        "learners": 250,
+        "mastery_rate": 0.116,
+        "mean_items_to_mastery": 185.092,
+        "mean_knowledge_gain": 0.030690644616608396,
+        "knowledge_gain_95_ci": [
+          -0.057784549488984906,
+          0.12603852908816238
+        ],
+        "mean_reward": 0.00612608234263469,
+        "mean_difficulty": 7.29774937376452,
+        "interventions_per_learner": {
+          "hint": 0.004,
+          "worked_example": 25.092,
+          "break_suggestion": 6.4,
+          "no_intervention": 153.596
+        }
+      }
+    },
+    "V1": {
+      "bandit_lin_ts": {
+        "learners": 250,
+        "mastery_rate": 0.128,
+        "mean_items_to_mastery": 183.828,
+        "mean_knowledge_gain": 0.11797304677545717,
+        "knowledge_gain_95_ci": [
+          0.036532385758649775,
+          0.2026173228122088
+        ],
+        "mean_reward": 0.00586168857277398,
+        "mean_difficulty": 4.922349542701679,
+        "interventions_per_learner": {
+          "hint": 36.608,
+          "worked_example": 46.444,
+          "break_suggestion": 66.416,
+          "no_intervention": 34.36
+        }
+      },
+      "bandit_linucb": {
+        "learners": 250,
+        "mastery_rate": 0.1,
+        "mean_items_to_mastery": 187.312,
+        "mean_knowledge_gain": 0.05038111100471258,
+        "knowledge_gain_95_ci": [
+          -0.03187080757424363,
+          0.13630029188166717
+        ],
+        "mean_reward": 0.003139095235480474,
+        "mean_difficulty": 4.707980568889587,
+        "interventions_per_learner": {
+          "hint": 48.26,
+          "worked_example": 44.988,
+          "break_suggestion": 48.096,
+          "no_intervention": 45.968
+        }
+      },
+      "model_L0": {
+        "learners": 250,
+        "mastery_rate": 0.116,
+        "mean_items_to_mastery": 184.564,
+        "mean_knowledge_gain": 0.050827587386948155,
+        "knowledge_gain_95_ci": [
+          -0.03209622534259537,
+          0.13693413759239495
+        ],
+        "mean_reward": 0.006488645000443808,
+        "mean_difficulty": 3.321621053122738,
+        "interventions_per_learner": {
+          "hint": 0.0,
+          "worked_example": 4.176,
+          "break_suggestion": 0.0,
+          "no_intervention": 180.388
+        }
+      },
+      "rl_ppo": {
+        "learners": 250,
+        "mastery_rate": 0.096,
+        "mean_items_to_mastery": 187.176,
+        "mean_knowledge_gain": 0.020078923402811647,
+        "knowledge_gain_95_ci": [
+          -0.06431161188846718,
+          0.10783437587006499
+        ],
+        "mean_reward": 0.003489248803803464,
+        "mean_difficulty": 7.250783938223819,
+        "interventions_per_learner": {
+          "hint": 0.008,
+          "worked_example": 24.804,
+          "break_suggestion": 5.648,
+          "no_intervention": 156.716
+        }
+      }
+    },
+    "V2": {
+      "bandit_lin_ts": {
+        "learners": 250,
+        "mastery_rate": 0.144,
+        "mean_items_to_mastery": 182.204,
+        "mean_knowledge_gain": 0.1149970152406317,
+        "knowledge_gain_95_ci": [
+          0.034319262393492755,
+          0.2011900990372916
+        ],
+        "mean_reward": 0.00777234993444642,
+        "mean_difficulty": 4.7684007543513385,
+        "interventions_per_learner": {
+          "hint": 40.18,
+          "worked_example": 44.908,
+          "break_suggestion": 59.672,
+          "no_intervention": 37.444
+        }
+      },
+      "bandit_linucb": {
+        "learners": 250,
+        "mastery_rate": 0.12,
+        "mean_items_to_mastery": 183.336,
+        "mean_knowledge_gain": 0.04709841529343291,
+        "knowledge_gain_95_ci": [
+          -0.0384271070795209,
+          0.14002263214431493
+        ],
+        "mean_reward": 0.0045578240364436765,
+        "mean_difficulty": 4.642335283580416,
+        "interventions_per_learner": {
+          "hint": 44.748,
+          "worked_example": 46.38,
+          "break_suggestion": 47.736,
+          "no_intervention": 44.472
+        }
+      },
+      "model_L0": {
+        "learners": 250,
+        "mastery_rate": 0.132,
+        "mean_items_to_mastery": 182.376,
+        "mean_knowledge_gain": 0.04116188390434762,
+        "knowledge_gain_95_ci": [
+          -0.051046966180901404,
+          0.1360908619921229
+        ],
+        "mean_reward": 0.007920377599871386,
+        "mean_difficulty": 3.374855144902749,
+        "interventions_per_learner": {
+          "hint": 0.0,
+          "worked_example": 4.1,
+          "break_suggestion": 0.0,
+          "no_intervention": 178.276
+        }
+      },
+      "rl_ppo": {
+        "learners": 250,
+        "mastery_rate": 0.1,
+        "mean_items_to_mastery": 186.096,
+        "mean_knowledge_gain": 0.029340839960981253,
+        "knowledge_gain_95_ci": [
+          -0.060508595458344465,
+          0.12307016147304635
+        ],
+        "mean_reward": 0.006204041101213345,
+        "mean_difficulty": 7.285410161846459,
+        "interventions_per_learner": {
+          "hint": 0.004,
+          "worked_example": 25.456,
+          "break_suggestion": 6.496,
+          "no_intervention": 154.14
+        }
+      }
+    },
+    "V3": {
+      "bandit_lin_ts": {
+        "learners": 250,
+        "mastery_rate": 0.152,
+        "mean_items_to_mastery": 180.824,
+        "mean_knowledge_gain": 0.12707923092043175,
+        "knowledge_gain_95_ci": [
+          0.04563981216184417,
+          0.20876238367055866
+        ],
+        "mean_reward": 0.007689341641288048,
+        "mean_difficulty": 4.870432149768587,
+        "interventions_per_learner": {
+          "hint": 33.944,
+          "worked_example": 41.896,
+          "break_suggestion": 62.508,
+          "no_intervention": 42.476
+        }
+      },
+      "bandit_linucb": {
+        "learners": 250,
+        "mastery_rate": 0.124,
+        "mean_items_to_mastery": 183.176,
+        "mean_knowledge_gain": 0.050149406201064964,
+        "knowledge_gain_95_ci": [
+          -0.037112351954632285,
+          0.14150056753790058
+        ],
+        "mean_reward": 0.004659967036665042,
+        "mean_difficulty": 4.654657258996443,
+        "interventions_per_learner": {
+          "hint": 45.856,
+          "worked_example": 44.748,
+          "break_suggestion": 47.304,
+          "no_intervention": 45.268
+        }
+      },
+      "model_L0": {
+        "learners": 250,
+        "mastery_rate": 0.12,
+        "mean_items_to_mastery": 183.732,
+        "mean_knowledge_gain": 0.028386916412311974,
+        "knowledge_gain_95_ci": [
+          -0.06098263007050829,
+          0.12174437361579246
+        ],
+        "mean_reward": 0.007137610389597956,
+        "mean_difficulty": 3.3835200528109772,
+        "interventions_per_learner": {
+          "hint": 0.0,
+          "worked_example": 4.172,
+          "break_suggestion": 0.0,
+          "no_intervention": 179.56
+        }
+      },
+      "rl_ppo": {
+        "learners": 250,
+        "mastery_rate": 0.1,
+        "mean_items_to_mastery": 184.768,
+        "mean_knowledge_gain": 0.04451805197179765,
+        "knowledge_gain_95_ci": [
+          -0.04424142291262809,
+          0.13654573672683387
+        ],
+        "mean_reward": 0.006809339428975444,
+        "mean_difficulty": 7.308378361025133,
+        "interventions_per_learner": {
+          "hint": 0.012,
+          "worked_example": 26.236,
+          "break_suggestion": 6.344,
+          "no_intervention": 152.176
+        }
+      }
+    },
+    "V4": {
+      "bandit_lin_ts": {
+        "learners": 250,
+        "mastery_rate": 0.128,
+        "mean_items_to_mastery": 186.208,
+        "mean_knowledge_gain": 0.12927226870428588,
+        "knowledge_gain_95_ci": [
+          0.051270550277435614,
+          0.2157822265917577
+        ],
+        "mean_reward": 0.007371027340452176,
+        "mean_difficulty": 4.819552339204538,
+        "interventions_per_learner": {
+          "hint": 31.648,
+          "worked_example": 48.084,
+          "break_suggestion": 66.064,
+          "no_intervention": 40.412
+        }
+      },
+      "bandit_linucb": {
+        "learners": 250,
+        "mastery_rate": 0.104,
+        "mean_items_to_mastery": 187.752,
+        "mean_knowledge_gain": 0.04820179037340126,
+        "knowledge_gain_95_ci": [
+          -0.03604950310698831,
+          0.13413108083684702
+        ],
+        "mean_reward": 0.0040645814019021,
+        "mean_difficulty": 4.73753554529931,
+        "interventions_per_learner": {
+          "hint": 47.248,
+          "worked_example": 45.332,
+          "break_suggestion": 48.324,
+          "no_intervention": 46.848
+        }
+      },
+      "model_L0": {
+        "learners": 250,
+        "mastery_rate": 0.088,
+        "mean_items_to_mastery": 188.008,
+        "mean_knowledge_gain": 0.024991961482098868,
+        "knowledge_gain_95_ci": [
+          -0.06717312651252892,
+          0.12078531527297978
+        ],
+        "mean_reward": 0.006522781940228898,
+        "mean_difficulty": 3.415143436032273,
+        "interventions_per_learner": {
+          "hint": 0.0,
+          "worked_example": 4.712,
+          "break_suggestion": 0.0,
+          "no_intervention": 183.296
+        }
+      },
+      "rl_ppo": {
+        "learners": 250,
+        "mastery_rate": 0.092,
+        "mean_items_to_mastery": 187.364,
+        "mean_knowledge_gain": 0.04927246841502299,
+        "knowledge_gain_95_ci": [
+          -0.04041135001744237,
+          0.14251543780335157
+        ],
+        "mean_reward": 0.006730360134525351,
+        "mean_difficulty": 7.2785003635753105,
+        "interventions_per_learner": {
+          "hint": 0.004,
+          "worked_example": 26.648,
+          "break_suggestion": 6.656,
+          "no_intervention": 154.056
+        }
+      }
+    }
+  },
+  "paired_tests": {
+    "V0": {
+      "items_to_mastery": [
+        {
+          "policy_a": "bandit_lin_ts",
+          "policy_b": "model_L0",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": -0.48,
+          "difference_95_ci": [
+            -2.7802,
+            1.824199999999999
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 348.5,
+          "p_value": 0.5624046826904849,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": -0.025413529845797127,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "bandit_linucb",
+          "policy_b": "model_L0",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": 0.924,
+          "difference_95_ci": [
+            -0.6201,
+            2.840099999999999
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 231.5,
+          "p_value": 0.7462825627981902,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": 0.06245385142198848,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "model_L0",
+          "policy_b": "rl_ppo",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": -2.716,
+          "difference_95_ci": [
+            -5.0246,
+            -0.7717000000000016
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 117.5,
+          "p_value": 0.0020808643555488868,
+          "p_value_bonferroni": 0.01248518613329332,
+          "cohens_d": -0.1540243171594264,
+          "significant_alpha_005": true
+        }
+      ],
+      "knowledge_gain": [
+        {
+          "policy_a": "bandit_lin_ts",
+          "policy_b": "model_L0",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": 0.08070094336073393,
+          "difference_95_ci": [
+            0.05354736637661366,
+            0.10849384716098028
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 10137.0,
+          "p_value": 1.2366835006259311e-06,
+          "p_value_bonferroni": 7.420101003755586e-06,
+          "cohens_d": 0.35609735259828285,
+          "significant_alpha_005": true
+        },
+        {
+          "policy_a": "bandit_linucb",
+          "policy_b": "model_L0",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": 0.006821204240205712,
+          "difference_95_ci": [
+            -0.013166725130854987,
+            0.026931545216857655
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 14271.0,
+          "p_value": 0.2562831003628281,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": 0.0418054781077737,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "model_L0",
+          "policy_b": "rl_ppo",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": 0.010471239287739215,
+          "difference_95_ci": [
+            -0.010827585199802621,
+            0.03355317808582387
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 14161.0,
+          "p_value": 0.21798292628467753,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": 0.057875989776382634,
+          "significant_alpha_005": false
+        }
+      ]
+    },
+    "V1": {
+      "items_to_mastery": [
+        {
+          "policy_a": "bandit_lin_ts",
+          "policy_b": "model_L0",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": -0.736,
+          "difference_95_ci": [
+            -2.9884,
+            1.5640999999999996
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 212.5,
+          "p_value": 0.9138886307482332,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": -0.039205550001670184,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "bandit_linucb",
+          "policy_b": "model_L0",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": 2.748,
+          "difference_95_ci": [
+            0.8599,
+            5.172199999999998
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 101.5,
+          "p_value": 0.011938584249621013,
+          "p_value_bonferroni": 0.07163150549772608,
+          "cohens_d": 0.15356283396194134,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "model_L0",
+          "policy_b": "rl_ppo",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": -2.612,
+          "difference_95_ci": [
+            -5.3724,
+            -0.3918000000000011
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 64.0,
+          "p_value": 0.0015403453145303024,
+          "p_value_bonferroni": 0.009242071887181815,
+          "cohens_d": -0.13266645390926554,
+          "significant_alpha_005": true
+        }
+      ],
+      "knowledge_gain": [
+        {
+          "policy_a": "bandit_lin_ts",
+          "policy_b": "model_L0",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": 0.067145459388509,
+          "difference_95_ci": [
+            0.04568510799713468,
+            0.08922877970949421
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 9347.0,
+          "p_value": 3.0261191582087315e-08,
+          "p_value_bonferroni": 1.815671494925239e-07,
+          "cohens_d": 0.388284020630534,
+          "significant_alpha_005": true
+        },
+        {
+          "policy_a": "bandit_linucb",
+          "policy_b": "model_L0",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": -0.0004464763822355795,
+          "difference_95_ci": [
+            -0.022920484544159,
+            0.02324507814286076
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 15204.0,
+          "p_value": 0.7526711704535827,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": -0.0024284035209087267,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "model_L0",
+          "policy_b": "rl_ppo",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": 0.030748663984136507,
+          "difference_95_ci": [
+            0.008027344234988017,
+            0.05352642773708831
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 12749.0,
+          "p_value": 0.013396605473565505,
+          "p_value_bonferroni": 0.08037963284139303,
+          "cohens_d": 0.160910174635341,
+          "significant_alpha_005": false
+        }
+      ]
+    },
+    "V2": {
+      "items_to_mastery": [
+        {
+          "policy_a": "bandit_lin_ts",
+          "policy_b": "model_L0",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": -0.172,
+          "difference_95_ci": [
+            -2.108,
+            1.868199999999999
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 295.5,
+          "p_value": 0.39803009268377254,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": -0.010706618785579857,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "bandit_linucb",
+          "policy_b": "model_L0",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": 0.96,
+          "difference_95_ci": [
+            -0.6441,
+            2.896199999999999
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 265.5,
+          "p_value": 0.7885829089116353,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": 0.06444520609694304,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "model_L0",
+          "policy_b": "rl_ppo",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": -3.72,
+          "difference_95_ci": [
+            -6.4443,
+            -1.4958000000000011
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 32.0,
+          "p_value": 1.4189647473386877e-05,
+          "p_value_bonferroni": 8.513788484032126e-05,
+          "cohens_d": -0.18445781603567524,
+          "significant_alpha_005": true
+        }
+      ],
+      "knowledge_gain": [
+        {
+          "policy_a": "bandit_lin_ts",
+          "policy_b": "model_L0",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": 0.07383513133628408,
+          "difference_95_ci": [
+            0.05202670573008362,
+            0.09565573299953271
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 8187.0,
+          "p_value": 5.622209331347003e-11,
+          "p_value_bonferroni": 3.3733255988082017e-10,
+          "cohens_d": 0.4042199230268232,
+          "significant_alpha_005": true
+        },
+        {
+          "policy_a": "bandit_linucb",
+          "policy_b": "model_L0",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": 0.005936531389085308,
+          "difference_95_ci": [
+            -0.014469876633601424,
+            0.026533274562176665
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 14216.0,
+          "p_value": 0.23658539478884977,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": 0.035568994151552985,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "model_L0",
+          "policy_b": "rl_ppo",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": 0.011821043943366345,
+          "difference_95_ci": [
+            -0.011740681399772752,
+            0.03573988521271816
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 14769.0,
+          "p_value": 0.4855016051165614,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": 0.06182878646254054,
+          "significant_alpha_005": false
+        }
+      ]
+    },
+    "V3": {
+      "items_to_mastery": [
+        {
+          "policy_a": "bandit_lin_ts",
+          "policy_b": "model_L0",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": -2.908,
+          "difference_95_ci": [
+            -5.3161,
+            -0.8956000000000022
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 204.0,
+          "p_value": 0.06886483914985113,
+          "p_value_bonferroni": 0.41318903489910674,
+          "cohens_d": -0.154677051259846,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "bandit_linucb",
+          "policy_b": "model_L0",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": -0.556,
+          "difference_95_ci": [
+            -2.3282,
+            0.9400999999999994
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 270.5,
+          "p_value": 0.6441399568861563,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": -0.040987201669525616,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "model_L0",
+          "policy_b": "rl_ppo",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": -1.036,
+          "difference_95_ci": [
+            -2.6242,
+            0.7680999999999994
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 81.0,
+          "p_value": 0.00544182667406422,
+          "p_value_bonferroni": 0.03265096004438532,
+          "cohens_d": -0.0775128560971522,
+          "significant_alpha_005": true
+        }
+      ],
+      "knowledge_gain": [
+        {
+          "policy_a": "bandit_lin_ts",
+          "policy_b": "model_L0",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": 0.09869231450811979,
+          "difference_95_ci": [
+            0.07253506966639188,
+            0.12438118418001314
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 7580.0,
+          "p_value": 2.273879725904144e-12,
+          "p_value_bonferroni": 1.3643278355424865e-11,
+          "cohens_d": 0.4676649863230735,
+          "significant_alpha_005": true
+        },
+        {
+          "policy_a": "bandit_linucb",
+          "policy_b": "model_L0",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": 0.02176248978875298,
+          "difference_95_ci": [
+            0.0018221516513035182,
+            0.041469920666
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 13330.0,
+          "p_value": 0.049721398515012796,
+          "p_value_bonferroni": 0.2983283910900768,
+          "cohens_d": 0.13632522846742268,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "model_L0",
+          "policy_b": "rl_ppo",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": -0.016131135559485678,
+          "difference_95_ci": [
+            -0.03784633797179634,
+            0.004690657274341685
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 14899.0,
+          "p_value": 0.5597504619233362,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": -0.09241239290054774,
+          "significant_alpha_005": false
+        }
+      ]
+    },
+    "V4": {
+      "items_to_mastery": [
+        {
+          "policy_a": "bandit_lin_ts",
+          "policy_b": "model_L0",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": -1.8,
+          "difference_95_ci": [
+            -5.2842,
+            1.296
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 228.5,
+          "p_value": 0.2380413154490426,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": -0.06794789593319932,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "bandit_linucb",
+          "policy_b": "model_L0",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": -0.256,
+          "difference_95_ci": [
+            -3.4321,
+            2.884
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 180.5,
+          "p_value": 0.2846673980635477,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": -0.009671352308218048,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "model_L0",
+          "policy_b": "rl_ppo",
+          "metric": "items_to_mastery",
+          "n": 250,
+          "mean_difference": 0.644,
+          "difference_95_ci": [
+            -2.416,
+            3.856099999999999
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 132.0,
+          "p_value": 0.607015558229527,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": 0.024839772861562505,
+          "significant_alpha_005": false
+        }
+      ],
+      "knowledge_gain": [
+        {
+          "policy_a": "bandit_lin_ts",
+          "policy_b": "model_L0",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": 0.104280307222187,
+          "difference_95_ci": [
+            0.07458217986917098,
+            0.13458385753094773
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 7995.0,
+          "p_value": 1.8022291589142396e-11,
+          "p_value_bonferroni": 1.0813374953485437e-10,
+          "cohens_d": 0.4296041045824539,
+          "significant_alpha_005": true
+        },
+        {
+          "policy_a": "bandit_linucb",
+          "policy_b": "model_L0",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": 0.02320982889130239,
+          "difference_95_ci": [
+            -0.0011944993880708382,
+            0.04807800738072112
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 13081.0,
+          "p_value": 0.022762880161653034,
+          "p_value_bonferroni": 0.1365772809699182,
+          "cohens_d": 0.112821095911031,
+          "significant_alpha_005": false
+        },
+        {
+          "policy_a": "model_L0",
+          "policy_b": "rl_ppo",
+          "metric": "knowledge_gain",
+          "n": 250,
+          "mean_difference": -0.024280506932924127,
+          "difference_95_ci": [
+            -0.04639010284560588,
+            -0.003296592747842569
+          ],
+          "test": "wilcoxon_signed_rank",
+          "statistic": 14860.0,
+          "p_value": 0.46967006744930084,
+          "p_value_bonferroni": 1.0,
+          "cohens_d": -0.1364110448265521,
+          "significant_alpha_005": false
+        }
+      ]
+    }
+  },
+  "rq4": {
+    "question": "does a learned policy beat the best transparent rule?",
+    "outcome_metric": "knowledge_gain",
+    "beats_on_point_estimate": [
+      "bandit_linucb",
+      "bandit_lin_ts"
+    ],
+    "beats_with_ci_excluding_zero": [
+      "bandit_lin_ts"
+    ],
+    "beats_on_mean_reward": [],
+    "verdict": "a learned arm beats the best rule on knowledge gain with a CI excluding zero; none beats it on the reward they optimise"
+  },
+  "protocol": {
+    "cohort": "identical across arms within a variant; comparisons are paired",
+    "bandits": "learn online within each variant; PPO is trained on V0 only",
+    "simulated": "no human participants"
+  }
+}

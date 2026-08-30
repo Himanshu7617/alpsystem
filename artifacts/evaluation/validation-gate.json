@@ -1,0 +1,200 @@
+{
+  "seed": 20260821,
+  "git_sha": "8219dbf20a9ef8f8fdf20bfd47c8080a6a1f0a13",
+  "rung": "L4",
+  "protocol": {
+    "splits": "data/processed/splits.json \u2014 read, never recomputed",
+    "train": "fold0-fold3",
+    "calibration": "half of fold4, by learner",
+    "scoring": "the other half of fold4",
+    "test": "not touched in this phase",
+    "uncertainty": "MC dropout, 20 passes",
+    "thresholds": "docs/preregistration.md \u00a78.2"
+  },
+  "measurements": {
+    "knowledge": {
+      "source": "assistments_2012",
+      "label": "next_correct \u2014 the next attempt's outcome",
+      "n": 15564,
+      "learners": 169,
+      "base_rate": 0.67277,
+      "roc_auc": 0.68569,
+      "ece_raw": 0.0342,
+      "ece_calibrated": 0.01579,
+      "label_correlation": 0.31562,
+      "label_correlation_ci_low": 0.28205,
+      "label_correlation_ci_high": 0.34492
+    },
+    "engagement": {
+      "source": "assistments_2012",
+      "label": "solution_behaviour of the next attempt (response-time effort, preregistration \u00a76)",
+      "n": 15395,
+      "learners": 169,
+      "base_rate": 0.98344,
+      "roc_auc": 0.83063,
+      "ece_raw": 0.00476,
+      "ece_calibrated": 0.00452,
+      "label_correlation": 0.28148,
+      "label_correlation_ci_low": 0.18798,
+      "label_correlation_ci_high": 0.37071,
+      "ability_correlation": 0.40253,
+      "ability_correlation_ci": [
+        0.1953,
+        0.61179
+      ],
+      "ability_learners": 169
+    },
+    "confidence": {
+      "source": "sim-V0",
+      "label": "probe_confidence >= 3 (post-submission self-report, preregistration \u00a73)",
+      "n": 1384,
+      "learners": 81,
+      "base_rate": 0.76373,
+      "roc_auc": 0.58411,
+      "ece_raw": 0.03193,
+      "ece_calibrated": 0.02421,
+      "label_correlation": 0.13755,
+      "label_correlation_ci_low": 0.08256,
+      "label_correlation_ci_high": 0.1961,
+      "knowledge_correlation": 0.89329,
+      "knowledge_correlation_ci": [
+        0.84675,
+        0.922
+      ]
+    }
+  },
+  "states": {
+    "knowledge": {
+      "measured": true,
+      "admitted": true,
+      "criteria": [
+        {
+          "criterion": "C1_label_correlation",
+          "measure": "label_correlation",
+          "value": 0.31562,
+          "bound": 0.15,
+          "direction": "min",
+          "passed": true,
+          "description": "point-biserial r between the calibrated estimate and the head's own label, learner-clustered 95% CI excluding zero",
+          "ci": [
+            0.28205,
+            0.34492
+          ],
+          "ci_excludes_zero": true
+        },
+        {
+          "criterion": "C2_calibration",
+          "measure": "ece_calibrated",
+          "value": 0.01579,
+          "bound": 0.05,
+          "direction": "max",
+          "passed": true,
+          "description": "expected calibration error after isotonic calibration; a policy acting at a threshold needs the probability to mean what it says"
+        }
+      ],
+      "failed": [],
+      "source": "assistments_2012",
+      "label": "next_correct \u2014 the next attempt's outcome",
+      "n": 15564
+    },
+    "engagement": {
+      "measured": true,
+      "admitted": false,
+      "criteria": [
+        {
+          "criterion": "C1_label_correlation",
+          "measure": "label_correlation",
+          "value": 0.28148,
+          "bound": 0.15,
+          "direction": "min",
+          "passed": true,
+          "description": "point-biserial r between the calibrated estimate and the head's own label, learner-clustered 95% CI excluding zero",
+          "ci": [
+            0.18798,
+            0.37071
+          ],
+          "ci_excludes_zero": true
+        },
+        {
+          "criterion": "C2_calibration",
+          "measure": "ece_calibrated",
+          "value": 0.00452,
+          "bound": 0.05,
+          "direction": "max",
+          "passed": true,
+          "description": "expected calibration error after isotonic calibration; a policy acting at a threshold needs the probability to mean what it says"
+        },
+        {
+          "criterion": "C3_effort_independent_of_ability",
+          "measure": "ability_correlation",
+          "value": 0.40253,
+          "bound": 0.2,
+          "direction": "max",
+          "passed": false,
+          "description": "Wise & Kong's negative criterion: an effort index correlating with ability has learned ability, not effort"
+        }
+      ],
+      "failed": [
+        "C3_effort_independent_of_ability"
+      ],
+      "source": "assistments_2012",
+      "label": "solution_behaviour of the next attempt (response-time effort, preregistration \u00a76)",
+      "n": 15395
+    },
+    "confidence": {
+      "measured": true,
+      "admitted": false,
+      "criteria": [
+        {
+          "criterion": "C1_label_correlation",
+          "measure": "label_correlation",
+          "value": 0.13755,
+          "bound": 0.15,
+          "direction": "min",
+          "passed": false,
+          "description": "point-biserial r between the calibrated estimate and the head's own label, learner-clustered 95% CI excluding zero",
+          "ci": [
+            0.08256,
+            0.1961
+          ],
+          "ci_excludes_zero": true
+        },
+        {
+          "criterion": "C2_calibration",
+          "measure": "ece_calibrated",
+          "value": 0.02421,
+          "bound": 0.05,
+          "direction": "max",
+          "passed": true,
+          "description": "expected calibration error after isotonic calibration; a policy acting at a threshold needs the probability to mean what it says"
+        },
+        {
+          "criterion": "C4_discriminant_validity",
+          "measure": "knowledge_correlation",
+          "value": 0.89329,
+          "bound": 0.85,
+          "direction": "max",
+          "passed": false,
+          "description": "the confidence head must not be a relabelled knowledge head"
+        }
+      ],
+      "failed": [
+        "C1_label_correlation",
+        "C4_discriminant_validity"
+      ],
+      "source": "sim-V0",
+      "label": "probe_confidence >= 3 (post-submission self-report, preregistration \u00a73)",
+      "n": 1384
+    }
+  },
+  "dropped_states": {
+    "fatigue": "no within-session accuracy decline in any archival source (preregistration \u00a77); construct dropped before modelling"
+  },
+  "admitted": [
+    "knowledge"
+  ],
+  "rejected": [
+    "confidence",
+    "engagement"
+  ]
+}

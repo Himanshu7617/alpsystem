@@ -1,0 +1,10 @@
+{
+  "source": "assistments_2012",
+  "prior": 0.6548945682464861,
+  "transition": 0.07672096028735041,
+  "slip": 0.1,
+  "guess": 0.29999999999998245,
+  "negative_log_likelihood": 48200.18194107951,
+  "sequences": 7335,
+  "seed": 20260821
+}

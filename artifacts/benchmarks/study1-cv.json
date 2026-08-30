@@ -1,0 +1,1512 @@
+{
+  "seed": 20260821,
+  "git_sha": "8219dbf20a9ef8f8fdf20bfd47c8080a6a1f0a13",
+  "label": "next_correct",
+  "protocol": {
+    "splits": "data/processed/splits.json \u2014 read, never recomputed",
+    "cross_validation": "5 learner-grouped folds; out-of-fold predictions",
+    "max_train_learners": 5000,
+    "max_rows": 250000,
+    "search_iterations": 12,
+    "search_scope": "once per source at the top rung, then held fixed across rungs",
+    "bootstrap": "learner-clustered, paired for every delta",
+    "protocol_noise_band": 0.02,
+    "saint_plus_reference": 0.0125
+  },
+  "unavailable_model_backends": {},
+  "sources": {
+    "assistments_2009": {
+      "rows": 249576,
+      "learners": 2959,
+      "test_learners": 592,
+      "live_rungs": [
+        "L0",
+        "L1",
+        "L2"
+      ],
+      "skipped_rungs": {
+        "L3": "adds no feature for assistments_2009 \u2014 identical to the rung below (11 columns)",
+        "L4": "adds no feature for assistments_2009 \u2014 identical to the rung below (11 columns)"
+      },
+      "rung_features": {
+        "L0": 7,
+        "L1": 10,
+        "L2": 11
+      },
+      "tuned_hyperparameters": {
+        "lightgbm": {
+          "num_leaves": 63,
+          "n_estimators": 200,
+          "min_child_samples": 100,
+          "learning_rate": 0.03
+        },
+        "logistic_elasticnet": {
+          "l1_ratio": 0.75,
+          "C": 0.03
+        }
+      },
+      "cells": {
+        "L0|logistic_elasticnet": {
+          "roc_auc": 0.70017,
+          "accuracy": 0.71066,
+          "precision": 0.72546,
+          "recall": 0.90166,
+          "f1": 0.80402,
+          "log_loss": 0.57915,
+          "brier": 0.19641,
+          "ece": 0.01334,
+          "auc": 0.70017,
+          "ci_low": 0.69207,
+          "ci_high": 0.70829,
+          "learners": 2367,
+          "features": 7,
+          "rung": "L0",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 0.7
+        },
+        "L0|lightgbm": {
+          "roc_auc": 0.71121,
+          "accuracy": 0.71566,
+          "precision": 0.72382,
+          "recall": 0.91848,
+          "f1": 0.80961,
+          "log_loss": 0.56853,
+          "brier": 0.1922,
+          "ece": 0.004,
+          "auc": 0.71121,
+          "ci_low": 0.70301,
+          "ci_high": 0.71894,
+          "learners": 2367,
+          "features": 7,
+          "rung": "L0",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 63,
+            "n_estimators": 200,
+            "min_child_samples": 100,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 2.26
+        },
+        "L1|logistic_elasticnet": {
+          "roc_auc": 0.69955,
+          "accuracy": 0.71219,
+          "precision": 0.7261,
+          "recall": 0.90363,
+          "f1": 0.8052,
+          "log_loss": 0.578,
+          "brier": 0.19587,
+          "ece": 0.01397,
+          "auc": 0.69955,
+          "ci_low": 0.69157,
+          "ci_high": 0.70804,
+          "learners": 2367,
+          "features": 10,
+          "rung": "L1",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 1.68
+        },
+        "L1|lightgbm": {
+          "roc_auc": 0.71287,
+          "accuracy": 0.71836,
+          "precision": 0.7244,
+          "recall": 0.92345,
+          "f1": 0.8119,
+          "log_loss": 0.56585,
+          "brier": 0.19112,
+          "ece": 0.00235,
+          "auc": 0.71287,
+          "ci_low": 0.70449,
+          "ci_high": 0.72074,
+          "learners": 2367,
+          "features": 10,
+          "rung": "L1",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 63,
+            "n_estimators": 200,
+            "min_child_samples": 100,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 2.93
+        },
+        "L2|logistic_elasticnet": {
+          "roc_auc": 0.70136,
+          "accuracy": 0.71394,
+          "precision": 0.72631,
+          "recall": 0.9073,
+          "f1": 0.80678,
+          "log_loss": 0.57554,
+          "brier": 0.19482,
+          "ece": 0.01007,
+          "auc": 0.70136,
+          "ci_low": 0.69332,
+          "ci_high": 0.7098,
+          "learners": 2367,
+          "features": 11,
+          "rung": "L2",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 1.67
+        },
+        "L2|lightgbm": {
+          "roc_auc": 0.71472,
+          "accuracy": 0.72082,
+          "precision": 0.72583,
+          "recall": 0.92543,
+          "f1": 0.81357,
+          "log_loss": 0.5635,
+          "brier": 0.1901,
+          "ece": 0.00315,
+          "auc": 0.71472,
+          "ci_low": 0.70635,
+          "ci_high": 0.72268,
+          "learners": 2367,
+          "features": 11,
+          "rung": "L2",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 63,
+            "n_estimators": 200,
+            "min_child_samples": 100,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 3.26
+        }
+      },
+      "ladder": {
+        "lightgbm": {
+          "L0->L1": {
+            "delta_auc": 0.00166,
+            "ci_low": 0.00118,
+            "ci_high": 0.00208,
+            "p_value": 0.0,
+            "clears_protocol_band": false,
+            "excludes_zero": true,
+            "from": "L0",
+            "to": "L1",
+            "p_holm": 0.0,
+            "significant_holm": true
+          },
+          "L1->L2": {
+            "delta_auc": 0.00185,
+            "ci_low": 0.00146,
+            "ci_high": 0.00227,
+            "p_value": 0.0,
+            "clears_protocol_band": false,
+            "excludes_zero": true,
+            "from": "L1",
+            "to": "L2",
+            "p_holm": 0.0,
+            "significant_holm": true
+          }
+        },
+        "logistic_elasticnet": {
+          "L0->L1": {
+            "delta_auc": -0.00062,
+            "ci_low": -0.00115,
+            "ci_high": -0.00012,
+            "p_value": 0.005,
+            "clears_protocol_band": false,
+            "excludes_zero": true,
+            "from": "L0",
+            "to": "L1",
+            "p_holm": 0.005,
+            "significant_holm": true
+          },
+          "L1->L2": {
+            "delta_auc": 0.0018,
+            "ci_low": 0.00138,
+            "ci_high": 0.00217,
+            "p_value": 0.0,
+            "clears_protocol_band": false,
+            "excludes_zero": true,
+            "from": "L1",
+            "to": "L2",
+            "p_holm": 0.0,
+            "significant_holm": true
+          }
+        }
+      },
+      "learning_curve": [
+        {
+          "fraction": 0.1,
+          "train_learners": 189,
+          "train_rows": 16713,
+          "auc": 0.69282
+        },
+        {
+          "fraction": 0.25,
+          "train_learners": 473,
+          "train_rows": 43908,
+          "auc": 0.70697
+        },
+        {
+          "fraction": 0.5,
+          "train_learners": 946,
+          "train_rows": 76621,
+          "auc": 0.71083
+        },
+        {
+          "fraction": 0.75,
+          "train_learners": 1419,
+          "train_rows": 116316,
+          "auc": 0.71201
+        },
+        {
+          "fraction": 1.0,
+          "train_learners": 1893,
+          "train_rows": 160736,
+          "auc": 0.71329
+        }
+      ],
+      "calibration": {
+        "raw": {
+          "roc_auc": 0.71472,
+          "accuracy": 0.72082,
+          "precision": 0.72583,
+          "recall": 0.92543,
+          "f1": 0.81357,
+          "log_loss": 0.5635,
+          "brier": 0.1901,
+          "ece": 0.00315
+        },
+        "calibrated": {
+          "roc_auc": 0.71378,
+          "accuracy": 0.71991,
+          "precision": 0.71878,
+          "recall": 0.9437,
+          "f1": 0.81603,
+          "log_loss": 0.56609,
+          "brier": 0.19104,
+          "ece": 0.02175
+        },
+        "model": "lightgbm",
+        "rung": "L2"
+      },
+      "selected_model": "lightgbm"
+    },
+    "assistments_2012": {
+      "rows": 249978,
+      "learners": 2203,
+      "test_learners": 417,
+      "live_rungs": [
+        "L0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "skipped_rungs": {
+        "L4": "adds no feature for assistments_2012 \u2014 identical to the rung below (16 columns)"
+      },
+      "rung_features": {
+        "L0": 7,
+        "L1": 11,
+        "L2": 12,
+        "L3": 16
+      },
+      "tuned_hyperparameters": {
+        "lightgbm": {
+          "num_leaves": 63,
+          "n_estimators": 200,
+          "min_child_samples": 100,
+          "learning_rate": 0.03
+        },
+        "logistic_elasticnet": {
+          "l1_ratio": 0.75,
+          "C": 0.03
+        }
+      },
+      "cells": {
+        "L0|logistic_elasticnet": {
+          "roc_auc": 0.66877,
+          "accuracy": 0.71756,
+          "precision": 0.72871,
+          "recall": 0.94853,
+          "f1": 0.82421,
+          "log_loss": 0.57229,
+          "brier": 0.19335,
+          "ece": 0.00889,
+          "auc": 0.66877,
+          "ci_low": 0.6602,
+          "ci_high": 0.67596,
+          "learners": 1786,
+          "features": 7,
+          "rung": "L0",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 0.89
+        },
+        "L0|lightgbm": {
+          "roc_auc": 0.67637,
+          "accuracy": 0.72124,
+          "precision": 0.73235,
+          "recall": 0.94662,
+          "f1": 0.82581,
+          "log_loss": 0.56657,
+          "brier": 0.19099,
+          "ece": 0.00203,
+          "auc": 0.67637,
+          "ci_low": 0.66795,
+          "ci_high": 0.68345,
+          "learners": 1786,
+          "features": 7,
+          "rung": "L0",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 63,
+            "n_estimators": 200,
+            "min_child_samples": 100,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 3.5
+        },
+        "L1|logistic_elasticnet": {
+          "roc_auc": 0.66864,
+          "accuracy": 0.71816,
+          "precision": 0.72934,
+          "recall": 0.94811,
+          "f1": 0.82446,
+          "log_loss": 0.57185,
+          "brier": 0.19312,
+          "ece": 0.00932,
+          "auc": 0.66864,
+          "ci_low": 0.66019,
+          "ci_high": 0.67593,
+          "learners": 1786,
+          "features": 11,
+          "rung": "L1",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 1.33
+        },
+        "L1|lightgbm": {
+          "roc_auc": 0.67743,
+          "accuracy": 0.72288,
+          "precision": 0.73269,
+          "recall": 0.9494,
+          "f1": 0.82708,
+          "log_loss": 0.56528,
+          "brier": 0.19043,
+          "ece": 0.00237,
+          "auc": 0.67743,
+          "ci_low": 0.66888,
+          "ci_high": 0.68456,
+          "learners": 1786,
+          "features": 11,
+          "rung": "L1",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 63,
+            "n_estimators": 200,
+            "min_child_samples": 100,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 4.43
+        },
+        "L2|logistic_elasticnet": {
+          "roc_auc": 0.66944,
+          "accuracy": 0.71863,
+          "precision": 0.73104,
+          "recall": 0.94437,
+          "f1": 0.82413,
+          "log_loss": 0.57108,
+          "brier": 0.19277,
+          "ece": 0.00623,
+          "auc": 0.66944,
+          "ci_low": 0.66093,
+          "ci_high": 0.67667,
+          "learners": 1786,
+          "features": 12,
+          "rung": "L2",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 1.36
+        },
+        "L2|lightgbm": {
+          "roc_auc": 0.67915,
+          "accuracy": 0.72427,
+          "precision": 0.73468,
+          "recall": 0.94699,
+          "f1": 0.82744,
+          "log_loss": 0.5642,
+          "brier": 0.18995,
+          "ece": 0.00287,
+          "auc": 0.67915,
+          "ci_low": 0.67065,
+          "ci_high": 0.68613,
+          "learners": 1786,
+          "features": 12,
+          "rung": "L2",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 63,
+            "n_estimators": 200,
+            "min_child_samples": 100,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 4.58
+        },
+        "L3|logistic_elasticnet": {
+          "roc_auc": 0.6694,
+          "accuracy": 0.71875,
+          "precision": 0.73108,
+          "recall": 0.94453,
+          "f1": 0.82421,
+          "log_loss": 0.5711,
+          "brier": 0.19278,
+          "ece": 0.00619,
+          "auc": 0.6694,
+          "ci_low": 0.66083,
+          "ci_high": 0.67658,
+          "learners": 1786,
+          "features": 16,
+          "rung": "L3",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 2.22
+        },
+        "L3|lightgbm": {
+          "roc_auc": 0.67967,
+          "accuracy": 0.72413,
+          "precision": 0.73446,
+          "recall": 0.94729,
+          "f1": 0.82741,
+          "log_loss": 0.56404,
+          "brier": 0.18989,
+          "ece": 0.00286,
+          "auc": 0.67967,
+          "ci_low": 0.67108,
+          "ci_high": 0.68688,
+          "learners": 1786,
+          "features": 16,
+          "rung": "L3",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 63,
+            "n_estimators": 200,
+            "min_child_samples": 100,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 5.52
+        }
+      },
+      "ladder": {
+        "lightgbm": {
+          "L0->L1": {
+            "delta_auc": 0.00106,
+            "ci_low": 0.00054,
+            "ci_high": 0.0016,
+            "p_value": 0.0,
+            "clears_protocol_band": false,
+            "excludes_zero": true,
+            "from": "L0",
+            "to": "L1",
+            "p_holm": 0.0,
+            "significant_holm": true
+          },
+          "L1->L2": {
+            "delta_auc": 0.00171,
+            "ci_low": 0.00127,
+            "ci_high": 0.00221,
+            "p_value": 0.0,
+            "clears_protocol_band": false,
+            "excludes_zero": true,
+            "from": "L1",
+            "to": "L2",
+            "p_holm": 0.0,
+            "significant_holm": true
+          },
+          "L2->L3": {
+            "delta_auc": 0.00052,
+            "ci_low": 0.00017,
+            "ci_high": 0.0009,
+            "p_value": 0.01,
+            "clears_protocol_band": false,
+            "excludes_zero": true,
+            "from": "L2",
+            "to": "L3",
+            "p_holm": 0.01,
+            "significant_holm": true
+          }
+        },
+        "logistic_elasticnet": {
+          "L0->L1": {
+            "delta_auc": -0.00013,
+            "ci_low": -0.00053,
+            "ci_high": 0.00027,
+            "p_value": 0.51,
+            "clears_protocol_band": false,
+            "excludes_zero": false,
+            "from": "L0",
+            "to": "L1",
+            "p_holm": 1.0,
+            "significant_holm": false
+          },
+          "L1->L2": {
+            "delta_auc": 0.0008,
+            "ci_low": 0.00052,
+            "ci_high": 0.0011,
+            "p_value": 0.0,
+            "clears_protocol_band": false,
+            "excludes_zero": true,
+            "from": "L1",
+            "to": "L2",
+            "p_holm": 0.0,
+            "significant_holm": true
+          },
+          "L2->L3": {
+            "delta_auc": -4e-05,
+            "ci_low": -0.00014,
+            "ci_high": 7e-05,
+            "p_value": 0.53,
+            "clears_protocol_band": false,
+            "excludes_zero": false,
+            "from": "L2",
+            "to": "L3",
+            "p_holm": 1.0,
+            "significant_holm": false
+          }
+        }
+      },
+      "learning_curve": [
+        {
+          "fraction": 0.1,
+          "train_learners": 142,
+          "train_rows": 16996,
+          "auc": 0.66192
+        },
+        {
+          "fraction": 0.25,
+          "train_learners": 357,
+          "train_rows": 39422,
+          "auc": 0.67494
+        },
+        {
+          "fraction": 0.5,
+          "train_learners": 714,
+          "train_rows": 76946,
+          "auc": 0.68052
+        },
+        {
+          "fraction": 0.75,
+          "train_learners": 1071,
+          "train_rows": 117038,
+          "auc": 0.68319
+        },
+        {
+          "fraction": 1.0,
+          "train_learners": 1428,
+          "train_rows": 158533,
+          "auc": 0.6835
+        }
+      ],
+      "calibration": {
+        "raw": {
+          "roc_auc": 0.67967,
+          "accuracy": 0.72413,
+          "precision": 0.73446,
+          "recall": 0.94729,
+          "f1": 0.82741,
+          "log_loss": 0.56404,
+          "brier": 0.18989,
+          "ece": 0.00286
+        },
+        "calibrated": {
+          "roc_auc": 0.67963,
+          "accuracy": 0.72402,
+          "precision": 0.7342,
+          "recall": 0.94775,
+          "f1": 0.82742,
+          "log_loss": 0.56413,
+          "brier": 0.18988,
+          "ece": 0.00285
+        },
+        "model": "lightgbm",
+        "rung": "L3"
+      },
+      "selected_model": "lightgbm"
+    },
+    "ednet_kt1": {
+      "rows": 249223,
+      "learners": 1070,
+      "test_learners": 206,
+      "live_rungs": [
+        "L0",
+        "L1",
+        "L3"
+      ],
+      "skipped_rungs": {
+        "L2": "adds no feature for ednet_kt1 \u2014 identical to the rung below (10 columns)",
+        "L4": "adds no feature for ednet_kt1 \u2014 identical to the rung below (14 columns)"
+      },
+      "rung_features": {
+        "L0": 6,
+        "L1": 10,
+        "L3": 14
+      },
+      "tuned_hyperparameters": {
+        "lightgbm": {
+          "num_leaves": 31,
+          "n_estimators": 300,
+          "min_child_samples": 20,
+          "learning_rate": 0.03
+        },
+        "logistic_elasticnet": {
+          "l1_ratio": 0.75,
+          "C": 0.03
+        }
+      },
+      "cells": {
+        "L0|logistic_elasticnet": {
+          "roc_auc": 0.60532,
+          "accuracy": 0.65786,
+          "precision": 0.66284,
+          "recall": 0.96198,
+          "f1": 0.78488,
+          "log_loss": 0.63219,
+          "brier": 0.22042,
+          "ece": 0.00614,
+          "auc": 0.60532,
+          "ci_low": 0.59279,
+          "ci_high": 0.61612,
+          "learners": 864,
+          "features": 6,
+          "rung": "L0",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 0.88
+        },
+        "L0|lightgbm": {
+          "roc_auc": 0.61596,
+          "accuracy": 0.66011,
+          "precision": 0.66673,
+          "recall": 0.95197,
+          "f1": 0.78422,
+          "log_loss": 0.62724,
+          "brier": 0.21833,
+          "ece": 0.00364,
+          "auc": 0.61596,
+          "ci_low": 0.60202,
+          "ci_high": 0.62816,
+          "learners": 864,
+          "features": 6,
+          "rung": "L0",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 31,
+            "n_estimators": 300,
+            "min_child_samples": 20,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 3.59
+        },
+        "L1|logistic_elasticnet": {
+          "roc_auc": 0.60567,
+          "accuracy": 0.65792,
+          "precision": 0.66295,
+          "recall": 0.9617,
+          "f1": 0.78485,
+          "log_loss": 0.63202,
+          "brier": 0.22035,
+          "ece": 0.00686,
+          "auc": 0.60567,
+          "ci_low": 0.59322,
+          "ci_high": 0.6164,
+          "learners": 864,
+          "features": 10,
+          "rung": "L1",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 1.36
+        },
+        "L1|lightgbm": {
+          "roc_auc": 0.61897,
+          "accuracy": 0.66093,
+          "precision": 0.66722,
+          "recall": 0.95243,
+          "f1": 0.78471,
+          "log_loss": 0.6262,
+          "brier": 0.21786,
+          "ece": 0.00271,
+          "auc": 0.61897,
+          "ci_low": 0.60502,
+          "ci_high": 0.63171,
+          "learners": 864,
+          "features": 10,
+          "rung": "L1",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 31,
+            "n_estimators": 300,
+            "min_child_samples": 20,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 4.31
+        },
+        "L3|logistic_elasticnet": {
+          "roc_auc": 0.60578,
+          "accuracy": 0.658,
+          "precision": 0.66311,
+          "recall": 0.96126,
+          "f1": 0.78482,
+          "log_loss": 0.63192,
+          "brier": 0.22031,
+          "ece": 0.00645,
+          "auc": 0.60578,
+          "ci_low": 0.59336,
+          "ci_high": 0.61652,
+          "learners": 864,
+          "features": 14,
+          "rung": "L3",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 1.93
+        },
+        "L3|lightgbm": {
+          "roc_auc": 0.61999,
+          "accuracy": 0.66131,
+          "precision": 0.66707,
+          "recall": 0.95422,
+          "f1": 0.78522,
+          "log_loss": 0.62597,
+          "brier": 0.21775,
+          "ece": 0.00294,
+          "auc": 0.61999,
+          "ci_low": 0.60666,
+          "ci_high": 0.63275,
+          "learners": 864,
+          "features": 14,
+          "rung": "L3",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 31,
+            "n_estimators": 300,
+            "min_child_samples": 20,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 5.38
+        }
+      },
+      "ladder": {
+        "lightgbm": {
+          "L0->L1": {
+            "delta_auc": 0.00301,
+            "ci_low": 0.00144,
+            "ci_high": 0.00457,
+            "p_value": 0.0,
+            "clears_protocol_band": false,
+            "excludes_zero": true,
+            "from": "L0",
+            "to": "L1",
+            "p_holm": 0.0,
+            "significant_holm": true
+          },
+          "L1->L3": {
+            "delta_auc": 0.00103,
+            "ci_low": -0.00018,
+            "ci_high": 0.00255,
+            "p_value": 0.11,
+            "clears_protocol_band": false,
+            "excludes_zero": false,
+            "from": "L1",
+            "to": "L3",
+            "p_holm": 0.11,
+            "significant_holm": false
+          }
+        },
+        "logistic_elasticnet": {
+          "L0->L1": {
+            "delta_auc": 0.00035,
+            "ci_low": -0.0001,
+            "ci_high": 0.00078,
+            "p_value": 0.135,
+            "clears_protocol_band": false,
+            "excludes_zero": false,
+            "from": "L0",
+            "to": "L1",
+            "p_holm": 0.27,
+            "significant_holm": false
+          },
+          "L1->L3": {
+            "delta_auc": 0.0001,
+            "ci_low": -0.00058,
+            "ci_high": 0.00073,
+            "p_value": 0.615,
+            "clears_protocol_band": false,
+            "excludes_zero": false,
+            "from": "L1",
+            "to": "L3",
+            "p_holm": 0.615,
+            "significant_holm": false
+          }
+        }
+      },
+      "learning_curve": [
+        {
+          "fraction": 0.1,
+          "train_learners": 69,
+          "train_rows": 19705,
+          "auc": 0.5962
+        },
+        {
+          "fraction": 0.25,
+          "train_learners": 173,
+          "train_rows": 46049,
+          "auc": 0.60306
+        },
+        {
+          "fraction": 0.5,
+          "train_learners": 347,
+          "train_rows": 74955,
+          "auc": 0.6112
+        },
+        {
+          "fraction": 0.75,
+          "train_learners": 521,
+          "train_rows": 129831,
+          "auc": 0.61057
+        },
+        {
+          "fraction": 1.0,
+          "train_learners": 695,
+          "train_rows": 160034,
+          "auc": 0.61169
+        }
+      ],
+      "calibration": {
+        "raw": {
+          "roc_auc": 0.61999,
+          "accuracy": 0.66131,
+          "precision": 0.66707,
+          "recall": 0.95422,
+          "f1": 0.78522,
+          "log_loss": 0.62597,
+          "brier": 0.21775,
+          "ece": 0.00294
+        },
+        "calibrated": {
+          "roc_auc": 0.61964,
+          "accuracy": 0.66111,
+          "precision": 0.66452,
+          "recall": 0.96468,
+          "f1": 0.78695,
+          "log_loss": 0.62628,
+          "brier": 0.21787,
+          "ece": 0.00648
+        },
+        "model": "lightgbm",
+        "rung": "L3"
+      },
+      "selected_model": "lightgbm"
+    },
+    "sim-V0": {
+      "rows": 152956,
+      "learners": 1000,
+      "test_learners": 200,
+      "live_rungs": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "skipped_rungs": {},
+      "rung_features": {
+        "L0": 8,
+        "L1": 16,
+        "L2": 25,
+        "L3": 31,
+        "L4": 44
+      },
+      "tuned_hyperparameters": {
+        "lightgbm": {
+          "num_leaves": 63,
+          "n_estimators": 200,
+          "min_child_samples": 100,
+          "learning_rate": 0.03
+        },
+        "logistic_elasticnet": {
+          "l1_ratio": 0.75,
+          "C": 0.03
+        }
+      },
+      "cells": {
+        "L0|logistic_elasticnet": {
+          "roc_auc": 0.62367,
+          "accuracy": 0.66637,
+          "precision": 0.67193,
+          "recall": 0.96496,
+          "f1": 0.79222,
+          "log_loss": 0.62076,
+          "brier": 0.21537,
+          "ece": 0.0094,
+          "auc": 0.62367,
+          "ci_low": 0.61094,
+          "ci_high": 0.63635,
+          "learners": 800,
+          "features": 8,
+          "rung": "L0",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 0.62
+        },
+        "L0|lightgbm": {
+          "roc_auc": 0.62165,
+          "accuracy": 0.66703,
+          "precision": 0.67329,
+          "recall": 0.96127,
+          "f1": 0.79191,
+          "log_loss": 0.6198,
+          "brier": 0.21503,
+          "ece": 0.00566,
+          "auc": 0.62165,
+          "ci_low": 0.60825,
+          "ci_high": 0.63536,
+          "learners": 800,
+          "features": 8,
+          "rung": "L0",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 63,
+            "n_estimators": 200,
+            "min_child_samples": 100,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 2.15
+        },
+        "L1|logistic_elasticnet": {
+          "roc_auc": 0.62384,
+          "accuracy": 0.66593,
+          "precision": 0.6715,
+          "recall": 0.96543,
+          "f1": 0.79208,
+          "log_loss": 0.62063,
+          "brier": 0.21534,
+          "ece": 0.00872,
+          "auc": 0.62384,
+          "ci_low": 0.61131,
+          "ci_high": 0.63662,
+          "learners": 800,
+          "features": 16,
+          "rung": "L1",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 1.16
+        },
+        "L1|lightgbm": {
+          "roc_auc": 0.62372,
+          "accuracy": 0.6667,
+          "precision": 0.67285,
+          "recall": 0.96213,
+          "f1": 0.79189,
+          "log_loss": 0.61926,
+          "brier": 0.21482,
+          "ece": 0.00467,
+          "auc": 0.62372,
+          "ci_low": 0.61108,
+          "ci_high": 0.63665,
+          "learners": 800,
+          "features": 16,
+          "rung": "L1",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 63,
+            "n_estimators": 200,
+            "min_child_samples": 100,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 3.76
+        },
+        "L2|logistic_elasticnet": {
+          "roc_auc": 0.62377,
+          "accuracy": 0.6661,
+          "precision": 0.67159,
+          "recall": 0.96558,
+          "f1": 0.79219,
+          "log_loss": 0.62062,
+          "brier": 0.21534,
+          "ece": 0.00881,
+          "auc": 0.62377,
+          "ci_low": 0.61118,
+          "ci_high": 0.63645,
+          "learners": 800,
+          "features": 25,
+          "rung": "L2",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 1.66
+        },
+        "L2|lightgbm": {
+          "roc_auc": 0.62383,
+          "accuracy": 0.66738,
+          "precision": 0.67341,
+          "recall": 0.96181,
+          "f1": 0.79218,
+          "log_loss": 0.61929,
+          "brier": 0.21483,
+          "ece": 0.00383,
+          "auc": 0.62383,
+          "ci_low": 0.61103,
+          "ci_high": 0.63652,
+          "learners": 800,
+          "features": 25,
+          "rung": "L2",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 63,
+            "n_estimators": 200,
+            "min_child_samples": 100,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 4.45
+        },
+        "L3|logistic_elasticnet": {
+          "roc_auc": 0.62373,
+          "accuracy": 0.66621,
+          "precision": 0.67158,
+          "recall": 0.96597,
+          "f1": 0.79231,
+          "log_loss": 0.62064,
+          "brier": 0.21536,
+          "ece": 0.00854,
+          "auc": 0.62373,
+          "ci_low": 0.61116,
+          "ci_high": 0.63627,
+          "learners": 800,
+          "features": 31,
+          "rung": "L3",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 2.2
+        },
+        "L3|lightgbm": {
+          "roc_auc": 0.62352,
+          "accuracy": 0.66702,
+          "precision": 0.67272,
+          "recall": 0.96358,
+          "f1": 0.7923,
+          "log_loss": 0.61914,
+          "brier": 0.21477,
+          "ece": 0.00297,
+          "auc": 0.62352,
+          "ci_low": 0.61088,
+          "ci_high": 0.63605,
+          "learners": 800,
+          "features": 31,
+          "rung": "L3",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 63,
+            "n_estimators": 200,
+            "min_child_samples": 100,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 4.94
+        },
+        "L4|logistic_elasticnet": {
+          "roc_auc": 0.62353,
+          "accuracy": 0.66563,
+          "precision": 0.67119,
+          "recall": 0.96587,
+          "f1": 0.79201,
+          "log_loss": 0.62068,
+          "brier": 0.21539,
+          "ece": 0.00835,
+          "auc": 0.62353,
+          "ci_low": 0.61091,
+          "ci_high": 0.63622,
+          "learners": 800,
+          "features": 44,
+          "rung": "L4",
+          "model": "logistic_elasticnet",
+          "tuned": {
+            "l1_ratio": 0.75,
+            "C": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 4.06
+        },
+        "L4|lightgbm": {
+          "roc_auc": 0.6239,
+          "accuracy": 0.66664,
+          "precision": 0.67231,
+          "recall": 0.96417,
+          "f1": 0.79221,
+          "log_loss": 0.61909,
+          "brier": 0.21476,
+          "ece": 0.00349,
+          "auc": 0.6239,
+          "ci_low": 0.61125,
+          "ci_high": 0.63668,
+          "learners": 800,
+          "features": 44,
+          "rung": "L4",
+          "model": "lightgbm",
+          "tuned": {
+            "num_leaves": 63,
+            "n_estimators": 200,
+            "min_child_samples": 100,
+            "learning_rate": 0.03
+          },
+          "folds": 5,
+          "train_seconds": 6.45
+        }
+      },
+      "ladder": {
+        "lightgbm": {
+          "L0->L1": {
+            "delta_auc": 0.00207,
+            "ci_low": 0.00068,
+            "ci_high": 0.00362,
+            "p_value": 0.005,
+            "clears_protocol_band": false,
+            "excludes_zero": true,
+            "from": "L0",
+            "to": "L1",
+            "p_holm": 0.02,
+            "significant_holm": true
+          },
+          "L1->L2": {
+            "delta_auc": 0.00011,
+            "ci_low": -0.00068,
+            "ci_high": 0.00091,
+            "p_value": 0.785,
+            "clears_protocol_band": false,
+            "excludes_zero": false,
+            "from": "L1",
+            "to": "L2",
+            "p_holm": 1.0,
+            "significant_holm": false
+          },
+          "L2->L3": {
+            "delta_auc": -0.00031,
+            "ci_low": -0.00103,
+            "ci_high": 0.00046,
+            "p_value": 0.45,
+            "clears_protocol_band": false,
+            "excludes_zero": false,
+            "from": "L2",
+            "to": "L3",
+            "p_holm": 1.0,
+            "significant_holm": false
+          },
+          "L3->L4": {
+            "delta_auc": 0.00038,
+            "ci_low": -0.00051,
+            "ci_high": 0.00133,
+            "p_value": 0.37,
+            "clears_protocol_band": false,
+            "excludes_zero": false,
+            "from": "L3",
+            "to": "L4",
+            "p_holm": 1.0,
+            "significant_holm": false
+          }
+        },
+        "logistic_elasticnet": {
+          "L0->L1": {
+            "delta_auc": 0.00017,
+            "ci_low": -0.00016,
+            "ci_high": 0.00062,
+            "p_value": 0.375,
+            "clears_protocol_band": false,
+            "excludes_zero": false,
+            "from": "L0",
+            "to": "L1",
+            "p_holm": 1.0,
+            "significant_holm": false
+          },
+          "L1->L2": {
+            "delta_auc": -7e-05,
+            "ci_low": -0.00032,
+            "ci_high": 0.00019,
+            "p_value": 0.635,
+            "clears_protocol_band": false,
+            "excludes_zero": false,
+            "from": "L1",
+            "to": "L2",
+            "p_holm": 1.0,
+            "significant_holm": false
+          },
+          "L2->L3": {
+            "delta_auc": -4e-05,
+            "ci_low": -0.00021,
+            "ci_high": 0.00013,
+            "p_value": 0.57,
+            "clears_protocol_band": false,
+            "excludes_zero": false,
+            "from": "L2",
+            "to": "L3",
+            "p_holm": 1.0,
+            "significant_holm": false
+          },
+          "L3->L4": {
+            "delta_auc": -0.0002,
+            "ci_low": -0.00066,
+            "ci_high": 0.00038,
+            "p_value": 0.485,
+            "clears_protocol_band": false,
+            "excludes_zero": false,
+            "from": "L3",
+            "to": "L4",
+            "p_holm": 1.0,
+            "significant_holm": false
+          }
+        }
+      },
+      "learning_curve": [
+        {
+          "fraction": 0.1,
+          "train_learners": 64,
+          "train_rows": 8057,
+          "auc": 0.58804
+        },
+        {
+          "fraction": 0.25,
+          "train_learners": 160,
+          "train_rows": 23564,
+          "auc": 0.60176
+        },
+        {
+          "fraction": 0.5,
+          "train_learners": 320,
+          "train_rows": 50240,
+          "auc": 0.61415
+        },
+        {
+          "fraction": 0.75,
+          "train_learners": 480,
+          "train_rows": 75323,
+          "auc": 0.61774
+        },
+        {
+          "fraction": 1.0,
+          "train_learners": 640,
+          "train_rows": 103317,
+          "auc": 0.61799
+        }
+      ],
+      "calibration": {
+        "raw": {
+          "roc_auc": 0.6239,
+          "accuracy": 0.66664,
+          "precision": 0.67231,
+          "recall": 0.96417,
+          "f1": 0.79221,
+          "log_loss": 0.61909,
+          "brier": 0.21476,
+          "ece": 0.00349
+        },
+        "calibrated": {
+          "roc_auc": 0.62389,
+          "accuracy": 0.66545,
+          "precision": 0.6681,
+          "recall": 0.97852,
+          "f1": 0.79405,
+          "log_loss": 0.61978,
+          "brier": 0.21507,
+          "ece": 0.01031
+        },
+        "model": "lightgbm",
+        "rung": "L4"
+      },
+      "selected_model": "lightgbm"
+    }
+  },
+  "figure_findings": {
+    "shap": {
+      "shap_share_by_class": {
+        "correctness": 0.65654,
+        "timing": 0.10479,
+        "interaction": 0.03557,
+        "session": 0.0655,
+        "motor": 0.13761
+      },
+      "top_features": {
+        "prior_accuracy": 0.333681,
+        "correct": 0.037599,
+        "prior_attempts": 0.035006,
+        "question_number": 0.01907,
+        "log_lag_time": 0.018063,
+        "skill_prior_accuracy": 0.017192,
+        "rt_drift": 0.011769,
+        "velocity_mean": 0.011594,
+        "max_deviation": 0.011333,
+        "velocity_peak": 0.011264
+      },
+      "rq2_top_motor_feature": {
+        "feature": "velocity_mean",
+        "mean_abs_shap": 0.011594,
+        "share_of_total": 0.01733
+      }
+    },
+    "subgroups": {
+      "assistments_2009|low": {
+        "source": "assistments_2009",
+        "tercile": "low",
+        "auc": 0.70515,
+        "n": 67451,
+        "base_rate": 0.4827
+      },
+      "assistments_2009|middle": {
+        "source": "assistments_2009",
+        "tercile": "middle",
+        "auc": 0.62021,
+        "n": 67461,
+        "base_rate": 0.6864
+      },
+      "assistments_2009|high": {
+        "source": "assistments_2009",
+        "tercile": "high",
+        "auc": 0.60489,
+        "n": 67379,
+        "base_rate": 0.8058
+      },
+      "assistments_2012|low": {
+        "source": "assistments_2012",
+        "tercile": "low",
+        "auc": 0.66254,
+        "n": 67235,
+        "base_rate": 0.5678
+      },
+      "assistments_2012|middle": {
+        "source": "assistments_2012",
+        "tercile": "middle",
+        "auc": 0.60301,
+        "n": 67907,
+        "base_rate": 0.7139
+      },
+      "assistments_2012|high": {
+        "source": "assistments_2012",
+        "tercile": "high",
+        "auc": 0.61307,
+        "n": 66276,
+        "base_rate": 0.814
+      },
+      "ednet_kt1|low": {
+        "source": "ednet_kt1",
+        "tercile": "low",
+        "auc": 0.59321,
+        "n": 72480,
+        "base_rate": 0.5481
+      },
+      "ednet_kt1|middle": {
+        "source": "ednet_kt1",
+        "tercile": "middle",
+        "auc": 0.56194,
+        "n": 73771,
+        "base_rate": 0.6652
+      },
+      "ednet_kt1|high": {
+        "source": "ednet_kt1",
+        "tercile": "high",
+        "auc": 0.57826,
+        "n": 69879,
+        "base_rate": 0.7359
+      },
+      "sim-V0|low": {
+        "source": "sim-V0",
+        "tercile": "low",
+        "auc": 0.55473,
+        "n": 43070,
+        "base_rate": 0.5436
+      },
+      "sim-V0|middle": {
+        "source": "sim-V0",
+        "tercile": "middle",
+        "auc": 0.51259,
+        "n": 40754,
+        "base_rate": 0.6571
+      },
+      "sim-V0|high": {
+        "source": "sim-V0",
+        "tercile": "high",
+        "auc": 0.56346,
+        "n": 41529,
+        "base_rate": 0.7808
+      }
+    },
+    "incremental_trajectory": {
+      "sim-V0": {
+        "learners_compared": 642,
+        "mean_delta_auc": 0.00113,
+        "median_delta_auc": 0.00355,
+        "share_improved": 0.5358,
+        "from_rung": "L3"
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "target": "assistments_2012",
+  "seed": 20260821,
+  "ks_limit": 0.15,
+  "sim_learners": 1000,
+  "sim_rows": 153956,
+  "checks": {
+    "accuracy": {
+      "ks_d": 0.0576,
+      "p_value": 0.003326763576398878,
+      "real_mean": 0.6878,
+      "sim_mean": 0.6782,
+      "real_sd": 0.1696,
+      "sim_sd": 0.1628,
+      "n_real": 22422,
+      "n_sim": 1000
+    },
+    "log_response_time": {
+      "ks_d": 0.0491,
+      "p_value": 1.7796838635476807e-182,
+      "real_mean": 10.2805,
+      "sim_mean": 10.3662,
+      "real_sd": 1.0917,
+      "sim_sd": 1.1024,
+      "n_real": 200000,
+      "n_sim": 153956
+    },
+    "sequence_length": {
+      "ks_d": 0.0383,
+      "p_value": 0.11840190631228442,
+      "real_mean": 115.6737,
+      "sim_mean": 153.956,
+      "real_sd": 159.3052,
+      "sim_sd": 305.9094,
+      "n_real": 22422,
+      "n_sim": 1000
+    },
+    "session_decay_slope": {
+      "ks_d": 0.107,
+      "p_value": 4.543057135416351e-23,
+      "real_mean": 0.0023,
+      "sim_mean": -0.0,
+      "real_sd": 0.0181,
+      "sim_sd": 0.017,
+      "n_real": 55825,
+      "n_sim": 2364
+    }
+  },
+  "documented_mismatches": {}
+}

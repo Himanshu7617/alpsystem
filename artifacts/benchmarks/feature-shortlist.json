@@ -1,0 +1,125 @@
+{
+  "criteria": {
+    "min_mutual_information": 0.0001,
+    "redundant_abs_correlation": 0.95,
+    "sources_examined": [
+      "assistments_2009",
+      "assistments_2012",
+      "ednet_kt1",
+      "sim-V0"
+    ],
+    "note": "a feature survives if it is available somewhere, not duplicated by a better-informed twin, and not simultaneously uninformative and unimportant. Value is decided by Phase 6's ablation ladder, not here."
+  },
+  "kept": [
+    "correct",
+    "attempt_count",
+    "prior_accuracy",
+    "prior_attempts",
+    "skill_prior_accuracy",
+    "skill_prior_attempts",
+    "item_difficulty",
+    "log_response_time",
+    "log_rt_z_item",
+    "rt_drift",
+    "log_lag_time",
+    "reading_time",
+    "decision_latency",
+    "time_after_last_interaction",
+    "option_changes",
+    "option_change_entropy",
+    "option_revisits",
+    "first_selection_changed",
+    "hint_count",
+    "idle_time",
+    "visibility_changes",
+    "question_number",
+    "session_duration",
+    "matched_difficulty_accuracy_slope",
+    "matched_difficulty_speed_slope",
+    "focus_fraction",
+    "auc_toward_nonchosen",
+    "max_deviation",
+    "x_flips",
+    "sample_entropy",
+    "velocity_peak",
+    "path_ratio",
+    "time_to_first_selection",
+    "hover_time_max",
+    "hover_time_nonchosen",
+    "cursor_samples"
+  ],
+  "kept_by_class": {
+    "correctness": [
+      "correct",
+      "attempt_count",
+      "prior_accuracy",
+      "prior_attempts",
+      "skill_prior_accuracy",
+      "skill_prior_attempts",
+      "item_difficulty"
+    ],
+    "timing": [
+      "log_response_time",
+      "log_rt_z_item",
+      "rt_drift",
+      "log_lag_time",
+      "reading_time",
+      "decision_latency",
+      "time_after_last_interaction"
+    ],
+    "interaction": [
+      "option_changes",
+      "option_change_entropy",
+      "option_revisits",
+      "first_selection_changed",
+      "hint_count",
+      "idle_time",
+      "visibility_changes"
+    ],
+    "session": [
+      "question_number",
+      "session_duration",
+      "matched_difficulty_accuracy_slope",
+      "matched_difficulty_speed_slope",
+      "focus_fraction"
+    ],
+    "motor": [
+      "auc_toward_nonchosen",
+      "max_deviation",
+      "x_flips",
+      "sample_entropy",
+      "velocity_peak",
+      "path_ratio",
+      "time_to_first_selection",
+      "hover_time_max",
+      "hover_time_nonchosen",
+      "cursor_samples"
+    ]
+  },
+  "dropped": {
+    "n_options": "constant in every source that supplies it (sim-V0) \u2014 this deployment cannot vary it",
+    "response_time_vs_estimate": "mutual information 0.00e+00 below 1e-04 and permutation importance +0.000000",
+    "skipped": "constant in every source that supplies it (sim-V0) \u2014 this deployment cannot vary it",
+    "idle_count": "redundant with visibility_changes (|r| > 0.95 in sim-V0: {'sim-V0': 1.0}), which carries more information \u2014 measured on simulated data only, so this is a property of the generative model until real telemetry can separate them",
+    "idle_fraction": "redundant with focus_fraction (|r| > 0.95 in sim-V0: {'sim-V0': -1.0}), which carries more information \u2014 measured on simulated data only, so this is a property of the generative model until real telemetry can separate them",
+    "velocity_mean": "mutual information 0.00e+00 below 1e-04 and permutation importance -0.000030",
+    "pause_count": "mutual information 0.00e+00 below 1e-04 and permutation importance +0.000000",
+    "time_to_first_movement": "redundant with time_to_first_selection (|r| > 0.95 in sim-V0: {'sim-V0': 1.0}), which carries more information \u2014 measured on simulated data only, so this is a property of the generative model until real telemetry can separate them"
+  },
+  "high_collinearity_vif_above_10": {
+    "idle_fraction": 105762738.724,
+    "focus_fraction": 105759863.638,
+    "response_time_vs_estimate": 39432752.519,
+    "decision_latency": 15102925.23,
+    "reading_time": 9330937.823,
+    "time_to_first_selection": 1202734.636,
+    "time_to_first_movement": 1202180.958,
+    "option_changes": 96.642,
+    "cursor_samples": 59.488,
+    "option_revisits": 49.911,
+    "option_change_entropy": 38.894,
+    "log_response_time": 33.624,
+    "log_rt_z_item": 21.857,
+    "question_number": 10.862
+  }
+}

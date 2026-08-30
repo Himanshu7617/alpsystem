@@ -1,0 +1,35 @@
+# Serving only — the subset of requirements.txt that `app.main` actually
+# reaches at request time, traced through its imports.
+#
+# The research pipeline's set (requirements.txt) installs mlflow, catboost,
+# shap, pykt-toolkit, pyBKT, stable-baselines3, matplotlib and weasyprint on
+# top of this. None of them is on the serving path: study1/study2 import
+# mlflow inside their training functions, baselines.py imports pyBKT and pykt
+# inside theirs, and learned.py imports stable_baselines3 only in the rl_ppo
+# branch. Installing them anyway is what makes the pipeline image 11.3 GB,
+# which no free hosting tier accepts.
+#
+# Keep this file in step with requirements.txt: same pins, fewer lines. If a
+# serving import is added, add it here too — the container fails at request
+# time, not at build time, when this drifts.
+#
+# torch ships a CPU-only build on PyTorch's own index; the default PyPI wheel
+# carries the CUDA runtime and is several GB for no benefit on a CPU host.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Service
+fastapi==0.141.1
+uvicorn==0.52.4
+pydantic==2.13.4
+
+# Data and numerics
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.17.1
+joblib==1.5.3
+
+# Models: scikit-learn unpickles the state calibrators, lightgbm unpickles the
+# Study 1 artifact, torch loads the Phase 7 state encoder.
+scikit-learn==1.9.0
+lightgbm==4.7.0
+torch==2.13.0

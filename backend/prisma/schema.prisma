@@ -1,0 +1,263 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+}
+
+model Session {
+  session_id         String   @id
+  topic              String
+  mastery            Float    @default(0.1) // Represents knowledge score (0 to 1)
+  asked_questions    Json
+  correct_answers    Int      @default(0)
+  wrong_answers      Int      @default(0)
+  current_difficulty String   @default("easy")
+  createdAt          DateTime @default(now())
+
+  // New fields for the upgraded rule-based system
+  confidence         Float    @default(0.5)
+  engagement         Float    @default(0.8)
+  cognitive_load     Float    @default(0.2)
+  fatigue            Float    @default(0.0)
+  history            Json     @default("[]")
+  source             String   @default("synthetic")  // "synthetic" or "pilot"
+
+  // --- Phase 2 telemetry ---
+  learner_id         String?
+  consent_id         String?
+  version            Int      @default(0)   // optimistic concurrency: every state write bumps it
+  started_at         DateTime @default(now())
+  ended_at           DateTime?
+
+  questions          Question[]
+  attempts           ItemAttempt[]
+  events             InteractionEvent[]
+  cursor_segments    CursorSegment[]
+  probes             Probe[]
+  state_estimates    StateEstimate[]
+  decisions          Decision[]
+  assignment         ExperimentAssignment?
+}
+
+model Question {
+  question_id          String   @id @default(uuid()) @map("question_id")
+  session_id           String   @map("session_id")
+  session              Session  @relation(fields: [session_id], references: [session_id], onDelete: Cascade)
+  
+  id                   String   @map("id") // Original ID like "q1", "q2"
+  difficulty           String   @map("difficulty")
+  questionType         String   @default("mcq") @map("question_type")
+  question             String   @map("question")
+  options              Json     @map("options")
+  correctAnswer        String   @map("correct_answer")
+  explanation          String   @map("explanation")
+  estimatedTimeSeconds Int      @default(30) @map("estimated_time_seconds")
+  concepts             Json     @default("[]") @map("concepts")
+  tags                 Json     @default("[]") @map("tags")
+  learningObjective    String   @default("") @map("learning_objective")
+  prerequisiteLevel    Int      @default(1) @map("prerequisite_level")
+  difficultyScore      Int      @default(1) @map("difficulty_score")
+  sourceType           String   @default("generated") @map("source_type")
+  asked                Boolean  @default(false) @map("asked")
+}
+
+model Learner {
+  id              String   @id @default(uuid())
+  username        String   @unique
+  email           String?  @unique
+  passwordHash    String?
+  role            String   @default("user")  // "user" or "admin"
+  concept_mastery Json     @default("{}")  
+  roadmap_state   Json     @default("{}")  
+  total_questions Int      @default(0)
+  total_correct   Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+
+// ---------------------------------------------------------------------------
+// Phase 2 — telemetry, labels and decision logging.
+//
+// Every model below exists so a research question stays answerable later:
+// InteractionEvent is the raw record, ItemAttempt the per-item unit of
+// analysis, CursorSegment the privacy-preserving aggregate of a trajectory,
+// Probe the self-report label, StateEstimate the model output with its
+// uncertainty, Decision the logged action *with its propensity*. Propensity is
+// required, not optional: Study 3 (offline policy evaluation) is impossible
+// without it and it cannot be backfilled.
+// ---------------------------------------------------------------------------
+
+model Consent {
+  consent_id  String   @id @default(uuid())
+  learner_id  String
+  // One boolean per signal class. The platform must run correctly with any
+  // subset disabled — that is the mechanism behind the RQ4 privacy-utility
+  // curve, not a nice-to-have. `correctness` is the only class that cannot be
+  // switched off, because without it there is no adaptive system at all.
+  correctness Boolean  @default(true)
+  timing      Boolean  @default(true)
+  interaction Boolean  @default(true)
+  motor       Boolean  @default(true)
+  probes      Boolean  @default(true)
+  user_agent  String?
+  createdAt   DateTime @default(now())
+
+  @@index([learner_id])
+}
+
+model ItemAttempt {
+  attempt_id       String   @id @default(uuid())
+  session_id       String
+  session          Session  @relation(fields: [session_id], references: [session_id], onDelete: Cascade)
+  item_id          String   // bank id, e.g. "ds-e-1"
+  question_id      String?  // Question.question_id for this session
+  seq              Int      // 1-based position within the session
+  correct          Boolean  // computed server-side from the answer key, never trusted from the client
+  selected_index   Int?
+  skipped          Boolean  @default(false)
+  presented_at     DateTime?
+  submitted_at     DateTime @default(now())
+  response_time_ms Int?
+  features         Json     @default("{}")  // the extractor's output, verbatim
+  feature_version  String?
+
+  cursor_segments  CursorSegment[]
+  probes           Probe[]
+  state_estimates  StateEstimate[]
+  decisions        Decision[]
+
+  @@unique([session_id, seq])
+  @@index([session_id])
+}
+
+model InteractionEvent {
+  event_id   String   @id            // client-generated uuid — the idempotency key for batch ingest
+  session_id String
+  session    Session  @relation(fields: [session_id], references: [session_id], onDelete: Cascade)
+  learner_id String?
+  item_id    String?
+  attempt_id String?
+  type       String
+  client_ts  DateTime
+  server_ts  DateTime @default(now())
+  seq        Int
+  payload    Json     @default("{}")
+
+  @@index([session_id, seq])
+  @@index([type])
+}
+
+model CursorSegment {
+  segment_id                String       @id @default(uuid())
+  session_id                String
+  session                   Session      @relation(fields: [session_id], references: [session_id], onDelete: Cascade)
+  attempt_id                String?
+  attempt                   ItemAttempt? @relation(fields: [attempt_id], references: [attempt_id], onDelete: SetNull)
+  item_id                   String?
+  // Aggregated trajectory features only. Raw pointer samples live in a
+  // session-scoped client buffer and are discarded after this row is derived —
+  // a privacy requirement, not a storage optimisation.
+  auc_toward_nonchosen      Float
+  max_deviation             Float
+  x_flips                   Int
+  sample_entropy            Float
+  velocity_peak             Float
+  velocity_mean             Float
+  pause_count               Int
+  path_ratio                Float
+  time_to_first_movement_ms Int
+  time_to_first_selection_ms Int
+  hover_time_ms             Json    @default("[]")  // per option, index-aligned with the item's options
+  n_samples                 Int
+  sample_interval_ms        Int     @default(50)
+  createdAt                 DateTime @default(now())
+
+  @@index([session_id])
+}
+
+model Probe {
+  probe_id     String       @id @default(uuid())
+  session_id   String
+  session      Session      @relation(fields: [session_id], references: [session_id], onDelete: Cascade)
+  attempt_id   String?
+  attempt      ItemAttempt? @relation(fields: [attempt_id], references: [attempt_id], onDelete: SetNull)
+  item_id      String?
+  kind         String       // "confidence" | "perceived_difficulty" | "effort"
+  scale_points Int
+  shown_at     DateTime
+  answered_at  DateTime?
+  response     Int?
+  skipped      Boolean      @default(false)   // skipping is itself data
+  // Probe assignment is randomised but reproducible: the draw is a function of
+  // (session seed, item sequence) and both the probability and the draw are
+  // stored so assignment is analysable rather than merely happening.
+  assign_p     Float
+  assign_draw  Float
+
+  @@index([session_id])
+  @@index([kind])
+}
+
+model StateEstimate {
+  estimate_id         String       @id @default(uuid())
+  session_id          String
+  session             Session      @relation(fields: [session_id], references: [session_id], onDelete: Cascade)
+  attempt_id          String?
+  attempt             ItemAttempt? @relation(fields: [attempt_id], references: [attempt_id], onDelete: SetNull)
+  knowledge           Float
+  knowledge_se        Float?
+  knowledge_validated Boolean      @default(false)
+  engagement          Float
+  engagement_se       Float?
+  engagement_validated Boolean     @default(false)
+  confidence          Float
+  confidence_se       Float?
+  confidence_validated Boolean     @default(false)
+  fatigue             Float
+  fatigue_se          Float?
+  fatigue_validated   Boolean      @default(false)
+  estimator           String       // which model produced this
+  estimator_version   String
+  createdAt           DateTime     @default(now())
+
+  @@index([session_id])
+}
+
+model Decision {
+  decision_id     String       @id @default(uuid())
+  session_id      String
+  session         Session      @relation(fields: [session_id], references: [session_id], onDelete: Cascade)
+  attempt_id      String?
+  attempt         ItemAttempt? @relation(fields: [attempt_id], references: [attempt_id], onDelete: SetNull)
+  policy_name     String
+  policy_version  String
+  action          Json         // {"item_id": ..., "difficulty": ...}
+  action_space    Json         // every candidate considered, with its score and probability
+  propensity      Float        // P(chosen action | state) under the logging policy. Required.
+  state_snapshot  Json
+  explanation     Json         @default("{}")
+  createdAt       DateTime     @default(now())
+
+  @@index([session_id])
+}
+
+model ExperimentAssignment {
+  assignment_id String   @id @default(uuid())
+  learner_id    String
+  session_id    String   @unique
+  session       Session  @relation(fields: [session_id], references: [session_id], onDelete: Cascade)
+  arm           String
+  policy_name   String
+  seed          Int
+  createdAt     DateTime @default(now())
+
+  @@index([learner_id])
+}

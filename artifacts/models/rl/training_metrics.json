@@ -1,0 +1,13 @@
+{
+  "timesteps": 50000,
+  "resumed_from": 50000,
+  "trained_this_run": 0,
+  "seconds": 0.0,
+  "episodes": 0,
+  "curve": [],
+  "sample_efficiency": {
+    "reached": false,
+    "timesteps": null,
+    "baseline": 0.007731900841550132
+  }
+}

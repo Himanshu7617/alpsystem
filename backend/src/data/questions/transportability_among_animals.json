@@ -1,0 +1,848 @@
+{
+  "topic": "Transportability among animals",
+  "questions": [
+    {
+      "id": "q1",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "Which of the following terms describes the movement of an organism from its birth site to its breeding site, or from one breeding site to another?",
+      "options": [
+        "Dispersal",
+        "Hibernation",
+        "Estivation",
+        "Echolocation"
+      ],
+      "correctAnswer": "Dispersal",
+      "explanation": "Dispersal refers to both the movement of individuals away from their birth site (natal dispersal) and the movement from one breeding site to another (breeding dispersal).",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "Animal Dispersal",
+        "Locomotion"
+      ],
+      "tags": [
+        "dispersal",
+        "ecology",
+        "movement"
+      ],
+      "learningObjective": "Define and identify the primary biological meaning of animal dispersal.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 1,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q2",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "What is the term used for the passive transport of small spiders through the air using silk threads caught by the wind?",
+      "options": [
+        "Ballooning",
+        "Gliding",
+        "Phoresy",
+        "Anemochory"
+      ],
+      "correctAnswer": "Ballooning",
+      "explanation": "Ballooning (sometimes called kiting) is a process by which spiders and some other small invertebrates move through the air by releasing fine silk threads to catch wind currents and electrostatic forces.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "Passive Transport",
+        "Passive Dispersal"
+      ],
+      "tags": [
+        "spiders",
+        "aerobiology",
+        "ballooning"
+      ],
+      "learningObjective": "Describe the mechanism of ballooning in arachnids as a form of passive aerial transport.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 2,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q3",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "Which term refers to the transport of plant seeds or propagules on the outside of an animal's body, such as stuck to fur or feathers?",
+      "options": [
+        "Endozoochory",
+        "Ectozoochory",
+        "Myrmecochory",
+        "Anemochory"
+      ],
+      "correctAnswer": "Ectozoochory",
+      "explanation": "Ectozoochory (or epizoochory) is seed dispersal where plant propagules physically attach to the external surface of animals (fur, feathers, or skin) and are transported to new locations.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "Zoochory",
+        "Symbiosis"
+      ],
+      "tags": [
+        "zoochory",
+        "seed dispersal",
+        "ecology"
+      ],
+      "learningObjective": "Distinguish between external and internal transport of seeds by animal vectors.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 2,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q4",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "Which of the following is the primary mechanism of passive transport for marine planktonic larvae over long distances?",
+      "options": [
+        "Jet propulsion",
+        "Ocean currents",
+        "Flagellar beating",
+        "Undulatory swimming"
+      ],
+      "correctAnswer": "Ocean currents",
+      "explanation": "Most marine larvae are planktonic and rely heavily on ocean currents and tides for long-distance transport (passive dispersal) because their own swimming capabilities are highly limited.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "Oceanic Transport",
+        "Passive Dispersal"
+      ],
+      "tags": [
+        "marine biology",
+        "currents",
+        "larvae"
+      ],
+      "learningObjective": "Identify the primary environmental driver of passive transport in marine larval stages.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 1,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q5",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "What specialized anatomical structure do female marsupials possess to transport and nurture their underdeveloped offspring?",
+      "options": [
+        "Placenta",
+        "Marsupium",
+        "Gular pouch",
+        "Crop"
+      ],
+      "correctAnswer": "Marsupium",
+      "explanation": "The marsupium is an external abdominal pouch found in most marsupials, serving as a transport and protection chamber for carrying young during early development.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "Parental Transport",
+        "Mammalian Anatomy"
+      ],
+      "tags": [
+        "marsupials",
+        "anatomy",
+        "offspring transport"
+      ],
+      "learningObjective": "Identify the anatomical structure used by marsupials to carry and transport their young.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 1,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q6",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "What is the biological term for an association where one organism attaches to another solely for the purpose of travel and transport, without causing harm?",
+      "options": [
+        "Phoresy",
+        "Parasitism",
+        "Predation",
+        "Mutualism"
+      ],
+      "correctAnswer": "Phoresy",
+      "explanation": "Phoresy is a non-parasitic association in which one organism (the phoront) attaches to another (the host) for the sole purpose of transportation.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "Phoresy",
+        "Symbiosis"
+      ],
+      "tags": [
+        "symbiosis",
+        "phoresy",
+        "transport"
+      ],
+      "learningObjective": "Define phoresy and recognize it as a specialized form of interspecific transport.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 2,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q7",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "Which of the following is the only group of mammals capable of active, self-powered flight (volant transport)?",
+      "options": [
+        "Flying squirrels",
+        "Sugar gliders",
+        "Bats",
+        "Flying lemurs"
+      ],
+      "correctAnswer": "Bats",
+      "explanation": "Bats (order Chiroptera) are the only mammals capable of sustained, active powered flight. Other 'flying' mammals like flying squirrels can only glide passively.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "Active Transport",
+        "Animal Locomotion"
+      ],
+      "tags": [
+        "bats",
+        "flight",
+        "mammals"
+      ],
+      "learningObjective": "Distinguish between active flight and passive gliding transport capabilities in mammals.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 1,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q8",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "What is the term for the regular, seasonal, two-way transport or movement of animal populations between distinct geographic regions?",
+      "options": [
+        "Migration",
+        "Emigration",
+        "Immigration",
+        "Speciation"
+      ],
+      "correctAnswer": "Migration",
+      "explanation": "Migration is the synchronized, seasonal movement of animal populations from one region to another, typically for breeding or feeding, and involves a return journey.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "Migration",
+        "Animal Dispersal"
+      ],
+      "tags": [
+        "migration",
+        "ecology",
+        "behavior"
+      ],
+      "learningObjective": "Define migration and distinguish it from one-way dispersal processes.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 1,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q9",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "How do rolling dung beetles primarily transport their collected dung to protect it from competitors?",
+      "options": [
+        "Carrying it in their mandibles",
+        "Dragging it backward using their hind legs",
+        "Pushing it forward with their forelegs",
+        "Swallowing and regurgitating it"
+      ],
+      "correctAnswer": "Dragging it backward using their hind legs",
+      "explanation": "Rolling dung beetles roll dung into a ball and transport it by walking backward and pushing/dragging the ball with their hind legs.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "Food Transport",
+        "Insect Locomotion"
+      ],
+      "tags": [
+        "beetles",
+        "behavior",
+        "biomechanics"
+      ],
+      "learningObjective": "Describe the behavioral and physical mechanism of dung transport by rolling dung beetles.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 3,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q10",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "Which of the following structures do pelicans use to catch and temporarily transport fish?",
+      "options": [
+        "Crop",
+        "Gular pouch",
+        "Cloaca",
+        "Proventriculus"
+      ],
+      "correctAnswer": "Gular pouch",
+      "explanation": "Pelicans have a highly distensible throat pouch called a gular pouch, which they use to scoop up water and fish, draining the water before transporting the fish to digest or feed young.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "Food Transport",
+        "Avian Anatomy"
+      ],
+      "tags": [
+        "birds",
+        "pelicans",
+        "anatomy"
+      ],
+      "learningObjective": "Identify the biological structure used by pelicans for food acquisition and transport.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 2,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q11",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "What is the key ecological distinction between endozoochory and ectozoochory?",
+      "options": [
+        "Endozoochory involves seed dispersal by wind, while ectozoochory involves water transport.",
+        "Endozoochory requires seeds to pass through the animal's digestive tract, whereas ectozoochory involves seeds attaching to the outside of the animal.",
+        "Endozoochory is practiced only by invertebrates, whereas ectozoochory is exclusive to vertebrates.",
+        "Endozoochory leads to seed damage, while ectozoochory always enhances seed germination."
+      ],
+      "correctAnswer": "Endozoochory requires seeds to pass through the animal's digestive tract, whereas ectozoochory involves seeds attaching to the outside of the animal.",
+      "explanation": "Endozoochory is internal seed dispersal, where animals eat the seeds and deposit them elsewhere after digestion. Ectozoochory is external, relying on adhesive structures (hooks, mucus) to cling to the animal's exterior.",
+      "estimatedTimeSeconds": 60,
+      "concepts": [
+        "Seed Dispersal Mechanisms",
+        "Ecosystem Interactions"
+      ],
+      "tags": [
+        "zoochory",
+        "dispersal",
+        "ecology"
+      ],
+      "learningObjective": "Differentiate between internal and external biological transport of seeds by animal vectors.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 4,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q12",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "Pseudoscorpions frequently engage in phoretic transport. How do they physically secure themselves to larger host insects like beetles or flies?",
+      "options": [
+        "Using specialized silk threads spun from their spinnerets",
+        "Using adhesive pads on their tarsi (feet)",
+        "Clasping the host's leg or wing with their pedipalps (large claws)",
+        "Secreted sticky chemical compounds from glands on their abdomen"
+      ],
+      "correctAnswer": "Clasping the host's leg or wing with their pedipalps (large claws)",
+      "explanation": "Pseudoscorpions utilize their pedipalps (chelae/claws) to pinch and securely grab onto the hairs, legs, or wing bases of larger, more mobile insects to hitchhike to new microhabitats.",
+      "estimatedTimeSeconds": 60,
+      "concepts": [
+        "Phoresy Mechanisms",
+        "Arachnid Locomotion"
+      ],
+      "tags": [
+        "pseudoscorpions",
+        "phoresy",
+        "behavior"
+      ],
+      "learningObjective": "Explain the physical mechanics pseudoscorpions employ to secure phoretic transport.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 5,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q13",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "When comparing the metabolic Cost of Transport (COT) per unit mass across different modes of animal locomotion, which of the following hierarchies is generally true (from most energy-efficient to least energy-efficient)?",
+      "options": [
+        "Running > Flying > Swimming",
+        "Swimming > Flying > Running",
+        "Flying > Swimming > Running",
+        "Running > Swimming > Flying"
+      ],
+      "correctAnswer": "Swimming > Flying > Running",
+      "explanation": "Swimming is the most energy-efficient mode of transport per unit mass because water buoyancy supports the body weight. Flying is intermediate, and running is the least efficient due to gravity and the need to repeatedly accelerate and decelerate limbs.",
+      "estimatedTimeSeconds": 75,
+      "concepts": [
+        "Cost of Transport",
+        "Biomechanics"
+      ],
+      "tags": [
+        "energetics",
+        "locomotion",
+        "physics"
+      ],
+      "learningObjective": "Analyze and compare the metabolic efficiency of swimming, flying, and running transport modes.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 6,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q14",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "How does 'rafting' (dispersal on floating vegetation) act as a vector for passive overseas transport, and what is its primary evolutionary consequence in island biogeography?",
+      "options": [
+        "It leads to uniform genetic structures across islands because the transport is highly predictable.",
+        "It acts as a sweepstake dispersal route, allowing rare, long-distance colonization of islands by terrestrial animals.",
+        "It prevents speciation by keeping island populations in constant genetic contact with mainland populations.",
+        "It is only viable for aquatic animals, as terrestrial animals cannot survive high salinity."
+      ],
+      "correctAnswer": "It acts as a sweepstake dispersal route, allowing rare, long-distance colonization of islands by terrestrial animals.",
+      "explanation": "Rafting is an unpredictable, rare ('sweepstake') event that occasionally transports terrestrial animals (like lizards or rodents) over oceanic barriers. This allows them to colonize isolated islands, initiating allopatric speciation.",
+      "estimatedTimeSeconds": 60,
+      "concepts": [
+        "Rafting Dispersal",
+        "Island Biogeography"
+      ],
+      "tags": [
+        "biogeography",
+        "evolution",
+        "rafting"
+      ],
+      "learningObjective": "Explain the role of passive rafting transport in shaping island community structures and speciation.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 6,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q15",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "Many blood-feeding arthropods (such as mosquitoes or ticks) act as vectors for pathogens. What is the primary method of pathogen transport from the vector to the host animal?",
+      "options": [
+        "Mechanical transfer from the vector's wings during flight",
+        "Biological transmission via salivary secretions injected during feeding",
+        "Inhalation of airborne dander shed by the vector",
+        "Absorption of pathogens through the host's intact skin upon contact"
+      ],
+      "correctAnswer": "Biological transmission via salivary secretions injected during feeding",
+      "explanation": "In vector-borne biological transport, pathogens multiply or develop inside the vector and are transmitted to the host animal through salivary secretions injected during hematophagy (blood-feeding).",
+      "estimatedTimeSeconds": 60,
+      "concepts": [
+        "Vector Transport",
+        "Pathogen Transmission"
+      ],
+      "tags": [
+        "vectors",
+        "parasitology",
+        "transmission"
+      ],
+      "learningObjective": "Describe the physiological process of pathogen transport from insect vector to animal host.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 5,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q16",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "Sea otters (Enhydra lutris) are known to transport physical tools (like rocks) to crack open prey. What morphological adaptation assists them in carrying these tools while swimming?",
+      "options": [
+        "A prehensile tail that wraps around objects",
+        "Loose pouches of skin under their forelimbs",
+        "Specialized storage cavities in their cheek bones",
+        "A highly texturized chest with high-friction fur"
+      ],
+      "correctAnswer": "Loose pouches of skin under their forelimbs",
+      "explanation": "Sea otters have baggy pouches of loose skin under their forelimbs (mostly the left side) where they store and transport collected food items and their favorite rocks used as tools.",
+      "estimatedTimeSeconds": 60,
+      "concepts": [
+        "Tool Transport",
+        "Morphological Adaptations"
+      ],
+      "tags": [
+        "sea otters",
+        "mammals",
+        "adaptations"
+      ],
+      "learningObjective": "Identify morphological structures used by sea otters for tool and food transport.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 5,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q17",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "Leafcutter ants (Atta spp.) optimize the transport of heavy foliage back to their nest. How is labor divided among worker castes to ensure efficient mass transport?",
+      "options": [
+        "Large majors cut and carry leaves, while small minors ride on the leaves to defend against parasitic flies.",
+        "Small minors cut the leaves, while large majors swallow and regurgitate the leaves as pulp.",
+        "Ants work in teams of three, physically carrying a single leaf together like a stretcher.",
+        "Leaves are left to dry and fly into the nest on wind currents, guided by the ants."
+      ],
+      "correctAnswer": "Large majors cut and carry leaves, while small minors ride on the leaves to defend against parasitic flies.",
+      "explanation": "In leafcutter colonies, larger workers (mediae/majors) cut and carry the leaf fragments, while tiny workers (minimae) hitchhike on the transported leaves to ward off parasitic phorid flies that try to lay eggs on the carriers' heads.",
+      "estimatedTimeSeconds": 90,
+      "concepts": [
+        "Collective Transport",
+        "Social Insect Behavior"
+      ],
+      "tags": [
+        "ants",
+        "behavior",
+        "social insects"
+      ],
+      "learningObjective": "Explain the division of labor and mutual protection strategies during collective transport in leafcutter ants.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 6,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q18",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "What primary physical constraint limits the active aerial transportability (flight) of modern insects compared to birds, keeping insects relatively small?",
+      "options": [
+        "The lack of a centralized nervous system to coordinate flight muscles",
+        "The relative inefficiency of trachea-based respiratory systems, which rely on passive gas diffusion",
+        "The aerodynamic instability of chitinous wings compared to feathered wings",
+        "Invertebrate blood (hemolymph) being unable to transport glucose"
+      ],
+      "correctAnswer": "The relative inefficiency of trachea-based respiratory systems, which rely on passive gas diffusion",
+      "explanation": "Insects rely on a tracheal system for respiration. Because gas diffusion rates decrease sharply over distance, giant sizes are unsustainable, limiting the scaling of insect size and their oxygen-intensive active transport (flight) capabilities.",
+      "estimatedTimeSeconds": 75,
+      "concepts": [
+        "Physiological Constraints",
+        "Biophysical Scaling"
+      ],
+      "tags": [
+        "insects",
+        "respiration",
+        "aerodynamics"
+      ],
+      "learningObjective": "Analyze how physical and physiological constraints limit the size and transportability of insects.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 7,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q19",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "What is the biological incentive for ants to transport seeds in 'myrmecochory', a mutualistic seed transport system?",
+      "options": [
+        "Seeds secrete toxic sap that ants use as chemical defense against predators.",
+        "Seeds have an oil-rich appendage called an elaiosome, which ants feed to their larvae.",
+        "Ants use the physical structure of the seeds to build defensive walls within their nest.",
+        "The seeds emit pheromones that mimic the queen ant's scent, tricking the workers."
+      ],
+      "correctAnswer": "Seeds have an oil-rich appendage called an elaiosome, which ants feed to their larvae.",
+      "explanation": "In myrmecochory, plants entice ants to transport their seeds by providing an elaiosome—a fleshy structure rich in lipids and proteins. Ants carry the seed to their nest, consume the elaiosome, and discard the intact seed in their nutrient-rich waste chambers.",
+      "estimatedTimeSeconds": 60,
+      "concepts": [
+        "Myrmecochory",
+        "Coevolutionary Transport"
+      ],
+      "tags": [
+        "ants",
+        "seed dispersal",
+        "symbiosis"
+      ],
+      "learningObjective": "Explain the reciprocal evolutionary benefits of myrmecochorous transport.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 5,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q20",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "How do maternal mouthbrooding cichlids transport and protect their fertilized eggs and vulnerable fry?",
+      "options": [
+        "By adhering them to the side of their scales with a specialized mucus",
+        "By holding them inside their buccal (mouth) cavity, abstaining from feeding",
+        "By transporting them inside their swim bladder, releasing them via the vent",
+        "By burying them in the sand and carrying water to them in their gills"
+      ],
+      "correctAnswer": "By holding them inside their buccal (mouth) cavity, abstaining from feeding",
+      "explanation": "Mouthbrooding cichlids collect fertilized eggs in their mouth (buccal cavity) to transport them away from danger. They brood the eggs and early fry internally, often starving during this multi-week transport and protection phase.",
+      "estimatedTimeSeconds": 60,
+      "concepts": [
+        "Parental Care",
+        "Internal Offspring Transport"
+      ],
+      "tags": [
+        "fish",
+        "behavior",
+        "reproduction"
+      ],
+      "learningObjective": "Explain the mouthbrooding mechanism of offspring protection and transport in fish.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 4,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q21",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "According to empirical allometric scaling laws of animal locomotion, how does the mass-specific Cost of Transport (COT, measured in J/kg/m) scale with body mass ($M$) across different taxa, and which locomotion mode is most energy-efficient for a given mass?",
+      "options": [
+        "COT increases with body mass ($M^{0.35}$); running is more efficient than swimming.",
+        "COT decreases with body mass ($M^{-0.30}$); swimming is more efficient than flying, which is more efficient than running.",
+        "COT is independent of body mass ($M^0$); flying is the most efficient due to lift generation.",
+        "COT decreases with body mass ($M^{-0.15}$); running is the most efficient, followed by flying and swimming."
+      ],
+      "correctAnswer": "COT decreases with body mass ($M^{-0.30}$); swimming is more efficient than flying, which is more efficient than running.",
+      "explanation": "Mass-specific Cost of Transport decreases with body mass scaling approximately as $M^{-0.30}$ (larger animals are more efficient per unit mass). Swimming has the lowest intercept (most efficient) due to buoyancy, followed by flying (lift generation), while running has the highest intercept due to mechanical work against gravity.",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "Allometric Scaling",
+        "Cost of Transport",
+        "Energetics"
+      ],
+      "tags": [
+        "physics",
+        "biomechanics",
+        "scaling laws"
+      ],
+      "learningObjective": "Analyze and calculate biological transport efficiency trends based on scaling equations and locomotive modes.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 9,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q22",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "Which mathematical model best describes the probability of successful colonization ($P$) of an island via sweepstake passive transport (rafting) as a function of distance ($d$) from the source mainland and time ($t$)?",
+      "options": [
+        "$P(d, t) = 1 - e^{-\\lambda t e^{-\\alpha d}}$",
+        "$P(d, t) = \\lambda t \\cdot \\alpha d$",
+        "$P(d, t) = e^{\\lambda t / \\alpha d}$",
+        "$P(d, t) = 1 - (\\lambda t)^{\\alpha d}$"
+      ],
+      "correctAnswer": "$P(d, t) = 1 - e^{-\\lambda t e^{-\\alpha d}}$",
+      "explanation": "Colonization via rafting is modeled as a Poisson process where arrival rate decreases exponentially with distance ($r = \\lambda e^{-\\alpha d}$). The probability of at least one successful arrival in time $t$ is $1 - e^{-rt}$, yielding $P(d, t) = 1 - e^{-\\lambda t e^{-\\alpha d}}$.",
+      "estimatedTimeSeconds": 150,
+      "concepts": [
+        "Biogeographical Modeling",
+        "Passive Transport Probabilities"
+      ],
+      "tags": [
+        "mathematics",
+        "ecology",
+        "biogeography"
+      ],
+      "learningObjective": "Apply mathematical models of probability to passive overseas transport and island colonization.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 10,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q23",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "In the Alerstam-Lindström model for optimal bird migration, how does the transport of accumulated fuel reserves (fat) affect the instantaneous flight speed and overall flight range?",
+      "options": [
+        "Fuel accumulation does not affect speed because lift and drag scale symmetrically with fuel weight.",
+        "High fuel loads increase body mass, which exponentially increases the power required to fly, leading to diminishing range returns per unit of added fat.",
+        "High fuel loads decrease body density, thereby reducing drag and making flight faster and more efficient.",
+        "Added fat increases mechanical stability, allowing birds to fly faster with lower muscle recruitment."
+      ],
+      "correctAnswer": "High fuel loads increase body mass, which exponentially increases the power required to fly, leading to diminishing range returns per unit of added fat.",
+      "explanation": "According to flight mechanics, power required scales as $M^{1.5}$ (or $M^{1.17}$ empirically). As a bird stores more fuel (fat), its total mass increases, requiring higher aerodynamic lift, which increases induced drag. This demands more power, causing a non-linear diminishing return on range for heavy fuel loads.",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "Avian Flight Aerodynamics",
+        "Migration Energetics"
+      ],
+      "tags": [
+        "birds",
+        "aerodynamics",
+        "migration"
+      ],
+      "learningObjective": "Evaluate the aerodynamic and energetic trade-offs of fuel transport during long-distance avian migration.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q24",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "How does the Reynolds number ($Re$) of a marine organism's fluid environment affect its passive transportability and larval settlement within the benthic boundary layer?",
+      "options": [
+        "At high $Re$ ($>10^4$), viscous forces dominate, making larval transport independent of turbulent eddies.",
+        "At low $Re$ ($<1$), inertial forces dominate, allowing larvae to actively launch themselves out of boundary currents.",
+        "At low $Re$ ($<1$), viscous forces dominate, making larvae behave as passive parcels of water, requiring shear stress or gravity to settle out of suspension.",
+        "At high $Re$, boundary layers vanish entirely, preventing any deposition of larvae onto substrates."
+      ],
+      "correctAnswer": "At low $Re$ ($<1$), viscous forces dominate, making larvae behave as passive parcels of water, requiring shear stress or gravity to settle out of suspension.",
+      "explanation": "In microscopic larval realms where $Re < 1$, fluid viscosity dominates over inertia. Larvae cannot glide or rely on coasting. They move purely with the fluid parcel. To exit this transport regime and settle onto substrates, they rely on boundary layer shear stresses and gravity to bring them into contact with the seabed.",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "Fluid Dynamics",
+        "Benthic Boundary Layers"
+      ],
+      "tags": [
+        "marine biology",
+        "fluid dynamics",
+        "larvae"
+      ],
+      "learningObjective": "Analyze how physical fluid dynamics (Reynolds numbers) govern the transport and settlement of marine larvae.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 9,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q25",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "In the evolutionary ecology of phoretic mites associated with burying beetles (Nicrophorus spp.), what ecological trade-off stabilizes this obligate transport relationship?",
+      "options": [
+        "The mites parasitize the beetle's wings, reducing beetle flight efficiency, but provide warmth in return.",
+        "The beetle provides transport to ephemeral carcasses; in return, the mites devour competing blowfly eggs on the carcass, protecting the beetle's food source.",
+        "Mites use the beetle for larval incubation, while the beetle digests adult mites as its primary source of dietary proteins.",
+        "Mites act as navigation guides using their superior vision, while the beetle provides physical transport."
+      ],
+      "correctAnswer": "The beetle provides transport to ephemeral carcasses; in return, the mites devour competing blowfly eggs on the carcass, protecting the beetle's food source.",
+      "explanation": "This mutualistic phoretic transport relies on a strict trade-off: mites (Poecilochirus spp.) get a free ride to ephemeral carcasses (a rare resource they cannot reach on their own). On arrival, the mites consume competitor blowfly eggs and larvae, which directly benefits the beetle's offspring by reducing resource competition.",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "Evolutionary Stable Strategies",
+        "Coevolution",
+        "Phoresy"
+      ],
+      "tags": [
+        "symbiosis",
+        "evolution",
+        "mites",
+        "beetles"
+      ],
+      "learningObjective": "Examine the reciprocal fitness advantages that maintain obligate phoretic transport relationships.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q26",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "Recent biophysical research reveals that spider 'ballooning' transport is not solely dependent on aerodynamic drag. What physical phenomenon explains how spiders can achieve lift even on windless days?",
+      "options": [
+        "Rapid metabolic warming of the silk threads, causing local thermal updrafts",
+        "Electrostatic repulsion between negatively charged silk fibers and the Earth's atmospheric potential gradient (APG)",
+        "The acoustic resonance of silk vibrating in response to infrasonic waves",
+        "Hyper-rapid physical paddling of the spider's legs to generate mechanical lift"
+      ],
+      "correctAnswer": "Electrostatic repulsion between negatively charged silk fibers and the Earth's atmospheric potential gradient (APG)",
+      "explanation": "Spiders can balloon in zero-wind conditions by utilizing the Earth's atmospheric potential gradient. The silk threads acquire a negative charge as they emerge, and the electrostatic force of the positive atmospheric field generates sufficient lift to propel the spider upward.",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "Electrostatic Lift",
+        "Arachnid Ballooning Biophysics"
+      ],
+      "tags": [
+        "physics",
+        "spiders",
+        "electromagnetism"
+      ],
+      "learningObjective": "Explain how physical forces (electrostatics and aerodynamics) interact to facilitate spider ballooning transport.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 9,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q27",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "How do cooperative-carrying ants (such as Paratrechina longicornis) resolve directional conflicts to achieve efficient collective transport of a large prey item without a central controller?",
+      "options": [
+        "By walking in circular patterns until a dominant ant chemically marks the correct direction.",
+        "Through a system of transient 'pullers' (informed ants that guide the load) and 'lifters' (uninformed ants that conform to the force applied by the pullers).",
+        "The ants systematically tear the prey item into microscopic pieces, converting collective transport into individual transport.",
+        "They utilize acoustic signaling (stridulation) to elect a single conductor ant that rides on top of the cargo."
+      ],
+      "correctAnswer": "Through a system of transient 'pullers' (informed ants that guide the load) and 'lifters' (uninformed ants that conform to the force applied by the pullers).",
+      "explanation": "Collective transport in ants is managed through dynamic force feedback. Uninformed ants act as 'lifters' that reduce friction by carrying the load's weight and aligning their pull with the moving force. Informed ants (who know the nest's direction) act as 'pullers' that steer the cargo, periodically transferring leadership.",
+      "estimatedTimeSeconds": 150,
+      "concepts": [
+        "Collective Locomotion",
+        "Emergent Behavior"
+      ],
+      "tags": [
+        "ants",
+        "cooperation",
+        "physics"
+      ],
+      "learningObjective": "Explain the mechanical and behavioral principles governing cooperative collective transport in social insects.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q28",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "According to the 'Central Place Foraging' theory, how does the transport distance ($d$) from the nest affect the selection of transport strategies between 'single-prey loaders' and 'multiple-prey loaders'?",
+      "options": [
+        "As distance ($d$) increases, multiple-prey loaders should decrease their load size to optimize speed.",
+        "As distance ($d$) increases, both strategies converge toward carrying smaller, lighter items to minimize metabolic fatigue.",
+        "Longer transport distances ($d$) favor increasing the load size (multiple-prey loading or larger single items) to offset the high travel time cost.",
+        "Distance has no effect; load size is strictly constrained by the volume of the bird's stomach."
+      ],
+      "correctAnswer": "Longer transport distances ($d$) favor increasing the load size (multiple-prey loading or larger single items) to offset the high travel time cost.",
+      "explanation": "Central Place Foraging models predict that as travel time/distance ($d$) increases, the animal should spend more time searching for and loading higher-quality or multiple items to maximize the net rate of energy delivery to the nest, offsetting the higher transit costs.",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "Central Place Foraging Theory",
+        "Optimal Foraging Models"
+      ],
+      "tags": [
+        "ecology",
+        "behavior",
+        "optimization"
+      ],
+      "learningObjective": "Predict optimal load-carrying and transport behaviors using Central Place Foraging theory.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q29",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "Lecithotrophic (non-feeding) larvae of deep-sea hydrothermal vent organisms must travel hundreds of kilometers through cold, nutrient-poor waters to colonize new vents. What physiological adaptation allows them to survive such long-distance transport?",
+      "options": [
+        "An extremely high metabolic rate that accelerates development so they reach adulthood during transit",
+        "Metabolic rate depression and low-temperature lipid stabilization, allowing them to remain in stasis for months",
+        "The ability to extract dissolved organic minerals directly from ocean salt to synthesize proteins",
+        "Photosynthesis utilizing ambient bioluminescent light from deep-sea fish"
+      ],
+      "correctAnswer": "Metabolic rate depression and low-temperature lipid stabilization, allowing them to remain in stasis for months",
+      "explanation": "Lecithotrophic larvae survive long-distance dispersal by entering a state of extreme metabolic depression. The low ambient temperature ($2^\\circ\\text{C}$) of the deep sea slows down developmental and respiratory rates, conserving their internal yolk (lipid) reserves over long transport periods.",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "Deep-sea Dispersal",
+        "Metabolic Adaptations"
+      ],
+      "tags": [
+        "marine biology",
+        "physiology",
+        "extreme environments"
+      ],
+      "learningObjective": "Analyze the metabolic strategies that enable deep-sea organisms to survive extended passive transport.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q30",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "From a biomechanical and evolutionary perspective, why have terrestrial animals not evolved biological wheels for transport, despite wheels being highly efficient on flat terrain?",
+      "options": [
+        "Wheel-like structures would violate the laws of fluid dynamics, making terrestrial respiration impossible.",
+        "The lack of evolutionary pathways to supply nutrients, nerve impulses, and vascularization across a continuously rotating joint (the axle).",
+        "Chitin and bone are physically incapable of forming circular geometries due to crystal lattice constraints.",
+        "Wheels are energetically less efficient than legs at all size scales and on all surfaces."
+      ],
+      "correctAnswer": "The lack of evolutionary pathways to supply nutrients, nerve impulses, and vascularization across a continuously rotating joint (the axle).",
+      "explanation": "A biological wheel would require a joint capable of continuous $360^\\circ$ rotation. This creates a severe developmental and physiological barrier: blood vessels, nerves, and lymphatic systems cannot pass across a fully rotating joint without twisting, shearing, and tearing, cutting off the rotating organ from living support systems.",
+      "estimatedTimeSeconds": 150,
+      "concepts": [
+        "Biomechanical Constraints",
+        "Evolutionary Constraints"
+      ],
+      "tags": [
+        "evolution",
+        "biomechanics",
+        "anatomy"
+      ],
+      "learningObjective": "Evaluate major evolutionary and physiological constraints that limit the types of transport organs developed by animals.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 9,
+      "sourceType": "generated"
+    }
+  ]
+}

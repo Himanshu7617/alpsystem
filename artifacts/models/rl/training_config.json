@@ -1,0 +1,14 @@
+{
+  "algorithm": "PPO",
+  "library": "stable-baselines3",
+  "policy": "MlpPolicy",
+  "hyperparameters": "library defaults (preregistration \u00a710.4: no sweep)",
+  "timesteps": 50000,
+  "train_variant": "V0",
+  "budget": 200,
+  "seed": 20260821,
+  "checkpoint_every_rollouts": 5,
+  "rollout_timesteps": 2048,
+  "observation": "app.policy.learned.context \u2014 gated states and observables only",
+  "action_space": "MultiDiscrete([10, 3, 4]) \u2014 the Phase 8 shared action space"
+}

@@ -1,0 +1,826 @@
+{
+  "topic": "Binary Trees",
+  "questions": [
+    {
+      "id": "q1",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "What is the maximum number of children any node can have in a binary tree?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "Unlimited"
+      ],
+      "correctAnswer": "2",
+      "explanation": "By definition, a binary tree is a hierarchical data structure in which each node has at most two children, referred to as the left child and the right child.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "Binary Tree Definition"
+      ],
+      "tags": [
+        "binary-trees",
+        "basics"
+      ],
+      "learningObjective": "Understand the fundamental structure and constraints of a binary tree.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 1,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q2",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "What is a node called if it has no child nodes?",
+      "options": [
+        "Root node",
+        "Leaf node",
+        "Ancestor node",
+        "Interior node"
+      ],
+      "correctAnswer": "Leaf node",
+      "explanation": "Nodes at the bottom of the tree structure that do not have any children are called leaf nodes or external nodes.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "Tree Terminology"
+      ],
+      "tags": [
+        "binary-trees",
+        "terminology"
+      ],
+      "learningObjective": "Identify structural node types within a binary tree.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 1,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q3",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "Which traversal visits nodes in the order: Left Subtree, Right Subtree, Root?",
+      "options": [
+        "Pre-order",
+        "In-order",
+        "Post-order",
+        "Level-order"
+      ],
+      "correctAnswer": "Post-order",
+      "explanation": "Post-order traversal recursively visits the left subtree, then the right subtree, and finally processes the root node.",
+      "estimatedTimeSeconds": 45,
+      "concepts": [
+        "Tree Traversals"
+      ],
+      "tags": [
+        "traversal",
+        "post-order"
+      ],
+      "learningObjective": "Distinguish between the three primary Depth-First Search traversal sequences.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 2,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q4",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "In a standard Binary Search Tree (BST) containing unique values, the left child of a node must have a value that is:",
+      "options": [
+        "Greater than the parent node's value",
+        "Less than the parent node's value",
+        "Equal to the parent node's value",
+        "Double the parent node's value"
+      ],
+      "correctAnswer": "Less than the parent node's value",
+      "explanation": "The fundamental property of a BST is that for any given node, all elements in its left subtree are smaller than the node, and all elements in its right subtree are larger.",
+      "estimatedTimeSeconds": 45,
+      "concepts": [
+        "Binary Search Tree Properties"
+      ],
+      "tags": [
+        "bst",
+        "properties"
+      ],
+      "learningObjective": "Recall and define the basic ordering property of a Binary Search Tree.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 2,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q5",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "Which binary tree traversal of a Binary Search Tree (BST) produces the keys in sorted ascending order?",
+      "options": [
+        "Pre-order",
+        "In-order",
+        "Post-order",
+        "Level-order"
+      ],
+      "correctAnswer": "In-order",
+      "explanation": "An in-order traversal (Left, Root, Right) of a Binary Search Tree visits values in non-decreasing order because of the underlying BST properties.",
+      "estimatedTimeSeconds": 45,
+      "concepts": [
+        "BST Traversals",
+        "Sorting"
+      ],
+      "tags": [
+        "bst",
+        "in-order",
+        "traversal"
+      ],
+      "learningObjective": "Recognize the relationship between in-order traversal and sorted keys in a BST.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 2,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q6",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "What is the maximum number of nodes at level L of a binary tree, assuming the root is at level 0?",
+      "options": [
+        "2^L",
+        "2^(L+1) - 1",
+        "2^(L-1)",
+        "L^2"
+      ],
+      "correctAnswer": "2^L",
+      "explanation": "At each successive level of a binary tree, the capacity of nodes doubles. Level 0 has 1 (2^0) node, Level 1 has 2 (2^1) nodes, Level 2 has 4 (2^2) nodes, resulting in 2^L nodes at level L.",
+      "estimatedTimeSeconds": 50,
+      "concepts": [
+        "Tree Properties",
+        "Binary Tree Levels"
+      ],
+      "tags": [
+        "properties",
+        "math"
+      ],
+      "learningObjective": "Calculate the node capacity of a specific level in a binary tree.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 2,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q7",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "A binary tree in which every node other than the leaves has exactly two children is known as a:",
+      "options": [
+        "Complete binary tree",
+        "Perfect binary tree",
+        "Full binary tree",
+        "Degenerate binary tree"
+      ],
+      "correctAnswer": "Full binary tree",
+      "explanation": "A Full Binary Tree (sometimes called a strict binary tree) is a tree structure where every node has either 0 or 2 children.",
+      "estimatedTimeSeconds": 60,
+      "concepts": [
+        "Binary Tree Types"
+      ],
+      "tags": [
+        "definitions",
+        "classification"
+      ],
+      "learningObjective": "Distinguish a full binary tree from other structural classifications.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 3,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q8",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "What is the depth of the root node in a standard binary tree representation?",
+      "options": [
+        "-1",
+        "0",
+        "1",
+        "It depends on the total height"
+      ],
+      "correctAnswer": "0",
+      "explanation": "The depth of a node is the number of edges from the node to the tree's root node. Since the root node is its own ancestor, the edge count is 0.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "Tree Terminology",
+        "Node Depth"
+      ],
+      "tags": [
+        "terminology",
+        "depth"
+      ],
+      "learningObjective": "Define and calculate the depth of a root node.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 1,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q9",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "Which data structure is most appropriate to perform a Level-Order (Breadth-First) traversal of a binary tree?",
+      "options": [
+        "Stack",
+        "Queue",
+        "Hash Map",
+        "Priority Queue"
+      ],
+      "correctAnswer": "Queue",
+      "explanation": "Level-order traversal visits nodes level by level from left to right. A Queue (FIFO) is used to track visited nodes and process their children in correct sequential order.",
+      "estimatedTimeSeconds": 45,
+      "concepts": [
+        "Level Order Traversal",
+        "Queue"
+      ],
+      "tags": [
+        "traversal",
+        "bfs",
+        "queue"
+      ],
+      "learningObjective": "Identify the queue as the standard utility structure for level-order tree traversal.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 2,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q10",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "What is a binary tree called where every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible?",
+      "options": [
+        "Full binary tree",
+        "Complete binary tree",
+        "Balanced binary tree",
+        "Perfect binary tree"
+      ],
+      "correctAnswer": "Complete binary tree",
+      "explanation": "A complete binary tree has all levels completely filled except potentially the last level, which must be filled from left to right without any gaps.",
+      "estimatedTimeSeconds": 60,
+      "concepts": [
+        "Binary Tree Classification"
+      ],
+      "tags": [
+        "definitions",
+        "complete-tree"
+      ],
+      "learningObjective": "Differentiate complete binary trees from other structural states.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 3,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q11",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "If a binary tree has N nodes, how many null (empty) pointers does it contain?",
+      "options": [
+        "N - 1",
+        "N",
+        "N + 1",
+        "2N"
+      ],
+      "correctAnswer": "N + 1",
+      "explanation": "A binary tree with N nodes has 2N total child pointers. Since N-1 nodes have incoming parent pointers (all except the root), the number of empty/null pointers is 2N - (N - 1) = N + 1.",
+      "estimatedTimeSeconds": 90,
+      "concepts": [
+        "Binary Tree Properties",
+        "Null pointers"
+      ],
+      "tags": [
+        "properties",
+        "analysis"
+      ],
+      "learningObjective": "Relate node counts to structural null pointer representation in binary trees.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 4,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q12",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "What is the height of a perfect binary tree containing 15 nodes? (Assume the height of a single-node tree is 0)",
+      "options": [
+        "3",
+        "4",
+        "15",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "explanation": "A perfect binary tree with height h contains 2^(h+1) - 1 nodes. For 15 nodes: 2^(h+1) - 1 = 15 => 2^(h+1) = 16 => h+1 = 4 => h = 3.",
+      "estimatedTimeSeconds": 90,
+      "concepts": [
+        "Perfect Binary Tree",
+        "Height Calculations"
+      ],
+      "tags": [
+        "properties",
+        "math",
+        "height"
+      ],
+      "learningObjective": "Compute the height of perfect binary trees given node capacity formulas.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 5,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q13",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "You are given the pre-order traversal sequence [A, B, D, E, C, F] and the in-order traversal sequence [D, B, E, A, F, C] of a binary tree. What is its post-order traversal?",
+      "options": [
+        "[D, E, B, F, C, A]",
+        "[D, E, B, C, F, A]",
+        "[E, D, B, F, C, A]",
+        "[D, B, E, F, C, A]"
+      ],
+      "correctAnswer": "[D, E, B, F, C, A]",
+      "explanation": "The root is A (from pre-order). In-order shows left subtree elements [D, B, E] and right subtree elements [F, C]. Reconstructing the left tree gives B as root, D as left, E as right. Reconstructing the right tree gives C as root, F as left. The post-order sequence is Left-Right-Root: [D, E, B, F, C, A].",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "Tree Reconstruction",
+        "Tree Traversals"
+      ],
+      "tags": [
+        "traversal",
+        "reconstruction"
+      ],
+      "learningObjective": "Reconstruct a binary tree given its pre-order and in-order traversal lists.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 6,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q14",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "Which of the following operations cannot be performed in O(log N) worst-case time on a self-balancing binary search tree (like an AVL tree) containing N nodes?",
+      "options": [
+        "Finding the minimum element",
+        "Inserting a new node",
+        "Finding the successor of a node",
+        "Sorting all elements"
+      ],
+      "correctAnswer": "Sorting all elements",
+      "explanation": "Sorting all elements requires visiting all N nodes, which takes O(N) time. Searching, inserting, and finding a successor in a self-balancing BST all operate within O(log N) height limits.",
+      "estimatedTimeSeconds": 90,
+      "concepts": [
+        "Self-Balancing Trees",
+        "Time Complexity"
+      ],
+      "tags": [
+        "avl",
+        "bst",
+        "complexity"
+      ],
+      "learningObjective": "Analyze algorithmic limits of self-balancing binary search trees.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 5,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q15",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "In a standard binary search tree (BST), what is the worst-case time complexity of searching for an element if the tree is unbalanced?",
+      "options": [
+        "O(1)",
+        "O(log N)",
+        "O(N)",
+        "O(N log N)"
+      ],
+      "correctAnswer": "O(N)",
+      "explanation": "In an unbalanced BST, the tree can degenerate into a linear sequence (skewed tree). Searching in a skewed tree of N elements requires checking every node, yielding O(N) worst-case time complexity.",
+      "estimatedTimeSeconds": 60,
+      "concepts": [
+        "BST Search Complexity",
+        "Skewed Trees"
+      ],
+      "tags": [
+        "bst",
+        "complexity",
+        "worst-case"
+      ],
+      "learningObjective": "Differentiate search complexity behavior between balanced and unbalanced BST scenarios.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 4,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q16",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "If you insert the keys [10, 20, 30, 40, 50] in that exact order into an initially empty, unbalanced BST, what structure is formed?",
+      "options": [
+        "A balanced binary tree",
+        "A complete binary tree",
+        "A left-skewed binary tree",
+        "A right-skewed binary tree"
+      ],
+      "correctAnswer": "A right-skewed binary tree",
+      "explanation": "Each subsequent key is strictly larger than all preceding keys. Therefore, each new node will be inserted as the right child of the previously inserted node, forming a linear rightward-slanted line.",
+      "estimatedTimeSeconds": 75,
+      "concepts": [
+        "BST Insertion",
+        "Tree Shape"
+      ],
+      "tags": [
+        "bst",
+        "insertion",
+        "skewed"
+      ],
+      "learningObjective": "Predict structural outcomes of sequential key insertions into basic BSTs.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 4,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q17",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "To find the Lowest Common Ancestor (LCA) of two nodes, p and q, in a Binary Search Tree (BST) containing unique elements, which heuristic property can you exploit?",
+      "options": [
+        "The LCA is the node whose value lies strictly between the values of p and q (inclusive)",
+        "The LCA is always the root node",
+        "The LCA is the node with the highest numerical height value",
+        "The LCA is the leaf node closest to both p and q"
+      ],
+      "correctAnswer": "The LCA is the node whose value lies strictly between the values of p and q (inclusive)",
+      "explanation": "In a BST, if you traverse from the root, the first node you encounter whose value splits the path (i.e., its value is between p and q inclusive) is their Lowest Common Ancestor.",
+      "estimatedTimeSeconds": 100,
+      "concepts": [
+        "Lowest Common Ancestor",
+        "BST Properties"
+      ],
+      "tags": [
+        "bst",
+        "algorithms",
+        "lca"
+      ],
+      "learningObjective": "Explain and apply the mathematical property used to find LCA in a BST.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 6,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q18",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "What is the maximum number of leaf nodes in a binary tree of height h? (Assume height of a single-node tree is 0)",
+      "options": [
+        "2^h",
+        "2^(h+1)",
+        "2^h - 1",
+        "2^(h-1)"
+      ],
+      "correctAnswer": "2^h",
+      "explanation": "The maximum number of leaves is achieved when the tree is a perfect binary tree. At height h, the bottommost level (level h) contains exactly 2^h nodes, all of which are leaves.",
+      "estimatedTimeSeconds": 90,
+      "concepts": [
+        "Tree Heights and Leaves",
+        "Tree Properties"
+      ],
+      "tags": [
+        "properties",
+        "math"
+      ],
+      "learningObjective": "Derive the mathematical boundary for maximum leaves given tree height.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 5,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q19",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "What defines a threaded binary tree?",
+      "options": [
+        "A tree where each node has a pointer to its parent node",
+        "A tree where null pointers are replaced with pointers to their in-order predecessor or successor",
+        "A tree optimized for execution on multi-threaded computer systems",
+        "A tree where nodes are structurally laid out in contiguous array memory blocks"
+      ],
+      "correctAnswer": "A tree where null pointers are replaced with pointers to their in-order predecessor or successor",
+      "explanation": "A threaded binary tree replaces standard empty child pointers (nulls) with 'threads' linking directly to the in-order predecessor or successor to facilitate traversal without stack/recursion overhead.",
+      "estimatedTimeSeconds": 100,
+      "concepts": [
+        "Threaded Binary Tree",
+        "Memory Optimization"
+      ],
+      "tags": [
+        "advanced",
+        "threaded-tree"
+      ],
+      "learningObjective": "Define threaded binary trees and explain their design intent.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 6,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q20",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "Which single traversal sequence is sufficient on its own to completely reconstruct a unique binary tree, provided we serialize null child nodes?",
+      "options": [
+        "In-order traversal",
+        "Pre-order traversal with null markers",
+        "Post-order traversal without null markers",
+        "Level-order traversal without null markers"
+      ],
+      "correctAnswer": "Pre-order traversal with null markers",
+      "explanation": "Standard pre-order (or post-order/level-order) traversals require an accompanying in-order traversal to reconstruct a unique tree. However, if null child markers are preserved, pre-order alone contains sufficient structural depth information.",
+      "estimatedTimeSeconds": 110,
+      "concepts": [
+        "Serialization",
+        "Tree Reconstruction"
+      ],
+      "tags": [
+        "serialization",
+        "reconstruction"
+      ],
+      "learningObjective": "Understand the requirements for structural serialization of binary trees.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 7,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q21",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "How many structurally unique Binary Search Trees (BSTs) can be formed containing exactly n distinct keys?",
+      "options": [
+        "2^n - n",
+        "n!",
+        "C_n = (1 / (n + 1)) * (2n Choose n)",
+        "2^(n-1)"
+      ],
+      "correctAnswer": "C_n = (1 / (n + 1)) * (2n Choose n)",
+      "explanation": "The number of structurally unique BSTs with n distinct keys is calculated by the Catalan Number sequence, given by the formula C_n = (1 / (n + 1)) * (2n Choose n).",
+      "estimatedTimeSeconds": 150,
+      "concepts": [
+        "Combinatorics",
+        "Catalan Numbers",
+        "BST Counting"
+      ],
+      "tags": [
+        "math",
+        "bst",
+        "combinatorics"
+      ],
+      "learningObjective": "Apply Catalan numbers to calculate the total number of unique BST structures.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q22",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "When implementing an iterative post-order traversal of a binary tree using a single stack, which of the following actions is necessary to determine if we should process a parent node?",
+      "options": [
+        "Track the last visited node to check if we just returned from its right subtree",
+        "Check if the stack depth is currently odd or even",
+        "Verify that both child pointers of the top stack node are null",
+        "Convert the tree nodes into a queue sequence first"
+      ],
+      "correctAnswer": "Track the last visited node to check if we just returned from its right subtree",
+      "explanation": "In post-order traversal, the root is visited after both subtrees. Using one stack, you can only pop and process the root when returning from its right child (or if the right child is null/empty). Tracking the 'last visited' node validates this state.",
+      "estimatedTimeSeconds": 180,
+      "concepts": [
+        "Iterative Traversal",
+        "Stack Implementation"
+      ],
+      "tags": [
+        "traversal",
+        "stack",
+        "iterative"
+      ],
+      "learningObjective": "Analyze stack management requirements for iterative post-order tree traversals.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 9,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q23",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "In a strict (full) binary tree where every node has either 0 or 2 children, if there are L leaf nodes, how many internal nodes (I) does the tree have?",
+      "options": [
+        "I = L - 1",
+        "I = L + 1",
+        "I = 2L",
+        "I = L / 2"
+      ],
+      "correctAnswer": "I = L - 1",
+      "explanation": "In any full binary tree, the relationship between the number of leaves (L) and the number of internal nodes (I) is strictly L = I + 1. Rearranging this yields I = L - 1.",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "Strict Binary Trees",
+        "Degree Properties"
+      ],
+      "tags": [
+        "properties",
+        "math",
+        "proof"
+      ],
+      "learningObjective": "Demonstrate understanding of algebraic relationships in full binary trees.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q24",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "What is the optimal time complexity of finding the diameter of an arbitrary binary tree?",
+      "options": [
+        "O(log N)",
+        "O(N)",
+        "O(N log N)",
+        "O(N^2)"
+      ],
+      "correctAnswer": "O(N)",
+      "explanation": "The naive recursive approach calculates height at each step, taking O(N^2). However, an optimized bottom-up approach calculates height and diameter simultaneously in a single post-order pass, reducing the complexity to O(N).",
+      "estimatedTimeSeconds": 140,
+      "concepts": [
+        "Tree Algorithms",
+        "Diameter of Binary Tree"
+      ],
+      "tags": [
+        "algorithms",
+        "diameter",
+        "optimization"
+      ],
+      "learningObjective": "Evaluate optimization paths from O(N^2) to O(N) for diameter algorithms.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q25",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "To perform an in-place conversion of a binary tree to a sorted doubly linked list (matching in-order sequence), recursive functions typically keep track of which references?",
+      "options": [
+        "The depth level of the recursion to offset pointer arrays",
+        "The head and tail pointers of the previously converted sublists",
+        "Parent pointers and subtree sibling nodes",
+        "The overall median value of the original tree"
+      ],
+      "correctAnswer": "The head and tail pointers of the previously converted sublists",
+      "explanation": "To perform an in-place conversion, you recursively convert the left and right subtrees and then link the root with the tail of the left list and the head of the right list. Hence, maintaining head and tail references is necessary.",
+      "estimatedTimeSeconds": 200,
+      "concepts": [
+        "In-place Data Structure Conversion",
+        "Recursion"
+      ],
+      "tags": [
+        "algorithms",
+        "linked-list",
+        "conversion"
+      ],
+      "learningObjective": "Formulate recursive linking designs for complex structural conversions.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 9,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q26",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "In an AVL tree, after inserting a node, you detect an unbalanced node with a balance factor of -2 (right-heavy). Its right child has a balance factor of +1 (left-heavy). Which rotation sequence is required?",
+      "options": [
+        "Left Rotation only",
+        "Right-Left Rotation",
+        "Left-Right Rotation",
+        "Double Right Rotation"
+      ],
+      "correctAnswer": "Right-Left Rotation",
+      "explanation": "When the parent node is right-heavy (-2) and its child is left-heavy (+1), this represents a Right-Left (RL) mismatch. A right rotation is performed on the child node first, followed by a left rotation on the unbalanced parent node.",
+      "estimatedTimeSeconds": 160,
+      "concepts": [
+        "AVL Tree Rotations",
+        "Balanced Trees"
+      ],
+      "tags": [
+        "avl",
+        "rotations",
+        "balance-factor"
+      ],
+      "learningObjective": "Select appropriate AVL rotation strategies based on balancing factor combinations.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 9,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q27",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "When finding the maximum path sum in a binary tree (where the path can start and end at any node), what is the correct formula to update the global maximum tracker 'global_max' at a node 'u' with computed maximum downward path branches 'left_down' and 'right_down'?",
+      "options": [
+        "global_max = max(global_max, u.val + max(0, left_down) + max(0, right_down))",
+        "global_max = max(global_max, u.val + left_down + right_down)",
+        "global_max = max(global_max, max(left_down, right_down))",
+        "global_max = max(global_max, u.val + left_down * right_down)"
+      ],
+      "correctAnswer": "global_max = max(global_max, u.val + max(0, left_down) + max(0, right_down))",
+      "explanation": "The maximum path containing node 'u' as its highest node joins 'u' with any non-negative contribution from its left and right downward paths. Thus, we check u.val + max(0, left_down) + max(0, right_down) against the global tracker.",
+      "estimatedTimeSeconds": 210,
+      "concepts": [
+        "Binary Tree Dynamic Programming",
+        "Max Path Sum"
+      ],
+      "tags": [
+        "algorithms",
+        "dynamic-programming",
+        "path-sum"
+      ],
+      "learningObjective": "Construct recurrence relations for path-sum optimization algorithms in binary trees.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 10,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q28",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "What is the worst-case space complexity of a recursive Depth-First Search (DFS) traversal of an arbitrary binary tree with N nodes?",
+      "options": [
+        "O(1)",
+        "O(log N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correctAnswer": "O(N)",
+      "explanation": "In a completely skewed tree, the call stack grows proportional to the height of the tree. Since the height in the worst-case scenario can equal N (when the tree is basically a single branch), the space complexity is O(N).",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "Call Stack Space Complexity",
+        "DFS Properties"
+      ],
+      "tags": [
+        "complexity",
+        "recursion",
+        "space-complexity"
+      ],
+      "learningObjective": "Evaluate call stack consumption for worst-case tree structures.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q29",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "If you want to serialize a binary tree into a string using Level-Order (BFS) traversal, how must you handle missing children to ensure lossless deserialization?",
+      "options": [
+        "You can skip storing null indicators if you write values to a binary file",
+        "You must store placeholder null markers for empty child branches of visited nodes",
+        "Omit null pointers and rely on sorting keys upon loading",
+        "BFS cannot support lossless serialization because it lacks parent indicators"
+      ],
+      "correctAnswer": "You must store placeholder null markers for empty child branches of visited nodes",
+      "explanation": "Without maintaining null placeholder symbols (e.g., '#') for missing child links during level-order queue processing, it is impossible to reconstruct the correct parent-child topology during reconstruction.",
+      "estimatedTimeSeconds": 150,
+      "concepts": [
+        "Serialization/Deserialization",
+        "Level-Order Traversal"
+      ],
+      "tags": [
+        "serialization",
+        "bfs"
+      ],
+      "learningObjective": "Formulate serialization models for non-complete binary tree layouts.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q30",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "To find the in-order successor of a node x in a binary search tree where each node possesses a parent pointer, if x has no right child, how do you locate the successor?",
+      "options": [
+        "The successor is the left child of x's parent node",
+        "The successor is the deepest leftmost leaf node in the left subtree of x",
+        "The successor is the lowest ancestor of x whose left child is also an ancestor of x",
+        "The successor does not exist because there is no right child"
+      ],
+      "correctAnswer": "The successor is the lowest ancestor of x whose left child is also an ancestor of x",
+      "explanation": "Without a right child, the in-order successor must be an ancestor. We traverse upward via parent pointers; the first node we reach from its left child is the in-order successor.",
+      "estimatedTimeSeconds": 180,
+      "concepts": [
+        "BST Successor",
+        "Parent Pointers"
+      ],
+      "tags": [
+        "bst",
+        "successor",
+        "algorithms"
+      ],
+      "learningObjective": "Determine the in-order successor of a node in a BST using parent linkages.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 9,
+      "sourceType": "generated"
+    }
+  ]
+}

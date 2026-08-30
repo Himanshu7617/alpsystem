@@ -1,0 +1,4 @@
+state,admitted,source,label,n,learners,base_rate,roc_auc,ece_raw,ece_calibrated,label_correlation,label_correlation_ci_low,label_correlation_ci_high,ability_correlation,ability_learners,knowledge_correlation
+knowledge,True,assistments_2012,next_correct — the next attempt's outcome,15564,169,0.67277,0.68569,0.0342,0.01579,0.31562,0.28205,0.34492,,,
+engagement,False,assistments_2012,"solution_behaviour of the next attempt (response-time effort, preregistration §6)",15395,169,0.98344,0.83063,0.00476,0.00452,0.28148,0.18798,0.37071,0.40253,169.0,
+confidence,False,sim-V0,"probe_confidence >= 3 (post-submission self-report, preregistration §3)",1384,81,0.76373,0.58411,0.03193,0.02421,0.13755,0.08256,0.1961,,,0.89329

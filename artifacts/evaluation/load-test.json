@@ -1,0 +1,319 @@
+{
+  "base_url": "http://127.0.0.1:4000",
+  "learners": 12,
+  "items_per_learner": 20,
+  "serving": {
+    "policy": "rule_improved",
+    "policy_rung": "L1",
+    "estimator_rung": "L4",
+    "epsilon": 0.1,
+    "action_space": 120,
+    "gate": {
+      "admitted": [
+        "knowledge"
+      ],
+      "rejected": {
+        "confidence": "confidence failed C1_label_correlation, C4_discriminant_validity",
+        "engagement": "engagement failed C3_effort_independent_of_ability",
+        "fatigue": "no within-session accuracy decline in any archival source (preregistration \u00a77); construct dropped before modelling"
+      }
+    },
+    "live_slots": 32,
+    "slots_in_use": 32,
+    "evictions": 64,
+    "replays": 96,
+    "seed": 20260821
+  },
+  "runs": [
+    {
+      "concurrency": 1,
+      "elapsed_seconds": 4.5,
+      "decisions": 240,
+      "decisions_per_second": 53.03,
+      "endpoints": {
+        "attempt": {
+          "n": 240,
+          "p50": 9.6,
+          "p95": 12.3,
+          "p99": 17.5,
+          "max": 35.0,
+          "mean": 10.1
+        },
+        "consent": {
+          "n": 12,
+          "p50": 0.9,
+          "p95": 8.5,
+          "p99": 8.5,
+          "max": 8.5,
+          "mean": 1.5
+        },
+        "events": {
+          "n": 240,
+          "p50": 1.8,
+          "p95": 2.3,
+          "p99": 3.9,
+          "max": 4.1,
+          "mean": 1.8
+        },
+        "next-item": {
+          "n": 240,
+          "p50": 5.8,
+          "p95": 7.9,
+          "p99": 14.7,
+          "max": 64.4,
+          "mean": 6.4
+        },
+        "session": {
+          "n": 12,
+          "p50": 4.5,
+          "p95": 20.8,
+          "p99": 20.8,
+          "max": 20.8,
+          "mean": 5.9
+        },
+        "session-end": {
+          "n": 12,
+          "p50": 1.1,
+          "p95": 1.2,
+          "p99": 1.2,
+          "max": 1.2,
+          "mean": 1.0
+        }
+      },
+      "errors": {},
+      "failures": []
+    },
+    {
+      "concurrency": 4,
+      "elapsed_seconds": 1.3,
+      "decisions": 240,
+      "decisions_per_second": 186.31,
+      "endpoints": {
+        "attempt": {
+          "n": 240,
+          "p50": 11.2,
+          "p95": 15.8,
+          "p99": 17.8,
+          "max": 18.2,
+          "mean": 11.7
+        },
+        "consent": {
+          "n": 12,
+          "p50": 1.7,
+          "p95": 8.9,
+          "p99": 8.9,
+          "max": 8.9,
+          "mean": 2.1
+        },
+        "events": {
+          "n": 240,
+          "p50": 2.1,
+          "p95": 3.2,
+          "p99": 5.2,
+          "max": 5.5,
+          "mean": 2.3
+        },
+        "next-item": {
+          "n": 240,
+          "p50": 6.5,
+          "p95": 9.4,
+          "p99": 11.7,
+          "max": 13.3,
+          "mean": 6.8
+        },
+        "session": {
+          "n": 12,
+          "p50": 7.0,
+          "p95": 13.5,
+          "p99": 13.5,
+          "max": 13.5,
+          "mean": 7.2
+        },
+        "session-end": {
+          "n": 12,
+          "p50": 1.3,
+          "p95": 3.2,
+          "p99": 3.2,
+          "max": 3.2,
+          "mean": 1.5
+        }
+      },
+      "errors": {},
+      "failures": []
+    },
+    {
+      "concurrency": 8,
+      "elapsed_seconds": 1.1,
+      "decisions": 240,
+      "decisions_per_second": 220.79,
+      "endpoints": {
+        "attempt": {
+          "n": 240,
+          "p50": 15.5,
+          "p95": 21.8,
+          "p99": 25.1,
+          "max": 27.8,
+          "mean": 15.5
+        },
+        "consent": {
+          "n": 12,
+          "p50": 2.4,
+          "p95": 11.9,
+          "p99": 11.9,
+          "max": 11.9,
+          "mean": 4.7
+        },
+        "events": {
+          "n": 240,
+          "p50": 3.3,
+          "p95": 4.8,
+          "p99": 5.9,
+          "max": 7.2,
+          "mean": 3.3
+        },
+        "next-item": {
+          "n": 240,
+          "p50": 9.4,
+          "p95": 13.7,
+          "p99": 16.0,
+          "max": 16.6,
+          "mean": 9.4
+        },
+        "session": {
+          "n": 12,
+          "p50": 10.6,
+          "p95": 19.3,
+          "p99": 19.3,
+          "max": 19.3,
+          "mean": 10.5
+        },
+        "session-end": {
+          "n": 12,
+          "p50": 2.2,
+          "p95": 7.4,
+          "p99": 7.4,
+          "max": 7.4,
+          "mean": 2.8
+        }
+      },
+      "errors": {},
+      "failures": []
+    },
+    {
+      "concurrency": 16,
+      "elapsed_seconds": 1.0,
+      "decisions": 240,
+      "decisions_per_second": 231.5,
+      "endpoints": {
+        "attempt": {
+          "n": 240,
+          "p50": 25.2,
+          "p95": 36.5,
+          "p99": 45.7,
+          "max": 57.7,
+          "mean": 26.5
+        },
+        "consent": {
+          "n": 12,
+          "p50": 2.5,
+          "p95": 3.8,
+          "p99": 3.8,
+          "max": 3.8,
+          "mean": 2.3
+        },
+        "events": {
+          "n": 240,
+          "p50": 6.1,
+          "p95": 9.4,
+          "p99": 11.0,
+          "max": 11.1,
+          "mean": 6.4
+        },
+        "next-item": {
+          "n": 240,
+          "p50": 15.4,
+          "p95": 31.3,
+          "p99": 34.4,
+          "max": 37.0,
+          "mean": 16.8
+        },
+        "session": {
+          "n": 12,
+          "p50": 20.3,
+          "p95": 47.8,
+          "p99": 47.8,
+          "max": 47.8,
+          "mean": 26.5
+        },
+        "session-end": {
+          "n": 12,
+          "p50": 4.3,
+          "p95": 6.0,
+          "p99": 6.0,
+          "max": 6.0,
+          "mean": 3.7
+        }
+      },
+      "errors": {},
+      "failures": []
+    }
+  ],
+  "headline": {
+    "concurrency": 16,
+    "elapsed_seconds": 1.0,
+    "decisions": 240,
+    "decisions_per_second": 231.5,
+    "endpoints": {
+      "attempt": {
+        "n": 240,
+        "p50": 25.2,
+        "p95": 36.5,
+        "p99": 45.7,
+        "max": 57.7,
+        "mean": 26.5
+      },
+      "consent": {
+        "n": 12,
+        "p50": 2.5,
+        "p95": 3.8,
+        "p99": 3.8,
+        "max": 3.8,
+        "mean": 2.3
+      },
+      "events": {
+        "n": 240,
+        "p50": 6.1,
+        "p95": 9.4,
+        "p99": 11.0,
+        "max": 11.1,
+        "mean": 6.4
+      },
+      "next-item": {
+        "n": 240,
+        "p50": 15.4,
+        "p95": 31.3,
+        "p99": 34.4,
+        "max": 37.0,
+        "mean": 16.8
+      },
+      "session": {
+        "n": 12,
+        "p50": 20.3,
+        "p95": 47.8,
+        "p99": 47.8,
+        "max": 47.8,
+        "mean": 26.5
+      },
+      "session-end": {
+        "n": 12,
+        "p50": 4.3,
+        "p95": 6.0,
+        "p99": 6.0,
+        "max": 6.0,
+        "mean": 3.7
+      }
+    },
+    "errors": {},
+    "failures": []
+  }
+}

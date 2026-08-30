@@ -1,0 +1,66 @@
+# Render blueprint. `New > Blueprint` on render.com reads this file from the
+# connected repository and creates both services described here.
+#
+# The database is deliberately NOT declared. Render's free Postgres expires 30
+# days after creation and is then deleted; Neon's free tier does not expire, so
+# DATABASE_URL is entered by hand and points there. See DEPLOY.md.
+services:
+  # The model service. Deployed first: the backend needs its URL.
+  - type: web
+    name: alp-ml-service
+    runtime: docker
+    dockerfilePath: ./ml-service/Dockerfile.serve
+    dockerContext: .
+    plan: free
+    region: oregon
+    healthCheckPath: /health
+    envVars:
+      # Which arm answers /v1/decide. `rule_improved` is the pre-registered
+      # default and the one Phase 8 reports. `bandit_lin_ts` and `rl_ppo` also
+      # work — rl_ppo additionally needs stable-baselines3, which
+      # requirements-serve.txt leaves out, so switching to it means adding the
+      # package back.
+      - key: ALP_POLICY
+        value: rule_improved
+      - key: SEED
+        value: "20260821"
+      # One thread per process: numpy/BLAS otherwise spawns a thread per core
+      # underneath a 0.1-CPU free instance.
+      - key: OMP_NUM_THREADS
+        value: "1"
+      - key: OPENBLAS_NUM_THREADS
+        value: "1"
+      - key: MKL_NUM_THREADS
+        value: "1"
+      # Live sessions held in memory at once. 32 is the compose default; a free
+      # instance has 512 MB and torch takes ~250 MB of it, so this is the knob
+      # to lower first if the service is OOM-killed.
+      - key: ALP_LIVE_SLOTS
+        value: "8"
+
+  # The platform: Express API plus the static frontend in files/.
+  - type: web
+    name: alp-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    plan: free
+    region: oregon
+    healthCheckPath: /health
+    # Overrides the image's CMD to seed the question bank on every boot. Free
+    # instances have no shell, so a one-off `prisma db seed` cannot be run by
+    # hand; the seed is idempotent (it upserts the session and replaces only
+    # that session's questions), so running it every boot is safe.
+    dockerCommand: sh -c "npx prisma migrate deploy && npx prisma db seed && node server.js"
+    envVars:
+      # Entered in the Render dashboard: the Neon connection string.
+      - key: DATABASE_URL
+        sync: false
+      # Entered in the Render dashboard AFTER alp-ml-service has deployed —
+      # its public https URL, no trailing slash.
+      - key: ML_SERVICE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ALP_POLICY
+        value: rule_improved

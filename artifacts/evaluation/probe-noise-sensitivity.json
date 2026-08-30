@@ -1,0 +1,77 @@
+{
+  "levels": [
+    0.25,
+    0.55,
+    1.0,
+    2.0
+  ],
+  "calibrated_level": 0.55,
+  "learners": 300,
+  "note": "the gate rejected the confidence head, so no policy reads a probe-derived state; a flat curve is the expected result",
+  "rows": [
+    {
+      "policy": "model_L0",
+      "probe_noise": 0.25,
+      "items_to_mastery": 186.64333333333335,
+      "knowledge_gain": -0.005558835186706695,
+      "mastered": 0.09666666666666666,
+      "mean_success_probability": 0.7044483127256608
+    },
+    {
+      "policy": "model_L0",
+      "probe_noise": 0.55,
+      "items_to_mastery": 186.64333333333335,
+      "knowledge_gain": -0.005558835186706695,
+      "mastered": 0.09666666666666666,
+      "mean_success_probability": 0.7044483127256608
+    },
+    {
+      "policy": "model_L0",
+      "probe_noise": 1.0,
+      "items_to_mastery": 186.64333333333335,
+      "knowledge_gain": -0.005558835186706695,
+      "mastered": 0.09666666666666666,
+      "mean_success_probability": 0.7044483127256608
+    },
+    {
+      "policy": "model_L0",
+      "probe_noise": 2.0,
+      "items_to_mastery": 186.64333333333335,
+      "knowledge_gain": -0.005558835186706695,
+      "mastered": 0.09666666666666666,
+      "mean_success_probability": 0.7044483127256608
+    },
+    {
+      "policy": "model_L4",
+      "probe_noise": 0.25,
+      "items_to_mastery": 185.21,
+      "knowledge_gain": -0.00919315565060029,
+      "mastered": 0.1,
+      "mean_success_probability": 0.7198441948163318
+    },
+    {
+      "policy": "model_L4",
+      "probe_noise": 0.55,
+      "items_to_mastery": 185.21,
+      "knowledge_gain": -0.00919315565060029,
+      "mastered": 0.1,
+      "mean_success_probability": 0.7198441948163318
+    },
+    {
+      "policy": "model_L4",
+      "probe_noise": 1.0,
+      "items_to_mastery": 185.21,
+      "knowledge_gain": -0.00919315565060029,
+      "mastered": 0.1,
+      "mean_success_probability": 0.7198441948163318
+    },
+    {
+      "policy": "model_L4",
+      "probe_noise": 2.0,
+      "items_to_mastery": 185.21,
+      "knowledge_gain": -0.00919315565060029,
+      "mastered": 0.1,
+      "mean_success_probability": 0.7198441948163318
+    }
+  ]
+}

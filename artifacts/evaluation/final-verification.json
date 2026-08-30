@@ -1,0 +1,394 @@
+{
+  "phase": 12,
+  "deliverables": [
+    {
+      "phase": "1",
+      "path": "artifacts/datasets/item-parameters-v1.csv",
+      "exists": true
+    },
+    {
+      "phase": "1",
+      "path": "data/items/item-bank-v1.json",
+      "exists": true
+    },
+    {
+      "phase": "2",
+      "path": "artifacts/figures/02-telemetry",
+      "exists": true
+    },
+    {
+      "phase": "3",
+      "path": "data/processed/splits.json",
+      "exists": true
+    },
+    {
+      "phase": "3",
+      "path": "artifacts/datasets/archival-summary.json",
+      "exists": true
+    },
+    {
+      "phase": "4",
+      "path": "artifacts/datasets/simulator-params-v2.json",
+      "exists": true
+    },
+    {
+      "phase": "4",
+      "path": "artifacts/datasets/simulator-calibration-ks.json",
+      "exists": true
+    },
+    {
+      "phase": "5",
+      "path": "artifacts/benchmarks/eda-summary.json",
+      "exists": true
+    },
+    {
+      "phase": "5",
+      "path": "artifacts/benchmarks/feature-shortlist.json",
+      "exists": true
+    },
+    {
+      "phase": "5",
+      "path": "docs/feature-catalogue.md",
+      "exists": true
+    },
+    {
+      "phase": "6",
+      "path": "artifacts/benchmarks/study1-cv.json",
+      "exists": true
+    },
+    {
+      "phase": "6",
+      "path": "artifacts/benchmarks/study1-final.json",
+      "exists": true
+    },
+    {
+      "phase": "7",
+      "path": "artifacts/benchmarks/study2-heads.json",
+      "exists": true
+    },
+    {
+      "phase": "7",
+      "path": "artifacts/evaluation/validation-gate.json",
+      "exists": true
+    },
+    {
+      "phase": "7",
+      "path": "artifacts/models/state-encoders-by-rung.pt",
+      "exists": true
+    },
+    {
+      "phase": "8",
+      "path": "artifacts/evaluation/policy-results-v0.json",
+      "exists": true
+    },
+    {
+      "phase": "8",
+      "path": "artifacts/evaluation/policy-results-v4.json",
+      "exists": true
+    },
+    {
+      "phase": "8",
+      "path": "artifacts/evaluation/decision-explanations.json",
+      "exists": true
+    },
+    {
+      "phase": "8.5",
+      "path": "artifacts/evaluation/phase-8.5-validation.json",
+      "exists": true
+    },
+    {
+      "phase": "9",
+      "path": "artifacts/evaluation/ope-results.json",
+      "exists": true
+    },
+    {
+      "phase": "9",
+      "path": "artifacts/evaluation/rl-results.json",
+      "exists": true
+    },
+    {
+      "phase": "9",
+      "path": "artifacts/models/rl/policy.zip",
+      "exists": true
+    },
+    {
+      "phase": "10",
+      "path": "artifacts/evaluation/load-test.json",
+      "exists": true
+    },
+    {
+      "phase": "10",
+      "path": "artifacts/evaluation/system-figure-findings.json",
+      "exists": true
+    },
+    {
+      "phase": "11",
+      "path": "artifacts/evaluation/statistical-report.json",
+      "exists": true
+    },
+    {
+      "phase": "11",
+      "path": "artifacts/evaluation/sensitivity.json",
+      "exists": true
+    },
+    {
+      "phase": "11",
+      "path": "artifacts/evaluation/tables/statistical-tests.tex",
+      "exists": true
+    },
+    {
+      "phase": "11",
+      "path": "artifacts/figures/INDEX.md",
+      "exists": true
+    },
+    {
+      "phase": "12",
+      "path": "artifacts/evaluation/test-results.json",
+      "exists": true
+    },
+    {
+      "phase": "12",
+      "path": "artifacts/evaluation/reproduction-timing.json",
+      "exists": true
+    },
+    {
+      "phase": "12",
+      "path": "docs/reports/ALP-System-Report.pdf",
+      "exists": true
+    },
+    {
+      "phase": "12",
+      "path": "docs/reports/ALP-Research-Paper-Draft.pdf",
+      "exists": true
+    }
+  ],
+  "missing_deliverables": [],
+  "figure_counts": {
+    "01-content": {
+      "expected": 4,
+      "found": 4
+    },
+    "02-telemetry": {
+      "expected": 4,
+      "found": 4
+    },
+    "03-archival": {
+      "expected": 8,
+      "found": 8
+    },
+    "04-simulator": {
+      "expected": 9,
+      "found": 9
+    },
+    "05-eda": {
+      "expected": 13,
+      "found": 13
+    },
+    "06-study1": {
+      "expected": 11,
+      "found": 14
+    },
+    "07-study2": {
+      "expected": 10,
+      "found": 10
+    },
+    "08-policies": {
+      "expected": 14,
+      "found": 14
+    },
+    "08.5-integration": {
+      "expected": 4,
+      "found": 4
+    },
+    "09-ope-rl": {
+      "expected": 10,
+      "found": 10
+    },
+    "10-system": {
+      "expected": 6,
+      "found": 6
+    },
+    "11-stats": {
+      "expected": 8,
+      "found": 8
+    },
+    "12-walkthrough": {
+      "expected": 5,
+      "found": 5
+    }
+  },
+  "figure_manifest": {
+    "figures": 109
+  },
+  "documents": {
+    "substituted_numbers": 27,
+    "unverified_prose_numbers": 0,
+    "unverified": [],
+    "substitutions": [
+      {
+        "document": "docs/reports/ALP-System-Report.md",
+        "artifact": "artifacts/evaluation/load-test.json",
+        "pointer": "headline/endpoints/next-item/p95",
+        "value": 31.3
+      },
+      {
+        "document": "docs/reports/ALP-System-Report.md",
+        "artifact": "artifacts/evaluation/load-test.json",
+        "pointer": "headline/decisions_per_second",
+        "value": 231.5
+      },
+      {
+        "document": "docs/reports/ALP-System-Report.md",
+        "artifact": "artifacts/evaluation/test-results.json",
+        "pointer": "suites/0/counts/passed",
+        "value": 16
+      },
+      {
+        "document": "docs/reports/ALP-System-Report.md",
+        "artifact": "artifacts/evaluation/test-results.json",
+        "pointer": "suites/1/counts/passed",
+        "value": 129
+      },
+      {
+        "document": "docs/reports/ALP-System-Report.md",
+        "artifact": "artifacts/evaluation/test-results.json",
+        "pointer": "total_tests",
+        "value": 145
+      },
+      {
+        "document": "docs/reports/ALP-System-Report.md",
+        "artifact": "artifacts/evaluation/statistical-report.json",
+        "pointer": "power/rct_requirement/n_per_arm",
+        "value": 176.0
+      },
+      {
+        "document": "docs/reports/ALP-System-Report.md",
+        "artifact": "artifacts/evaluation/statistical-report.json",
+        "pointer": "power/rct_requirement/n_total",
+        "value": 352.0
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/benchmarks/study1-final.json",
+        "pointer": "sources/assistments_2009/cells/L2|lightgbm/roc_auc",
+        "value": 0.7142
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/benchmarks/study1-cv.json",
+        "pointer": "sources/assistments_2009/ladder/lightgbm/L1->L2/delta_auc",
+        "value": 0.00185
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/evaluation/statistical-report.json",
+        "pointer": "censoring/arms/model_L0/censoring_rate",
+        "value": 0.909
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/evaluation/ope-results.json",
+        "pointer": "mean_absolute_error_vs_truth/snips",
+        "value": 0.0014674211099683103
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/evaluation/ope-results.json",
+        "pointer": "mean_absolute_error_vs_truth/ips",
+        "value": 0.005111626876419862
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/evaluation/statistical-report.json",
+        "pointer": "power/rct_requirement/n_per_arm",
+        "value": 176.0
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/evaluation/statistical-report.json",
+        "pointer": "power/rct_requirement/n_total",
+        "value": 352.0
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/benchmarks/study1-final.json",
+        "pointer": "sources/assistments_2009/cells/L2|lightgbm/roc_auc",
+        "value": 0.7142
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/benchmarks/study1-final.json",
+        "pointer": "sources/assistments_2012/cells/L3|lightgbm/roc_auc",
+        "value": 0.67604
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/benchmarks/study1-final.json",
+        "pointer": "sources/ednet_kt1/cells/L3|catboost/roc_auc",
+        "value": 0.64349
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/benchmarks/study1-cv.json",
+        "pointer": "sources/assistments_2009/ladder/lightgbm/L0->L1/delta_auc",
+        "value": 0.00166
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/benchmarks/study1-cv.json",
+        "pointer": "sources/assistments_2009/ladder/lightgbm/L1->L2/delta_auc",
+        "value": 0.00185
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/evaluation/ope-results.json",
+        "pointer": "mean_absolute_error_vs_truth/snips",
+        "value": 0.0014674211099683103
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/evaluation/ope-results.json",
+        "pointer": "mean_absolute_error_vs_truth/dr",
+        "value": 0.004424297365782362
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/evaluation/ope-results.json",
+        "pointer": "mean_absolute_error_vs_truth/ips",
+        "value": 0.005111626876419862
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/evaluation/statistical-report.json",
+        "pointer": "censoring/arms/model_L0/censoring_rate",
+        "value": 0.909
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/evaluation/statistical-report.json",
+        "pointer": "censoring/arms/model_L0/restricted_mean_items_to_budget",
+        "value": 187.17366666666675
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/evaluation/load-test.json",
+        "pointer": "headline/endpoints/next-item/p95",
+        "value": 31.3
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/evaluation/statistical-report.json",
+        "pointer": "power/rct_requirement/n_per_arm",
+        "value": 176.0
+      },
+      {
+        "document": "docs/paper-draft.md",
+        "artifact": "artifacts/evaluation/statistical-report.json",
+        "pointer": "power/rct_requirement/n_total",
+        "value": 352.0
+      }
+    ]
+  },
+  "problems": [],
+  "passed": true
+}

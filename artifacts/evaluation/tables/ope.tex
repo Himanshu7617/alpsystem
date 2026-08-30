@@ -1,0 +1,13 @@
+\begin{table}
+\caption{Study 3 off-policy evaluation: IPS, SNIPS and DR against the on-policy truth.}
+\label{tab:ope}
+\begin{tabular}{lrrrrrrrrrrrrrrrrrr}
+\toprule
+policy & ips & snips & dr & direct\_method & effective\_sample\_size & effective\_sample\_size\_unclipped & weight\_clip & clipped\_share & decisions & support\_rate & action\_match\_rate & target\_epsilon & weight\_max & weight\_mean & weight\_p99 & true\_value & true\_decisions & on\_policy\_seconds \\
+\midrule
+bandit\_linucb & 0.0009 & 0.0046 & 0.0050 & 0.0047 & 2691.0153 & 75.9568 & 20.0000 & 0.0011 & 45884 & 1.0000 & 0.0173 & 0.1500 & 681.0000 & 0.9239 & 1.0000 & 0.0078 & 45751 & 9.7000 \\
+bandit\_lin\_ts & 0.0009 & 0.0051 & 0.0074 & 0.0070 & 2347.8236 & 79.1539 & 20.0000 & 0.0012 & 45884 & 1.0000 & 0.0077 & 0.1500 & 681.0000 & 0.9883 & 1.0000 & 0.0044 & 46195 & 10.0000 \\
+rl\_ppo & 0.0010 & 0.0054 & 0.0134 & 0.0132 & 2491.7540 & 77.9476 & 20.0000 & 0.0012 & 45884 & 1.0000 & 0.0121 & 0.1500 & 681.0000 & 0.9630 & 1.0000 & 0.0059 & 46015 & 9.0000 \\
+\bottomrule
+\end{tabular}
+\end{table}

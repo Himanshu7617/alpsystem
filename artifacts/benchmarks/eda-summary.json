@@ -1,0 +1,598 @@
+{
+  "seed": 20260821,
+  "sample_rows_per_source": 300000,
+  "git_sha": "c042f6659357eadd40e81e68a5eec454b49b12c5",
+  "features_in_catalogue": 44,
+  "sources": {
+    "assistments_2009": {
+      "rows_sampled": 250718,
+      "features_usable": 11,
+      "accuracy": 0.6591,
+      "next_correct_rate": 0.6595
+    },
+    "assistments_2012": {
+      "rows_sampled": 300000,
+      "features_usable": 16,
+      "accuracy": 0.6997,
+      "next_correct_rate": 0.6998
+    },
+    "ednet_kt1": {
+      "rows_sampled": 300000,
+      "features_usable": 14,
+      "accuracy": 0.6542,
+      "next_correct_rate": 0.6511
+    },
+    "sim-V0": {
+      "rows_sampled": 152956,
+      "features_usable": 40,
+      "accuracy": 0.6621,
+      "next_correct_rate": 0.6624
+    }
+  },
+  "mutual_information": {
+    "assistments_2009": {
+      "correct": 0.066739,
+      "attempt_count": 0.016579,
+      "prior_accuracy": 0.044796,
+      "prior_attempts": 0.004201,
+      "skill_prior_accuracy": 0.039849,
+      "skill_prior_attempts": 0.001072,
+      "item_difficulty": 0.012959,
+      "log_response_time": 0.024942,
+      "log_rt_z_item": 0.029608,
+      "rt_drift": 0.00173,
+      "hint_count": 0.026536
+    },
+    "assistments_2012": {
+      "correct": 0.06314,
+      "attempt_count": 0.023356,
+      "prior_accuracy": 0.027251,
+      "prior_attempts": 0.000159,
+      "skill_prior_accuracy": 0.023997,
+      "skill_prior_attempts": 0.00065,
+      "item_difficulty": 0.018654,
+      "log_response_time": 0.003409,
+      "log_rt_z_item": 0.004203,
+      "rt_drift": 0.000422,
+      "log_lag_time": 0.001732,
+      "hint_count": 0.01415,
+      "question_number": 0.000812,
+      "session_duration": 0.000491,
+      "matched_difficulty_accuracy_slope": 0.004251,
+      "matched_difficulty_speed_slope": 0.000877
+    },
+    "ednet_kt1": {
+      "correct": 0.042277,
+      "prior_accuracy": 0.023149,
+      "prior_attempts": 0.008956,
+      "skill_prior_accuracy": 0.012159,
+      "skill_prior_attempts": 0.001022,
+      "item_difficulty": 0.018934,
+      "log_response_time": 0.005485,
+      "log_rt_z_item": 0.014651,
+      "rt_drift": 0.002135,
+      "log_lag_time": 0.001601,
+      "question_number": 0.000657,
+      "session_duration": 0.003294,
+      "matched_difficulty_accuracy_slope": 0.003098,
+      "matched_difficulty_speed_slope": 0.0
+    },
+    "sim-V0": {
+      "correct": 0.018621,
+      "prior_accuracy": 0.022417,
+      "prior_attempts": 0.00131,
+      "skill_prior_accuracy": 0.008826,
+      "skill_prior_attempts": 0.0,
+      "item_difficulty": 0.00038,
+      "log_response_time": 0.0,
+      "log_rt_z_item": 0.000121,
+      "rt_drift": 0.00256,
+      "log_lag_time": 0.003764,
+      "reading_time": 0.000181,
+      "decision_latency": 0.0,
+      "time_after_last_interaction": 0.000578,
+      "response_time_vs_estimate": 0.0,
+      "option_changes": 0.005466,
+      "option_change_entropy": 0.000653,
+      "option_revisits": 0.00191,
+      "first_selection_changed": 0.017193,
+      "idle_count": 0.0,
+      "idle_time": 0.0,
+      "visibility_changes": 0.00079,
+      "question_number": 0.0,
+      "session_duration": 0.000692,
+      "matched_difficulty_accuracy_slope": 0.0,
+      "matched_difficulty_speed_slope": 0.0,
+      "idle_fraction": 0.000614,
+      "focus_fraction": 0.017136,
+      "auc_toward_nonchosen": 0.001718,
+      "max_deviation": 0.001392,
+      "x_flips": 0.001637,
+      "sample_entropy": 0.0,
+      "velocity_peak": 0.000397,
+      "velocity_mean": 0.0,
+      "pause_count": 0.0,
+      "path_ratio": 0.001441,
+      "time_to_first_movement": 0.0,
+      "time_to_first_selection": 0.001279,
+      "hover_time_max": 0.00389,
+      "hover_time_nonchosen": 0.002671,
+      "cursor_samples": 0.002403
+    }
+  },
+  "variance_inflation": {
+    "correct": 1.172,
+    "prior_accuracy": 1.489,
+    "prior_attempts": 2.625,
+    "skill_prior_accuracy": 1.521,
+    "skill_prior_attempts": 1.772,
+    "item_difficulty": 1.74,
+    "log_response_time": 33.624,
+    "log_rt_z_item": 21.857,
+    "rt_drift": 8.072,
+    "log_lag_time": 1.212,
+    "reading_time": 9330937.823,
+    "decision_latency": 15102925.23,
+    "time_after_last_interaction": 8.147,
+    "response_time_vs_estimate": 39432752.519,
+    "option_changes": 96.642,
+    "option_change_entropy": 38.894,
+    "option_revisits": 49.911,
+    "first_selection_changed": 3.291,
+    "idle_count": 0.564,
+    "idle_time": 3.223,
+    "visibility_changes": 0.564,
+    "question_number": 10.862,
+    "session_duration": 9.56,
+    "matched_difficulty_accuracy_slope": 1.0,
+    "matched_difficulty_speed_slope": 1.005,
+    "idle_fraction": 105762738.724,
+    "focus_fraction": 105759863.638,
+    "auc_toward_nonchosen": 1.118,
+    "max_deviation": 2.068,
+    "x_flips": 4.745,
+    "sample_entropy": 1.418,
+    "velocity_peak": 2.657,
+    "velocity_mean": 3.611,
+    "pause_count": 1.384,
+    "path_ratio": 3.118,
+    "time_to_first_movement": 1202180.958,
+    "time_to_first_selection": 1202734.636,
+    "hover_time_max": 3.716,
+    "hover_time_nonchosen": 3.457,
+    "cursor_samples": 59.488
+  },
+  "permutation_importance_simulated": {
+    "correct": 0.002098,
+    "prior_accuracy": 0.127607,
+    "prior_attempts": 0.003811,
+    "skill_prior_accuracy": -5.7e-05,
+    "skill_prior_attempts": 0.000226,
+    "item_difficulty": 7e-06,
+    "log_response_time": 0.000574,
+    "log_rt_z_item": 0.000417,
+    "rt_drift": 0.00022,
+    "log_lag_time": 0.000708,
+    "reading_time": 8.2e-05,
+    "decision_latency": 0.000729,
+    "time_after_last_interaction": 0.000953,
+    "response_time_vs_estimate": 0.0,
+    "option_changes": 5.1e-05,
+    "option_change_entropy": 0.000197,
+    "option_revisits": 2e-05,
+    "first_selection_changed": 0.0,
+    "idle_count": 4e-06,
+    "idle_time": 3.8e-05,
+    "visibility_changes": 0.0,
+    "question_number": 0.000695,
+    "session_duration": -0.000292,
+    "matched_difficulty_accuracy_slope": -0.000228,
+    "matched_difficulty_speed_slope": 0.000445,
+    "idle_fraction": -0.000225,
+    "focus_fraction": -0.0002,
+    "auc_toward_nonchosen": -0.000679,
+    "max_deviation": 0.00075,
+    "x_flips": 0.000283,
+    "sample_entropy": 1e-05,
+    "velocity_peak": 0.001036,
+    "velocity_mean": -3e-05,
+    "pause_count": 0.0,
+    "path_ratio": 0.000377,
+    "time_to_first_movement": 0.000487,
+    "time_to_first_selection": 0.000256,
+    "hover_time_max": 4.7e-05,
+    "hover_time_nonchosen": -3.9e-05,
+    "cursor_samples": -0.000134
+  },
+  "quick_baseline_auc_simulated": 0.6367,
+  "correlation": {
+    "simulated_strong_pairs": [
+      {
+        "a": "idle_count",
+        "b": "visibility_changes",
+        "r": 1.0
+      },
+      {
+        "a": "focus_fraction",
+        "b": "idle_fraction",
+        "r": -1.0
+      },
+      {
+        "a": "time_to_first_movement",
+        "b": "time_to_first_selection",
+        "r": 1.0
+      },
+      {
+        "a": "log_response_time",
+        "b": "log_rt_z_item",
+        "r": 0.9545
+      }
+    ],
+    "max_abs_correlation": 1.0,
+    "redundant_across_sources": [
+      {
+        "a": "idle_count",
+        "b": "visibility_changes",
+        "r_by_source": {
+          "sim-V0": 1.0
+        },
+        "r": 1.0,
+        "sources_checked": [
+          "sim-V0"
+        ],
+        "simulated_only": true
+      },
+      {
+        "a": "idle_fraction",
+        "b": "focus_fraction",
+        "r_by_source": {
+          "sim-V0": -1.0
+        },
+        "r": -1.0,
+        "sources_checked": [
+          "sim-V0"
+        ],
+        "simulated_only": true
+      },
+      {
+        "a": "time_to_first_movement",
+        "b": "time_to_first_selection",
+        "r_by_source": {
+          "sim-V0": 1.0
+        },
+        "r": 1.0,
+        "sources_checked": [
+          "sim-V0"
+        ],
+        "simulated_only": true
+      }
+    ]
+  },
+  "constant_features": {
+    "attempt_count": [
+      "sim-V0"
+    ],
+    "n_options": [
+      "sim-V0"
+    ],
+    "hint_count": [
+      "sim-V0"
+    ],
+    "skipped": [
+      "sim-V0"
+    ]
+  },
+  "response_time_vs_correctness": {
+    "assistments_2009": {
+      "correlation_logrt_correct": -0.028
+    },
+    "assistments_2012": {
+      "correlation_logrt_correct": -0.0961
+    },
+    "ednet_kt1": {
+      "correlation_logrt_correct": -0.0855
+    },
+    "sim-V0": {
+      "correlation_logrt_correct": -0.0481
+    }
+  },
+  "option_changes": {
+    "accuracy_by_option_changes": {
+      "0": 0.7025,
+      "1": 0.6746,
+      "2": 0.6534,
+      "3": 0.6327,
+      "4": 0.6158
+    },
+    "single_change_wrong_to_right_rate": 0.6746,
+    "single_change_n": 43703
+  },
+  "within_session": {
+    "accuracy": {
+      "assistments_2012": {
+        "slope": 7.7e-05,
+        "ci_low": -0.000125,
+        "ci_high": 0.00028,
+        "n": 300000,
+        "learners": 21325,
+        "flat": true
+      },
+      "ednet_kt1": {
+        "slope": 0.000165,
+        "ci_low": 4e-06,
+        "ci_high": 0.000343,
+        "n": 300000,
+        "learners": 19458,
+        "flat": false
+      },
+      "sim-V0": {
+        "slope": -9.6e-05,
+        "ci_low": -0.000232,
+        "ci_high": 1.3e-05,
+        "n": 152956,
+        "learners": 1000,
+        "flat": true
+      }
+    },
+    "speed": {
+      "assistments_2012": {
+        "slope": -0.009207,
+        "ci_low": -0.00971,
+        "ci_high": -0.008709,
+        "n": 300000,
+        "learners": 21325,
+        "flat": false
+      },
+      "ednet_kt1": {
+        "slope": -0.001822,
+        "ci_low": -0.002301,
+        "ci_high": -0.001342,
+        "n": 300000,
+        "learners": 19458,
+        "flat": false
+      },
+      "sim-V0": {
+        "slope": -0.00264,
+        "ci_low": -0.003191,
+        "ci_high": -0.00218,
+        "n": 152956,
+        "learners": 1000,
+        "flat": false
+      }
+    }
+  },
+  "rq2_trajectory_beyond_response_time": {
+    "headline_feature": "max_deviation",
+    "partial_correlations": {
+      "auc_toward_nonchosen": {
+        "raw_correlation_with_label": -0.0078,
+        "partial_correlation_given_rt": -0.0072,
+        "correlation_with_rt": 0.0355
+      },
+      "max_deviation": {
+        "raw_correlation_with_label": -0.023,
+        "partial_correlation_given_rt": -0.0225,
+        "correlation_with_rt": 0.0303
+      },
+      "x_flips": {
+        "raw_correlation_with_label": -0.0074,
+        "partial_correlation_given_rt": -0.0069,
+        "correlation_with_rt": 0.0302
+      },
+      "sample_entropy": {
+        "raw_correlation_with_label": -0.0065,
+        "partial_correlation_given_rt": -0.0061,
+        "correlation_with_rt": 0.0269
+      },
+      "velocity_peak": {
+        "raw_correlation_with_label": -0.0014,
+        "partial_correlation_given_rt": -0.0017,
+        "correlation_with_rt": -0.0178
+      },
+      "velocity_mean": {
+        "raw_correlation_with_label": 0.0097,
+        "partial_correlation_given_rt": 0.009,
+        "correlation_with_rt": -0.0464
+      },
+      "path_ratio": {
+        "raw_correlation_with_label": -0.0213,
+        "partial_correlation_given_rt": -0.0209,
+        "correlation_with_rt": 0.0232
+      },
+      "time_to_first_movement": {
+        "raw_correlation_with_label": -0.0089,
+        "partial_correlation_given_rt": 0.0043,
+        "correlation_with_rt": 0.7425
+      },
+      "time_to_first_selection": {
+        "raw_correlation_with_label": -0.009,
+        "partial_correlation_given_rt": 0.0042,
+        "correlation_with_rt": 0.7426
+      },
+      "hover_time_max": {
+        "raw_correlation_with_label": -0.021,
+        "partial_correlation_given_rt": -0.02,
+        "correlation_with_rt": 0.0689
+      },
+      "hover_time_nonchosen": {
+        "raw_correlation_with_label": 0.0028,
+        "partial_correlation_given_rt": 0.0031,
+        "correlation_with_rt": 0.0201
+      },
+      "cursor_samples": {
+        "raw_correlation_with_label": -0.0075,
+        "partial_correlation_given_rt": -0.0068,
+        "correlation_with_rt": 0.0439
+      }
+    }
+  },
+  "feature_stability": {
+    "item_difficulty": 0.026,
+    "rt_drift": 0.0315,
+    "auc_toward_nonchosen": 0.0408,
+    "idle_time": 0.0455,
+    "idle_fraction": 0.0482,
+    "focus_fraction": 0.0482,
+    "visibility_changes": 0.063,
+    "idle_count": 0.063,
+    "option_revisits": 0.0821,
+    "first_selection_changed": 0.0838,
+    "option_change_entropy": 0.0889,
+    "pause_count": 0.1007,
+    "option_changes": 0.1171,
+    "correct": 0.1196,
+    "time_to_first_movement": 0.129,
+    "time_to_first_selection": 0.1291,
+    "reading_time": 0.1338,
+    "response_time_vs_estimate": 0.1425,
+    "time_after_last_interaction": 0.1494,
+    "log_lag_time": 0.1581,
+    "decision_latency": 0.1644,
+    "sample_entropy": 0.1876,
+    "log_response_time": 0.2175,
+    "log_rt_z_item": 0.2351,
+    "matched_difficulty_accuracy_slope": 0.2773,
+    "matched_difficulty_speed_slope": 0.2809,
+    "skill_prior_accuracy": 0.3142,
+    "skill_prior_attempts": 0.328,
+    "hover_time_nonchosen": 0.3393,
+    "question_number": 0.4045,
+    "session_duration": 0.4215,
+    "velocity_peak": 0.5277,
+    "max_deviation": 0.6514,
+    "x_flips": 0.6701,
+    "prior_attempts": 0.7058,
+    "hover_time_max": 0.7152,
+    "prior_accuracy": 0.7457,
+    "cursor_samples": 0.7471,
+    "velocity_mean": 0.8708,
+    "path_ratio": 0.8728
+  },
+  "signal_class_overlap": {
+    "own_information_nats": {
+      "L0": 0.02323,
+      "L1": 0.00019,
+      "L2": 0.00335,
+      "L3": 0.0006,
+      "L4": 0.0
+    },
+    "pairwise_redundancy_nats": {
+      "L0|L1": 0.00016,
+      "L0|L2": 0.00136,
+      "L0|L3": 8e-05,
+      "L0|L4": 0.00015,
+      "L1|L2": 0.00114,
+      "L1|L3": -0.00015,
+      "L1|L4": -7e-05,
+      "L2|L3": 0.00222,
+      "L2|L4": 0.00229,
+      "L3|L4": -0.00011
+    }
+  },
+  "archetype_profiles": {
+    "careful": {
+      "log_response_time": -0.018,
+      "option_changes": 0.019,
+      "pause_count": -0.013,
+      "path_ratio": -0.037,
+      "hover_time_nonchosen": -0.043,
+      "idle_fraction": 0.009,
+      "x_flips": -0.047,
+      "prior_accuracy": -0.032
+    },
+    "fatigable": {
+      "log_response_time": -0.245,
+      "option_changes": -0.143,
+      "pause_count": -0.061,
+      "path_ratio": -0.018,
+      "hover_time_nonchosen": -0.148,
+      "idle_fraction": 0.073,
+      "x_flips": -0.14,
+      "prior_accuracy": 0.376
+    },
+    "rapid": {
+      "log_response_time": -0.011,
+      "option_changes": -0.138,
+      "pause_count": 0.01,
+      "path_ratio": 0.2,
+      "hover_time_nonchosen": 0.155,
+      "idle_fraction": 0.167,
+      "x_flips": 0.149,
+      "prior_accuracy": 0.955
+    },
+    "steady": {
+      "log_response_time": 0.021,
+      "option_changes": -0.016,
+      "pause_count": 0.014,
+      "path_ratio": 0.035,
+      "hover_time_nonchosen": 0.043,
+      "idle_fraction": -0.011,
+      "x_flips": 0.047,
+      "prior_accuracy": 0.019
+    }
+  },
+  "consent_configurations": {
+    "features_per_configuration": {
+      "correctness only": {
+        "assistments_2009": 7,
+        "assistments_2012": 7,
+        "ednet_kt1": 6,
+        "sim-V0": 6
+      },
+      "+ timing": {
+        "assistments_2009": 10,
+        "assistments_2012": 11,
+        "ednet_kt1": 10,
+        "sim-V0": 14
+      },
+      "+ interaction": {
+        "assistments_2009": 11,
+        "assistments_2012": 12,
+        "ednet_kt1": 10,
+        "sim-V0": 21
+      },
+      "+ session": {
+        "assistments_2009": 11,
+        "assistments_2012": 16,
+        "ednet_kt1": 14,
+        "sim-V0": 27
+      },
+      "+ motor (full)": {
+        "assistments_2009": 11,
+        "assistments_2012": 16,
+        "ednet_kt1": 14,
+        "sim-V0": 40
+      }
+    }
+  },
+  "h2_fatigue_verdict": {
+    "preregistered_rule": "docs/preregistration.md H2 \u2014 if f05-06 is flat, the fatigue construct is reduced or dropped rather than defended",
+    "real_sources_measured": [
+      "assistments_2012",
+      "ednet_kt1"
+    ],
+    "real_sources_not_measurable": {
+      "assistments_2009": "no wall-clock column, so no sessions and no within-session position"
+    },
+    "real_sources_declining": [],
+    "slopes": {
+      "assistments_2012": {
+        "slope": 7.7e-05,
+        "ci_low": -0.000125,
+        "ci_high": 0.00028,
+        "n": 300000,
+        "learners": 21325,
+        "flat": true
+      },
+      "ednet_kt1": {
+        "slope": 0.000165,
+        "ci_low": 4e-06,
+        "ci_high": 0.000343,
+        "n": 300000,
+        "learners": 19458,
+        "flat": false
+      }
+    },
+    "decision": "reduce or drop \u2014 no real source shows a within-session accuracy decline"
+  }
+}

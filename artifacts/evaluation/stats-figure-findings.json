@@ -1,0 +1,186 @@
+{
+  "seed": 20260821,
+  "f11-01": {
+    "comparisons": 27,
+    "largest": {
+      "comparison": "random vs rule_improved",
+      "outcome": "time_to_mastery_seconds",
+      "hedges_g": 1.7695444535053353
+    },
+    "holm_significant": 9,
+    "exceeding_g_0.3": 1
+  },
+  "f11-02": {
+    "correctness_rung_increment": {
+      "assistments_2009": 0.02250347587964421,
+      "assistments_2012": 0.022085274588096657,
+      "ednet_kt1": 0.014655981488945428,
+      "sim-V0": 0.02441836274044452
+    }
+  },
+  "f11-03": {
+    "correctness\nassistments_2009": {
+      "item": 0.07785507956176173,
+      "learner": 0.06356491714939769,
+      "residual": 0.8585800032888405
+    },
+    "correctness\nassistments_2012": {
+      "item": 0.05377126440729978,
+      "learner": 0.015959810592663968,
+      "residual": 0.9302689250000363
+    },
+    "correctness\nednet_kt1": {
+      "item": 0.0898061614312078,
+      "learner": 0.03567559813888556,
+      "residual": 0.8745182404299066
+    },
+    "correctness\nsim-V0": {
+      "item": 0.057025503415820605,
+      "learner": 3.526699944490326e-10,
+      "residual": 0.9429744962315094
+    },
+    "closed loop\nper item": {
+      "item": 0.03900721564027155,
+      "learner": 0.014942136050122436,
+      "residual": 0.9460506483096061
+    },
+    "outcome\nknowledge_gain": {
+      "learner": 0.9774220032847126,
+      "residual": 0.022577996715287374
+    },
+    "outcome\nitems_to_mastery": {
+      "learner": 0.9303841854175665,
+      "residual": 0.06961581458243352
+    },
+    "outcome\ntime_to_mastery_seconds": {
+      "learner": 0.8892043132640512,
+      "residual": 0.11079568673594879
+    }
+  },
+  "f11-04": {
+    "rct_requirement": {
+      "target_g": 0.3,
+      "n_per_arm": 176.0,
+      "n_total": 352.0,
+      "note": "g = 0.3 is the effect this literature reports for adaptive instruction; the simulated effects above are not evidence that a real trial would see one, only that this design could detect it"
+    },
+    "underpowered_comparisons": 9,
+    "total_comparisons": 9
+  },
+  "f11-06": {
+    "knowledge_gain": {
+      "significant_raw": 0,
+      "significant_holm": 0,
+      "lost_to_correction": []
+    },
+    "items_to_mastery": {
+      "significant_raw": 0,
+      "significant_holm": 0,
+      "lost_to_correction": []
+    },
+    "time_to_mastery_seconds": {
+      "significant_raw": 9,
+      "significant_holm": 9,
+      "lost_to_correction": []
+    }
+  },
+  "f11-07": {
+    "model_L0|knowledge_gain": {
+      "mean_difference": 0.008872122612170324,
+      "ci_low": -0.02883086472824377,
+      "ci_high": 0.04688796153080416,
+      "share_favouring_treatment": 0.6757,
+      "excludes_zero": false
+    },
+    "model_L4|knowledge_gain": {
+      "mean_difference": 0.007881688833127821,
+      "ci_low": -0.03011316628262516,
+      "ci_high": 0.04584489018832506,
+      "share_favouring_treatment": 0.6576,
+      "excludes_zero": false
+    },
+    "irt_cat_maxinfo|knowledge_gain": {
+      "mean_difference": -0.0010025548543342545,
+      "ci_low": -0.038874184307487326,
+      "ci_high": 0.0368487475880187,
+      "share_favouring_treatment": 0.4815,
+      "excludes_zero": false
+    }
+  },
+  "f11-08": {
+    "knowledge_gain": {
+      "skew": 1.1344812917352696,
+      "kurtosis": 2.8442774737266143,
+      "residual_sd_ratio_across_arms": 1.0523840877748825,
+      "reading": "the outcome is a bounded, censored quantity, so normality is not expected; Welch and the rank test are reported for that reason"
+    },
+    "items_to_mastery": {
+      "skew": -3.443178079642011,
+      "kurtosis": 10.378506262211452,
+      "residual_sd_ratio_across_arms": 1.0625159809357325,
+      "reading": "the outcome is a bounded, censored quantity, so normality is not expected; Welch and the rank test are reported for that reason"
+    },
+    "time_to_mastery_seconds": {
+      "skew": 0.28879481517118805,
+      "kurtosis": 2.645178059896584,
+      "residual_sd_ratio_across_arms": 1.4336014590394783,
+      "reading": "the outcome is a bounded, censored quantity, so normality is not expected; Welch and the rank test are reported for that reason"
+    }
+  },
+  "f11-05": {
+    "probe_noise": {
+      "model_L0": 0.0,
+      "model_L4": 0.0
+    },
+    "mastery_threshold": {
+      "0.7": "rule_improved",
+      "0.8": "model_L0",
+      "0.9": "model_L0"
+    },
+    "item_budget": {
+      "25": "model_L0",
+      "50": "model_L0",
+      "75": "model_L0",
+      "100": "model_L0",
+      "125": "model_L0",
+      "150": "model_L0",
+      "175": "model_L0",
+      "200": "model_L0"
+    },
+    "simulator_variant": {
+      "V0": "model_L3",
+      "V1": "model_L0",
+      "V2": "model_L4",
+      "V3": "random",
+      "V4": "model_L1"
+    },
+    "target_epsilon": {
+      "levels": [
+        0.0,
+        0.05,
+        0.1,
+        0.15,
+        0.25,
+        0.5
+      ]
+    },
+    "reward_weights": {
+      "lambda_timex0.25": "bandit_lin_ts",
+      "lambda_timex0.5": "bandit_lin_ts",
+      "lambda_timex1.0": "bandit_lin_ts",
+      "lambda_timex2.0": "bandit_lin_ts",
+      "lambda_timex4.0": "bandit_linucb",
+      "mu_frustrationx0.25": "bandit_lin_ts",
+      "mu_frustrationx0.5": "bandit_lin_ts",
+      "mu_frustrationx1.0": "bandit_lin_ts",
+      "mu_frustrationx2.0": "bandit_lin_ts",
+      "mu_frustrationx4.0": "bandit_lin_ts"
+    },
+    "ordering_stable": {
+      "item_budget": true,
+      "simulator_variant": false,
+      "reward_weights": false,
+      "mastery_threshold": false
+    }
+  }
+}

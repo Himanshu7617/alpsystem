@@ -1,0 +1,3508 @@
+{
+  "version": "item-bank-v1",
+  "graph_version": "cse-prerequisite-graph-v1",
+  "seed": 20260821,
+  "items": [
+    {
+      "item_id": "ds-e-1",
+      "concept_id": "stacks_and_queues",
+      "subject": "Data Structures",
+      "stem": "Which data structure follows the Last In First Out (LIFO) principle?",
+      "options": [
+        "Queue",
+        "Stack",
+        "Linked List",
+        "Hash Table"
+      ],
+      "correct_index": 1,
+      "explanation": "A stack removes the most recently added element first \u2014 this is the LIFO property.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "arrays_and_lists"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-e-2",
+      "concept_id": "arrays_and_lists",
+      "subject": "Data Structures",
+      "stem": "In a singly linked list each node contains data and what else?",
+      "options": [
+        "A pointer to the previous node",
+        "A pointer to the next node",
+        "The total size of the list",
+        "A sorted index"
+      ],
+      "correct_index": 1,
+      "explanation": "Each node in a singly linked list stores data and a reference (pointer) to the next node in the sequence.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-e-3",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "What is the maximum number of children a node can have in a binary tree?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "Unlimited"
+      ],
+      "correct_index": 1,
+      "explanation": "By definition a binary tree node has at most two children: a left child and a right child.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-e-4",
+      "concept_id": "stacks_and_queues",
+      "subject": "Data Structures",
+      "stem": "Which data structure uses First In First Out (FIFO) ordering?",
+      "options": [
+        "Stack",
+        "Queue",
+        "Binary Tree",
+        "Hash Map"
+      ],
+      "correct_index": 1,
+      "explanation": "A queue processes elements in the order they were added \u2014 the first element enqueued is the first dequeued.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "arrays_and_lists"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-e-5",
+      "concept_id": "hash_tables",
+      "subject": "Data Structures",
+      "stem": "What does a hash table use to map keys to array indices?",
+      "options": [
+        "Sorting algorithm",
+        "Hash function",
+        "Binary search",
+        "Linked list traversal"
+      ],
+      "correct_index": 1,
+      "explanation": "A hash function computes an index from the key so the value can be stored and retrieved in near-constant time.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "arrays_and_lists"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-e-6",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "Which traversal visits the root node before its subtrees?",
+      "options": [
+        "In-order",
+        "Post-order",
+        "Pre-order",
+        "Level-order"
+      ],
+      "correct_index": 2,
+      "explanation": "Pre-order traversal visits the root first then recursively visits the left subtree followed by the right subtree.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-e-7",
+      "concept_id": "arrays_and_lists",
+      "subject": "Data Structures",
+      "stem": "What is the time complexity of accessing an element by index in an array?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n\u00b2)"
+      ],
+      "correct_index": 0,
+      "explanation": "Arrays support constant-time random access because elements are stored in contiguous memory locations.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-m-1",
+      "concept_id": "hash_tables",
+      "subject": "Data Structures",
+      "stem": "What is the worst-case time complexity of inserting into a hash table with chaining?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correct_index": 2,
+      "explanation": "If all keys hash to the same bucket the chain becomes a linked list of length n so insertion degrades to O(n).",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "arrays_and_lists"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-m-2",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "Which self-balancing BST guarantees O(log n) height by enforcing a color invariant on every node?",
+      "options": [
+        "B-Tree",
+        "AVL Tree",
+        "Red-Black Tree",
+        "Splay Tree"
+      ],
+      "correct_index": 2,
+      "explanation": "A Red-Black Tree colors every node red or black and enforces rules that keep the longest path at most twice the shortest guaranteeing O(log n) height.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-m-3",
+      "concept_id": "heaps",
+      "subject": "Data Structures",
+      "stem": "In a min-heap which element is always at the root?",
+      "options": [
+        "The largest element",
+        "The median element",
+        "The smallest element",
+        "The most recently inserted element"
+      ],
+      "correct_index": 2,
+      "explanation": "A min-heap maintains the heap property: every parent is less than or equal to its children so the minimum is always at the root.",
+      "author_difficulty": 4,
+      "prerequisite_concepts": [
+        "trees_and_bst"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-m-4",
+      "concept_id": "arrays_and_lists",
+      "subject": "Data Structures",
+      "stem": "What is the amortized time complexity of appending to a dynamic array that doubles in size when full?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n\u00b2)"
+      ],
+      "correct_index": 0,
+      "explanation": "Although individual resizes cost O(n) they happen rarely enough that the amortized cost per append is O(1).",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-m-5",
+      "concept_id": "hash_tables",
+      "subject": "Data Structures",
+      "stem": "Which data structure is best suited for implementing an LRU cache?",
+      "options": [
+        "Array",
+        "Stack",
+        "HashMap + Doubly Linked List",
+        "Binary Search Tree"
+      ],
+      "correct_index": 2,
+      "explanation": "An LRU cache needs O(1) lookup (hash map) and O(1) insertion/removal of the least-recently-used item (doubly linked list).",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "arrays_and_lists"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-m-6",
+      "concept_id": "graphs",
+      "subject": "Data Structures",
+      "stem": "What is the space complexity of storing a graph with V vertices and E edges using an adjacency list?",
+      "options": [
+        "O(V\u00b2)",
+        "O(V + E)",
+        "O(E\u00b2)",
+        "O(V \u00d7 E)"
+      ],
+      "correct_index": 1,
+      "explanation": "An adjacency list stores a list of neighbors for each vertex using O(V) vertex entries plus O(E) edge entries total.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "trees_and_bst",
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-m-7",
+      "concept_id": "heaps",
+      "subject": "Data Structures",
+      "stem": "After deleting the root of a max-heap how is the heap property restored?",
+      "options": [
+        "Insert a new root",
+        "Swap root with last element then heapify down",
+        "Rebuild the entire heap",
+        "Sort the array"
+      ],
+      "correct_index": 1,
+      "explanation": "The last element replaces the root then sift-down (heapify) swaps it with its larger child repeatedly until the max-heap property holds.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "trees_and_bst"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-h-1",
+      "concept_id": "advanced_ds",
+      "subject": "Data Structures",
+      "stem": "A Bloom filter may return false positives but never false negatives. Why is this the case?",
+      "options": [
+        "It stores all elements explicitly",
+        "It uses multiple hash functions mapping to a bit array",
+        "It uses a sorted array with binary search",
+        "It discards elements after a timeout"
+      ],
+      "correct_index": 1,
+      "explanation": "A Bloom filter sets bits at multiple hash positions. A lookup checks all positions \u2014 an absent element may collide with bits set by other elements (false positive) but a present element always has all its bits set (no false negative).",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "hash_tables",
+        "heaps",
+        "graphs"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-h-2",
+      "concept_id": "heaps",
+      "subject": "Data Structures",
+      "stem": "What is the time complexity of building a binary heap from an unsorted array using the bottom-up method?",
+      "options": [
+        "O(n log n)",
+        "O(n\u00b2)",
+        "O(n)",
+        "O(log n)"
+      ],
+      "correct_index": 2,
+      "explanation": "Bottom-up heap construction calls heapify on each non-leaf node. The total work sums to O(n) because most nodes are near the bottom and require few swaps.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "trees_and_bst"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-h-3",
+      "concept_id": "advanced_ds",
+      "subject": "Data Structures",
+      "stem": "In a B-tree of minimum degree t what is the maximum number of keys a node can hold?",
+      "options": [
+        "t",
+        "t \u2212 1",
+        "2t",
+        "2t \u2212 1"
+      ],
+      "correct_index": 3,
+      "explanation": "A B-tree node of minimum degree t can hold at most 2t \u2212 1 keys and 2t children. This keeps the tree balanced and optimizes disk reads.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "hash_tables",
+        "heaps",
+        "graphs"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-h-4",
+      "concept_id": "advanced_ds",
+      "subject": "Data Structures",
+      "stem": "Which data structure supports union and find operations in nearly O(1) amortized time using path compression and union by rank?",
+      "options": [
+        "Balanced BST",
+        "Trie",
+        "Disjoint Set (Union-Find)",
+        "Skip List"
+      ],
+      "correct_index": 2,
+      "explanation": "Union-Find with path compression and union by rank achieves an amortized time complexity of O(\u03b1(n)) per operation where \u03b1 is the inverse Ackermann function \u2014 effectively constant.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "hash_tables",
+        "heaps",
+        "graphs"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-h-5",
+      "concept_id": "advanced_ds",
+      "subject": "Data Structures",
+      "stem": "What problem does a skip list solve compared to a standard sorted linked list?",
+      "options": [
+        "Constant-time deletion",
+        "O(log n) expected search time",
+        "O(1) insertion at any position",
+        "Guaranteed worst-case O(1) access"
+      ],
+      "correct_index": 1,
+      "explanation": "A skip list adds multiple levels of forward pointers to a sorted linked list enabling binary-search-like behavior with O(log n) expected time for search insert and delete.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "hash_tables",
+        "heaps",
+        "graphs"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-h-6",
+      "concept_id": "advanced_ds",
+      "subject": "Data Structures",
+      "stem": "In a segment tree built over an array of n elements how many nodes does the tree contain in the worst case?",
+      "options": [
+        "n",
+        "2n",
+        "2n \u2212 1",
+        "4n"
+      ],
+      "correct_index": 3,
+      "explanation": "A segment tree is typically allocated as a complete binary tree. For n elements the array representation may need up to 4n nodes to handle non-power-of-two sizes safely.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "hash_tables",
+        "heaps",
+        "graphs"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "ds-h-7",
+      "concept_id": "advanced_ds",
+      "subject": "Data Structures",
+      "stem": "What is the key advantage of a Fibonacci heap over a binary heap for Dijkstra's algorithm?",
+      "options": [
+        "Simpler implementation",
+        "O(1) amortized decrease-key",
+        "O(1) worst-case extract-min",
+        "Lower space usage"
+      ],
+      "correct_index": 1,
+      "explanation": "Fibonacci heaps support decrease-key in O(1) amortized time reducing Dijkstra's total complexity to O(V log V + E) compared to O((V+E) log V) with a binary heap.",
+      "author_difficulty": 10,
+      "prerequisite_concepts": [
+        "hash_tables",
+        "heaps",
+        "graphs"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-e-1",
+      "concept_id": "complexity_analysis",
+      "subject": "Algorithms",
+      "stem": "What does Big-O notation describe about an algorithm?",
+      "options": [
+        "The exact running time in seconds",
+        "An upper bound on growth rate as input size increases",
+        "The minimum number of operations",
+        "The average-case performance only"
+      ],
+      "correct_index": 1,
+      "explanation": "Big-O gives an asymptotic upper bound on how an algorithm's time or space requirements grow relative to input size.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-e-2",
+      "concept_id": "sorting_searching",
+      "subject": "Algorithms",
+      "stem": "Which sorting algorithm repeatedly finds the minimum element and places it at the beginning?",
+      "options": [
+        "Merge Sort",
+        "Quick Sort",
+        "Selection Sort",
+        "Insertion Sort"
+      ],
+      "correct_index": 2,
+      "explanation": "Selection sort scans the unsorted portion for the minimum element and swaps it into the next sorted position on each pass.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "arrays_and_lists"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-e-3",
+      "concept_id": "sorting_searching",
+      "subject": "Algorithms",
+      "stem": "What is the time complexity of linear search in the worst case?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n\u00b2)"
+      ],
+      "correct_index": 2,
+      "explanation": "Linear search checks each element one by one \u2014 in the worst case the target is last or absent requiring n comparisons.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [
+        "arrays_and_lists"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-e-4",
+      "concept_id": "sorting_searching",
+      "subject": "Algorithms",
+      "stem": "Binary search requires the input array to be in what state?",
+      "options": [
+        "Unsorted",
+        "Sorted",
+        "Reversed",
+        "Randomly shuffled"
+      ],
+      "correct_index": 1,
+      "explanation": "Binary search halves the search space at each step which only works correctly when the array is sorted.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "arrays_and_lists"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-e-5",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "Which algorithm technique solves a problem by breaking it into smaller subproblems solving each recursively and combining results?",
+      "options": [
+        "Greedy",
+        "Divide and Conquer",
+        "Backtracking",
+        "Brute Force"
+      ],
+      "correct_index": 1,
+      "explanation": "Divide and conquer splits the problem into independent subproblems solves them recursively and merges the solutions.",
+      "author_difficulty": 3,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-e-6",
+      "concept_id": "sorting_searching",
+      "subject": "Algorithms",
+      "stem": "What is the time complexity of Bubble Sort in the worst case?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n\u00b2)",
+        "O(2\u207f)"
+      ],
+      "correct_index": 2,
+      "explanation": "Bubble sort makes n passes through the array swapping adjacent elements \u2014 nested loops give O(n\u00b2) in the worst case.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "arrays_and_lists"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-e-7",
+      "concept_id": "sorting_searching",
+      "subject": "Algorithms",
+      "stem": "Which search algorithm works by checking every element one by one from start to end?",
+      "options": [
+        "Binary Search",
+        "Interpolation Search",
+        "Linear Search",
+        "Depth-First Search"
+      ],
+      "correct_index": 2,
+      "explanation": "Linear search iterates through the collection sequentially comparing each element with the target.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [
+        "arrays_and_lists"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-m-1",
+      "concept_id": "sorting_searching",
+      "subject": "Algorithms",
+      "stem": "What is the average-case time complexity of Quick Sort?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n\u00b2)",
+        "O(log n)"
+      ],
+      "correct_index": 1,
+      "explanation": "Quick sort's average case partitions the array into roughly equal halves at each level of recursion giving O(n log n) comparisons.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "arrays_and_lists"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-m-2",
+      "concept_id": "dynamic_programming",
+      "subject": "Algorithms",
+      "stem": "Which algorithmic paradigm stores solutions to overlapping subproblems to avoid redundant computation?",
+      "options": [
+        "Divide and Conquer",
+        "Dynamic Programming",
+        "Greedy",
+        "Branch and Bound"
+      ],
+      "correct_index": 1,
+      "explanation": "Dynamic programming identifies overlapping subproblems and stores their results (memoization or tabulation) so each subproblem is solved only once.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "divide_and_conquer"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-m-3",
+      "concept_id": "graph_algorithms",
+      "subject": "Algorithms",
+      "stem": "In Dijkstra's shortest-path algorithm why must all edge weights be non-negative?",
+      "options": [
+        "The algorithm uses a stack",
+        "The greedy choice assumes shorter partial paths remain shorter",
+        "Negative weights cause infinite loops",
+        "The algorithm only works on trees"
+      ],
+      "correct_index": 1,
+      "explanation": "Dijkstra greedily finalizes the shortest known distance to a node. A negative edge could later provide a shorter path to an already-finalized node violating this greedy invariant.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "graphs",
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-m-4",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "What is the recurrence relation for Merge Sort?",
+      "options": [
+        "T(n) = T(n\u22121) + O(n)",
+        "T(n) = 2T(n/2) + O(n)",
+        "T(n) = T(n/2) + O(1)",
+        "T(n) = 2T(n\u22121) + O(1)"
+      ],
+      "correct_index": 1,
+      "explanation": "Merge sort splits the array into two halves (2 subproblems of size n/2) and merges them in O(n) time.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-m-5",
+      "concept_id": "graph_algorithms",
+      "subject": "Algorithms",
+      "stem": "Which graph traversal algorithm uses a queue and visits nodes level by level?",
+      "options": [
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Topological Sort",
+        "A* Search"
+      ],
+      "correct_index": 1,
+      "explanation": "BFS uses a FIFO queue to explore all neighbors at the current depth before moving to the next level.",
+      "author_difficulty": 4,
+      "prerequisite_concepts": [
+        "graphs",
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-m-6",
+      "concept_id": "greedy_algorithms",
+      "subject": "Algorithms",
+      "stem": "A greedy algorithm for the activity selection problem sorts activities by what criterion?",
+      "options": [
+        "Start time",
+        "Duration",
+        "Finish time",
+        "Number of conflicts"
+      ],
+      "correct_index": 2,
+      "explanation": "Sorting by finish time and always picking the next compatible activity yields the maximum number of non-overlapping activities \u2014 a classic greedy strategy.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-m-7",
+      "concept_id": "sorting_searching",
+      "subject": "Algorithms",
+      "stem": "What is the worst-case time complexity of Quick Sort and when does it occur?",
+      "options": [
+        "O(n log n) when the array is sorted",
+        "O(n\u00b2) when the pivot is always the smallest or largest element",
+        "O(n) when all elements are equal",
+        "O(n\u00b2) when the array is random"
+      ],
+      "correct_index": 1,
+      "explanation": "If the pivot consistently produces maximally unbalanced partitions (e.g. already sorted array with first-element pivot) recursion depth reaches n and total work becomes O(n\u00b2).",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "arrays_and_lists"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-h-1",
+      "concept_id": "advanced_algorithms",
+      "subject": "Algorithms",
+      "stem": "What is the time complexity of the Knuth-Morris-Pratt (KMP) string matching algorithm?",
+      "options": [
+        "O(n \u00d7 m)",
+        "O(n + m)",
+        "O(n\u00b2)",
+        "O(n log m)"
+      ],
+      "correct_index": 1,
+      "explanation": "KMP preprocesses the pattern to build a failure function in O(m) then scans the text in O(n) \u2014 total O(n + m) without backtracking on the text.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "dynamic_programming",
+        "graph_algorithms"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-h-2",
+      "concept_id": "advanced_algorithms",
+      "subject": "Algorithms",
+      "stem": "Which problem is solved by finding a Hamiltonian cycle of minimum total weight in a complete graph?",
+      "options": [
+        "Minimum Spanning Tree",
+        "Shortest Path",
+        "Travelling Salesman Problem",
+        "Maximum Flow"
+      ],
+      "correct_index": 2,
+      "explanation": "The TSP asks for the minimum-cost tour visiting every vertex exactly once and returning to the start \u2014 a Hamiltonian cycle of minimum weight.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "dynamic_programming",
+        "graph_algorithms"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-h-3",
+      "concept_id": "complexity_analysis",
+      "subject": "Algorithms",
+      "stem": "What does the Master Theorem directly solve?",
+      "options": [
+        "Any recurrence relation",
+        "Recurrences of the form T(n) = aT(n/b) + f(n)",
+        "Recurrences with variable-size subproblems",
+        "Non-recursive running times"
+      ],
+      "correct_index": 1,
+      "explanation": "The Master Theorem applies to divide-and-conquer recurrences where the problem splits into a subproblems each of size n/b with combine cost f(n).",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-h-4",
+      "concept_id": "complexity_analysis",
+      "subject": "Algorithms",
+      "stem": "In the context of NP-completeness what does a polynomial-time reduction from problem A to problem B prove?",
+      "options": [
+        "A is easier than B",
+        "B is at least as hard as A",
+        "A and B have the same solution",
+        "B can be solved in polynomial time"
+      ],
+      "correct_index": 1,
+      "explanation": "If A \u2264\u209a B then any polynomial-time algorithm for B would also solve A \u2014 so B is at least as hard as A.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-h-5",
+      "concept_id": "graph_algorithms",
+      "subject": "Algorithms",
+      "stem": "Which algorithm finds the strongly connected components of a directed graph in O(V + E) time?",
+      "options": [
+        "Kruskal's algorithm",
+        "Tarjan's algorithm",
+        "Prim's algorithm",
+        "Floyd-Warshall algorithm"
+      ],
+      "correct_index": 1,
+      "explanation": "Tarjan's SCC algorithm uses a single DFS pass with a stack and low-link values to identify all strongly connected components in linear time.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "graphs",
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-h-6",
+      "concept_id": "graph_algorithms",
+      "subject": "Algorithms",
+      "stem": "What is the time complexity of the Floyd-Warshall all-pairs shortest path algorithm?",
+      "options": [
+        "O(V\u00b2)",
+        "O(V\u00b2 log V)",
+        "O(V\u00b3)",
+        "O(V \u00d7 E)"
+      ],
+      "correct_index": 2,
+      "explanation": "Floyd-Warshall uses three nested loops over V vertices to consider every intermediate vertex for every pair giving O(V\u00b3).",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "graphs",
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "algo-h-7",
+      "concept_id": "graph_algorithms",
+      "subject": "Algorithms",
+      "stem": "In a maximum-flow network what does the max-flow min-cut theorem state?",
+      "options": [
+        "Maximum flow equals minimum edge weight",
+        "Maximum flow equals the capacity of the minimum cut",
+        "Maximum flow equals the number of paths",
+        "Flow is always equal to demand"
+      ],
+      "correct_index": 1,
+      "explanation": "The theorem proves that the value of the maximum flow from source to sink equals the total capacity of the edges in the minimum s-t cut.",
+      "author_difficulty": 10,
+      "prerequisite_concepts": [
+        "graphs",
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-e-1",
+      "concept_id": "sql_basics",
+      "subject": "DBMS",
+      "stem": "What does SQL stand for?",
+      "options": [
+        "Structured Query Language",
+        "Simple Query Logic",
+        "Standard Question Language",
+        "Sequential Query Listing"
+      ],
+      "correct_index": 0,
+      "explanation": "SQL (Structured Query Language) is the standard language for managing and querying relational databases.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-e-2",
+      "concept_id": "sql_basics",
+      "subject": "DBMS",
+      "stem": "Which SQL keyword is used to retrieve data from a database?",
+      "options": [
+        "INSERT",
+        "UPDATE",
+        "SELECT",
+        "CREATE"
+      ],
+      "correct_index": 2,
+      "explanation": "The SELECT statement queries one or more tables and returns the matching rows as a result set.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-e-3",
+      "concept_id": "sql_basics",
+      "subject": "DBMS",
+      "stem": "A primary key in a relational database must be what?",
+      "options": [
+        "Nullable",
+        "Unique and not null",
+        "Always an integer",
+        "Automatically generated"
+      ],
+      "correct_index": 1,
+      "explanation": "A primary key uniquely identifies each row in a table and by definition cannot contain NULL values.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-e-4",
+      "concept_id": "sql_basics",
+      "subject": "DBMS",
+      "stem": "Which type of database relationship links one record in table A to many records in table B?",
+      "options": [
+        "One-to-One",
+        "One-to-Many",
+        "Many-to-Many",
+        "Self-referencing"
+      ],
+      "correct_index": 1,
+      "explanation": "A one-to-many relationship means a single row in table A can relate to multiple rows in table B \u2014 for example one department having many employees.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-e-5",
+      "concept_id": "sql_basics",
+      "subject": "DBMS",
+      "stem": "What does the WHERE clause do in a SQL query?",
+      "options": [
+        "Sorts the results",
+        "Filters rows based on a condition",
+        "Groups rows together",
+        "Joins two tables"
+      ],
+      "correct_index": 1,
+      "explanation": "The WHERE clause specifies a condition that each row must satisfy to be included in the query results.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-e-6",
+      "concept_id": "sql_basics",
+      "subject": "DBMS",
+      "stem": "Which SQL command is used to add a new row to a table?",
+      "options": [
+        "SELECT",
+        "INSERT",
+        "UPDATE",
+        "ALTER"
+      ],
+      "correct_index": 1,
+      "explanation": "INSERT INTO adds a new row of data to an existing table.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-e-7",
+      "concept_id": "sql_basics",
+      "subject": "DBMS",
+      "stem": "What is a foreign key?",
+      "options": [
+        "A key that encrypts data",
+        "A column that references the primary key of another table",
+        "A unique identifier within the same table",
+        "An index on multiple columns"
+      ],
+      "correct_index": 1,
+      "explanation": "A foreign key creates a link between two tables by referencing the primary key in the parent table enforcing referential integrity.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-m-1",
+      "concept_id": "normalization",
+      "subject": "DBMS",
+      "stem": "What is the purpose of database normalization?",
+      "options": [
+        "To speed up all queries",
+        "To reduce data redundancy and improve integrity",
+        "To encrypt sensitive data",
+        "To create backup copies"
+      ],
+      "correct_index": 1,
+      "explanation": "Normalization organizes tables to minimize duplicate data and dependency anomalies \u2014 each fact is stored in exactly one place.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "sql_basics"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-m-2",
+      "concept_id": "normalization",
+      "subject": "DBMS",
+      "stem": "Which normal form eliminates transitive dependencies?",
+      "options": [
+        "First Normal Form (1NF)",
+        "Second Normal Form (2NF)",
+        "Third Normal Form (3NF)",
+        "Boyce-Codd Normal Form (BCNF)"
+      ],
+      "correct_index": 2,
+      "explanation": "3NF requires that every non-key attribute depends only on the primary key \u2014 not transitively through another non-key attribute.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "sql_basics"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-m-3",
+      "concept_id": "transactions_acid",
+      "subject": "DBMS",
+      "stem": "What is the ACID property 'Atomicity' in database transactions?",
+      "options": [
+        "All transactions run at the same time",
+        "A transaction is all-or-nothing",
+        "Data is always consistent",
+        "Transactions are isolated from each other"
+      ],
+      "correct_index": 1,
+      "explanation": "Atomicity guarantees that either all operations in a transaction complete successfully or none of them take effect \u2014 partial execution is impossible.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "sql_basics"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-m-4",
+      "concept_id": "sql_basics",
+      "subject": "DBMS",
+      "stem": "Which type of SQL JOIN returns only the rows with matching values in both tables?",
+      "options": [
+        "LEFT JOIN",
+        "RIGHT JOIN",
+        "INNER JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correct_index": 2,
+      "explanation": "An INNER JOIN returns only those rows where the join condition is satisfied in both tables \u2014 unmatched rows are excluded.",
+      "author_difficulty": 4,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-m-5",
+      "concept_id": "indexing_optimization",
+      "subject": "DBMS",
+      "stem": "What does a database index primarily improve?",
+      "options": [
+        "Write speed",
+        "Read query performance",
+        "Data integrity",
+        "Storage compression"
+      ],
+      "correct_index": 1,
+      "explanation": "An index creates a sorted data structure (like a B-tree) that lets the database locate rows much faster than scanning the entire table.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "normalization"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-m-6",
+      "concept_id": "sql_basics",
+      "subject": "DBMS",
+      "stem": "In a relational database what is a view?",
+      "options": [
+        "A physical copy of a table",
+        "A virtual table defined by a stored query",
+        "A backup of the database",
+        "A type of stored procedure"
+      ],
+      "correct_index": 1,
+      "explanation": "A view is a named SELECT query that behaves like a table but does not store data itself \u2014 it dynamically retrieves data when queried.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-m-7",
+      "concept_id": "concurrency_control",
+      "subject": "DBMS",
+      "stem": "What is a deadlock in database systems?",
+      "options": [
+        "A query that takes too long",
+        "Two transactions waiting for each other's locks indefinitely",
+        "A corrupted table",
+        "An out-of-memory error"
+      ],
+      "correct_index": 1,
+      "explanation": "A deadlock occurs when transaction A holds lock X and waits for lock Y while transaction B holds Y and waits for X \u2014 neither can proceed.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "transactions_acid"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-h-1",
+      "concept_id": "indexing_optimization",
+      "subject": "DBMS",
+      "stem": "What is the difference between a clustered and a non-clustered index?",
+      "options": [
+        "Clustered indexes are faster; non-clustered are slower",
+        "A clustered index determines physical row order; a non-clustered index uses a separate structure pointing to rows",
+        "Clustered indexes work on views; non-clustered indexes work on tables",
+        "There is no practical difference"
+      ],
+      "correct_index": 1,
+      "explanation": "A clustered index sorts and stores table rows by the index key (one per table). A non-clustered index maintains a separate B-tree with pointers back to the data rows.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "normalization"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-h-2",
+      "concept_id": "concurrency_control",
+      "subject": "DBMS",
+      "stem": "In the context of ACID what does the Isolation level 'Serializable' guarantee?",
+      "options": [
+        "Fastest transaction processing",
+        "Transactions execute as if they were run one after another",
+        "Only read operations are isolated",
+        "Transactions share locks freely"
+      ],
+      "correct_index": 1,
+      "explanation": "Serializable is the strictest isolation level \u2014 it ensures concurrent transactions produce the same result as some serial execution order preventing all anomalies.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "transactions_acid"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-h-3",
+      "concept_id": "concurrency_control",
+      "subject": "DBMS",
+      "stem": "What problem can occur at the 'Read Committed' isolation level but not at 'Repeatable Read'?",
+      "options": [
+        "Dirty reads",
+        "Non-repeatable reads",
+        "Phantom reads",
+        "Lost updates"
+      ],
+      "correct_index": 1,
+      "explanation": "At Read Committed a transaction may see different values for the same row if another transaction commits between reads. Repeatable Read prevents this by locking read rows.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "transactions_acid"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-h-4",
+      "concept_id": "transactions_acid",
+      "subject": "DBMS",
+      "stem": "What is a write-ahead log (WAL) and why is it important?",
+      "options": [
+        "A log written after transaction commit for auditing",
+        "A log written before changes are applied to disk ensuring crash recovery",
+        "A debug log for developers",
+        "A network communication log"
+      ],
+      "correct_index": 1,
+      "explanation": "WAL writes all modifications to a log file before applying them to data pages. After a crash the log can replay committed changes and undo uncommitted ones.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "sql_basics"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-h-5",
+      "concept_id": "concurrency_control",
+      "subject": "DBMS",
+      "stem": "Which concurrency control protocol uses timestamps to order transactions without locks?",
+      "options": [
+        "Two-Phase Locking (2PL)",
+        "Timestamp Ordering Protocol",
+        "Optimistic Concurrency Control",
+        "Multi-Version Concurrency Control"
+      ],
+      "correct_index": 1,
+      "explanation": "The timestamp ordering protocol assigns a unique timestamp to each transaction and ensures read/write operations follow timestamp order \u2014 aborting transactions that violate the order.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "transactions_acid"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-h-6",
+      "concept_id": "indexing_optimization",
+      "subject": "DBMS",
+      "stem": "In query optimization what does a cost-based optimizer use to choose an execution plan?",
+      "options": [
+        "The length of the SQL statement",
+        "Statistics about table sizes and index selectivity",
+        "The order of columns in the SELECT clause",
+        "The user's role permissions"
+      ],
+      "correct_index": 1,
+      "explanation": "A cost-based optimizer estimates the I/O and CPU cost of different plans using statistics like row counts histogram distributions and index cardinality to pick the cheapest plan.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "normalization"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "db-h-7",
+      "concept_id": "distributed_databases",
+      "subject": "DBMS",
+      "stem": "What is the CAP theorem in distributed databases?",
+      "options": [
+        "Consistency Availability and Performance can all be achieved",
+        "You can guarantee at most two of Consistency Availability and Partition tolerance simultaneously",
+        "All databases are eventually consistent",
+        "CAP only applies to NoSQL databases"
+      ],
+      "correct_index": 1,
+      "explanation": "The CAP theorem states that in the presence of a network partition a distributed system must choose between consistency and availability \u2014 it cannot guarantee all three.",
+      "author_difficulty": 10,
+      "prerequisite_concepts": [
+        "concurrency_control",
+        "indexing_optimization"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-e-1",
+      "concept_id": "processes_threads",
+      "subject": "Operating Systems",
+      "stem": "What is the primary function of an operating system?",
+      "options": [
+        "Run web browsers",
+        "Manage hardware resources and provide services to applications",
+        "Compile source code",
+        "Design user interfaces"
+      ],
+      "correct_index": 1,
+      "explanation": "An OS acts as an intermediary between applications and hardware \u2014 managing CPU memory storage and I/O devices.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-e-2",
+      "concept_id": "processes_threads",
+      "subject": "Operating Systems",
+      "stem": "What is a process in an operating system?",
+      "options": [
+        "A file stored on disk",
+        "A program in execution with its own memory and state",
+        "A hardware component",
+        "A type of file system"
+      ],
+      "correct_index": 1,
+      "explanation": "A process is a running instance of a program including its code data stack program counter and allocated resources.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-e-3",
+      "concept_id": "scheduling",
+      "subject": "Operating Systems",
+      "stem": "Which scheduling algorithm gives each process an equal time slice in round-robin fashion?",
+      "options": [
+        "First-Come First-Served",
+        "Shortest Job First",
+        "Round Robin",
+        "Priority Scheduling"
+      ],
+      "correct_index": 2,
+      "explanation": "Round Robin assigns a fixed time quantum to each process cycling through the ready queue \u2014 ensuring fair CPU sharing.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "processes_threads"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-e-4",
+      "concept_id": "memory_management",
+      "subject": "Operating Systems",
+      "stem": "What is virtual memory?",
+      "options": [
+        "Memory on an external USB drive",
+        "A technique that uses disk space to extend available RAM",
+        "Encrypted RAM",
+        "Cache memory on the CPU"
+      ],
+      "correct_index": 1,
+      "explanation": "Virtual memory maps address spaces to physical RAM and disk so programs can use more memory than physically available. The OS swaps pages between RAM and disk as needed.",
+      "author_difficulty": 3,
+      "prerequisite_concepts": [
+        "processes_threads"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-e-5",
+      "concept_id": "processes_threads",
+      "subject": "Operating Systems",
+      "stem": "What is the difference between a thread and a process?",
+      "options": [
+        "Threads are faster than processes",
+        "A thread is a lightweight unit of execution within a process sharing its memory space",
+        "Threads cannot run concurrently",
+        "Processes are always single-threaded"
+      ],
+      "correct_index": 1,
+      "explanation": "Threads within the same process share code data and resources but each has its own stack and program counter. Processes have separate memory spaces.",
+      "author_difficulty": 3,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-e-6",
+      "concept_id": "processes_threads",
+      "subject": "Operating Systems",
+      "stem": "What does the kernel of an operating system do?",
+      "options": [
+        "Only manages the file system",
+        "Provides the core services including process scheduling and memory management",
+        "Runs user applications directly",
+        "Handles only network connections"
+      ],
+      "correct_index": 1,
+      "explanation": "The kernel is the core component of the OS \u2014 it manages CPU scheduling memory allocation device I/O and system calls.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-e-7",
+      "concept_id": "processes_threads",
+      "subject": "Operating Systems",
+      "stem": "What is a system call?",
+      "options": [
+        "A phone call to tech support",
+        "An interface for user programs to request services from the OS kernel",
+        "A type of interrupt",
+        "A debugging tool"
+      ],
+      "correct_index": 1,
+      "explanation": "System calls provide a controlled gateway for user-space programs to request kernel services like file I/O process creation and memory allocation.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-m-1",
+      "concept_id": "synchronization",
+      "subject": "Operating Systems",
+      "stem": "What is a race condition?",
+      "options": [
+        "When two programs compete for CPU time",
+        "When the outcome depends on the unpredictable order of thread execution",
+        "When a process runs too fast",
+        "When the CPU overheats"
+      ],
+      "correct_index": 1,
+      "explanation": "A race condition occurs when multiple threads access shared data concurrently and the result depends on the timing of their execution \u2014 leading to unpredictable behavior.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "processes_threads"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-m-2",
+      "concept_id": "synchronization",
+      "subject": "Operating Systems",
+      "stem": "What is the purpose of a mutex (mutual exclusion lock)?",
+      "options": [
+        "To speed up thread execution",
+        "To ensure only one thread accesses a critical section at a time",
+        "To allocate memory to threads",
+        "To schedule threads in order"
+      ],
+      "correct_index": 1,
+      "explanation": "A mutex prevents concurrent access to a shared resource \u2014 a thread must acquire the lock before entering the critical section and release it when done.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "processes_threads"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-m-3",
+      "concept_id": "memory_management",
+      "subject": "Operating Systems",
+      "stem": "Which page replacement algorithm is optimal but impractical to implement?",
+      "options": [
+        "FIFO",
+        "Least Recently Used (LRU)",
+        "Optimal (B\u00e9l\u00e1dy's)",
+        "Clock"
+      ],
+      "correct_index": 2,
+      "explanation": "The optimal algorithm replaces the page that will not be used for the longest time in the future. It requires future knowledge making it impractical but useful as a benchmark.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "processes_threads"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-m-4",
+      "concept_id": "memory_management",
+      "subject": "Operating Systems",
+      "stem": "What is thrashing in the context of virtual memory?",
+      "options": [
+        "Rapid disk writes",
+        "Excessive page faults causing the system to spend more time swapping than executing",
+        "A type of disk fragmentation",
+        "Memory leaks in programs"
+      ],
+      "correct_index": 1,
+      "explanation": "Thrashing occurs when the working set of active pages exceeds available physical memory \u2014 the OS constantly swaps pages in and out and useful work drops dramatically.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "processes_threads"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-m-5",
+      "concept_id": "deadlocks",
+      "subject": "Operating Systems",
+      "stem": "What are the four necessary conditions for a deadlock to occur?",
+      "options": [
+        "Mutual exclusion \u2014 hold and wait \u2014 no preemption \u2014 circular wait",
+        "Starvation \u2014 livelock \u2014 priority inversion \u2014 race condition",
+        "Mutual exclusion \u2014 FIFO \u2014 aging \u2014 round robin",
+        "Blocking \u2014 polling \u2014 sleeping \u2014 spinning"
+      ],
+      "correct_index": 0,
+      "explanation": "Coffman's conditions state that deadlock requires all four: mutual exclusion hold-and-wait no preemption and circular wait. Preventing any one condition prevents deadlock.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "synchronization",
+        "scheduling"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-m-6",
+      "concept_id": "scheduling",
+      "subject": "Operating Systems",
+      "stem": "What is the difference between preemptive and non-preemptive scheduling?",
+      "options": [
+        "Preemptive uses more memory",
+        "In preemptive scheduling the OS can forcibly suspend a running process; in non-preemptive it cannot",
+        "Preemptive scheduling is only for I/O-bound processes",
+        "Non-preemptive scheduling is faster"
+      ],
+      "correct_index": 1,
+      "explanation": "Preemptive schedulers can interrupt a running process (e.g. when its time quantum expires) while non-preemptive schedulers let each process run until it voluntarily yields or completes.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "processes_threads"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-m-7",
+      "concept_id": "memory_management",
+      "subject": "Operating Systems",
+      "stem": "What is the purpose of a Translation Lookaside Buffer (TLB)?",
+      "options": [
+        "To cache frequently used files",
+        "To cache virtual-to-physical address translations for faster memory access",
+        "To buffer network packets",
+        "To store process IDs"
+      ],
+      "correct_index": 1,
+      "explanation": "The TLB is a hardware cache that stores recent page table entries. On a TLB hit the CPU skips the page table walk \u2014 dramatically speeding up memory access.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "processes_threads"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-h-1",
+      "concept_id": "deadlocks",
+      "subject": "Operating Systems",
+      "stem": "Explain the Banker's algorithm. What type of deadlock strategy does it implement?",
+      "options": [
+        "Deadlock detection",
+        "Deadlock prevention",
+        "Deadlock avoidance",
+        "Deadlock recovery"
+      ],
+      "correct_index": 2,
+      "explanation": "The Banker's algorithm is a deadlock avoidance strategy. Before granting a resource request it checks whether the system would remain in a safe state \u2014 if not the request is deferred.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "synchronization",
+        "scheduling"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-h-2",
+      "concept_id": "synchronization",
+      "subject": "Operating Systems",
+      "stem": "What is priority inversion and how does priority inheritance solve it?",
+      "options": [
+        "A high-priority process runs first; inheritance gives it more CPU",
+        "A low-priority task holding a lock blocks a high-priority task; priority inheritance temporarily raises the lock holder's priority",
+        "Priority is inverted when the scheduler fails; inheritance resets it",
+        "It only occurs in real-time systems and has no solution"
+      ],
+      "correct_index": 1,
+      "explanation": "Priority inversion occurs when a medium-priority task preempts a low-priority one that holds a lock needed by a high-priority task. Priority inheritance boosts the lock holder to prevent this.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "processes_threads"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-h-3",
+      "concept_id": "memory_management",
+      "subject": "Operating Systems",
+      "stem": "What is the difference between internal and external fragmentation?",
+      "options": [
+        "Internal wastes space inside allocated blocks; external wastes space between allocated blocks",
+        "Internal is on disk; external is in RAM",
+        "Internal is caused by paging; external is caused by segmentation only",
+        "They are the same thing"
+      ],
+      "correct_index": 0,
+      "explanation": "Internal fragmentation occurs when allocated memory exceeds what the process needs (e.g. fixed-size pages). External fragmentation occurs when free memory is scattered in small non-contiguous chunks.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "processes_threads"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-h-4",
+      "concept_id": "memory_management",
+      "subject": "Operating Systems",
+      "stem": "How does Copy-on-Write (COW) optimize the fork() system call?",
+      "options": [
+        "It copies the entire process memory immediately",
+        "It shares pages between parent and child and copies only when either writes to a page",
+        "It avoids creating a child process",
+        "It compresses the memory before copying"
+      ],
+      "correct_index": 1,
+      "explanation": "COW marks shared pages as read-only after fork(). A write triggers a page fault which copies just that page \u2014 avoiding the cost of duplicating the entire address space upfront.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "processes_threads"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-h-5",
+      "concept_id": "processes_threads",
+      "subject": "Operating Systems",
+      "stem": "What is the difference between a monolithic kernel and a microkernel?",
+      "options": [
+        "Monolithic kernels are smaller",
+        "A monolithic kernel runs all OS services in kernel space; a microkernel runs minimal services in kernel space and the rest in user space",
+        "Microkernels are faster because they have fewer features",
+        "Monolithic kernels don't support multitasking"
+      ],
+      "correct_index": 1,
+      "explanation": "Monolithic kernels (e.g. Linux) include drivers file systems and networking in kernel mode. Microkernels (e.g. Minix) keep only IPC scheduling and memory management in the kernel \u2014 other services run as user processes.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-h-6",
+      "concept_id": "memory_management",
+      "subject": "Operating Systems",
+      "stem": "What is B\u00e9l\u00e1dy's anomaly in page replacement?",
+      "options": [
+        "Adding more pages always reduces page faults",
+        "With FIFO replacement increasing the number of page frames can sometimes increase page faults",
+        "It only affects LRU replacement",
+        "It means pages are loaded in the wrong order"
+      ],
+      "correct_index": 1,
+      "explanation": "B\u00e9l\u00e1dy's anomaly is counterintuitive: for FIFO page replacement certain reference strings cause more page faults with more frames. Stack-based algorithms like LRU never exhibit this anomaly.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "processes_threads"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "os-h-7",
+      "concept_id": "scheduling",
+      "subject": "Operating Systems",
+      "stem": "In a real-time operating system what is the difference between hard and soft real-time constraints?",
+      "options": [
+        "Hard real-time is faster",
+        "Hard real-time requires deadlines to be met absolutely; soft real-time allows occasional deadline misses",
+        "Soft real-time is only for multimedia",
+        "Hard real-time doesn't use scheduling"
+      ],
+      "correct_index": 1,
+      "explanation": "In hard real-time systems (e.g. aircraft control) missing a deadline is a system failure. Soft real-time (e.g. video streaming) tolerates occasional misses with degraded quality.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "processes_threads"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-e-1",
+      "concept_id": "network_fundamentals",
+      "subject": "Computer Networks",
+      "stem": "What does IP stand for in networking?",
+      "options": [
+        "Internal Processing",
+        "Internet Protocol",
+        "Integrated Platform",
+        "Information Provider"
+      ],
+      "correct_index": 1,
+      "explanation": "The Internet Protocol (IP) is responsible for addressing and routing packets across networks to their destination.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-e-2",
+      "concept_id": "network_fundamentals",
+      "subject": "Computer Networks",
+      "stem": "Which layer of the OSI model is responsible for end-to-end data transfer and error recovery?",
+      "options": [
+        "Physical",
+        "Data Link",
+        "Transport",
+        "Application"
+      ],
+      "correct_index": 2,
+      "explanation": "The Transport layer (Layer 4) provides reliable end-to-end communication through segmentation flow control and error recovery \u2014 e.g. TCP.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-e-3",
+      "concept_id": "application_protocols",
+      "subject": "Computer Networks",
+      "stem": "What is the purpose of DNS in networking?",
+      "options": [
+        "To encrypt network traffic",
+        "To translate domain names into IP addresses",
+        "To assign MAC addresses",
+        "To route packets between networks"
+      ],
+      "correct_index": 1,
+      "explanation": "The Domain Name System maps human-readable domain names (like google.com) to IP addresses so browsers can locate servers.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "transport_protocols"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-e-4",
+      "concept_id": "transport_protocols",
+      "subject": "Computer Networks",
+      "stem": "What is the difference between TCP and UDP?",
+      "options": [
+        "TCP is faster than UDP",
+        "TCP provides reliable ordered delivery while UDP is connectionless and faster but unreliable",
+        "UDP is used only for email",
+        "TCP does not use IP addresses"
+      ],
+      "correct_index": 1,
+      "explanation": "TCP ensures packets arrive in order with error checking and retransmission. UDP sends packets without guarantees \u2014 useful for real-time applications like video calls.",
+      "author_difficulty": 3,
+      "prerequisite_concepts": [
+        "network_fundamentals"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-e-5",
+      "concept_id": "network_fundamentals",
+      "subject": "Computer Networks",
+      "stem": "What does a router do in a computer network?",
+      "options": [
+        "Stores web pages",
+        "Forwards data packets between different networks based on IP addresses",
+        "Converts analog signals to digital",
+        "Provides wireless encryption"
+      ],
+      "correct_index": 1,
+      "explanation": "A router examines the destination IP of each packet and forwards it toward its destination using routing tables.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-e-6",
+      "concept_id": "network_fundamentals",
+      "subject": "Computer Networks",
+      "stem": "What is a MAC address?",
+      "options": [
+        "A type of encryption key",
+        "A unique hardware identifier assigned to a network interface card",
+        "A software-assigned network address",
+        "The same as an IP address"
+      ],
+      "correct_index": 1,
+      "explanation": "A MAC (Media Access Control) address is a 48-bit hardware address burned into a NIC \u2014 used for communication within a local network segment.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-e-7",
+      "concept_id": "ip_addressing",
+      "subject": "Computer Networks",
+      "stem": "What is a subnet mask used for?",
+      "options": [
+        "To hide a computer's identity",
+        "To determine which portion of an IP address identifies the network vs. the host",
+        "To encrypt data packets",
+        "To measure network speed"
+      ],
+      "correct_index": 1,
+      "explanation": "A subnet mask separates the network prefix from the host portion of an IP address allowing routers to determine if a destination is local or remote.",
+      "author_difficulty": 3,
+      "prerequisite_concepts": [
+        "network_fundamentals"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-m-1",
+      "concept_id": "transport_protocols",
+      "subject": "Computer Networks",
+      "stem": "What is the three-way handshake in TCP?",
+      "options": [
+        "A method to encrypt data",
+        "The SYN \u2192 SYN-ACK \u2192 ACK sequence used to establish a TCP connection",
+        "A way to terminate a connection",
+        "A routing protocol"
+      ],
+      "correct_index": 1,
+      "explanation": "The client sends SYN the server replies with SYN-ACK and the client confirms with ACK. This establishes a reliable connection before data transfer begins.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "network_fundamentals"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-m-2",
+      "concept_id": "network_fundamentals",
+      "subject": "Computer Networks",
+      "stem": "What is the purpose of ARP (Address Resolution Protocol)?",
+      "options": [
+        "To assign IP addresses",
+        "To resolve an IP address to a MAC address on a local network",
+        "To encrypt network traffic",
+        "To route packets across the internet"
+      ],
+      "correct_index": 1,
+      "explanation": "When a host knows the destination IP but needs the MAC address for the local link it broadcasts an ARP request. The target replies with its MAC address.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-m-3",
+      "concept_id": "ip_addressing",
+      "subject": "Computer Networks",
+      "stem": "What is NAT (Network Address Translation) used for?",
+      "options": [
+        "To speed up DNS lookups",
+        "To allow multiple devices on a private network to share a single public IP address",
+        "To encrypt VPN tunnels",
+        "To assign domain names"
+      ],
+      "correct_index": 1,
+      "explanation": "NAT translates private IP addresses to a public IP for outgoing traffic and maps responses back \u2014 enabling many devices to access the internet through one public address.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "network_fundamentals"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-m-4",
+      "concept_id": "network_fundamentals",
+      "subject": "Computer Networks",
+      "stem": "What is the difference between a hub and a switch?",
+      "options": [
+        "They are identical devices",
+        "A hub broadcasts to all ports while a switch forwards frames only to the destination port",
+        "A switch is wireless and a hub is wired",
+        "Hubs are faster than switches"
+      ],
+      "correct_index": 1,
+      "explanation": "A hub is a simple repeater that sends incoming frames to every port. A switch learns MAC addresses and forwards frames only to the correct port \u2014 reducing collisions.",
+      "author_difficulty": 4,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-m-5",
+      "concept_id": "ip_addressing",
+      "subject": "Computer Networks",
+      "stem": "What is CIDR notation and why is it used?",
+      "options": [
+        "A type of encryption",
+        "A compact representation of IP address ranges (e.g. 192.168.1.0/24) that enables flexible subnetting",
+        "A routing protocol",
+        "A DNS record type"
+      ],
+      "correct_index": 1,
+      "explanation": "CIDR (Classless Inter-Domain Routing) replaces the rigid Class A/B/C system allowing networks to be subdivided into subnets of any size by specifying the prefix length.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "network_fundamentals"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-m-6",
+      "concept_id": "application_protocols",
+      "subject": "Computer Networks",
+      "stem": "How does DHCP assign IP addresses to devices on a network?",
+      "options": [
+        "Manually by the administrator",
+        "Through a Discover-Offer-Request-Acknowledge (DORA) process",
+        "By reading the device's MAC address only",
+        "Using DNS lookups"
+      ],
+      "correct_index": 1,
+      "explanation": "A DHCP client broadcasts a Discover message. The server responds with an Offer. The client sends a Request and the server confirms with an Acknowledge \u2014 dynamically assigning an IP.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "transport_protocols"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-m-7",
+      "concept_id": "network_security",
+      "subject": "Computer Networks",
+      "stem": "What does a firewall do?",
+      "options": [
+        "Increases network speed",
+        "Monitors and filters incoming and outgoing network traffic based on security rules",
+        "Assigns IP addresses",
+        "Compresses network data"
+      ],
+      "correct_index": 1,
+      "explanation": "A firewall inspects packets against a set of rules and decides whether to allow or block traffic \u2014 protecting networks from unauthorized access and attacks.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "transport_protocols",
+        "routing"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-h-1",
+      "concept_id": "congestion_control_net",
+      "subject": "Computer Networks",
+      "stem": "How does TCP handle congestion control?",
+      "options": [
+        "By dropping all packets",
+        "Through algorithms like Slow Start and Congestion Avoidance that dynamically adjust the sending rate",
+        "By using UDP instead",
+        "By increasing packet size"
+      ],
+      "correct_index": 1,
+      "explanation": "TCP starts with a small congestion window (slow start) doubling it each RTT until loss occurs. Then it switches to congestion avoidance (additive increase) and halves the window on loss (multiplicative decrease).",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "transport_protocols"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-h-2",
+      "concept_id": "routing",
+      "subject": "Computer Networks",
+      "stem": "What is the difference between distance-vector and link-state routing protocols?",
+      "options": [
+        "They use the same algorithm",
+        "Distance-vector routers share routing tables with neighbors; link-state routers flood topology information to all routers",
+        "Distance-vector is faster",
+        "Link-state doesn't use IP"
+      ],
+      "correct_index": 1,
+      "explanation": "Distance-vector protocols (e.g. RIP) exchange distance tables with direct neighbors. Link-state protocols (e.g. OSPF) flood link-state advertisements so every router builds a complete topology map and runs Dijkstra.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "ip_addressing"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-h-3",
+      "concept_id": "routing",
+      "subject": "Computer Networks",
+      "stem": "What is BGP and why is it called the 'protocol of the internet'?",
+      "options": [
+        "A local area network protocol",
+        "The Border Gateway Protocol \u2014 it manages routing between autonomous systems that make up the internet",
+        "A type of encryption",
+        "A DNS replacement"
+      ],
+      "correct_index": 1,
+      "explanation": "BGP is the exterior gateway protocol that enables autonomous systems (ISPs and large networks) to exchange reachability information \u2014 forming the global internet routing table.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "ip_addressing"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-h-4",
+      "concept_id": "network_security",
+      "subject": "Computer Networks",
+      "stem": "How does TLS (Transport Layer Security) establish a secure connection?",
+      "options": [
+        "By hiding the IP address",
+        "Through a handshake that negotiates cipher suites exchanges certificates and derives session keys",
+        "By compressing all data",
+        "By using UDP instead of TCP"
+      ],
+      "correct_index": 1,
+      "explanation": "The TLS handshake includes: client hello \u2192 server hello + certificate \u2192 key exchange \u2192 session key derivation. This establishes an encrypted channel before application data flows.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "transport_protocols",
+        "routing"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-h-5",
+      "concept_id": "routing",
+      "subject": "Computer Networks",
+      "stem": "What is the count-to-infinity problem in distance-vector routing?",
+      "options": [
+        "Routers count packets indefinitely",
+        "After a link failure routers slowly increment distance metrics through update loops before converging",
+        "Routers cannot count beyond 15 hops",
+        "It refers to infinite bandwidth"
+      ],
+      "correct_index": 1,
+      "explanation": "When a link fails distance-vector protocols can enter a loop where routers keep incrementing the cost metric \u2014 converging very slowly. Solutions include split horizon and poison reverse.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "ip_addressing"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-h-6",
+      "concept_id": "transport_protocols",
+      "subject": "Computer Networks",
+      "stem": "What is the purpose of the sliding window protocol in TCP?",
+      "options": [
+        "To encrypt data in transit",
+        "To allow the sender to transmit multiple segments before requiring an acknowledgment improving throughput",
+        "To compress packets",
+        "To prioritize certain traffic"
+      ],
+      "correct_index": 1,
+      "explanation": "The sliding window allows multiple unacknowledged segments to be in flight. The window size adjusts based on receiver capacity (flow control) and network conditions (congestion control).",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "network_fundamentals"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "cn-h-7",
+      "concept_id": "network_security",
+      "subject": "Computer Networks",
+      "stem": "How does an ARP spoofing attack work and what is its impact?",
+      "options": [
+        "It floods the network with DNS requests",
+        "An attacker sends fake ARP replies to associate their MAC with a victim's IP enabling man-in-the-middle attacks",
+        "It overwrites the router firmware",
+        "It disables TCP connections"
+      ],
+      "correct_index": 1,
+      "explanation": "ARP has no authentication. An attacker can send unsolicited ARP replies mapping a legitimate IP to their own MAC \u2014 intercepting traffic intended for that IP.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "transport_protocols",
+        "routing"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-e-1",
+      "concept_id": "classes_and_objects",
+      "subject": "OOP",
+      "stem": "What is encapsulation in object-oriented programming?",
+      "options": [
+        "Writing code in a capsule",
+        "Bundling data and methods that operate on that data into a single unit (class) and restricting direct access",
+        "A type of inheritance",
+        "A way to compile code"
+      ],
+      "correct_index": 1,
+      "explanation": "Encapsulation hides internal state behind methods \u2014 external code interacts through a public interface without knowing the implementation details.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-e-2",
+      "concept_id": "inheritance_polymorphism",
+      "subject": "OOP",
+      "stem": "What is inheritance in OOP?",
+      "options": [
+        "A financial concept",
+        "A mechanism where a new class derives properties and behavior from an existing class",
+        "A type of loop",
+        "A memory management technique"
+      ],
+      "correct_index": 1,
+      "explanation": "Inheritance allows a child class to reuse and extend the functionality of a parent class \u2014 promoting code reuse and hierarchical design.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "classes_and_objects"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-e-3",
+      "concept_id": "inheritance_polymorphism",
+      "subject": "OOP",
+      "stem": "What is polymorphism?",
+      "options": [
+        "Having multiple variables",
+        "The ability of different classes to be treated through the same interface while behaving differently",
+        "A sorting algorithm",
+        "A type of database"
+      ],
+      "correct_index": 1,
+      "explanation": "Polymorphism lets a method call behave differently depending on the object's actual type \u2014 e.g. calling draw() on a Circle vs. a Rectangle produces different results.",
+      "author_difficulty": 3,
+      "prerequisite_concepts": [
+        "classes_and_objects"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-e-4",
+      "concept_id": "classes_and_objects",
+      "subject": "OOP",
+      "stem": "What is a class in OOP?",
+      "options": [
+        "A running program",
+        "A blueprint for creating objects that defines attributes and methods",
+        "A type of variable",
+        "A database table"
+      ],
+      "correct_index": 1,
+      "explanation": "A class defines the structure (attributes) and behavior (methods) that its instances (objects) will have.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-e-5",
+      "concept_id": "classes_and_objects",
+      "subject": "OOP",
+      "stem": "What is the difference between a class and an object?",
+      "options": [
+        "They are the same thing",
+        "A class is a blueprint; an object is an instance of that class",
+        "A class runs faster",
+        "Objects cannot have methods"
+      ],
+      "correct_index": 1,
+      "explanation": "A class defines the template. An object is a concrete instance created from that class with its own attribute values stored in memory.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-e-6",
+      "concept_id": "classes_and_objects",
+      "subject": "OOP",
+      "stem": "What is a constructor?",
+      "options": [
+        "A method that destroys objects",
+        "A special method called automatically when an object is created to initialize its state",
+        "A type of loop",
+        "A file handling function"
+      ],
+      "correct_index": 1,
+      "explanation": "A constructor initializes the object's attributes when it is instantiated \u2014 e.g. __init__ in Python or the class-named method in Java/C++.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-e-7",
+      "concept_id": "classes_and_objects",
+      "subject": "OOP",
+      "stem": "What does the 'this' (or 'self') keyword refer to in a method?",
+      "options": [
+        "The class definition",
+        "The current instance of the class on which the method is called",
+        "The parent class",
+        "A global variable"
+      ],
+      "correct_index": 1,
+      "explanation": "'this' (Java/C++) or 'self' (Python) refers to the specific object invoking the method \u2014 allowing access to its own attributes and other methods.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-m-1",
+      "concept_id": "inheritance_polymorphism",
+      "subject": "OOP",
+      "stem": "What is the difference between method overloading and method overriding?",
+      "options": [
+        "They are the same concept",
+        "Overloading defines multiple methods with the same name but different parameters in the same class; overriding redefines a parent method in a child class",
+        "Overloading is faster",
+        "Overriding requires a new class name"
+      ],
+      "correct_index": 1,
+      "explanation": "Overloading is compile-time polymorphism (same method name different signatures). Overriding is runtime polymorphism (child replaces parent's method with its own implementation).",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "classes_and_objects"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-m-2",
+      "concept_id": "inheritance_polymorphism",
+      "subject": "OOP",
+      "stem": "What is an abstract class?",
+      "options": [
+        "A class with no methods",
+        "A class that cannot be instantiated and may contain abstract methods that subclasses must implement",
+        "A class that is automatically deleted",
+        "A final class"
+      ],
+      "correct_index": 1,
+      "explanation": "Abstract classes define a contract \u2014 they can have both implemented and abstract (unimplemented) methods. Subclasses must provide implementations for the abstract methods.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "classes_and_objects"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-m-3",
+      "concept_id": "inheritance_polymorphism",
+      "subject": "OOP",
+      "stem": "What is the difference between an interface and an abstract class?",
+      "options": [
+        "They are identical",
+        "An interface declares method signatures without implementation (prior to Java 8); an abstract class can include both implemented and abstract methods",
+        "Interfaces are faster",
+        "Abstract classes cannot be inherited"
+      ],
+      "correct_index": 1,
+      "explanation": "Interfaces define a pure contract. Abstract classes can share common code. A class can implement multiple interfaces but typically extends only one abstract class.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "classes_and_objects"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-m-4",
+      "concept_id": "solid_principles",
+      "subject": "OOP",
+      "stem": "What is the SOLID principle 'Single Responsibility'?",
+      "options": [
+        "A class should have only one method",
+        "A class should have only one reason to change",
+        "A variable should hold only one value",
+        "A function should have only one parameter"
+      ],
+      "correct_index": 1,
+      "explanation": "The Single Responsibility Principle states each class should be responsible for one aspect of functionality \u2014 reducing coupling and making changes localized.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "inheritance_polymorphism"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-m-5",
+      "concept_id": "solid_principles",
+      "subject": "OOP",
+      "stem": "What is composition in OOP and how does it differ from inheritance?",
+      "options": [
+        "Composition is the same as inheritance",
+        "Composition builds complex objects by containing instances of other classes rather than inheriting from them",
+        "Composition is slower",
+        "Composition only works with interfaces"
+      ],
+      "correct_index": 1,
+      "explanation": "Composition uses a 'has-a' relationship (a Car has an Engine) while inheritance uses an 'is-a' relationship (a Dog is an Animal). Composition is generally more flexible.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "inheritance_polymorphism"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-m-6",
+      "concept_id": "classes_and_objects",
+      "subject": "OOP",
+      "stem": "What is the purpose of access modifiers like public private and protected?",
+      "options": [
+        "To speed up code execution",
+        "To control the visibility and accessibility of class members",
+        "To define data types",
+        "To manage memory allocation"
+      ],
+      "correct_index": 1,
+      "explanation": "Access modifiers enforce encapsulation: private restricts access to the class itself protected adds access for subclasses and public allows access from anywhere.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-m-7",
+      "concept_id": "design_patterns",
+      "subject": "OOP",
+      "stem": "What is a design pattern in OOP?",
+      "options": [
+        "A way to format code",
+        "A reusable solution template for a commonly occurring software design problem",
+        "A type of algorithm",
+        "A database schema"
+      ],
+      "correct_index": 1,
+      "explanation": "Design patterns (like Singleton Factory Observer) provide proven approaches to recurring design challenges \u2014 they are not code but templates for how to structure solutions.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "solid_principles"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-h-1",
+      "concept_id": "solid_principles",
+      "subject": "OOP",
+      "stem": "What is the Liskov Substitution Principle and why does violating it cause bugs?",
+      "options": [
+        "Subclasses should always override all parent methods",
+        "Objects of a superclass should be replaceable with objects of a subclass without altering program correctness",
+        "It requires all classes to be abstract",
+        "It prevents method overriding"
+      ],
+      "correct_index": 1,
+      "explanation": "LSP means subclasses must honor the contract of their parent. Violating it (e.g. a Square subclass of Rectangle that breaks setWidth/setHeight expectations) causes subtle bugs when code uses the parent type.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "inheritance_polymorphism"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-h-2",
+      "concept_id": "solid_principles",
+      "subject": "OOP",
+      "stem": "What problem does the Dependency Inversion Principle solve?",
+      "options": [
+        "Memory leaks",
+        "High-level modules depending on low-level implementation details making the system rigid",
+        "Slow compilation",
+        "Too many classes"
+      ],
+      "correct_index": 1,
+      "explanation": "DIP states that high-level modules should depend on abstractions not concretions. This allows swapping implementations (e.g. switching databases) without modifying business logic.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "inheritance_polymorphism"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-h-3",
+      "concept_id": "design_patterns",
+      "subject": "OOP",
+      "stem": "How does the Observer pattern work and when should it be used?",
+      "options": [
+        "It observes CPU usage",
+        "Subjects maintain a list of observers and notify them of state changes \u2014 useful for event-driven architectures",
+        "It monitors network traffic",
+        "It replaces inheritance"
+      ],
+      "correct_index": 1,
+      "explanation": "The Observer pattern decouples event producers from consumers. When the subject's state changes all registered observers are automatically notified \u2014 used in GUIs event systems and reactive programming.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "solid_principles"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-h-4",
+      "concept_id": "inheritance_polymorphism",
+      "subject": "OOP",
+      "stem": "What is the diamond problem in multiple inheritance and how do languages solve it?",
+      "options": [
+        "A performance issue with loops",
+        "Ambiguity when a class inherits from two classes that share a common ancestor \u2014 solved by virtual inheritance or interfaces",
+        "A database design problem",
+        "It only affects single inheritance"
+      ],
+      "correct_index": 1,
+      "explanation": "If class D inherits from B and C which both inherit from A then D has two copies of A's members. C++ uses virtual inheritance; Java/C# avoid the problem by allowing only single class inheritance with multiple interfaces.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "classes_and_objects"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-h-5",
+      "concept_id": "classes_and_objects",
+      "subject": "OOP",
+      "stem": "What is the difference between shallow copy and deep copy of an object?",
+      "options": [
+        "Shallow copy is faster",
+        "A shallow copy duplicates the object but shares references to nested objects; a deep copy recursively duplicates all nested objects",
+        "Deep copy uses less memory",
+        "They produce identical results"
+      ],
+      "correct_index": 1,
+      "explanation": "With a shallow copy modifying a nested object in the copy also affects the original. Deep copy creates fully independent copies at all levels \u2014 important for mutable nested structures.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-h-6",
+      "concept_id": "design_patterns",
+      "subject": "OOP",
+      "stem": "How does the Strategy pattern differ from the Template Method pattern?",
+      "options": [
+        "They are identical",
+        "Strategy uses composition to swap entire algorithms at runtime; Template Method uses inheritance to let subclasses override specific steps",
+        "Strategy is slower",
+        "Template Method doesn't use classes"
+      ],
+      "correct_index": 1,
+      "explanation": "Strategy encapsulates algorithms as interchangeable objects (composition). Template Method defines a skeleton algorithm in a base class with hook methods that subclasses override (inheritance).",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "solid_principles"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "oop-h-7",
+      "concept_id": "inheritance_polymorphism",
+      "subject": "OOP",
+      "stem": "What is type erasure in Java generics and what are its implications?",
+      "options": [
+        "Generics are erased at compile time",
+        "Generic type information is removed at runtime by the compiler \u2014 preventing runtime type checks on generic parameters",
+        "Generics are always preserved at runtime",
+        "Type erasure only affects primitive types"
+      ],
+      "correct_index": 1,
+      "explanation": "Java compiles generics by replacing type parameters with their bounds (usually Object) and inserting casts. This means you cannot do instanceof on generic types or create generic arrays at runtime.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "classes_and_objects"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q1",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "What is the maximum number of children any node can have in a binary tree?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "Unlimited"
+      ],
+      "correct_index": 1,
+      "explanation": "By definition, a binary tree is a hierarchical data structure in which each node has at most two children, referred to as the left child and the right child.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q2",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "What is a node called if it has no child nodes?",
+      "options": [
+        "Root node",
+        "Leaf node",
+        "Ancestor node",
+        "Interior node"
+      ],
+      "correct_index": 1,
+      "explanation": "Nodes at the bottom of the tree structure that do not have any children are called leaf nodes or external nodes.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q3",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "Which traversal visits nodes in the order: Left Subtree, Right Subtree, Root?",
+      "options": [
+        "Pre-order",
+        "In-order",
+        "Post-order",
+        "Level-order"
+      ],
+      "correct_index": 2,
+      "explanation": "Post-order traversal recursively visits the left subtree, then the right subtree, and finally processes the root node.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q4",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "In a standard Binary Search Tree (BST) containing unique values, the left child of a node must have a value that is:",
+      "options": [
+        "Greater than the parent node's value",
+        "Less than the parent node's value",
+        "Equal to the parent node's value",
+        "Double the parent node's value"
+      ],
+      "correct_index": 1,
+      "explanation": "The fundamental property of a BST is that for any given node, all elements in its left subtree are smaller than the node, and all elements in its right subtree are larger.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q5",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "Which binary tree traversal of a Binary Search Tree (BST) produces the keys in sorted ascending order?",
+      "options": [
+        "Pre-order",
+        "In-order",
+        "Post-order",
+        "Level-order"
+      ],
+      "correct_index": 1,
+      "explanation": "An in-order traversal (Left, Root, Right) of a Binary Search Tree visits values in non-decreasing order because of the underlying BST properties.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q6",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "What is the maximum number of nodes at level L of a binary tree, assuming the root is at level 0?",
+      "options": [
+        "2^L",
+        "2^(L+1) - 1",
+        "2^(L-1)",
+        "L^2"
+      ],
+      "correct_index": 0,
+      "explanation": "At each successive level of a binary tree, the capacity of nodes doubles. Level 0 has 1 (2^0) node, Level 1 has 2 (2^1) nodes, Level 2 has 4 (2^2) nodes, resulting in 2^L nodes at level L.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q7",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "A binary tree in which every node other than the leaves has exactly two children is known as a:",
+      "options": [
+        "Complete binary tree",
+        "Perfect binary tree",
+        "Full binary tree",
+        "Degenerate binary tree"
+      ],
+      "correct_index": 2,
+      "explanation": "A Full Binary Tree (sometimes called a strict binary tree) is a tree structure where every node has either 0 or 2 children.",
+      "author_difficulty": 3,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q8",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "What is the depth of the root node in a standard binary tree representation?",
+      "options": [
+        "-1",
+        "0",
+        "1",
+        "It depends on the total height"
+      ],
+      "correct_index": 1,
+      "explanation": "The depth of a node is the number of edges from the node to the tree's root node. Since the root node is its own ancestor, the edge count is 0.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q9",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "Which data structure is most appropriate to perform a Level-Order (Breadth-First) traversal of a binary tree?",
+      "options": [
+        "Stack",
+        "Queue",
+        "Hash Map",
+        "Priority Queue"
+      ],
+      "correct_index": 1,
+      "explanation": "Level-order traversal visits nodes level by level from left to right. A Queue (FIFO) is used to track visited nodes and process their children in correct sequential order.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q10",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "What is a binary tree called where every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible?",
+      "options": [
+        "Full binary tree",
+        "Complete binary tree",
+        "Balanced binary tree",
+        "Perfect binary tree"
+      ],
+      "correct_index": 1,
+      "explanation": "A complete binary tree has all levels completely filled except potentially the last level, which must be filled from left to right without any gaps.",
+      "author_difficulty": 3,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q11",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "If a binary tree has N nodes, how many null (empty) pointers does it contain?",
+      "options": [
+        "N - 1",
+        "N",
+        "N + 1",
+        "2N"
+      ],
+      "correct_index": 2,
+      "explanation": "A binary tree with N nodes has 2N total child pointers. Since N-1 nodes have incoming parent pointers (all except the root), the number of empty/null pointers is 2N - (N - 1) = N + 1.",
+      "author_difficulty": 4,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q12",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "What is the height of a perfect binary tree containing 15 nodes? (Assume the height of a single-node tree is 0)",
+      "options": [
+        "3",
+        "4",
+        "15",
+        "7"
+      ],
+      "correct_index": 0,
+      "explanation": "A perfect binary tree with height h contains 2^(h+1) - 1 nodes. For 15 nodes: 2^(h+1) - 1 = 15 => 2^(h+1) = 16 => h+1 = 4 => h = 3.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q13",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "You are given the pre-order traversal sequence [A, B, D, E, C, F] and the in-order traversal sequence [D, B, E, A, F, C] of a binary tree. What is its post-order traversal?",
+      "options": [
+        "[D, E, B, F, C, A]",
+        "[D, E, B, C, F, A]",
+        "[E, D, B, F, C, A]",
+        "[D, B, E, F, C, A]"
+      ],
+      "correct_index": 0,
+      "explanation": "The root is A (from pre-order). In-order shows left subtree elements [D, B, E] and right subtree elements [F, C]. Reconstructing the left tree gives B as root, D as left, E as right. Reconstructing the right tree gives C as root, F as left. The post-order sequence is Left-Right-Root: [D, E, B, F, C, A].",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q14",
+      "concept_id": "complexity_analysis",
+      "subject": "Algorithms",
+      "stem": "Which of the following operations cannot be performed in O(log N) worst-case time on a self-balancing binary search tree (like an AVL tree) containing N nodes?",
+      "options": [
+        "Finding the minimum element",
+        "Inserting a new node",
+        "Finding the successor of a node",
+        "Sorting all elements"
+      ],
+      "correct_index": 3,
+      "explanation": "Sorting all elements requires visiting all N nodes, which takes O(N) time. Searching, inserting, and finding a successor in a self-balancing BST all operate within O(log N) height limits.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q15",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "In a standard binary search tree (BST), what is the worst-case time complexity of searching for an element if the tree is unbalanced?",
+      "options": [
+        "O(1)",
+        "O(log N)",
+        "O(N)",
+        "O(N log N)"
+      ],
+      "correct_index": 2,
+      "explanation": "In an unbalanced BST, the tree can degenerate into a linear sequence (skewed tree). Searching in a skewed tree of N elements requires checking every node, yielding O(N) worst-case time complexity.",
+      "author_difficulty": 4,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q16",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "If you insert the keys [10, 20, 30, 40, 50] in that exact order into an initially empty, unbalanced BST, what structure is formed?",
+      "options": [
+        "A balanced binary tree",
+        "A complete binary tree",
+        "A left-skewed binary tree",
+        "A right-skewed binary tree"
+      ],
+      "correct_index": 3,
+      "explanation": "Each subsequent key is strictly larger than all preceding keys. Therefore, each new node will be inserted as the right child of the previously inserted node, forming a linear rightward-slanted line.",
+      "author_difficulty": 4,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q17",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "To find the Lowest Common Ancestor (LCA) of two nodes, p and q, in a Binary Search Tree (BST) containing unique elements, which heuristic property can you exploit?",
+      "options": [
+        "The LCA is the node whose value lies strictly between the values of p and q (inclusive)",
+        "The LCA is always the root node",
+        "The LCA is the node with the highest numerical height value",
+        "The LCA is the leaf node closest to both p and q"
+      ],
+      "correct_index": 0,
+      "explanation": "In a BST, if you traverse from the root, the first node you encounter whose value splits the path (i.e., its value is between p and q inclusive) is their Lowest Common Ancestor.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q18",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "What is the maximum number of leaf nodes in a binary tree of height h? (Assume height of a single-node tree is 0)",
+      "options": [
+        "2^h",
+        "2^(h+1)",
+        "2^h - 1",
+        "2^(h-1)"
+      ],
+      "correct_index": 0,
+      "explanation": "The maximum number of leaves is achieved when the tree is a perfect binary tree. At height h, the bottommost level (level h) contains exactly 2^h nodes, all of which are leaves.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q19",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "What defines a threaded binary tree?",
+      "options": [
+        "A tree where each node has a pointer to its parent node",
+        "A tree where null pointers are replaced with pointers to their in-order predecessor or successor",
+        "A tree optimized for execution on multi-threaded computer systems",
+        "A tree where nodes are structurally laid out in contiguous array memory blocks"
+      ],
+      "correct_index": 1,
+      "explanation": "A threaded binary tree replaces standard empty child pointers (nulls) with 'threads' linking directly to the in-order predecessor or successor to facilitate traversal without stack/recursion overhead.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q20",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "Which single traversal sequence is sufficient on its own to completely reconstruct a unique binary tree, provided we serialize null child nodes?",
+      "options": [
+        "In-order traversal",
+        "Pre-order traversal with null markers",
+        "Post-order traversal without null markers",
+        "Level-order traversal without null markers"
+      ],
+      "correct_index": 1,
+      "explanation": "Standard pre-order (or post-order/level-order) traversals require an accompanying in-order traversal to reconstruct a unique tree. However, if null child markers are preserved, pre-order alone contains sufficient structural depth information.",
+      "author_difficulty": 7,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q21",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "How many structurally unique Binary Search Trees (BSTs) can be formed containing exactly n distinct keys?",
+      "options": [
+        "2^n - n",
+        "n!",
+        "C_n = (1 / (n + 1)) * (2n Choose n)",
+        "2^(n-1)"
+      ],
+      "correct_index": 2,
+      "explanation": "The number of structurally unique BSTs with n distinct keys is calculated by the Catalan Number sequence, given by the formula C_n = (1 / (n + 1)) * (2n Choose n).",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q22",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "When implementing an iterative post-order traversal of a binary tree using a single stack, which of the following actions is necessary to determine if we should process a parent node?",
+      "options": [
+        "Track the last visited node to check if we just returned from its right subtree",
+        "Check if the stack depth is currently odd or even",
+        "Verify that both child pointers of the top stack node are null",
+        "Convert the tree nodes into a queue sequence first"
+      ],
+      "correct_index": 0,
+      "explanation": "In post-order traversal, the root is visited after both subtrees. Using one stack, you can only pop and process the root when returning from its right child (or if the right child is null/empty). Tracking the 'last visited' node validates this state.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q23",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "In a strict (full) binary tree where every node has either 0 or 2 children, if there are L leaf nodes, how many internal nodes (I) does the tree have?",
+      "options": [
+        "I = L - 1",
+        "I = L + 1",
+        "I = 2L",
+        "I = L / 2"
+      ],
+      "correct_index": 0,
+      "explanation": "In any full binary tree, the relationship between the number of leaves (L) and the number of internal nodes (I) is strictly L = I + 1. Rearranging this yields I = L - 1.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q24",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "What is the optimal time complexity of finding the diameter of an arbitrary binary tree?",
+      "options": [
+        "O(log N)",
+        "O(N)",
+        "O(N log N)",
+        "O(N^2)"
+      ],
+      "correct_index": 1,
+      "explanation": "The naive recursive approach calculates height at each step, taking O(N^2). However, an optimized bottom-up approach calculates height and diameter simultaneously in a single post-order pass, reducing the complexity to O(N).",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q25",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "To perform an in-place conversion of a binary tree to a sorted doubly linked list (matching in-order sequence), recursive functions typically keep track of which references?",
+      "options": [
+        "The depth level of the recursion to offset pointer arrays",
+        "The head and tail pointers of the previously converted sublists",
+        "Parent pointers and subtree sibling nodes",
+        "The overall median value of the original tree"
+      ],
+      "correct_index": 1,
+      "explanation": "To perform an in-place conversion, you recursively convert the left and right subtrees and then link the root with the tail of the left list and the head of the right list. Hence, maintaining head and tail references is necessary.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q26",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "In an AVL tree, after inserting a node, you detect an unbalanced node with a balance factor of -2 (right-heavy). Its right child has a balance factor of +1 (left-heavy). Which rotation sequence is required?",
+      "options": [
+        "Left Rotation only",
+        "Right-Left Rotation",
+        "Left-Right Rotation",
+        "Double Right Rotation"
+      ],
+      "correct_index": 1,
+      "explanation": "When the parent node is right-heavy (-2) and its child is left-heavy (+1), this represents a Right-Left (RL) mismatch. A right rotation is performed on the child node first, followed by a left rotation on the unbalanced parent node.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q27",
+      "concept_id": "dynamic_programming",
+      "subject": "Algorithms",
+      "stem": "When finding the maximum path sum in a binary tree (where the path can start and end at any node), what is the correct formula to update the global maximum tracker 'global_max' at a node 'u' with computed maximum downward path branches 'left_down' and 'right_down'?",
+      "options": [
+        "global_max = max(global_max, u.val + max(0, left_down) + max(0, right_down))",
+        "global_max = max(global_max, u.val + left_down + right_down)",
+        "global_max = max(global_max, max(left_down, right_down))",
+        "global_max = max(global_max, u.val + left_down * right_down)"
+      ],
+      "correct_index": 0,
+      "explanation": "The maximum path containing node 'u' as its highest node joins 'u' with any non-negative contribution from its left and right downward paths. Thus, we check u.val + max(0, left_down) + max(0, right_down) against the global tracker.",
+      "author_difficulty": 10,
+      "prerequisite_concepts": [
+        "divide_and_conquer"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q28",
+      "concept_id": "graph_algorithms",
+      "subject": "Algorithms",
+      "stem": "What is the worst-case space complexity of a recursive Depth-First Search (DFS) traversal of an arbitrary binary tree with N nodes?",
+      "options": [
+        "O(1)",
+        "O(log N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct_index": 2,
+      "explanation": "In a completely skewed tree, the call stack grows proportional to the height of the tree. Since the height in the worst-case scenario can equal N (when the tree is basically a single branch), the space complexity is O(N).",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "graphs",
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q29",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "If you want to serialize a binary tree into a string using Level-Order (BFS) traversal, how must you handle missing children to ensure lossless deserialization?",
+      "options": [
+        "You can skip storing null indicators if you write values to a binary file",
+        "You must store placeholder null markers for empty child branches of visited nodes",
+        "Omit null pointers and rely on sorting keys upon loading",
+        "BFS cannot support lossless serialization because it lacks parent indicators"
+      ],
+      "correct_index": 1,
+      "explanation": "Without maintaining null placeholder symbols (e.g., '#') for missing child links during level-order queue processing, it is impossible to reconstruct the correct parent-child topology during reconstruction.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "bt-q30",
+      "concept_id": "trees_and_bst",
+      "subject": "Data Structures",
+      "stem": "To find the in-order successor of a node x in a binary search tree where each node possesses a parent pointer, if x has no right child, how do you locate the successor?",
+      "options": [
+        "The successor is the left child of x's parent node",
+        "The successor is the deepest leftmost leaf node in the left subtree of x",
+        "The successor is the lowest ancestor of x whose left child is also an ancestor of x",
+        "The successor does not exist because there is no right child"
+      ],
+      "correct_index": 2,
+      "explanation": "Without a right child, the in-order successor must be an ancestor. We traverse upward via parent pointers; the first node we reach from its left child is the in-order successor.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "stacks_and_queues"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q1",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "What is the primary role of the base case in a recursive function?",
+      "options": [
+        "To call the function with a modified argument",
+        "To terminate the recursion and prevent infinite loops",
+        "To allocate dynamic memory on the heap",
+        "To increase the execution speed of the program"
+      ],
+      "correct_index": 1,
+      "explanation": "The base case is a critical boundary condition that stops the recursion from proceeding indefinitely, avoiding call stack overflow.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q2",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "Which error occurs when a recursive function fails to reach its base case, leading to unlimited calls?",
+      "options": [
+        "NullPointerException",
+        "StackOverflowError",
+        "OutOfMemoryError",
+        "SegmentationFault"
+      ],
+      "correct_index": 1,
+      "explanation": "Each recursive call consumes frame space on the call stack. Without a terminating base case, memory limit is exceeded, triggering a StackOverflowError.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q3",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "Which internal data structure is utilized by the runtime environment to track active recursive subroutine calls?",
+      "options": [
+        "Queue",
+        "Heap",
+        "Call Stack",
+        "Binary Tree"
+      ],
+      "correct_index": 2,
+      "explanation": "The call stack manages active subroutines, pushing stack frames containing local variables and return addresses for each recursive execution.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q4",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "A standard recursive function must contain which two key components?",
+      "options": [
+        "A loop and a break statement",
+        "A base case and a recursive case",
+        "A pointer and an allocation step",
+        "A try block and a catch block"
+      ],
+      "correct_index": 1,
+      "explanation": "Every proper recursive algorithm requires at least one base case to stop execution, and a recursive step to progress toward the base case.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q5",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "What is direct recursion?",
+      "options": [
+        "A function calling itself directly",
+        "A function calling another function which then calls the original",
+        "A loop converting itself into a stack frame",
+        "A recursive function optimized to run in O(1) space"
+      ],
+      "correct_index": 0,
+      "explanation": "Direct recursion occurs when a function explicitly contains a call to itself within its own body.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q6",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "If a countdown function countdown(n) prints n and then calls countdown(n-1) when n > 0, what will countdown(3) print if the print statement runs before the recursive call?",
+      "options": [
+        "3, 2, 1",
+        "1, 2, 3",
+        "3, 2, 1, 0",
+        "0, 1, 2, 3"
+      ],
+      "correct_index": 0,
+      "explanation": "Since the print statement runs before the recursive step, the numbers are printed in descending order: 3, then 2, then 1, stopping when n becomes 0.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q7",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "What is the return value of a recursive factorial function fact(n) for fact(3) if fact(n) = n * fact(n-1) with base case fact(0) = 1?",
+      "options": [
+        "3",
+        "6",
+        "9",
+        "2"
+      ],
+      "correct_index": 1,
+      "explanation": "fact(3) evaluates as 3 * fact(2) = 3 * 2 * fact(1) = 3 * 2 * 1 * fact(0) = 3 * 2 * 1 * 1 = 6.",
+      "author_difficulty": 3,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q8",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "What happens if a recursive function does not make progress toward its base case on each step?",
+      "options": [
+        "It terminates immediately",
+        "It causes an infinite loop / stack overflow",
+        "It automatically switches to an iterative equivalent",
+        "It yields a compiler error"
+      ],
+      "correct_index": 1,
+      "explanation": "Without progression toward the base case, the termination criteria are never met, resulting in endless recursion and stack depletion.",
+      "author_difficulty": 1,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q9",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "In recursive terminology, what is the 'recursive step'?",
+      "options": [
+        "The statement that handles the simplest input directly",
+        "The line of code that frees call stack frames",
+        "The part of the function where the problem is reduced to a smaller subproblem",
+        "The compilation step that optimizes recursive loops"
+      ],
+      "correct_index": 2,
+      "explanation": "The recursive step decomposes the primary problem into a smaller, solvable instance of the same problem.",
+      "author_difficulty": 2,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q10",
+      "concept_id": "complexity_analysis",
+      "subject": "Algorithms",
+      "stem": "What is the worst-case space complexity of a linear recursive algorithm processing N elements with a call stack depth of N (assuming no tail-call optimization)?",
+      "options": [
+        "O(1)",
+        "O(log N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correct_index": 2,
+      "explanation": "Each frame on the call stack takes up constant O(1) space. For N active recursive calls, the space complexity scales linearly to O(N).",
+      "author_difficulty": 3,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q11",
+      "concept_id": "complexity_analysis",
+      "subject": "Algorithms",
+      "stem": "What is the time complexity of the standard recursive Fibonacci algorithm defined by F(n) = F(n-1) + F(n-2) without optimization?",
+      "options": [
+        "O(log N)",
+        "O(N)",
+        "O(N log N)",
+        "O(2^N)"
+      ],
+      "correct_index": 3,
+      "explanation": "The recursion tree for naive Fibonacci branches into two subproblems at each step, yielding an exponential growth rate of roughly O(1.618^N), which is bounded by O(2^N).",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q12",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "Which property must a recursive call possess to be classified as 'tail recursive'?",
+      "options": [
+        "It must be the first line of the function",
+        "The recursive call must be the final operation evaluated, with no pending work",
+        "It must occur inside a loop body",
+        "It must return a static variable"
+      ],
+      "correct_index": 1,
+      "explanation": "Tail recursion requires that the result of the recursive call is directly returned without any further operations (like addition or multiplication) pending.",
+      "author_difficulty": 4,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q13",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "Consider the following Python function:\n\n```python\ndef rev(s):\n    if len(s) <= 1:\n        return s\n    return rev(s[1:]) + s[0]\n```\nWhat does rev('algo') return?",
+      "options": [
+        "algo",
+        "ogla",
+        "laog",
+        "oalg"
+      ],
+      "correct_index": 1,
+      "explanation": "This algorithm recursively processes the slice s[1:] and appends the first character s[0] at the end, successfully reversing the input string to 'ogla'.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q14",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "For the Euclidean recursive GCD algorithm:\ngcd(a, b) = gcd(b, a % b) with base case b == 0 returning a.\nHow many recursive calls (excluding the initial call) are made to compute gcd(24, 9)?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_index": 2,
+      "explanation": "Initial call: gcd(24, 9). Call 1: gcd(9, 6). Call 2: gcd(6, 3). Call 3: gcd(3, 0) which hits base case. There are 3 recursive calls.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q15",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "Which recurrence relation describes the worst-case time complexity of a recursive Binary Search on a sorted array of size N?",
+      "options": [
+        "T(N) = 2T(N/2) + O(1)",
+        "T(N) = T(N/2) + O(1)",
+        "T(N) = T(N-1) + O(1)",
+        "T(N) = T(N/2) + O(N)"
+      ],
+      "correct_index": 1,
+      "explanation": "Binary search divides the search space in half at each step (T(N/2)) and performs constant-time comparisons (O(1)) at the middle element.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q16",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "Consider the following recursive function execution flow:\n\n```\nvoid foo(int x) {\n    if (x <= 0) return;\n    print(x);\n    foo(x - 1);\n    print(x);\n}\n```\nWhat is the exact output sequence for foo(3)?",
+      "options": [
+        "3, 2, 1, 1, 2, 3",
+        "3, 2, 1, 0, 1, 2, 3",
+        "3, 2, 1, 3, 2, 1",
+        "3, 2, 1"
+      ],
+      "correct_index": 0,
+      "explanation": "foo(3) prints 3, calls foo(2). foo(2) prints 2, calls foo(1). foo(1) prints 1, calls foo(0) (returns). After return, unwinding executes the remaining print statements: 1, then 2, then 3.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q17",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "How many total calls to fib (including the initial call) are made when calculating the 4th Fibonacci number using: \nfib(n) = fib(n-1) + fib(n-2) with base cases fib(1) = 1 and fib(0) = 0?",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "correct_index": 2,
+      "explanation": "Tree of calls: fib(4) -> [fib(3), fib(2)]. fib(3) -> [fib(2), fib(1)]. fib(2) -> [fib(1), fib(0)]. The second fib(2) from fib(4) -> [fib(1), fib(0)]. Total calls: fib(4)[1] + fib(3)[1] + fib(2)[2] + fib(1)[3] + fib(0)[2] = 9.",
+      "author_difficulty": 6,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q18",
+      "concept_id": "dynamic_programming",
+      "subject": "Algorithms",
+      "stem": "What optimization technique stores the results of expensive recursive function calls to avoid redundant computations on identical inputs?",
+      "options": [
+        "Garbage Collection",
+        "Memoization",
+        "Tabulation",
+        "Tail Call Optimization"
+      ],
+      "correct_index": 1,
+      "explanation": "Memoization caches the output of function calls relative to their parameter states, enabling top-down recursive solutions to achieve optimal lookup times (often O(1)) on repeating subproblems.",
+      "author_difficulty": 4,
+      "prerequisite_concepts": [
+        "divide_and_conquer"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q19",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "Given pow(x, y) = x * pow(x, y-1) with base case pow(x, 0) = 1, what is the runtime of evaluating pow(2, N) linearly, and how can it be optimized recursively to logarithmic time?",
+      "options": [
+        "Linear O(N); optimize using pow(x, y/2) * pow(x, y/2) dividing powers.",
+        "Linear O(N^2); optimize using binary division trees.",
+        "Linear O(N); optimize using Memoized sliding windows.",
+        "Linear O(log N); optimize using tail-call mapping."
+      ],
+      "correct_index": 0,
+      "explanation": "Evaluating linearly takes O(N) depth. It can be optimized to O(log N) using divide-and-conquer exponentiation: x^y = (x^(y/2))^2 for even y.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q20",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "When recursively computing the height of a binary tree, what is the correct formulation of the recursive case?",
+      "options": [
+        "height = 1 + height(left) + height(right)",
+        "height = max(height(left), height(right))",
+        "height = 1 + max(height(left), height(right))",
+        "height = 1 + min(height(left), height(right))"
+      ],
+      "correct_index": 2,
+      "explanation": "The height of a node is 1 (for the current level node) plus the maximum of the heights of its left and right subtrees.",
+      "author_difficulty": 5,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q21",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "For the Tower of Hanoi puzzle with N disks, what is the minimum number of moves required, and what is the recurrence relation governing this problem?",
+      "options": [
+        "2^N - 1 moves, governed by T(N) = 2T(N-1) + 1",
+        "2^N moves, governed by T(N) = 2T(N-1) + 2",
+        "N^2 moves, governed by T(N) = T(N-1) + N",
+        "2^(N-1) moves, governed by T(N) = T(N-1) + 2T(N-2)"
+      ],
+      "correct_index": 0,
+      "explanation": "To move N disks, you must recursively move N-1 disks to an auxiliary peg (T(N-1)), move the largest disk (1 step), and move the N-1 disks to the destination peg (T(N-1)). This yields T(N) = 2T(N-1) + 1, which solves to 2^N - 1.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q22",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "In the context of compilation and runtime systems, how does Tail Call Optimization (TCO) prevent Stack Overflow errors during deeply nested tail recursion?",
+      "options": [
+        "It allocates the activation record dynamically on the heap rather than the call stack.",
+        "It compiles recursive calls into iterative loops by reusing the current activation record frame.",
+        "It forks separate threads to handle each cascading recursive frame concurrently.",
+        "It uses an automatic pruning garbage collector to discard previous parent frames."
+      ],
+      "correct_index": 1,
+      "explanation": "TCO avoids creating new stack frames for tail-recursive calls by overwriting the current frame with the parameters of the child call, running in O(1) stack space.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q23",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "The Ackermann function is defined recursively as:\nA(m, n) = n + 1 if m = 0;\nA(m, n) = A(m-1, 1) if m > 0, n = 0;\nA(m, n) = A(m-1, A(m, n-1)) if m > 0, n > 0.\nCompute the exact value of A(1, 2).",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "2"
+      ],
+      "correct_index": 1,
+      "explanation": "A(1, 2) = A(0, A(1, 1)). Evaluated: A(1, 1) = A(0, A(1, 0)) = A(0, A(0, 1)) = A(0, 2) = 3. Thus, A(1, 2) = A(0, 3) = 4.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q24",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "What is mutual (indirect) recursion, and which of the following code blocks demonstrates it?",
+      "options": [
+        "A function calling itself inside a loop",
+        "Two or more functions calling each other in a circular chain",
+        "A recursive function that utilizes a helper method within its base case",
+        "A function calling its own duplicate helper with different parameters"
+      ],
+      "correct_index": 1,
+      "explanation": "Mutual recursion is a form of recursion where two or more functions are defined in terms of each other (e.g., function A calls B, and B calls A).",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q25",
+      "concept_id": "sorting_searching",
+      "subject": "Algorithms",
+      "stem": "When analyzing the memory usage of Quick Sort in the worst-case scenario where the chosen pivot is always the smallest or largest element, what is the maximum call stack space complexity?",
+      "options": [
+        "O(log N)",
+        "O(N)",
+        "O(N log N)",
+        "O(1)"
+      ],
+      "correct_index": 1,
+      "explanation": "In the worst case, the partitioning yields subproblems of size 0 and N-1. The recursion depth goes up to N, consuming O(N) space on the call stack.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "arrays_and_lists"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q26",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "The McCarthy 91 function is defined as: M(n) = n - 10 if n > 100, and M(M(n + 11)) if n <= 100. What is the value of M(95)?",
+      "options": [
+        "91",
+        "95",
+        "101",
+        "85"
+      ],
+      "correct_index": 0,
+      "explanation": "For all inputs n <= 100, the McCarthy 91 function returns 91. Tracking M(95) -> M(M(106)) -> M(96) -> M(M(107)) -> M(97)... eventually resolves to 91.",
+      "author_difficulty": 10,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q27",
+      "concept_id": "advanced_algorithms",
+      "subject": "Algorithms",
+      "stem": "In a backtracking algorithm to find all permutations of a unique list of size N, what is the upper-bound execution time complexity and total leaf nodes in the recursion tree?",
+      "options": [
+        "O(2^N) time, 2^N leaf nodes",
+        "O(N!) time, N! leaf nodes",
+        "O(N^2) time, N^2 leaf nodes",
+        "O(N^N) time, N^N leaf nodes"
+      ],
+      "correct_index": 1,
+      "explanation": "Generating all permutations of size N requires making decisions that scale factorially. There are exactly N! unique permutations, leading to N! leaf nodes in the search tree.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "dynamic_programming",
+        "graph_algorithms"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q28",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "Consider this custom tri-recursive function:\n```python\ndef f(n):\n    if n <= 0:\n        return 1\n    if n == 1:\n        return 2\n    return f(n-1) + f(n-2) + f(n-3)\n```\nWhat is the output value of f(3)?",
+      "options": [
+        "5",
+        "7",
+        "8",
+        "9"
+      ],
+      "correct_index": 1,
+      "explanation": "We calculate: f(0)=1, f(1)=2, f(-1)=1. f(2) = f(1) + f(0) + f(-1) = 2 + 1 + 1 = 4. f(3) = f(2) + f(1) + f(0) = 4 + 2 + 1 = 7.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q29",
+      "concept_id": "graph_algorithms",
+      "subject": "Algorithms",
+      "stem": "What is the worst-case space complexity of a Depth-First Search (DFS) algorithm implemented recursively on a graph with V vertices and E edges?",
+      "options": [
+        "O(E)",
+        "O(V)",
+        "O(V + E)",
+        "O(V * E)"
+      ],
+      "correct_index": 1,
+      "explanation": "The recursion stack depth is bounded by the maximum path length from the source. In the worst case (a linear path visiting all vertices), the stack will hold up to V frames, resulting in O(V) space complexity.",
+      "author_difficulty": 8,
+      "prerequisite_concepts": [
+        "graphs",
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    },
+    {
+      "item_id": "rec-q30",
+      "concept_id": "divide_and_conquer",
+      "subject": "Algorithms",
+      "stem": "Which of the following describes a nested recursion?",
+      "options": [
+        "A function containing multiple recursive calls in sequence",
+        "A recursive function that calls another function inside its base case",
+        "A recursive function where a recursive call is passed as an argument to another recursive call",
+        "A recursive function containing an iterative loop within its body"
+      ],
+      "correct_index": 2,
+      "explanation": "Nested recursion occurs when a parameter to a recursive call is itself a recursive call (e.g., f(f(n-1))), as seen in the Ackermann and McCarthy 91 functions.",
+      "author_difficulty": 9,
+      "prerequisite_concepts": [
+        "sorting_searching"
+      ],
+      "format": "mcq"
+    }
+  ]
+}

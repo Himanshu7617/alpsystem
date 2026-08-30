@@ -1,0 +1,68 @@
+{
+  "f12-01": {
+    "steps": [
+      "Consent",
+      "Session",
+      "Item",
+      "Answer",
+      "State",
+      "End"
+    ],
+    "latency_p95_ms": {
+      "attempt": 36.5,
+      "consent": 3.8,
+      "events": 9.4,
+      "next-item": 31.3,
+      "session": 47.8,
+      "session-end": 6.0
+    }
+  },
+  "f12-02": {
+    "screens": [
+      "01-landing-and-login.jpg",
+      "02-item-served.jpg",
+      "03-state-panel-gate-withheld.jpg",
+      "04-adapted-explanation.jpg",
+      "05-roadmap.jpg",
+      "06-recent-attempts.jpg",
+      "07-researcher-dashboard.jpg",
+      "08-decision-log-propensities.jpg"
+    ]
+  },
+  "f12-03": {
+    "total": 145,
+    "all_passed": true,
+    "per_suite": {
+      "backend (jest)": {
+        "passed": 16,
+        "total": 16
+      },
+      "ml-service (pytest)": {
+        "passed": 129
+      }
+    }
+  },
+  "f12-04": {
+    "total_minutes": 5.9,
+    "targets": 6,
+    "all_ok": true,
+    "slowest": "simulate"
+  },
+  "f12-05": {
+    "study1_best_auc": {
+      "assistments_2009": 0.7142,
+      "assistments_2012": 0.676,
+      "ednet_kt1": 0.6435,
+      "sim-V0": 0.6245
+    },
+    "gate_admitted": [
+      "knowledge"
+    ],
+    "gate_rejected": [
+      "confidence",
+      "engagement"
+    ],
+    "closed_loop_max_abs_g": 0.0115,
+    "rct_n_per_arm": 176.0
+  }
+}

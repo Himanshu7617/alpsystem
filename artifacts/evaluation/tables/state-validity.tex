@@ -1,0 +1,13 @@
+\begin{table}
+\caption{Study 2 validity gate: every state head, admitted or rejected.}
+\label{tab:state-validity}
+\begin{tabular}{lrllrrrrrrrrrrrr}
+\toprule
+state & admitted & source & label & n & learners & base\_rate & roc\_auc & ece\_raw & ece\_calibrated & label\_correlation & label\_correlation\_ci\_low & label\_correlation\_ci\_high & ability\_correlation & ability\_learners & knowledge\_correlation \\
+\midrule
+knowledge & True & assistments\_2012 & next\_correct — the next attempt's outcome & 15564 & 169 & 0.6728 & 0.6857 & 0.0342 & 0.0158 & 0.3156 & 0.2821 & 0.3449 & NaN & NaN & NaN \\
+engagement & False & assistments\_2012 & solution\_behaviour of the next attempt (response-time effort, preregistration §6) & 15395 & 169 & 0.9834 & 0.8306 & 0.0048 & 0.0045 & 0.2815 & 0.1880 & 0.3707 & 0.4025 & 169.0000 & NaN \\
+confidence & False & sim-V0 & probe\_confidence >= 3 (post-submission self-report, preregistration §3) & 1384 & 81 & 0.7637 & 0.5841 & 0.0319 & 0.0242 & 0.1376 & 0.0826 & 0.1961 & NaN & NaN & 0.8933 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,1383 @@
+{
+  "phase": 11,
+  "seed": 20260821,
+  "run_profile": "smoke",
+  "why": "every headline number rests on a constant somebody chose; these are the six, moved",
+  "probe_noise": {
+    "knob": "probe_noise_sd",
+    "source": "artifacts/evaluation/probe-noise-sensitivity.json",
+    "calibrated": 0.55,
+    "levels": [
+      0.25,
+      0.55,
+      1.0,
+      2.0
+    ],
+    "learners": 300,
+    "rows": [
+      {
+        "policy": "model_L0",
+        "probe_noise": 0.25,
+        "items_to_mastery": 186.64333333333335,
+        "knowledge_gain": -0.005558835186706695,
+        "mastered": 0.09666666666666666,
+        "mean_success_probability": 0.7044483127256608
+      },
+      {
+        "policy": "model_L0",
+        "probe_noise": 0.55,
+        "items_to_mastery": 186.64333333333335,
+        "knowledge_gain": -0.005558835186706695,
+        "mastered": 0.09666666666666666,
+        "mean_success_probability": 0.7044483127256608
+      },
+      {
+        "policy": "model_L0",
+        "probe_noise": 1.0,
+        "items_to_mastery": 186.64333333333335,
+        "knowledge_gain": -0.005558835186706695,
+        "mastered": 0.09666666666666666,
+        "mean_success_probability": 0.7044483127256608
+      },
+      {
+        "policy": "model_L0",
+        "probe_noise": 2.0,
+        "items_to_mastery": 186.64333333333335,
+        "knowledge_gain": -0.005558835186706695,
+        "mastered": 0.09666666666666666,
+        "mean_success_probability": 0.7044483127256608
+      },
+      {
+        "policy": "model_L4",
+        "probe_noise": 0.25,
+        "items_to_mastery": 185.21,
+        "knowledge_gain": -0.00919315565060029,
+        "mastered": 0.1,
+        "mean_success_probability": 0.7198441948163318
+      },
+      {
+        "policy": "model_L4",
+        "probe_noise": 0.55,
+        "items_to_mastery": 185.21,
+        "knowledge_gain": -0.00919315565060029,
+        "mastered": 0.1,
+        "mean_success_probability": 0.7198441948163318
+      },
+      {
+        "policy": "model_L4",
+        "probe_noise": 1.0,
+        "items_to_mastery": 185.21,
+        "knowledge_gain": -0.00919315565060029,
+        "mastered": 0.1,
+        "mean_success_probability": 0.7198441948163318
+      },
+      {
+        "policy": "model_L4",
+        "probe_noise": 2.0,
+        "items_to_mastery": 185.21,
+        "knowledge_gain": -0.00919315565060029,
+        "mastered": 0.1,
+        "mean_success_probability": 0.7198441948163318
+      }
+    ],
+    "max_spread_in_knowledge_gain": {
+      "model_L0": 0.0,
+      "model_L4": 0.0
+    },
+    "reading": "the gate rejected the confidence head, so no policy reads a probe-derived state; a flat curve is the expected result"
+  },
+  "item_budget": {
+    "knob": "item_budget",
+    "preregistered": 200,
+    "levels": [
+      25,
+      50,
+      75,
+      100,
+      125,
+      150,
+      175,
+      200
+    ],
+    "rows": [
+      {
+        "policy": "fixed_order",
+        "budget": 25,
+        "mastery_rate": 0.029666666666666668
+      },
+      {
+        "policy": "fixed_order",
+        "budget": 50,
+        "mastery_rate": 0.04666666666666667
+      },
+      {
+        "policy": "fixed_order",
+        "budget": 75,
+        "mastery_rate": 0.059
+      },
+      {
+        "policy": "fixed_order",
+        "budget": 100,
+        "mastery_rate": 0.066
+      },
+      {
+        "policy": "fixed_order",
+        "budget": 125,
+        "mastery_rate": 0.07133333333333333
+      },
+      {
+        "policy": "fixed_order",
+        "budget": 150,
+        "mastery_rate": 0.07466666666666667
+      },
+      {
+        "policy": "fixed_order",
+        "budget": 175,
+        "mastery_rate": 0.07833333333333334
+      },
+      {
+        "policy": "fixed_order",
+        "budget": 200,
+        "mastery_rate": 0.081
+      },
+      {
+        "policy": "irt_cat_maxinfo",
+        "budget": 25,
+        "mastery_rate": 0.027333333333333334
+      },
+      {
+        "policy": "irt_cat_maxinfo",
+        "budget": 50,
+        "mastery_rate": 0.04666666666666667
+      },
+      {
+        "policy": "irt_cat_maxinfo",
+        "budget": 75,
+        "mastery_rate": 0.058666666666666666
+      },
+      {
+        "policy": "irt_cat_maxinfo",
+        "budget": 100,
+        "mastery_rate": 0.06566666666666666
+      },
+      {
+        "policy": "irt_cat_maxinfo",
+        "budget": 125,
+        "mastery_rate": 0.075
+      },
+      {
+        "policy": "irt_cat_maxinfo",
+        "budget": 150,
+        "mastery_rate": 0.078
+      },
+      {
+        "policy": "irt_cat_maxinfo",
+        "budget": 175,
+        "mastery_rate": 0.08
+      },
+      {
+        "policy": "irt_cat_maxinfo",
+        "budget": 200,
+        "mastery_rate": 0.08366666666666667
+      },
+      {
+        "policy": "mastery_threshold_bkt",
+        "budget": 25,
+        "mastery_rate": 0.026333333333333334
+      },
+      {
+        "policy": "mastery_threshold_bkt",
+        "budget": 50,
+        "mastery_rate": 0.046
+      },
+      {
+        "policy": "mastery_threshold_bkt",
+        "budget": 75,
+        "mastery_rate": 0.057
+      },
+      {
+        "policy": "mastery_threshold_bkt",
+        "budget": 100,
+        "mastery_rate": 0.064
+      },
+      {
+        "policy": "mastery_threshold_bkt",
+        "budget": 125,
+        "mastery_rate": 0.07033333333333333
+      },
+      {
+        "policy": "mastery_threshold_bkt",
+        "budget": 150,
+        "mastery_rate": 0.07533333333333334
+      },
+      {
+        "policy": "mastery_threshold_bkt",
+        "budget": 175,
+        "mastery_rate": 0.07833333333333334
+      },
+      {
+        "policy": "mastery_threshold_bkt",
+        "budget": 200,
+        "mastery_rate": 0.08333333333333333
+      },
+      {
+        "policy": "model_L0",
+        "budget": 25,
+        "mastery_rate": 0.03166666666666667
+      },
+      {
+        "policy": "model_L0",
+        "budget": 50,
+        "mastery_rate": 0.05266666666666667
+      },
+      {
+        "policy": "model_L0",
+        "budget": 75,
+        "mastery_rate": 0.063
+      },
+      {
+        "policy": "model_L0",
+        "budget": 100,
+        "mastery_rate": 0.07266666666666667
+      },
+      {
+        "policy": "model_L0",
+        "budget": 125,
+        "mastery_rate": 0.07766666666666666
+      },
+      {
+        "policy": "model_L0",
+        "budget": 150,
+        "mastery_rate": 0.08266666666666667
+      },
+      {
+        "policy": "model_L0",
+        "budget": 175,
+        "mastery_rate": 0.087
+      },
+      {
+        "policy": "model_L0",
+        "budget": 200,
+        "mastery_rate": 0.091
+      },
+      {
+        "policy": "model_L1",
+        "budget": 25,
+        "mastery_rate": 0.029
+      },
+      {
+        "policy": "model_L1",
+        "budget": 50,
+        "mastery_rate": 0.04766666666666667
+      },
+      {
+        "policy": "model_L1",
+        "budget": 75,
+        "mastery_rate": 0.06266666666666666
+      },
+      {
+        "policy": "model_L1",
+        "budget": 100,
+        "mastery_rate": 0.07
+      },
+      {
+        "policy": "model_L1",
+        "budget": 125,
+        "mastery_rate": 0.07633333333333334
+      },
+      {
+        "policy": "model_L1",
+        "budget": 150,
+        "mastery_rate": 0.081
+      },
+      {
+        "policy": "model_L1",
+        "budget": 175,
+        "mastery_rate": 0.084
+      },
+      {
+        "policy": "model_L1",
+        "budget": 200,
+        "mastery_rate": 0.08733333333333333
+      },
+      {
+        "policy": "model_L3",
+        "budget": 25,
+        "mastery_rate": 0.030333333333333334
+      },
+      {
+        "policy": "model_L3",
+        "budget": 50,
+        "mastery_rate": 0.050333333333333334
+      },
+      {
+        "policy": "model_L3",
+        "budget": 75,
+        "mastery_rate": 0.062
+      },
+      {
+        "policy": "model_L3",
+        "budget": 100,
+        "mastery_rate": 0.07
+      },
+      {
+        "policy": "model_L3",
+        "budget": 125,
+        "mastery_rate": 0.07733333333333334
+      },
+      {
+        "policy": "model_L3",
+        "budget": 150,
+        "mastery_rate": 0.08033333333333334
+      },
+      {
+        "policy": "model_L3",
+        "budget": 175,
+        "mastery_rate": 0.08333333333333333
+      },
+      {
+        "policy": "model_L3",
+        "budget": 200,
+        "mastery_rate": 0.08666666666666667
+      },
+      {
+        "policy": "model_L4",
+        "budget": 25,
+        "mastery_rate": 0.029666666666666668
+      },
+      {
+        "policy": "model_L4",
+        "budget": 50,
+        "mastery_rate": 0.049
+      },
+      {
+        "policy": "model_L4",
+        "budget": 75,
+        "mastery_rate": 0.06266666666666666
+      },
+      {
+        "policy": "model_L4",
+        "budget": 100,
+        "mastery_rate": 0.069
+      },
+      {
+        "policy": "model_L4",
+        "budget": 125,
+        "mastery_rate": 0.07366666666666667
+      },
+      {
+        "policy": "model_L4",
+        "budget": 150,
+        "mastery_rate": 0.07833333333333334
+      },
+      {
+        "policy": "model_L4",
+        "budget": 175,
+        "mastery_rate": 0.085
+      },
+      {
+        "policy": "model_L4",
+        "budget": 200,
+        "mastery_rate": 0.08833333333333333
+      },
+      {
+        "policy": "random",
+        "budget": 25,
+        "mastery_rate": 0.029666666666666668
+      },
+      {
+        "policy": "random",
+        "budget": 50,
+        "mastery_rate": 0.04766666666666667
+      },
+      {
+        "policy": "random",
+        "budget": 75,
+        "mastery_rate": 0.059666666666666666
+      },
+      {
+        "policy": "random",
+        "budget": 100,
+        "mastery_rate": 0.06833333333333333
+      },
+      {
+        "policy": "random",
+        "budget": 125,
+        "mastery_rate": 0.075
+      },
+      {
+        "policy": "random",
+        "budget": 150,
+        "mastery_rate": 0.07933333333333334
+      },
+      {
+        "policy": "random",
+        "budget": 175,
+        "mastery_rate": 0.08333333333333333
+      },
+      {
+        "policy": "random",
+        "budget": 200,
+        "mastery_rate": 0.087
+      },
+      {
+        "policy": "rule_improved",
+        "budget": 25,
+        "mastery_rate": 0.027
+      },
+      {
+        "policy": "rule_improved",
+        "budget": 50,
+        "mastery_rate": 0.044333333333333336
+      },
+      {
+        "policy": "rule_improved",
+        "budget": 75,
+        "mastery_rate": 0.058666666666666666
+      },
+      {
+        "policy": "rule_improved",
+        "budget": 100,
+        "mastery_rate": 0.06633333333333333
+      },
+      {
+        "policy": "rule_improved",
+        "budget": 125,
+        "mastery_rate": 0.07166666666666667
+      },
+      {
+        "policy": "rule_improved",
+        "budget": 150,
+        "mastery_rate": 0.075
+      },
+      {
+        "policy": "rule_improved",
+        "budget": 175,
+        "mastery_rate": 0.078
+      },
+      {
+        "policy": "rule_improved",
+        "budget": 200,
+        "mastery_rate": 0.08166666666666667
+      },
+      {
+        "policy": "rule_legacy",
+        "budget": 25,
+        "mastery_rate": 0.027666666666666666
+      },
+      {
+        "policy": "rule_legacy",
+        "budget": 50,
+        "mastery_rate": 0.043333333333333335
+      },
+      {
+        "policy": "rule_legacy",
+        "budget": 75,
+        "mastery_rate": 0.055
+      },
+      {
+        "policy": "rule_legacy",
+        "budget": 100,
+        "mastery_rate": 0.06366666666666666
+      },
+      {
+        "policy": "rule_legacy",
+        "budget": 125,
+        "mastery_rate": 0.069
+      },
+      {
+        "policy": "rule_legacy",
+        "budget": 150,
+        "mastery_rate": 0.073
+      },
+      {
+        "policy": "rule_legacy",
+        "budget": 175,
+        "mastery_rate": 0.076
+      },
+      {
+        "policy": "rule_legacy",
+        "budget": 200,
+        "mastery_rate": 0.08
+      }
+    ],
+    "best_arm_by_budget": {
+      "25": "model_L0",
+      "50": "model_L0",
+      "75": "model_L0",
+      "100": "model_L0",
+      "125": "model_L0",
+      "150": "model_L0",
+      "175": "model_L0",
+      "200": "model_L0"
+    },
+    "ordering_stable": true,
+    "note": "mastery rate only \u2014 the stored outcome is a threshold crossing time, so a smaller budget is a re-cut of it, while knowledge gain at a smaller budget would need the loop rerun"
+  },
+  "simulator_variant": {
+    "knob": "simulator_variant",
+    "preregistered": "V0",
+    "levels": [
+      "V0",
+      "V1",
+      "V2",
+      "V3",
+      "V4"
+    ],
+    "rows": [
+      {
+        "variant": "V0",
+        "policy": "fixed_order",
+        "knowledge_gain": 0.02733877200122143,
+        "items_to_mastery": 188.27233333333334,
+        "mastered": 0.081
+      },
+      {
+        "variant": "V0",
+        "policy": "irt_cat_maxinfo",
+        "knowledge_gain": 0.030415864418282722,
+        "items_to_mastery": 188.092,
+        "mastered": 0.08366666666666667
+      },
+      {
+        "variant": "V0",
+        "policy": "mastery_threshold_bkt",
+        "knowledge_gain": 0.029484838877025073,
+        "items_to_mastery": 188.43266666666668,
+        "mastered": 0.08333333333333333
+      },
+      {
+        "variant": "V0",
+        "policy": "model_L0",
+        "knowledge_gain": 0.04022826778939142,
+        "items_to_mastery": 187.17366666666666,
+        "mastered": 0.091
+      },
+      {
+        "variant": "V0",
+        "policy": "model_L1",
+        "knowledge_gain": 0.03766758277355556,
+        "items_to_mastery": 187.496,
+        "mastered": 0.08733333333333333
+      },
+      {
+        "variant": "V0",
+        "policy": "model_L3",
+        "knowledge_gain": 0.04023999299614886,
+        "items_to_mastery": 187.55066666666667,
+        "mastered": 0.08666666666666667
+      },
+      {
+        "variant": "V0",
+        "policy": "model_L4",
+        "knowledge_gain": 0.03929444997941494,
+        "items_to_mastery": 187.644,
+        "mastered": 0.08833333333333333
+      },
+      {
+        "variant": "V0",
+        "policy": "random",
+        "knowledge_gain": 0.039370327854094,
+        "items_to_mastery": 187.81366666666668,
+        "mastered": 0.087
+      },
+      {
+        "variant": "V0",
+        "policy": "rule_improved",
+        "knowledge_gain": 0.031593137159140604,
+        "items_to_mastery": 188.31566666666666,
+        "mastered": 0.08166666666666667
+      },
+      {
+        "variant": "V0",
+        "policy": "rule_legacy",
+        "knowledge_gain": 0.027291097087975322,
+        "items_to_mastery": 188.763,
+        "mastered": 0.08
+      },
+      {
+        "variant": "V1",
+        "policy": "fixed_order",
+        "knowledge_gain": 0.024965886183101554,
+        "items_to_mastery": 187.702,
+        "mastered": 0.084
+      },
+      {
+        "variant": "V1",
+        "policy": "irt_cat_maxinfo",
+        "knowledge_gain": 0.0243115194119243,
+        "items_to_mastery": 187.739,
+        "mastered": 0.08633333333333333
+      },
+      {
+        "variant": "V1",
+        "policy": "mastery_threshold_bkt",
+        "knowledge_gain": 0.030147358137977136,
+        "items_to_mastery": 187.75,
+        "mastered": 0.08633333333333333
+      },
+      {
+        "variant": "V1",
+        "policy": "model_L0",
+        "knowledge_gain": 0.04115007270883866,
+        "items_to_mastery": 186.59633333333332,
+        "mastered": 0.09633333333333334
+      },
+      {
+        "variant": "V1",
+        "policy": "model_L1",
+        "knowledge_gain": 0.03516245156562736,
+        "items_to_mastery": 186.475,
+        "mastered": 0.09666666666666666
+      },
+      {
+        "variant": "V1",
+        "policy": "model_L3",
+        "knowledge_gain": 0.03223748358793355,
+        "items_to_mastery": 187.03266666666667,
+        "mastered": 0.09166666666666666
+      },
+      {
+        "variant": "V1",
+        "policy": "model_L4",
+        "knowledge_gain": 0.030391137342713915,
+        "items_to_mastery": 187.06533333333334,
+        "mastered": 0.08966666666666667
+      },
+      {
+        "variant": "V1",
+        "policy": "random",
+        "knowledge_gain": 0.03816489505515871,
+        "items_to_mastery": 187.11733333333333,
+        "mastered": 0.09166666666666666
+      },
+      {
+        "variant": "V1",
+        "policy": "rule_improved",
+        "knowledge_gain": 0.026819277666553704,
+        "items_to_mastery": 188.02933333333334,
+        "mastered": 0.085
+      },
+      {
+        "variant": "V1",
+        "policy": "rule_legacy",
+        "knowledge_gain": 0.020030307101474236,
+        "items_to_mastery": 188.521,
+        "mastered": 0.08166666666666667
+      },
+      {
+        "variant": "V2",
+        "policy": "fixed_order",
+        "knowledge_gain": 0.02733877200122143,
+        "items_to_mastery": 188.27233333333334,
+        "mastered": 0.081
+      },
+      {
+        "variant": "V2",
+        "policy": "irt_cat_maxinfo",
+        "knowledge_gain": 0.030415864418282722,
+        "items_to_mastery": 188.092,
+        "mastered": 0.08366666666666667
+      },
+      {
+        "variant": "V2",
+        "policy": "mastery_threshold_bkt",
+        "knowledge_gain": 0.029484838877025073,
+        "items_to_mastery": 188.43266666666668,
+        "mastered": 0.08333333333333333
+      },
+      {
+        "variant": "V2",
+        "policy": "model_L0",
+        "knowledge_gain": 0.04022826778939142,
+        "items_to_mastery": 187.17366666666666,
+        "mastered": 0.091
+      },
+      {
+        "variant": "V2",
+        "policy": "model_L1",
+        "knowledge_gain": 0.03943072552357578,
+        "items_to_mastery": 187.49933333333334,
+        "mastered": 0.088
+      },
+      {
+        "variant": "V2",
+        "policy": "model_L3",
+        "knowledge_gain": 0.039411930576937766,
+        "items_to_mastery": 187.48333333333332,
+        "mastered": 0.087
+      },
+      {
+        "variant": "V2",
+        "policy": "model_L4",
+        "knowledge_gain": 0.04197431891025668,
+        "items_to_mastery": 187.14466666666667,
+        "mastered": 0.09033333333333333
+      },
+      {
+        "variant": "V2",
+        "policy": "random",
+        "knowledge_gain": 0.039370327854094,
+        "items_to_mastery": 187.81366666666668,
+        "mastered": 0.087
+      },
+      {
+        "variant": "V2",
+        "policy": "rule_improved",
+        "knowledge_gain": 0.03282346387648733,
+        "items_to_mastery": 188.27133333333333,
+        "mastered": 0.084
+      },
+      {
+        "variant": "V2",
+        "policy": "rule_legacy",
+        "knowledge_gain": 0.027291097087975322,
+        "items_to_mastery": 188.763,
+        "mastered": 0.08
+      },
+      {
+        "variant": "V3",
+        "policy": "fixed_order",
+        "knowledge_gain": 0.02561617932167428,
+        "items_to_mastery": 188.31233333333333,
+        "mastered": 0.083
+      },
+      {
+        "variant": "V3",
+        "policy": "irt_cat_maxinfo",
+        "knowledge_gain": 0.026463966901349896,
+        "items_to_mastery": 188.18833333333333,
+        "mastered": 0.08266666666666667
+      },
+      {
+        "variant": "V3",
+        "policy": "mastery_threshold_bkt",
+        "knowledge_gain": 0.03286715298737602,
+        "items_to_mastery": 188.0,
+        "mastered": 0.086
+      },
+      {
+        "variant": "V3",
+        "policy": "model_L0",
+        "knowledge_gain": 0.04254237814363062,
+        "items_to_mastery": 187.10766666666666,
+        "mastered": 0.09033333333333333
+      },
+      {
+        "variant": "V3",
+        "policy": "model_L1",
+        "knowledge_gain": 0.03942348360925898,
+        "items_to_mastery": 187.50866666666667,
+        "mastered": 0.088
+      },
+      {
+        "variant": "V3",
+        "policy": "model_L3",
+        "knowledge_gain": 0.037195983244432476,
+        "items_to_mastery": 187.59033333333332,
+        "mastered": 0.08666666666666667
+      },
+      {
+        "variant": "V3",
+        "policy": "model_L4",
+        "knowledge_gain": 0.03512188460091003,
+        "items_to_mastery": 187.84666666666666,
+        "mastered": 0.084
+      },
+      {
+        "variant": "V3",
+        "policy": "random",
+        "knowledge_gain": 0.042694262430107516,
+        "items_to_mastery": 187.58566666666667,
+        "mastered": 0.08766666666666667
+      },
+      {
+        "variant": "V3",
+        "policy": "rule_improved",
+        "knowledge_gain": 0.03260620224061487,
+        "items_to_mastery": 188.411,
+        "mastered": 0.08166666666666667
+      },
+      {
+        "variant": "V3",
+        "policy": "rule_legacy",
+        "knowledge_gain": 0.026459196982129958,
+        "items_to_mastery": 188.97933333333333,
+        "mastered": 0.07666666666666666
+      },
+      {
+        "variant": "V4",
+        "policy": "fixed_order",
+        "knowledge_gain": 0.028884194028398133,
+        "items_to_mastery": 185.92,
+        "mastered": 0.097
+      },
+      {
+        "variant": "V4",
+        "policy": "irt_cat_maxinfo",
+        "knowledge_gain": 0.02275844386115529,
+        "items_to_mastery": 186.18733333333333,
+        "mastered": 0.09766666666666667
+      },
+      {
+        "variant": "V4",
+        "policy": "mastery_threshold_bkt",
+        "knowledge_gain": 0.023840183940177454,
+        "items_to_mastery": 186.068,
+        "mastered": 0.09566666666666666
+      },
+      {
+        "variant": "V4",
+        "policy": "model_L0",
+        "knowledge_gain": 0.036464800140994506,
+        "items_to_mastery": 185.07733333333334,
+        "mastered": 0.10533333333333333
+      },
+      {
+        "variant": "V4",
+        "policy": "model_L1",
+        "knowledge_gain": 0.03732418748275867,
+        "items_to_mastery": 185.27166666666668,
+        "mastered": 0.10366666666666667
+      },
+      {
+        "variant": "V4",
+        "policy": "model_L3",
+        "knowledge_gain": 0.03050770616103428,
+        "items_to_mastery": 185.39166666666668,
+        "mastered": 0.10066666666666667
+      },
+      {
+        "variant": "V4",
+        "policy": "model_L4",
+        "knowledge_gain": 0.02973663275637896,
+        "items_to_mastery": 185.53533333333334,
+        "mastered": 0.098
+      },
+      {
+        "variant": "V4",
+        "policy": "random",
+        "knowledge_gain": 0.031315792415269696,
+        "items_to_mastery": 185.62733333333333,
+        "mastered": 0.09933333333333333
+      },
+      {
+        "variant": "V4",
+        "policy": "rule_improved",
+        "knowledge_gain": 0.025208182892124315,
+        "items_to_mastery": 186.349,
+        "mastered": 0.092
+      },
+      {
+        "variant": "V4",
+        "policy": "rule_legacy",
+        "knowledge_gain": 0.020751985784969052,
+        "items_to_mastery": 186.75633333333334,
+        "mastered": 0.091
+      }
+    ],
+    "best_arm_by_variant": {
+      "V0": "model_L3",
+      "V1": "model_L0",
+      "V2": "model_L4",
+      "V3": "random",
+      "V4": "model_L1"
+    },
+    "ordering_stable": false,
+    "rank_spread": {
+      "fixed_order": 4.0,
+      "irt_cat_maxinfo": 2.0,
+      "mastery_threshold_bkt": 2.0,
+      "model_L0": 1.0,
+      "model_L1": 4.0,
+      "model_L3": 3.0,
+      "model_L4": 4.0,
+      "random": 4.0,
+      "rule_improved": 1.0,
+      "rule_legacy": 1.0
+    },
+    "note": "V1\u2013V4 are the deliberate mis-specifications from Phase 4; a finding that only holds on V0 is a property of one generative model"
+  },
+  "target_epsilon": {
+    "knob": "target_epsilon",
+    "preregistered": 0.15,
+    "logging_epsilon": 0.15,
+    "levels": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.25,
+      0.5
+    ],
+    "rows": [
+      {
+        "policy": "bandit_linucb",
+        "target_epsilon": 0.0,
+        "ips": 0.0002071543866202261,
+        "snips": 0.005015383263346105,
+        "effective_sample_size": 167.61719693488254,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_linucb",
+        "target_epsilon": 0.05,
+        "ips": 0.0004290349497890517,
+        "snips": 0.004735397384273891,
+        "effective_sample_size": 782.3142187414636,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_linucb",
+        "target_epsilon": 0.1,
+        "ips": 0.0006509155129578771,
+        "snips": 0.0046527346438673635,
+        "effective_sample_size": 1696.8698999992873,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_linucb",
+        "target_epsilon": 0.15,
+        "ips": 0.0008727960761267025,
+        "snips": 0.004613149630397675,
+        "effective_sample_size": 2691.0153445446495,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_linucb",
+        "target_epsilon": 0.25,
+        "ips": 0.0013165572024643535,
+        "snips": 0.004574664176302653,
+        "effective_sample_size": 4355.305321714062,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_linucb",
+        "target_epsilon": 0.5,
+        "ips": 0.0024259600183084806,
+        "snips": 0.004540593492432951,
+        "effective_sample_size": 6203.123295925825,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "target_epsilon": 0.0,
+        "ips": 0.0002489081150443216,
+        "snips": 0.007768931662959861,
+        "effective_sample_size": 94.73905261670937,
+        "action_match_rate": 0.007715107662801848
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "target_epsilon": 0.05,
+        "ips": 0.0004723569949455736,
+        "snips": 0.005769409129621791,
+        "effective_sample_size": 599.6812651440576,
+        "action_match_rate": 0.007715107662801848
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "target_epsilon": 0.1,
+        "ips": 0.0006958058748468255,
+        "snips": 0.00528300527248713,
+        "effective_sample_size": 1416.5975064271431,
+        "action_match_rate": 0.007715107662801848
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "target_epsilon": 0.15,
+        "ips": 0.0009192547547480773,
+        "snips": 0.005063642379568583,
+        "effective_sample_size": 2347.8235832964538,
+        "action_match_rate": 0.007715107662801848
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "target_epsilon": 0.25,
+        "ips": 0.0013661525145505812,
+        "snips": 0.004858160794679815,
+        "effective_sample_size": 3994.9065836938416,
+        "action_match_rate": 0.007715107662801848
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "target_epsilon": 0.5,
+        "ips": 0.0024833969140568408,
+        "snips": 0.004682327378982865,
+        "effective_sample_size": 6002.0109312084805,
+        "action_match_rate": 0.007715107662801848
+      }
+    ],
+    "note": "the logging policy is fixed at the \u03b5 it actually ran with; what varies is the exploration assumed of the *target*, which is what the importance weights are built from. DR is omitted: the reward model is fitted per run in Phase 9 and is not re-fitted here."
+  },
+  "reward_weights": {
+    "knob": "reward_weights",
+    "preregistered": {
+      "formula": "MASTERY_SCALE * delta_curriculum_success_probability - LAMBDA_TIME * minutes_on_task - MU_FRUSTRATION * frustrated",
+      "mastery_scale": 100.0,
+      "lambda_time": 0.002,
+      "mu_frustration": 0.005,
+      "frustration_streak": 3,
+      "preregistration": "docs/preregistration.md \u00a710.1",
+      "mastery_term_is_latent": true,
+      "note": "the mastery term is the simulator's response model and exists only in simulation; it is a reward, never an observation"
+    },
+    "reconstruction_agreement": 0.9999128236422282,
+    "multipliers": [
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "rows": [
+      {
+        "policy": "bandit_linucb",
+        "knob": "lambda_time",
+        "multiplier": 0.25,
+        "lambda_time": 0.0005,
+        "mu_frustration": 0.005,
+        "logged_mean_reward": 0.00837608981638907,
+        "ips": 0.001695653885827501,
+        "snips": 0.008962351356345884,
+        "effective_sample_size": 2691.0153445446495,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "knob": "lambda_time",
+        "multiplier": 0.25,
+        "lambda_time": 0.0005,
+        "mu_frustration": 0.005,
+        "logged_mean_reward": 0.00837608981638907,
+        "ips": 0.001740869373674521,
+        "snips": 0.009589441764973103,
+        "effective_sample_size": 2347.8235832964538,
+        "action_match_rate": 0.007715107662801848
+      },
+      {
+        "policy": "bandit_linucb",
+        "knob": "mu_frustration",
+        "multiplier": 0.25,
+        "lambda_time": 0.002,
+        "mu_frustration": 0.00125,
+        "logged_mean_reward": 0.0056171726972748534,
+        "ips": 0.000891804578509843,
+        "snips": 0.004713618764187029,
+        "effective_sample_size": 2691.0153445446495,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "knob": "mu_frustration",
+        "multiplier": 0.25,
+        "lambda_time": 0.002,
+        "mu_frustration": 0.00125,
+        "logged_mean_reward": 0.0056171726972748534,
+        "ips": 0.0009397344781801224,
+        "snips": 0.005176453322298781,
+        "effective_sample_size": 2347.8235832964538,
+        "action_match_rate": 0.007715107662801848
+      },
+      {
+        "policy": "bandit_linucb",
+        "knob": "lambda_time",
+        "multiplier": 0.5,
+        "lambda_time": 0.001,
+        "mu_frustration": 0.005,
+        "logged_mean_reward": 0.0074276280933960395,
+        "ips": 0.001421404432758314,
+        "snips": 0.007512810280637353,
+        "effective_sample_size": 2691.0153445446495,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "knob": "lambda_time",
+        "multiplier": 0.5,
+        "lambda_time": 0.001,
+        "mu_frustration": 0.005,
+        "logged_mean_reward": 0.0074276280933960395,
+        "ips": 0.0014670343175301188,
+        "snips": 0.00808104293631071,
+        "effective_sample_size": 2347.8235832964538,
+        "action_match_rate": 0.007715107662801848
+      },
+      {
+        "policy": "bandit_linucb",
+        "knob": "mu_frustration",
+        "multiplier": 0.5,
+        "lambda_time": 0.002,
+        "mu_frustration": 0.0025,
+        "logged_mean_reward": 0.005588350013986561,
+        "ips": 0.0008855048945465422,
+        "snips": 0.004680321885864785,
+        "effective_sample_size": 2691.0153445446495,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "knob": "mu_frustration",
+        "multiplier": 0.5,
+        "lambda_time": 0.002,
+        "mu_frustration": 0.0025,
+        "logged_mean_reward": 0.005588350013986561,
+        "ips": 0.0009329443872005199,
+        "snips": 0.005139050641194494,
+        "effective_sample_size": 2347.8235832964538,
+        "action_match_rate": 0.007715107662801848
+      },
+      {
+        "policy": "bandit_linucb",
+        "knob": "lambda_time",
+        "multiplier": 1.0,
+        "lambda_time": 0.002,
+        "mu_frustration": 0.005,
+        "logged_mean_reward": 0.005530704647409977,
+        "ips": 0.0008729055266199401,
+        "snips": 0.004613728129220293,
+        "effective_sample_size": 2691.0153445446495,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "knob": "lambda_time",
+        "multiplier": 1.0,
+        "lambda_time": 0.002,
+        "mu_frustration": 0.005,
+        "logged_mean_reward": 0.005530704647409977,
+        "ips": 0.0009193642052413151,
+        "snips": 0.005064245278985922,
+        "effective_sample_size": 2347.8235832964538,
+        "action_match_rate": 0.007715107662801848
+      },
+      {
+        "policy": "bandit_linucb",
+        "knob": "mu_frustration",
+        "multiplier": 1.0,
+        "lambda_time": 0.002,
+        "mu_frustration": 0.005,
+        "logged_mean_reward": 0.005530704647409977,
+        "ips": 0.0008729055266199401,
+        "snips": 0.004613728129220293,
+        "effective_sample_size": 2691.0153445446495,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "knob": "mu_frustration",
+        "multiplier": 1.0,
+        "lambda_time": 0.002,
+        "mu_frustration": 0.005,
+        "logged_mean_reward": 0.005530704647409977,
+        "ips": 0.0009193642052413151,
+        "snips": 0.005064245278985922,
+        "effective_sample_size": 2347.8235832964538,
+        "action_match_rate": 0.007715107662801848
+      },
+      {
+        "policy": "bandit_linucb",
+        "knob": "lambda_time",
+        "multiplier": 2.0,
+        "lambda_time": 0.004,
+        "mu_frustration": 0.005,
+        "logged_mean_reward": 0.0017368577554378515,
+        "ips": -0.000224092285656808,
+        "snips": -0.001184436173613827,
+        "effective_sample_size": 2691.0153445446495,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "knob": "lambda_time",
+        "multiplier": 2.0,
+        "lambda_time": 0.004,
+        "mu_frustration": 0.005,
+        "logged_mean_reward": 0.0017368577554378515,
+        "ips": -0.00017597601933629206,
+        "snips": -0.0009693500356636503,
+        "effective_sample_size": 2347.8235832964538,
+        "action_match_rate": 0.007715107662801848
+      },
+      {
+        "policy": "bandit_linucb",
+        "knob": "mu_frustration",
+        "multiplier": 2.0,
+        "lambda_time": 0.002,
+        "mu_frustration": 0.01,
+        "logged_mean_reward": 0.005415413914256807,
+        "ips": 0.0008477067907667364,
+        "snips": 0.004480540615931313,
+        "effective_sample_size": 2691.0153445446495,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "knob": "mu_frustration",
+        "multiplier": 2.0,
+        "lambda_time": 0.002,
+        "mu_frustration": 0.01,
+        "logged_mean_reward": 0.005415413914256807,
+        "ips": 0.0008922038413229054,
+        "snips": 0.004914634554568777,
+        "effective_sample_size": 2347.8235832964538,
+        "action_match_rate": 0.007715107662801848
+      },
+      {
+        "policy": "bandit_linucb",
+        "knob": "lambda_time",
+        "multiplier": 4.0,
+        "lambda_time": 0.008,
+        "mu_frustration": 0.005,
+        "logged_mean_reward": -0.005850836028506399,
+        "ips": -0.002418087910210305,
+        "snips": -0.01278076477928207,
+        "effective_sample_size": 2691.0153445446495,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "knob": "lambda_time",
+        "multiplier": 4.0,
+        "lambda_time": 0.008,
+        "mu_frustration": 0.005,
+        "logged_mean_reward": -0.005850836028506399,
+        "ips": -0.002366656468491507,
+        "snips": -0.013036540664962798,
+        "effective_sample_size": 2347.8235832964538,
+        "action_match_rate": 0.007715107662801848
+      },
+      {
+        "policy": "bandit_linucb",
+        "knob": "mu_frustration",
+        "multiplier": 4.0,
+        "lambda_time": 0.002,
+        "mu_frustration": 0.02,
+        "logged_mean_reward": 0.0051848324479504704,
+        "ips": 0.000797309319060329,
+        "snips": 0.0042141655893533515,
+        "effective_sample_size": 2691.0153445446495,
+        "action_match_rate": 0.01734809519658269
+      },
+      {
+        "policy": "bandit_lin_ts",
+        "knob": "mu_frustration",
+        "multiplier": 4.0,
+        "lambda_time": 0.002,
+        "mu_frustration": 0.02,
+        "logged_mean_reward": 0.0051848324479504704,
+        "ips": 0.0008378831134860862,
+        "snips": 0.0046154131057344885,
+        "effective_sample_size": 2347.8235832964538,
+        "action_match_rate": 0.007715107662801848
+      }
+    ],
+    "best_arm_by_weights": {
+      "lambda_timex0.25": "bandit_lin_ts",
+      "lambda_timex0.5": "bandit_lin_ts",
+      "lambda_timex1.0": "bandit_lin_ts",
+      "lambda_timex2.0": "bandit_lin_ts",
+      "lambda_timex4.0": "bandit_linucb",
+      "mu_frustrationx0.25": "bandit_lin_ts",
+      "mu_frustrationx0.5": "bandit_lin_ts",
+      "mu_frustrationx1.0": "bandit_lin_ts",
+      "mu_frustrationx2.0": "bandit_lin_ts",
+      "mu_frustrationx4.0": "bandit_lin_ts"
+    },
+    "ordering_stable": false,
+    "note": "the reward is recomputed from the logged components and the same logged decisions are re-weighted; no policy is retrained, so this asks whether the *evaluation* is weight-sensitive, not whether training would be"
+  },
+  "mastery_threshold": {
+    "knob": "mastery_threshold_tau",
+    "preregistered": 0.8,
+    "levels": [
+      0.7,
+      0.8,
+      0.9
+    ],
+    "arms": [
+      "rule_improved",
+      "model_L0"
+    ],
+    "learners_per_cell": 40,
+    "budget": 60,
+    "rows": [
+      {
+        "policy": "rule_improved",
+        "tau": 0.7,
+        "learners": 40,
+        "mastered": 0.175,
+        "items_to_mastery": 54.55,
+        "knowledge_gain": 0.10269744948404846,
+        "final_mastery_fraction": 0.5416666666666666,
+        "seconds": 0.4
+      },
+      {
+        "policy": "model_L0",
+        "tau": 0.7,
+        "learners": 40,
+        "mastered": 0.175,
+        "items_to_mastery": 54.2,
+        "knowledge_gain": 0.09284718620997186,
+        "final_mastery_fraction": 0.5375,
+        "seconds": 0.4
+      },
+      {
+        "policy": "rule_improved",
+        "tau": 0.8,
+        "learners": 40,
+        "mastered": 0.05,
+        "items_to_mastery": 59.45,
+        "knowledge_gain": -0.0009441734390827766,
+        "final_mastery_fraction": 0.32083333333333336,
+        "seconds": 0.4
+      },
+      {
+        "policy": "model_L0",
+        "tau": 0.8,
+        "learners": 40,
+        "mastered": 0.05,
+        "items_to_mastery": 59.825,
+        "knowledge_gain": 0.025158358978346812,
+        "final_mastery_fraction": 0.3333333333333333,
+        "seconds": 0.5
+      },
+      {
+        "policy": "rule_improved",
+        "tau": 0.9,
+        "learners": 40,
+        "mastered": 0.0,
+        "items_to_mastery": 60.0,
+        "knowledge_gain": -0.458301275393346,
+        "final_mastery_fraction": 0.0,
+        "seconds": 0.4
+      },
+      {
+        "policy": "model_L0",
+        "tau": 0.9,
+        "learners": 40,
+        "mastered": 0.0,
+        "items_to_mastery": 60.0,
+        "knowledge_gain": -0.36432859859810923,
+        "final_mastery_fraction": 0.0,
+        "seconds": 0.4
+      }
+    ],
+    "best_arm_by_tau": {
+      "0.7": "rule_improved",
+      "0.8": "model_L0",
+      "0.9": "model_L0"
+    },
+    "ordering_stable": false,
+    "elapsed_seconds": 2.6
+  },
+  "summary": {
+    "ordering_stable": {
+      "item_budget": true,
+      "simulator_variant": false,
+      "reward_weights": false,
+      "mastery_threshold": false
+    },
+    "reading": "a knob whose ordering is not stable is a knob the conclusion depends on, and the paper says so rather than reporting the preregistered level alone"
+  }
+}

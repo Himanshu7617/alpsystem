@@ -1,0 +1,108 @@
+{
+  "seed": 20260821,
+  "git_sha": "d8bd416a971e9839669d0fbd1fe687f3d5b3cdfc",
+  "learners_per_variant": 1000,
+  "calibrated_against": "assistments_2012",
+  "params_file": "artifacts/datasets/simulator-params-v2.json",
+  "params_sha256": "0a214bd8bd19ca783d1d9be3bcb2937010b464b60125fd728fd0bfc0d9b33f7e",
+  "variants": [
+    {
+      "variant": "V0",
+      "description": "calibrated baseline",
+      "file": "artifacts/datasets/sim-v2-V0.parquet",
+      "rows": 153956,
+      "learners": 1000,
+      "params_sha256": "0a214bd8bd19ca783d1d9be3bcb2937010b464b60125fd728fd0bfc0d9b33f7e",
+      "accuracy": 0.6625,
+      "median_response_time_ms": 31862.5,
+      "mean_sequence_length": 153.96
+    },
+    {
+      "variant": "V1",
+      "description": "2PL link \u2014 item discrimination varies instead of being fixed at 1",
+      "file": "artifacts/datasets/sim-v2-V1.parquet",
+      "rows": 151997,
+      "learners": 1000,
+      "params_sha256": "eb833b793c0e3bf4b9c62458e04adb1e89842200a0bed432db7168e8451c2c54",
+      "accuracy": 0.6567,
+      "median_response_time_ms": 32547.7,
+      "mean_sequence_length": 152.0
+    },
+    {
+      "variant": "V2",
+      "description": "fatigue affects speed only, never accuracy",
+      "file": "artifacts/datasets/sim-v2-V2.parquet",
+      "rows": 153956,
+      "learners": 1000,
+      "params_sha256": "977524661c5d6e7bdfcb387ce146869ce130db712b23fec50247e0f26888419b",
+      "accuracy": 0.6625,
+      "median_response_time_ms": 27469.2,
+      "mean_sequence_length": 153.96
+    },
+    {
+      "variant": "V3",
+      "description": "behavioural signals are half noise \u2014 traits dominate the latent state",
+      "file": "artifacts/datasets/sim-v2-V3.parquet",
+      "rows": 153956,
+      "learners": 1000,
+      "params_sha256": "7cf39bf8ef897a17e1a0001e0b592bc51e9323c311b5d2242737198d4b0bbe91",
+      "accuracy": 0.6611,
+      "median_response_time_ms": 31809.4,
+      "mean_sequence_length": 153.96
+    },
+    {
+      "variant": "V4",
+      "description": "non-stationary learning rate \u2014 learners speed up or slow down mid-session",
+      "file": "artifacts/datasets/sim-v2-V4.parquet",
+      "rows": 153956,
+      "learners": 1000,
+      "params_sha256": "eaa9dec99a517031f3d054b80ad13fe8c505bf0d6b6834b3ae55b89fda3e3164",
+      "accuracy": 0.6713,
+      "median_response_time_ms": 31605.5,
+      "mean_sequence_length": 153.96
+    }
+  ],
+  "ks_limit": 0.15,
+  "v0_vs_real": {
+    "accuracy": {
+      "ks_d": 0.042,
+      "p_value": 0.06687335263845495,
+      "real_mean": 0.6878,
+      "sim_mean": 0.6868,
+      "real_sd": 0.1696,
+      "sim_sd": 0.1615,
+      "n_real": 22422,
+      "n_sim": 1000
+    },
+    "log_response_time": {
+      "ks_d": 0.0486,
+      "p_value": 5.215892540328113e-179,
+      "real_mean": 10.2805,
+      "sim_mean": 10.3603,
+      "real_sd": 1.0917,
+      "sim_sd": 1.0954,
+      "n_real": 200000,
+      "n_sim": 153956
+    },
+    "sequence_length": {
+      "ks_d": 0.0383,
+      "p_value": 0.11840190631228442,
+      "real_mean": 115.6737,
+      "sim_mean": 153.956,
+      "real_sd": 159.3052,
+      "sim_sd": 305.9094,
+      "n_real": 22422,
+      "n_sim": 1000
+    },
+    "session_decay_slope": {
+      "ks_d": 0.1068,
+      "p_value": 2.967705740720462e-23,
+      "real_mean": 0.0023,
+      "sim_mean": 0.0003,
+      "real_sd": 0.0181,
+      "sim_sd": 0.0168,
+      "n_real": 55825,
+      "n_sim": 2395
+    }
+  }
+}

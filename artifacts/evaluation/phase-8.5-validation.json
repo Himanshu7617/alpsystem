@@ -1,0 +1,43 @@
+{
+  "phase": 8.5,
+  "seed": 20260821,
+  "profile": "smoke",
+  "chain": "data/processed \u2192 trained artifact \u2192 registry.load() \u2192 policy \u2192 closed loop",
+  "seconds": 2.9,
+  "summary": {
+    "pass": 1,
+    "fail": 0,
+    "blocked": 3
+  },
+  "checks": [
+    {
+      "check": "model_artifact_contract",
+      "status": "blocked",
+      "detail": "no complete artifact under artifacts/models/ \u2014 run `make train-baselines` (Phase 8.5 step 1)"
+    },
+    {
+      "check": "artifact_reproduces_metric",
+      "status": "blocked",
+      "detail": "no study1 artifact \u2014 run `make train-baselines`"
+    },
+    {
+      "check": "closed_loop_smoke",
+      "status": "pass",
+      "detail": "40 learners, 1600 decisions, gate admitted ['knowledge'], 0.8s",
+      "learners": 40,
+      "decisions": 1600,
+      "admitted": [
+        "knowledge"
+      ],
+      "rejected": [
+        "confidence",
+        "engagement"
+      ]
+    },
+    {
+      "check": "service_loads_registry_artifact",
+      "status": "blocked",
+      "detail": "predictor.load_model() found nothing \u2014 expected until `make train-baselines` writes a registry artifact"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "rule": "exact match on the case- and punctuation-normalised skill name against the 36 concept names",
+  "archival_skills_considered": 2161,
+  "bank_concepts": 36,
+  "matches": [],
+  "verdict": "no archival skill names a bank concept \u2014 ASSISTments is middle-school mathematics and EdNet KT1 is TOEIC English, while the bank is undergraduate computer science. Bank item difficulties therefore stay author priors and are flagged as such in artifacts/datasets/item-parameters-v1.csv."
+}

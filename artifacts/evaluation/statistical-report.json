@@ -1,0 +1,2341 @@
+{
+  "phase": 11,
+  "seed": 20260821,
+  "git_sha": "c042f6659357eadd40e81e68a5eec454b49b12c5",
+  "bootstrap_resamples": 10000,
+  "alpha": 0.05,
+  "reference_arm": "rule_improved",
+  "protocol": {
+    "effect_size": "Hedges' g on independent samples; the paired d Phase 8 reports is the correct significance test and the wrong effect size, because it divides by the sd of the difference",
+    "clustering": "crossed learner and item random intercepts on every per-item model; a random learner intercept on every learner-level model",
+    "correction": "Holm within each outcome family, raw and corrected both reported",
+    "censoring": "Kaplan-Meier and log-rank for items-to-mastery; knowledge_gain is the uncensored co-primary",
+    "simulated": "every closed-loop number here is simulated"
+  },
+  "effect_sizes": [
+    {
+      "comparison": "fixed_order vs rule_improved",
+      "policy": "fixed_order",
+      "reference": "rule_improved",
+      "outcome": "knowledge_gain",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 0.02733877200122143,
+      "mean_control": 0.03159313715914061,
+      "difference": -0.004254365157919181,
+      "cohens_d_unpaired": -0.005733418067430338,
+      "hedges_g": -0.005732701121317117,
+      "g_ci_low": -0.055810939113915055,
+      "g_ci_high": 0.045088550228223875,
+      "welch_t": -0.22205432692002414,
+      "p_welch": 0.8242791555126304,
+      "mannwhitney_u": 4505192.5,
+      "p_mannwhitney": 0.9383122478791855,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 3.5791149029027703e-32,
+        "shapiro_p_control": 6.116168417941002e-32,
+        "levene_p": 0.2429913056585313,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "irt_cat_maxinfo vs rule_improved",
+      "policy": "irt_cat_maxinfo",
+      "reference": "rule_improved",
+      "outcome": "knowledge_gain",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 0.030415864418282732,
+      "mean_control": 0.03159313715914061,
+      "difference": -0.0011772727408578786,
+      "cohens_d_unpaired": -0.0015642567419965592,
+      "hedges_g": -0.0015640611365517678,
+      "g_ci_low": -0.05173651281951519,
+      "g_ci_high": 0.04867146032972635,
+      "welch_t": -0.060583403109453475,
+      "p_welch": 0.9516930101656227,
+      "mannwhitney_u": 4489878.0,
+      "p_mannwhitney": 0.8800783910281045,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 9.358100937585427e-33,
+        "shapiro_p_control": 6.116168417941002e-32,
+        "levene_p": 0.8892943705572912,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "mastery_threshold_bkt vs rule_improved",
+      "policy": "mastery_threshold_bkt",
+      "reference": "rule_improved",
+      "outcome": "knowledge_gain",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 0.02948483887702507,
+      "mean_control": 0.03159313715914061,
+      "difference": -0.0021082982821155408,
+      "cohens_d_unpaired": -0.0028083172609668404,
+      "hedges_g": -0.0028079660896199645,
+      "g_ci_low": -0.05318428632188523,
+      "g_ci_high": 0.04802121327517919,
+      "welch_t": -0.108765659825914,
+      "p_welch": 0.9133919999602667,
+      "mannwhitney_u": 4494298.5,
+      "p_mannwhitney": 0.9322785556948663,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 8.960559727650207e-32,
+        "shapiro_p_control": 6.116168417941002e-32,
+        "levene_p": 0.886799029249459,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "model_L0 vs rule_improved",
+      "policy": "model_L0",
+      "reference": "rule_improved",
+      "outcome": "knowledge_gain",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 0.04022826778939141,
+      "mean_control": 0.03159313715914061,
+      "difference": 0.0086351306302508,
+      "cohens_d_unpaired": 0.011478966202764581,
+      "hedges_g": 0.01147753079371084,
+      "g_ci_low": -0.03818753766977311,
+      "g_ci_high": 0.0623444956072554,
+      "welch_t": 0.44457844934985014,
+      "p_welch": 0.6566404655712813,
+      "mannwhitney_u": 4531594.5,
+      "p_mannwhitney": 0.6376862235451725,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 1.1820184900574875e-32,
+        "shapiro_p_control": 6.116168417941002e-32,
+        "levene_p": 0.9081542999654058,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "model_L1 vs rule_improved",
+      "policy": "model_L1",
+      "reference": "rule_improved",
+      "outcome": "knowledge_gain",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 0.03766758277355556,
+      "mean_control": 0.03159313715914061,
+      "difference": 0.006074445614414947,
+      "cohens_d_unpaired": 0.008081717941553357,
+      "hedges_g": 0.008080707347838018,
+      "g_ci_low": -0.042159261174158816,
+      "g_ci_high": 0.05852982048152085,
+      "welch_t": 0.3130035899638184,
+      "p_welch": 0.7542888174510041,
+      "mannwhitney_u": 4523057.0,
+      "p_mannwhitney": 0.7310889315399609,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 1.4371063676811056e-32,
+        "shapiro_p_control": 6.116168417941002e-32,
+        "levene_p": 0.9402334350548998,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "model_L3 vs rule_improved",
+      "policy": "model_L3",
+      "reference": "rule_improved",
+      "outcome": "knowledge_gain",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 0.04023999299614886,
+      "mean_control": 0.03159313715914061,
+      "difference": 0.00864685583700825,
+      "cohens_d_unpaired": 0.011401621959849017,
+      "hedges_g": 0.011400196222452513,
+      "g_ci_low": -0.03867699469391531,
+      "g_ci_high": 0.06190899142519892,
+      "welch_t": 0.44158291970248015,
+      "p_welch": 0.658806972237648,
+      "mannwhitney_u": 4514081.0,
+      "p_mannwhitney": 0.8337596060697043,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 1.0588497796688666e-32,
+        "shapiro_p_control": 6.116168417941002e-32,
+        "levene_p": 0.4005160586320996,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "model_L4 vs rule_improved",
+      "policy": "model_L4",
+      "reference": "rule_improved",
+      "outcome": "knowledge_gain",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 0.03929444997941494,
+      "mean_control": 0.03159313715914061,
+      "difference": 0.0077013128202743295,
+      "cohens_d_unpaired": 0.010169826712689753,
+      "hedges_g": 0.010168555007461205,
+      "g_ci_low": -0.03978625406286414,
+      "g_ci_high": 0.060823496390848414,
+      "welch_t": 0.39387569492062735,
+      "p_welch": 0.6936868220128167,
+      "mannwhitney_u": 4511924.5,
+      "p_mannwhitney": 0.8589289870742809,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 2.0379753450226185e-32,
+        "shapiro_p_control": 6.116168417941002e-32,
+        "levene_p": 0.3606098878534308,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "random vs rule_improved",
+      "policy": "random",
+      "reference": "rule_improved",
+      "outcome": "knowledge_gain",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 0.039370327854094,
+      "mean_control": 0.03159313715914061,
+      "difference": 0.00777719069495339,
+      "cohens_d_unpaired": 0.010519147985616983,
+      "hedges_g": 0.010517832598848743,
+      "g_ci_low": -0.03981520177145161,
+      "g_ci_high": 0.0605746994090091,
+      "welch_t": 0.40740484964585877,
+      "p_welch": 0.6837252169590494,
+      "mannwhitney_u": 4554658.0,
+      "p_mannwhitney": 0.4152337401751248,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 4.2885330480650354e-33,
+        "shapiro_p_control": 6.116168417941002e-32,
+        "levene_p": 0.12804364884943423,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "rule_legacy vs rule_improved",
+      "policy": "rule_legacy",
+      "reference": "rule_improved",
+      "outcome": "knowledge_gain",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 0.027291097087975322,
+      "mean_control": 0.03159313715914061,
+      "difference": -0.004302040071165289,
+      "cohens_d_unpaired": -0.005746819905179566,
+      "hedges_g": -0.005746101283208179,
+      "g_ci_low": -0.05606911540931946,
+      "g_ci_high": 0.044773958469059565,
+      "welch_t": -0.22257337786413747,
+      "p_welch": 0.8238751366249241,
+      "mannwhitney_u": 4484351.5,
+      "p_mannwhitney": 0.8155694755163793,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 1.3982484278538298e-32,
+        "shapiro_p_control": 6.116168417941002e-32,
+        "levene_p": 0.8037068830186368,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "fixed_order vs rule_improved",
+      "policy": "fixed_order",
+      "reference": "rule_improved",
+      "outcome": "items_to_mastery",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 188.27233333333334,
+      "mean_control": 188.31566666666666,
+      "difference": -0.043333333333322344,
+      "cohens_d_unpaired": -0.001034653738468067,
+      "hedges_g": -0.0010345243582331703,
+      "g_ci_low": -0.05062715560153747,
+      "g_ci_high": 0.05018123051675699,
+      "welch_t": -0.040071966981780685,
+      "p_welch": 0.9680370847496497,
+      "mannwhitney_u": 4502051.0,
+      "p_mannwhitney": 0.9485882773603282,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 4.1157747943015227e-75,
+        "shapiro_p_control": 4.895712088600244e-75,
+        "levene_p": 0.9680370846372262,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "irt_cat_maxinfo vs rule_improved",
+      "policy": "irt_cat_maxinfo",
+      "reference": "rule_improved",
+      "outcome": "items_to_mastery",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 188.092,
+      "mean_control": 188.31566666666666,
+      "difference": -0.22366666666664514,
+      "cohens_d_unpaired": -0.005343167967126742,
+      "hedges_g": -0.005342499820575894,
+      "g_ci_low": -0.05454992231445241,
+      "g_ci_high": 0.04662638926619723,
+      "welch_t": -0.20694000552670808,
+      "p_welch": 0.8360637378516044,
+      "mannwhitney_u": 4491161.0,
+      "p_mannwhitney": 0.7826460839644743,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 6.386136105385746e-75,
+        "shapiro_p_control": 4.895712088600244e-75,
+        "levene_p": 0.8360637373843727,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "mastery_threshold_bkt vs rule_improved",
+      "policy": "mastery_threshold_bkt",
+      "reference": "rule_improved",
+      "outcome": "items_to_mastery",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 188.43266666666668,
+      "mean_control": 188.31566666666666,
+      "difference": 0.11700000000001864,
+      "cohens_d_unpaired": 0.002813728835860077,
+      "hedges_g": 0.0028133769878125768,
+      "g_ci_low": -0.045837066000358,
+      "g_ci_high": 0.05477718911519451,
+      "welch_t": 0.1089752492202966,
+      "p_welch": 0.9132257671205938,
+      "mannwhitney_u": 4494712.5,
+      "p_mannwhitney": 0.8686871506921156,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 4.406388749788572e-75,
+        "shapiro_p_control": 4.895712088600244e-75,
+        "levene_p": 0.9132257670230265,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "model_L0 vs rule_improved",
+      "policy": "model_L0",
+      "reference": "rule_improved",
+      "outcome": "items_to_mastery",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 187.17366666666666,
+      "mean_control": 188.31566666666666,
+      "difference": -1.141999999999996,
+      "cohens_d_unpaired": -0.026788568074489094,
+      "hedges_g": -0.026785218247294584,
+      "g_ci_low": -0.07566112660231102,
+      "g_ci_high": 0.02427326047832011,
+      "welch_t": -1.0375167802123995,
+      "p_welch": 0.2995369830331678,
+      "mannwhitney_u": 4459691.5,
+      "p_mannwhitney": 0.21700950002683406,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 1.6511556190060754e-74,
+        "shapiro_p_control": 4.895712088600244e-75,
+        "levene_p": 0.2995369033356503,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "model_L1 vs rule_improved",
+      "policy": "model_L1",
+      "reference": "rule_improved",
+      "outcome": "items_to_mastery",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 187.496,
+      "mean_control": 188.31566666666666,
+      "difference": -0.8196666666666488,
+      "cohens_d_unpaired": -0.01932983444434285,
+      "hedges_g": -0.01932741730861141,
+      "g_ci_low": -0.06819762899914125,
+      "g_ci_high": 0.031913134562575066,
+      "welch_t": -0.7486412688788637,
+      "p_welch": 0.454102839114951,
+      "mannwhitney_u": 4474215.0,
+      "p_mannwhitney": 0.4255830775013957,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 1.1145544172137811e-74,
+        "shapiro_p_control": 4.895712088600244e-75,
+        "levene_p": 0.45410280629606753,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "model_L3 vs rule_improved",
+      "policy": "model_L3",
+      "reference": "rule_improved",
+      "outcome": "items_to_mastery",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 187.55066666666667,
+      "mean_control": 188.31566666666666,
+      "difference": -0.7649999999999864,
+      "cohens_d_unpaired": -0.018059373045640387,
+      "hedges_g": -0.018057114777159003,
+      "g_ci_low": -0.06736851628583773,
+      "g_ci_high": 0.03303596624059122,
+      "welch_t": -0.6994365104871235,
+      "p_welch": 0.48430642701067306,
+      "mannwhitney_u": 4478624.0,
+      "p_mannwhitney": 0.5077649781308948,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 1.0430625883660855e-74,
+        "shapiro_p_control": 4.895712088600244e-75,
+        "levene_p": 0.48430640021806254,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "model_L4 vs rule_improved",
+      "policy": "model_L4",
+      "reference": "rule_improved",
+      "outcome": "items_to_mastery",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 187.644,
+      "mean_control": 188.31566666666666,
+      "difference": -0.6716666666666526,
+      "cohens_d_unpaired": -0.01588652128090149,
+      "hedges_g": -0.015884534720781333,
+      "g_ci_low": -0.0655818327167449,
+      "g_ci_high": 0.03647270368677549,
+      "welch_t": -0.615282323501012,
+      "p_welch": 0.5383916501554621,
+      "mannwhitney_u": 4471717.5,
+      "p_mannwhitney": 0.3830015151432933,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 9.759415683250678e-75,
+        "shapiro_p_control": 4.895712088600244e-75,
+        "levene_p": 0.5383916322397639,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "random vs rule_improved",
+      "policy": "random",
+      "reference": "rule_improved",
+      "outcome": "items_to_mastery",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 187.81366666666668,
+      "mean_control": 188.31566666666666,
+      "difference": -0.5019999999999811,
+      "cohens_d_unpaired": -0.011929528649552889,
+      "hedges_g": -0.011928036899065261,
+      "g_ci_low": -0.06191722451069496,
+      "g_ci_high": 0.03966613877829592,
+      "welch_t": -0.46202865787822595,
+      "p_welch": 0.6440775326019467,
+      "mannwhitney_u": 4476605.5,
+      "p_mannwhitney": 0.46933882834986396,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 8.782040540072808e-75,
+        "shapiro_p_control": 4.895712088600244e-75,
+        "levene_p": 0.6440775268630413,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "rule_legacy vs rule_improved",
+      "policy": "rule_legacy",
+      "reference": "rule_improved",
+      "outcome": "items_to_mastery",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 188.763,
+      "mean_control": 188.31566666666666,
+      "difference": 0.4473333333333471,
+      "cohens_d_unpaired": 0.01082077256697591,
+      "hedges_g": 0.010819419462991043,
+      "g_ci_low": -0.037904571764068515,
+      "g_ci_high": 0.06250974516496548,
+      "welch_t": 0.41908671944995785,
+      "p_welch": 0.6751677677160911,
+      "mannwhitney_u": 4507899.0,
+      "p_mannwhitney": 0.8033004613965332,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 2.941781203518913e-75,
+        "shapiro_p_control": 4.895712088600244e-75,
+        "levene_p": 0.6751677634011815,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 1.0,
+      "significant_holm": false
+    },
+    {
+      "comparison": "fixed_order vs rule_improved",
+      "policy": "fixed_order",
+      "reference": "rule_improved",
+      "outcome": "time_to_mastery_seconds",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 16568.886663931615,
+      "mean_control": 18565.343766146245,
+      "difference": -1996.4571022146301,
+      "cohens_d_unpaired": -0.26771729912868086,
+      "hedges_g": -0.26768382191233364,
+      "g_ci_low": -0.3188380799499363,
+      "g_ci_high": -0.21607707350931477,
+      "welch_t": -10.368646410170104,
+      "p_welch": 5.594588245232436e-25,
+      "mannwhitney_u": 3658026.0,
+      "p_mannwhitney": 3.9573660080960486e-36,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 4.329514221595566e-30,
+        "shapiro_p_control": 1.1229460120702868e-27,
+        "levene_p": 0.2808784414668812,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 0.0,
+      "significant_holm": true
+    },
+    {
+      "comparison": "irt_cat_maxinfo vs rule_improved",
+      "policy": "irt_cat_maxinfo",
+      "reference": "rule_improved",
+      "outcome": "time_to_mastery_seconds",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 20482.50617789637,
+      "mean_control": 18565.343766146245,
+      "difference": 1917.162411750127,
+      "cohens_d_unpaired": 0.235470556512406,
+      "hedges_g": 0.23544111165101891,
+      "g_ci_low": 0.18602343215644643,
+      "g_ci_high": 0.2861391206854477,
+      "welch_t": 9.119735438947409,
+      "p_welch": 1.0146062307530904e-19,
+      "mannwhitney_u": 5142090.0,
+      "p_mannwhitney": 1.059712666883096e-21,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 5.356387816251799e-26,
+        "shapiro_p_control": 1.1229460120702868e-27,
+        "levene_p": 8.304465390514278e-11,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 0.0,
+      "significant_holm": true
+    },
+    {
+      "comparison": "mastery_threshold_bkt vs rule_improved",
+      "policy": "mastery_threshold_bkt",
+      "reference": "rule_improved",
+      "outcome": "time_to_mastery_seconds",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 19230.264496287757,
+      "mean_control": 18565.343766146245,
+      "difference": 664.9207301415117,
+      "cohens_d_unpaired": 0.08598975886488698,
+      "hedges_g": 0.08597900611274681,
+      "g_ci_low": 0.03695889351769096,
+      "g_ci_high": 0.13627013334569588,
+      "welch_t": 3.330369040280989,
+      "p_welch": 0.0008725582228529532,
+      "mannwhitney_u": 4738046.5,
+      "p_mannwhitney": 0.00038774904127742896,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 4.466923371191248e-27,
+        "shapiro_p_control": 1.1229460120702868e-27,
+        "levene_p": 0.03159159795067934,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 0.00175,
+      "significant_holm": true
+    },
+    {
+      "comparison": "model_L0 vs rule_improved",
+      "policy": "model_L0",
+      "reference": "rule_improved",
+      "outcome": "time_to_mastery_seconds",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 18043.695678744705,
+      "mean_control": 18565.343766146245,
+      "difference": -521.6480874015397,
+      "cohens_d_unpaired": -0.0687289211540775,
+      "hedges_g": -0.06872032681605648,
+      "g_ci_low": -0.11865722331216831,
+      "g_ci_high": -0.018435501516834277,
+      "welch_t": -2.6618596703254482,
+      "p_welch": 0.007791749970684916,
+      "mannwhitney_u": 4279752.0,
+      "p_mannwhitney": 0.0010271511152704438,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 2.9063217924804974e-30,
+        "shapiro_p_control": 1.1229460120702868e-27,
+        "levene_p": 0.9165883495615587,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 0.00779,
+      "significant_holm": true
+    },
+    {
+      "comparison": "model_L1 vs rule_improved",
+      "policy": "model_L1",
+      "reference": "rule_improved",
+      "outcome": "time_to_mastery_seconds",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 17847.325316996725,
+      "mean_control": 18565.343766146245,
+      "difference": -718.0184491495202,
+      "cohens_d_unpaired": -0.09685324062420868,
+      "hedges_g": -0.09684112942743185,
+      "g_ci_low": -0.14560079043203164,
+      "g_ci_high": -0.04608117267413981,
+      "welch_t": -3.751109879637799,
+      "p_welch": 0.00017771606256659998,
+      "mannwhitney_u": 4253344.0,
+      "p_mannwhitney": 0.00023634773207130747,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 1.388299284684304e-27,
+        "shapiro_p_control": 1.1229460120702868e-27,
+        "levene_p": 0.11189357391994785,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 0.00053,
+      "significant_holm": true
+    },
+    {
+      "comparison": "model_L3 vs rule_improved",
+      "policy": "model_L3",
+      "reference": "rule_improved",
+      "outcome": "time_to_mastery_seconds",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 19946.9311482083,
+      "mean_control": 18565.343766146245,
+      "difference": 1381.5873820620545,
+      "cohens_d_unpaired": 0.18206420159219602,
+      "hedges_g": 0.182041435029536,
+      "g_ci_low": 0.13243781800283838,
+      "g_ci_high": 0.23266832019854755,
+      "welch_t": 7.051316207071251,
+      "p_welch": 1.971651598573143e-12,
+      "mannwhitney_u": 5137846.0,
+      "p_mannwhitney": 1.9502371086418932e-21,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 9.033674944945275e-26,
+        "shapiro_p_control": 1.1229460120702868e-27,
+        "levene_p": 0.7136090798978844,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 0.0,
+      "significant_holm": true
+    },
+    {
+      "comparison": "model_L4 vs rule_improved",
+      "policy": "model_L4",
+      "reference": "rule_improved",
+      "outcome": "time_to_mastery_seconds",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 19822.159801312904,
+      "mean_control": 18565.343766146245,
+      "difference": 1256.8160351666593,
+      "cohens_d_unpaired": 0.16582240333286036,
+      "hedges_g": 0.16580166775660266,
+      "g_ci_low": 0.11602322868365912,
+      "g_ci_high": 0.21680746142099744,
+      "welch_t": 6.422274065362575,
+      "p_welch": 1.44561794591223e-10,
+      "mannwhitney_u": 5074106.0,
+      "p_mannwhitney": 1.1529498501402754e-17,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 2.440633224291344e-27,
+        "shapiro_p_control": 1.1229460120702868e-27,
+        "levene_p": 0.9813087681800055,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 0.0,
+      "significant_holm": true
+    },
+    {
+      "comparison": "random vs rule_improved",
+      "policy": "random",
+      "reference": "rule_improved",
+      "outcome": "time_to_mastery_seconds",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 34671.63843257975,
+      "mean_control": 18565.343766146245,
+      "difference": 16106.294666433503,
+      "cohens_d_unpaired": 1.7697657572138779,
+      "hedges_g": 1.7695444535053353,
+      "g_ci_low": 1.6881437825533196,
+      "g_ci_high": 1.854873796178351,
+      "welch_t": 68.54273304377509,
+      "p_welch": 0.0,
+      "mannwhitney_u": 8133513.0,
+      "p_mannwhitney": 0.0,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 2.114486248133683e-39,
+        "shapiro_p_control": 1.1229460120702868e-27,
+        "levene_p": 2.0972084312520636e-19,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 0.0,
+      "significant_holm": true
+    },
+    {
+      "comparison": "rule_legacy vs rule_improved",
+      "policy": "rule_legacy",
+      "reference": "rule_improved",
+      "outcome": "time_to_mastery_seconds",
+      "n_treatment": 3000,
+      "n_control": 3000,
+      "mean_treatment": 19629.91493035181,
+      "mean_control": 18565.343766146245,
+      "difference": 1064.5711642055649,
+      "cohens_d_unpaired": 0.13566308682461228,
+      "hedges_g": 0.1356461225771664,
+      "g_ci_low": 0.08639956500771355,
+      "g_ci_high": 0.1864247024255361,
+      "welch_t": 5.254208759668143,
+      "p_welch": 1.538207182118795e-07,
+      "mannwhitney_u": 4855938.5,
+      "p_mannwhitney": 1.1232249200132237e-07,
+      "test": "Welch two-sample t (headline), Mann-Whitney U (rank), bootstrap 10000 resamples for the CI on g",
+      "assumptions": {
+        "shapiro_p_treatment": 1.4762985967679833e-27,
+        "shapiro_p_control": 1.1229460120702868e-27,
+        "levene_p": 0.0012480846891468936,
+        "note": "both reject on trivial departures at this n; Welch and Mann-Whitney are reported so neither result depends on them"
+      },
+      "p_holm": 0.0,
+      "significant_holm": true
+    }
+  ],
+  "multiple_comparisons": {
+    "knowledge_gain": {
+      "family": [
+        "fixed_order vs rule_improved",
+        "irt_cat_maxinfo vs rule_improved",
+        "mastery_threshold_bkt vs rule_improved",
+        "model_L0 vs rule_improved",
+        "model_L1 vs rule_improved",
+        "model_L3 vs rule_improved",
+        "model_L4 vs rule_improved",
+        "random vs rule_improved",
+        "rule_legacy vs rule_improved"
+      ],
+      "size": 9,
+      "raw": {
+        "fixed_order vs rule_improved": 0.8242791555126304,
+        "irt_cat_maxinfo vs rule_improved": 0.9516930101656227,
+        "mastery_threshold_bkt vs rule_improved": 0.9133919999602667,
+        "model_L0 vs rule_improved": 0.6566404655712813,
+        "model_L1 vs rule_improved": 0.7542888174510041,
+        "model_L3 vs rule_improved": 0.658806972237648,
+        "model_L4 vs rule_improved": 0.6936868220128167,
+        "random vs rule_improved": 0.6837252169590494,
+        "rule_legacy vs rule_improved": 0.8238751366249241
+      },
+      "holm": {
+        "model_L0 vs rule_improved": 1.0,
+        "model_L3 vs rule_improved": 1.0,
+        "random vs rule_improved": 1.0,
+        "model_L4 vs rule_improved": 1.0,
+        "model_L1 vs rule_improved": 1.0,
+        "rule_legacy vs rule_improved": 1.0,
+        "fixed_order vs rule_improved": 1.0,
+        "mastery_threshold_bkt vs rule_improved": 1.0,
+        "irt_cat_maxinfo vs rule_improved": 1.0
+      },
+      "significant_raw": [],
+      "significant_holm": []
+    },
+    "items_to_mastery": {
+      "family": [
+        "fixed_order vs rule_improved",
+        "irt_cat_maxinfo vs rule_improved",
+        "mastery_threshold_bkt vs rule_improved",
+        "model_L0 vs rule_improved",
+        "model_L1 vs rule_improved",
+        "model_L3 vs rule_improved",
+        "model_L4 vs rule_improved",
+        "random vs rule_improved",
+        "rule_legacy vs rule_improved"
+      ],
+      "size": 9,
+      "raw": {
+        "fixed_order vs rule_improved": 0.9680370847496497,
+        "irt_cat_maxinfo vs rule_improved": 0.8360637378516044,
+        "mastery_threshold_bkt vs rule_improved": 0.9132257671205938,
+        "model_L0 vs rule_improved": 0.2995369830331678,
+        "model_L1 vs rule_improved": 0.454102839114951,
+        "model_L3 vs rule_improved": 0.48430642701067306,
+        "model_L4 vs rule_improved": 0.5383916501554621,
+        "random vs rule_improved": 0.6440775326019467,
+        "rule_legacy vs rule_improved": 0.6751677677160911
+      },
+      "holm": {
+        "model_L0 vs rule_improved": 1.0,
+        "model_L1 vs rule_improved": 1.0,
+        "model_L3 vs rule_improved": 1.0,
+        "model_L4 vs rule_improved": 1.0,
+        "random vs rule_improved": 1.0,
+        "rule_legacy vs rule_improved": 1.0,
+        "irt_cat_maxinfo vs rule_improved": 1.0,
+        "mastery_threshold_bkt vs rule_improved": 1.0,
+        "fixed_order vs rule_improved": 1.0
+      },
+      "significant_raw": [],
+      "significant_holm": []
+    },
+    "time_to_mastery_seconds": {
+      "family": [
+        "fixed_order vs rule_improved",
+        "irt_cat_maxinfo vs rule_improved",
+        "mastery_threshold_bkt vs rule_improved",
+        "model_L0 vs rule_improved",
+        "model_L1 vs rule_improved",
+        "model_L3 vs rule_improved",
+        "model_L4 vs rule_improved",
+        "random vs rule_improved",
+        "rule_legacy vs rule_improved"
+      ],
+      "size": 9,
+      "raw": {
+        "fixed_order vs rule_improved": 5.594588245232436e-25,
+        "irt_cat_maxinfo vs rule_improved": 1.0146062307530904e-19,
+        "mastery_threshold_bkt vs rule_improved": 0.0008725582228529532,
+        "model_L0 vs rule_improved": 0.007791749970684916,
+        "model_L1 vs rule_improved": 0.00017771606256659998,
+        "model_L3 vs rule_improved": 1.971651598573143e-12,
+        "model_L4 vs rule_improved": 1.44561794591223e-10,
+        "random vs rule_improved": 0.0,
+        "rule_legacy vs rule_improved": 1.538207182118795e-07
+      },
+      "holm": {
+        "random vs rule_improved": 0.0,
+        "fixed_order vs rule_improved": 0.0,
+        "irt_cat_maxinfo vs rule_improved": 0.0,
+        "model_L3 vs rule_improved": 0.0,
+        "model_L4 vs rule_improved": 0.0,
+        "rule_legacy vs rule_improved": 0.0,
+        "model_L1 vs rule_improved": 0.00053,
+        "mastery_threshold_bkt vs rule_improved": 0.00175,
+        "model_L0 vs rule_improved": 0.00779
+      },
+      "significant_raw": [
+        "fixed_order vs rule_improved",
+        "irt_cat_maxinfo vs rule_improved",
+        "mastery_threshold_bkt vs rule_improved",
+        "model_L0 vs rule_improved",
+        "model_L1 vs rule_improved",
+        "model_L3 vs rule_improved",
+        "model_L4 vs rule_improved",
+        "random vs rule_improved",
+        "rule_legacy vs rule_improved"
+      ],
+      "significant_holm": [
+        "fixed_order vs rule_improved",
+        "irt_cat_maxinfo vs rule_improved",
+        "mastery_threshold_bkt vs rule_improved",
+        "model_L0 vs rule_improved",
+        "model_L1 vs rule_improved",
+        "model_L3 vs rule_improved",
+        "model_L4 vs rule_improved",
+        "random vs rule_improved",
+        "rule_legacy vs rule_improved"
+      ]
+    }
+  },
+  "effect_sizes_over_threshold": [],
+  "mixed_effects": {
+    "outcomes": {
+      "knowledge_gain": {
+        "formula": "knowledge_gain ~ C(policy) + (1 | learner)",
+        "reference": "rule_improved",
+        "n": 30000,
+        "learners": 3000,
+        "fixed_effects": {
+          "Intercept": {
+            "coefficient": 0.03159313715913846,
+            "std_error": 0.013701513581908522,
+            "ci_low": 0.0047386640049113665,
+            "ci_high": 0.05844761031336555,
+            "p_value": 0.02112104670551473
+          },
+          "C(policy)[T.fixed_order]": {
+            "coefficient": -0.004254365157920923,
+            "std_error": 0.0029115633646387617,
+            "ci_low": -0.009960924491319157,
+            "ci_high": 0.0014521941754773102,
+            "p_value": 0.14396162128583184
+          },
+          "C(policy)[T.irt_cat_maxinfo]": {
+            "coefficient": -0.0011772727408596965,
+            "std_error": 0.0029115633646387617,
+            "ci_low": -0.00688383207425793,
+            "ci_high": 0.004529286592538537,
+            "p_value": 0.6859598841594509
+          },
+          "C(policy)[T.mastery_threshold_bkt]": {
+            "coefficient": -0.0021082982821173197,
+            "std_error": 0.002911563364638762,
+            "ci_low": -0.007814857615515553,
+            "ci_high": 0.0035982610512809146,
+            "p_value": 0.4689969124671156
+          },
+          "C(policy)[T.model_L0]": {
+            "coefficient": 0.00863513063024873,
+            "std_error": 0.002911563364638762,
+            "ci_low": 0.002928571296850495,
+            "ci_high": 0.014341689963646964,
+            "p_value": 0.003018913493851708
+          },
+          "C(policy)[T.model_L1]": {
+            "coefficient": 0.006074445614412942,
+            "std_error": 0.002911563364638762,
+            "ci_low": 0.0003678862810147076,
+            "ci_high": 0.011781004947811176,
+            "p_value": 0.03694987205198215
+          },
+          "C(policy)[T.model_L3]": {
+            "coefficient": 0.008646855837006175,
+            "std_error": 0.002911563364638762,
+            "ci_low": 0.0029402965036079403,
+            "ci_high": 0.014353415170404409,
+            "p_value": 0.0029796205481900503
+          },
+          "C(policy)[T.model_L4]": {
+            "coefficient": 0.007701312820272278,
+            "std_error": 0.0029115633646387617,
+            "ci_low": 0.0019947534868740447,
+            "ci_high": 0.013407872153670512,
+            "p_value": 0.008167203694521648
+          },
+          "C(policy)[T.random]": {
+            "coefficient": 0.007777190694951347,
+            "std_error": 0.0029115633646387617,
+            "ci_low": 0.0020706313615531137,
+            "ci_high": 0.01348375002834958,
+            "p_value": 0.0075594317441761245
+          },
+          "C(policy)[T.rule_legacy]": {
+            "coefficient": -0.004302040071167023,
+            "std_error": 0.002911563364638762,
+            "ci_low": -0.010008599404565256,
+            "ci_high": 0.0014045192622312115,
+            "p_value": 0.1395227812195006
+          }
+        },
+        "variance": {
+          "learner": 0.5504786214662469,
+          "residual": 0.012715801839464521
+        },
+        "variance_share": {
+          "learner": 0.9774220032847126,
+          "residual": 0.022577996715287374
+        },
+        "converged": true
+      },
+      "items_to_mastery": {
+        "formula": "items_to_mastery ~ C(policy) + (1 | learner)",
+        "reference": "rule_improved",
+        "n": 30000,
+        "learners": 3000,
+        "fixed_effects": {
+          "Intercept": {
+            "coefficient": 188.31566666665952,
+            "std_error": 0.7728114587793377,
+            "ci_low": 186.80098404061215,
+            "ci_high": 189.8303492927069,
+            "p_value": 0.0
+          },
+          "C(policy)[T.fixed_order]": {
+            "coefficient": -0.043333333332439335,
+            "std_error": 0.28836497221268287,
+            "ci_low": -0.6085182932721913,
+            "ci_high": 0.5218516266073125,
+            "p_value": 0.8805496064089894
+          },
+          "C(policy)[T.irt_cat_maxinfo]": {
+            "coefficient": -0.2236666666657899,
+            "std_error": 0.28836497221268287,
+            "ci_low": -0.7888516266055419,
+            "ci_high": 0.341518293273962,
+            "p_value": 0.43796309203517725
+          },
+          "C(policy)[T.mastery_threshold_bkt]": {
+            "coefficient": 0.11700000000091242,
+            "std_error": 0.2883649722126828,
+            "ci_low": -0.4481849599388394,
+            "ci_high": 0.6821849599406642,
+            "p_value": 0.684936716181775
+          },
+          "C(policy)[T.model_L0]": {
+            "coefficient": -1.1419999999990897,
+            "std_error": 0.28836497221268287,
+            "ci_low": -1.7071849599388416,
+            "ci_high": -0.5768150400593378,
+            "p_value": 7.486849201559784e-05
+          },
+          "C(policy)[T.model_L1]": {
+            "coefficient": -0.8196666666657987,
+            "std_error": 0.2883649722126828,
+            "ci_low": -1.3848516266055504,
+            "ci_high": -0.25448170672604686,
+            "p_value": 0.004476647437105587
+          },
+          "C(policy)[T.model_L3]": {
+            "coefficient": -0.7649999999991346,
+            "std_error": 0.28836497221268287,
+            "ci_low": -1.3301849599388866,
+            "ci_high": -0.19981504005938266,
+            "p_value": 0.007980632582247993
+          },
+          "C(policy)[T.model_L4]": {
+            "coefficient": -0.6716666666657973,
+            "std_error": 0.28836497221268287,
+            "ci_low": -1.2368516266055494,
+            "ci_high": -0.1064817067260454,
+            "p_value": 0.019847192456767093
+          },
+          "C(policy)[T.random]": {
+            "coefficient": -0.5019999999991674,
+            "std_error": 0.28836497221268287,
+            "ci_low": -1.0671849599389194,
+            "ci_high": 0.06318495994058448,
+            "p_value": 0.08170997339914261
+          },
+          "C(policy)[T.rule_legacy]": {
+            "coefficient": 0.44733333333429354,
+            "std_error": 0.2883649722126828,
+            "ci_low": -0.11785162660545828,
+            "ci_high": 1.0125182932740453,
+            "p_value": 0.12083582766810082
+          }
+        },
+        "variance": {
+          "learner": 1666.981116663136,
+          "residual": 124.73153579878955
+        },
+        "variance_share": {
+          "learner": 0.9303841854175665,
+          "residual": 0.06961581458243352
+        },
+        "converged": true
+      },
+      "time_to_mastery_seconds": {
+        "formula": "time_to_mastery_seconds ~ C(policy) + (1 | learner)",
+        "reference": "rule_improved",
+        "n": 30000,
+        "learners": 3000,
+        "fixed_effects": {
+          "Intercept": {
+            "coefficient": 18565.3437661459,
+            "std_error": 147.25371810094487,
+            "ci_low": 18276.731782078434,
+            "ci_high": 18853.955750213365,
+            "p_value": 0.0
+          },
+          "C(policy)[T.fixed_order]": {
+            "coefficient": -1996.4571022142438,
+            "std_error": 69.31746854951245,
+            "ci_low": -2132.316844070776,
+            "ci_high": -1860.5973603577115,
+            "p_value": 2.0456014203247412e-182
+          },
+          "C(policy)[T.irt_cat_maxinfo]": {
+            "coefficient": 1917.1624117506801,
+            "std_error": 69.31746854951247,
+            "ci_low": 1781.3026698941478,
+            "ci_high": 2053.0221536072127,
+            "p_value": 2.2543191541680147e-168
+          },
+          "C(policy)[T.mastery_threshold_bkt]": {
+            "coefficient": 664.9207301420191,
+            "std_error": 69.31746854951248,
+            "ci_low": 529.0609882854867,
+            "ci_high": 800.7804719985515,
+            "p_value": 8.606132829929927e-22
+          },
+          "C(policy)[T.model_L0]": {
+            "coefficient": -521.6480874010855,
+            "std_error": 69.31746854951247,
+            "ci_low": -657.5078292576178,
+            "ci_high": -385.7883455445532,
+            "p_value": 5.2521982314248456e-14
+          },
+          "C(policy)[T.model_L1]": {
+            "coefficient": -718.0184491490721,
+            "std_error": 69.31746854951247,
+            "ci_low": -853.8781910056044,
+            "ci_high": -582.1587072925398,
+            "p_value": 3.832981549294854e-25
+          },
+          "C(policy)[T.model_L3]": {
+            "coefficient": 1381.587382062585,
+            "std_error": 69.31746854951247,
+            "ci_low": 1245.7276402060527,
+            "ci_high": 1517.4471239191173,
+            "p_value": 2.1782222972292758e-88
+          },
+          "C(policy)[T.model_L4]": {
+            "coefficient": 1256.8160351671834,
+            "std_error": 69.31746854951247,
+            "ci_low": 1120.956293310651,
+            "ci_high": 1392.6757770237157,
+            "p_value": 1.804321593875315e-73
+          },
+          "C(policy)[T.random]": {
+            "coefficient": 16106.294666434645,
+            "std_error": 69.31746854951247,
+            "ci_low": 15970.434924578112,
+            "ci_high": 16242.154408291179,
+            "p_value": 0.0
+          },
+          "C(policy)[T.rule_legacy]": {
+            "coefficient": 1064.5711642060858,
+            "std_error": 69.31746854951247,
+            "ci_low": 928.7114223495535,
+            "ci_high": 1200.430906062618,
+            "p_value": 3.1353931748045642e-53
+          }
+        },
+        "variance": {
+          "learner": 57843605.31448862,
+          "residual": 7207367.169168049
+        },
+        "variance_share": {
+          "learner": 0.8892043132640512,
+          "residual": 0.11079568673594879
+        },
+        "converged": true
+      }
+    },
+    "closed_loop_items": {
+      "reference": "rule_improved",
+      "note": "a linear probability model: the outcome is binary, the coefficients are percentage-point differences in the chance of a correct answer, and no logistic mixed model is fitted because statsmodels' GLMM support does not cover crossed effects",
+      "formula": "correct ~ C(policy) + step_100",
+      "n": 8000,
+      "levels": {
+        "learner": 198,
+        "item": 60
+      },
+      "fixed_effects": {
+        "Intercept": {
+          "coefficient": 0.6129118510259114,
+          "std_error": 0.02041537323110938,
+          "ci_low": 0.5728984547619939,
+          "ci_high": 0.6529252472898289,
+          "z": 30.022074251963385,
+          "p_value": 5.055852728450868e-198
+        },
+        "C(policy)[T.model_L0]": {
+          "coefficient": 0.05521704684536281,
+          "std_error": 0.01755923488099559,
+          "ci_low": 0.020801578882532,
+          "ci_high": 0.08963251480819362,
+          "z": 3.144615765982172,
+          "p_value": 0.0016630509768229007
+        },
+        "C(policy)[T.model_L4]": {
+          "coefficient": 0.04059011675777461,
+          "std_error": 0.017734285730649148,
+          "ci_low": 0.005831555434159683,
+          "ci_high": 0.07534867808138954,
+          "z": 2.2887934351720207,
+          "p_value": 0.02209135709342765
+        },
+        "C(policy)[T.random]": {
+          "coefficient": 0.09833733246593071,
+          "std_error": 0.015927352753518757,
+          "ci_low": 0.06712029469996908,
+          "ci_high": 0.12955437023189234,
+          "z": 6.174116564612754,
+          "p_value": 6.653444165260507e-10
+        },
+        "step_100": {
+          "coefficient": 0.026867852071119178,
+          "std_error": 0.008985856607557617,
+          "ci_low": 0.009255896750064978,
+          "ci_high": 0.04447980739217337,
+          "z": 2.990015670684282,
+          "p_value": 0.002789631351158649
+        }
+      },
+      "variance": {
+        "item": 0.008658427217922891,
+        "learner": 0.003316704239118214,
+        "residual": 0.20999475477559276
+      },
+      "variance_share": {
+        "item": 0.03900721564027155,
+        "learner": 0.014942136050122436,
+        "residual": 0.9460506483096061
+      },
+      "converged": true
+    },
+    "correctness": {
+      "assistments_2009": {
+        "low_rung": "L0|lightgbm",
+        "high_rung": "L2|lightgbm",
+        "rows_available": 202291,
+        "predictor_scale": {
+          "standardised": true,
+          "sd_of_raw_logit": {
+            "base_logit": 0.8811615303697871,
+            "rung_increment": 0.25513419056586584
+          }
+        },
+        "interpretation": "rung_increment > 0 with a CI excluding zero means the higher rung adds signal the lower rung does not, after learner and item clustering",
+        "formula": "y ~ base_logit + rung_increment",
+        "n": 1501,
+        "levels": {
+          "learner": 148,
+          "item": 200
+        },
+        "fixed_effects": {
+          "Intercept": {
+            "coefficient": 0.6475945254080112,
+            "std_error": 0.01883053099547441,
+            "ci_low": 0.6106873628471162,
+            "ci_high": 0.6845016879689062,
+            "z": 34.39066723947664,
+            "p_value": 3.47683427241214e-259
+          },
+          "base_logit": {
+            "coefficient": 0.1622197099965171,
+            "std_error": 0.015146499337588961,
+            "ci_low": 0.13253311680298296,
+            "ci_high": 0.19190630319005125,
+            "z": 10.71004635334698,
+            "p_value": 9.131607992763589e-27
+          },
+          "rung_increment": {
+            "coefficient": 0.02250347587964421,
+            "std_error": 0.01302104539913531,
+            "ci_low": -0.0030173041437219703,
+            "ci_high": 0.04802425590301039,
+            "z": 1.7282388003300104,
+            "p_value": 0.08394542009818431
+          }
+        },
+        "variance": {
+          "item": 0.015128447890690653,
+          "learner": 0.012351647987307913,
+          "residual": 0.16683539356529964
+        },
+        "variance_share": {
+          "item": 0.07785507956176173,
+          "learner": 0.06356491714939769,
+          "residual": 0.8585800032888405
+        },
+        "converged": true
+      },
+      "assistments_2012": {
+        "low_rung": "L0|lightgbm",
+        "high_rung": "L3|lightgbm",
+        "rows_available": 201418,
+        "predictor_scale": {
+          "standardised": true,
+          "sd_of_raw_logit": {
+            "base_logit": 0.6748763746589642,
+            "rung_increment": 0.18376354561544195
+          }
+        },
+        "interpretation": "rung_increment > 0 with a CI excluding zero means the higher rung adds signal the lower rung does not, after learner and item clustering",
+        "formula": "y ~ base_logit + rung_increment",
+        "n": 1475,
+        "levels": {
+          "learner": 142,
+          "item": 200
+        },
+        "fixed_effects": {
+          "Intercept": {
+            "coefficient": 0.7377748267892976,
+            "std_error": 0.014253016428930345,
+            "ci_low": 0.7098394279175364,
+            "ci_high": 0.7657102256610588,
+            "z": 51.76271496409591,
+            "p_value": 0.0
+          },
+          "base_logit": {
+            "coefficient": 0.1094557456410106,
+            "std_error": 0.01381451171174163,
+            "ci_low": 0.08237980022199023,
+            "ci_high": 0.13653169106003096,
+            "z": 7.923243899238132,
+            "p_value": 2.3139306589270565e-15
+          },
+          "rung_increment": {
+            "coefficient": 0.022085274588096657,
+            "std_error": 0.011001302771170939,
+            "ci_low": 0.0005231173735809232,
+            "ci_high": 0.043647431802612394,
+            "z": 2.0075144778281544,
+            "p_value": 0.044694910630513715
+          }
+        },
+        "variance": {
+          "item": 0.00979270014114563,
+          "learner": 0.0029065643362892663,
+          "residual": 0.1694184567457285
+        },
+        "variance_share": {
+          "item": 0.05377126440729978,
+          "learner": 0.015959810592663968,
+          "residual": 0.9302689250000363
+        },
+        "converged": true
+      },
+      "ednet_kt1": {
+        "low_rung": "L0|lightgbm",
+        "high_rung": "L3|lightgbm",
+        "rows_available": 216130,
+        "predictor_scale": {
+          "standardised": true,
+          "sd_of_raw_logit": {
+            "base_logit": 0.44653642103544233,
+            "rung_increment": 0.1454542355039422
+          }
+        },
+        "interpretation": "rung_increment > 0 with a CI excluding zero means the higher rung adds signal the lower rung does not, after learner and item clustering",
+        "formula": "y ~ base_logit + rung_increment",
+        "n": 7313,
+        "levels": {
+          "learner": 180,
+          "item": 200
+        },
+        "fixed_effects": {
+          "Intercept": {
+            "coefficient": 0.5374415137306463,
+            "std_error": 0.016374008006780422,
+            "ci_low": 0.5053490477547862,
+            "ci_high": 0.5695339797065064,
+            "z": 32.82284419966654,
+            "p_value": 2.780662211705926e-236
+          },
+          "base_logit": {
+            "coefficient": 0.05073583173779032,
+            "std_error": 0.007691624367532571,
+            "ci_low": 0.035660524994815805,
+            "ci_high": 0.06581113848076484,
+            "z": 6.5962440849235175,
+            "p_value": 4.2170444255575563e-11
+          },
+          "rung_increment": {
+            "coefficient": 0.014655981488945428,
+            "std_error": 0.005471889742698022,
+            "ci_low": 0.003931274665883161,
+            "ci_high": 0.025380688312007696,
+            "z": 2.6784131585442017,
+            "p_value": 0.00739719111073694
+          }
+        },
+        "variance": {
+          "item": 0.02177332842865034,
+          "learner": 0.00864947908681654,
+          "residual": 0.21202523927393824
+        },
+        "variance_share": {
+          "item": 0.0898061614312078,
+          "learner": 0.03567559813888556,
+          "residual": 0.8745182404299066
+        },
+        "converged": true
+      },
+      "sim-V0": {
+        "low_rung": "L0|lightgbm",
+        "high_rung": "L4|lightgbm",
+        "rows_available": 125353,
+        "predictor_scale": {
+          "standardised": true,
+          "sd_of_raw_logit": {
+            "base_logit": 0.4810907631290356,
+            "rung_increment": 0.1751780301798496
+          }
+        },
+        "interpretation": "rung_increment > 0 with a CI excluding zero means the higher rung adds signal the lower rung does not, after learner and item clustering",
+        "formula": "y ~ base_logit + rung_increment",
+        "n": 8000,
+        "levels": {
+          "learner": 199,
+          "item": 186
+        },
+        "fixed_effects": {
+          "Intercept": {
+            "coefficient": 0.6639907464177438,
+            "std_error": 0.009917068923565147,
+            "ci_low": 0.6445536484953547,
+            "ci_high": 0.6834278443401329,
+            "z": 66.95433414201197,
+            "p_value": 0.0
+          },
+          "base_logit": {
+            "coefficient": 0.10569158820630485,
+            "std_error": 0.004813286267218181,
+            "ci_low": 0.09625772047527598,
+            "ci_high": 0.11512545593733373,
+            "z": 21.95830090683322,
+            "p_value": 7.214664374368446e-107
+          },
+          "rung_increment": {
+            "coefficient": 0.02441836274044452,
+            "std_error": 0.004811297601008148,
+            "ci_low": 0.014988392723564588,
+            "ci_high": 0.033848332757324455,
+            "z": 5.075213542252708,
+            "p_value": 3.8706106524539415e-07
+          }
+        },
+        "variance": {
+          "item": 0.011752519583865858,
+          "learner": 7.26825853018991e-11,
+          "residual": 0.19433982289005594
+        },
+        "variance_share": {
+          "item": 0.057025503415820605,
+          "learner": 3.526699944490326e-10,
+          "residual": 0.9429744962315094
+        },
+        "converged": true
+      }
+    }
+  },
+  "power": {
+    "alpha": 0.05,
+    "test": "two-sided independent-samples t",
+    "achieved": [
+      {
+        "comparison": "fixed_order vs rule_improved",
+        "outcome": "knowledge_gain",
+        "hedges_g": -0.005732701121317117,
+        "n_per_arm": 3000,
+        "power": 0.055664215278236666
+      },
+      {
+        "comparison": "irt_cat_maxinfo vs rule_improved",
+        "outcome": "knowledge_gain",
+        "hedges_g": -0.0015640611365517678,
+        "n_per_arm": 3000,
+        "power": 0.050420307521622895
+      },
+      {
+        "comparison": "mastery_threshold_bkt vs rule_improved",
+        "outcome": "knowledge_gain",
+        "hedges_g": -0.0028079660896199645,
+        "n_per_arm": 3000,
+        "power": 0.05135547129416374
+      },
+      {
+        "comparison": "model_L0 vs rule_improved",
+        "outcome": "knowledge_gain",
+        "hedges_g": 0.01147753079371084,
+        "n_per_arm": 3000,
+        "power": 0.07292053059157241
+      },
+      {
+        "comparison": "model_L1 vs rule_improved",
+        "outcome": "knowledge_gain",
+        "hedges_g": 0.008080707347838018,
+        "n_per_arm": 3000,
+        "power": 0.06129067793791156
+      },
+      {
+        "comparison": "model_L3 vs rule_improved",
+        "outcome": "knowledge_gain",
+        "hedges_g": 0.011400196222452513,
+        "n_per_arm": 3000,
+        "power": 0.07260908897348116
+      },
+      {
+        "comparison": "model_L4 vs rule_improved",
+        "outcome": "knowledge_gain",
+        "hedges_g": 0.010168555007461205,
+        "n_per_arm": 3000,
+        "power": 0.06794395013419467
+      },
+      {
+        "comparison": "random vs rule_improved",
+        "outcome": "knowledge_gain",
+        "hedges_g": 0.010517832598848743,
+        "n_per_arm": 3000,
+        "power": 0.06921070995421384
+      },
+      {
+        "comparison": "rule_legacy vs rule_improved",
+        "outcome": "knowledge_gain",
+        "hedges_g": -0.005746101283208179,
+        "n_per_arm": 3000,
+        "power": 0.05569081502207551
+      },
+      {
+        "comparison": "fixed_order vs rule_improved",
+        "outcome": "items_to_mastery",
+        "hedges_g": -0.0010345243582331703,
+        "n_per_arm": 3000,
+        "power": 0.050183856268276414
+      },
+      {
+        "comparison": "irt_cat_maxinfo vs rule_improved",
+        "outcome": "items_to_mastery",
+        "hedges_g": -0.005342499820575894,
+        "n_per_arm": 3000,
+        "power": 0.05491721995078884
+      },
+      {
+        "comparison": "mastery_threshold_bkt vs rule_improved",
+        "outcome": "items_to_mastery",
+        "hedges_g": 0.0028133769878125768,
+        "n_per_arm": 3000,
+        "power": 0.05136070457609841
+      },
+      {
+        "comparison": "model_L0 vs rule_improved",
+        "outcome": "items_to_mastery",
+        "hedges_g": -0.026785218247294584,
+        "n_per_arm": 3000,
+        "power": 0.1794329928093093
+      },
+      {
+        "comparison": "model_L1 vs rule_improved",
+        "outcome": "items_to_mastery",
+        "hedges_g": -0.01932741730861141,
+        "n_per_arm": 3000,
+        "power": 0.11622549666305264
+      },
+      {
+        "comparison": "model_L3 vs rule_improved",
+        "outcome": "items_to_mastery",
+        "hedges_g": -0.018057114777159003,
+        "n_per_arm": 3000,
+        "power": 0.10761993836805751
+      },
+      {
+        "comparison": "model_L4 vs rule_improved",
+        "outcome": "items_to_mastery",
+        "hedges_g": -0.015884534720781333,
+        "n_per_arm": 3000,
+        "power": 0.0943466709686279
+      },
+      {
+        "comparison": "random vs rule_improved",
+        "outcome": "items_to_mastery",
+        "hedges_g": -0.011928036899065261,
+        "n_per_arm": 3000,
+        "power": 0.07477854324057495
+      },
+      {
+        "comparison": "rule_legacy vs rule_improved",
+        "outcome": "items_to_mastery",
+        "hedges_g": 0.010819419462991043,
+        "n_per_arm": 3000,
+        "power": 0.07034024519955998
+      },
+      {
+        "comparison": "fixed_order vs rule_improved",
+        "outcome": "time_to_mastery_seconds",
+        "hedges_g": -0.26768382191233364,
+        "n_per_arm": 3000,
+        "power": 1.0
+      },
+      {
+        "comparison": "irt_cat_maxinfo vs rule_improved",
+        "outcome": "time_to_mastery_seconds",
+        "hedges_g": 0.23544111165101891,
+        "n_per_arm": 3000,
+        "power": NaN
+      },
+      {
+        "comparison": "mastery_threshold_bkt vs rule_improved",
+        "outcome": "time_to_mastery_seconds",
+        "hedges_g": 0.08597900611274681,
+        "n_per_arm": 3000,
+        "power": 0.9145715751935047
+      },
+      {
+        "comparison": "model_L0 vs rule_improved",
+        "outcome": "time_to_mastery_seconds",
+        "hedges_g": -0.06872032681605648,
+        "n_per_arm": 3000,
+        "power": 0.758393041262327
+      },
+      {
+        "comparison": "model_L1 vs rule_improved",
+        "outcome": "time_to_mastery_seconds",
+        "hedges_g": -0.09684112942743185,
+        "n_per_arm": 3000,
+        "power": 0.9632791770869445
+      },
+      {
+        "comparison": "model_L3 vs rule_improved",
+        "outcome": "time_to_mastery_seconds",
+        "hedges_g": 0.182041435029536,
+        "n_per_arm": 3000,
+        "power": 0.9999998203452669
+      },
+      {
+        "comparison": "model_L4 vs rule_improved",
+        "outcome": "time_to_mastery_seconds",
+        "hedges_g": 0.16580166775660266,
+        "n_per_arm": 3000,
+        "power": 0.9999959111580364
+      },
+      {
+        "comparison": "random vs rule_improved",
+        "outcome": "time_to_mastery_seconds",
+        "hedges_g": 1.7695444535053353,
+        "n_per_arm": 3000,
+        "power": 1.0
+      },
+      {
+        "comparison": "rule_legacy vs rule_improved",
+        "outcome": "time_to_mastery_seconds",
+        "hedges_g": 0.1356461225771664,
+        "n_per_arm": 3000,
+        "power": 0.9995039304368347
+      }
+    ],
+    "required_n_per_arm_at_80_percent": {
+      "0.2": 394.0,
+      "0.3": 176.0,
+      "0.5": 64.0,
+      "0.8": 26.0
+    },
+    "rct_requirement": {
+      "target_g": 0.3,
+      "n_per_arm": 176.0,
+      "n_total": 352.0,
+      "note": "g = 0.3 is the effect this literature reports for adaptive instruction; the simulated effects above are not evidence that a real trial would see one, only that this design could detect it"
+    },
+    "curves": {
+      "0.2": [
+        {
+          "n_per_arm": 10,
+          "power": 0.07082134518931064
+        },
+        {
+          "n_per_arm": 12,
+          "power": 0.07554086228222424
+        },
+        {
+          "n_per_arm": 13,
+          "power": 0.07790573385299723
+        },
+        {
+          "n_per_arm": 16,
+          "power": 0.0850230849893072
+        },
+        {
+          "n_per_arm": 18,
+          "power": 0.08978747354231861
+        },
+        {
+          "n_per_arm": 21,
+          "power": 0.09696292638696079
+        },
+        {
+          "n_per_arm": 24,
+          "power": 0.10417156064098987
+        },
+        {
+          "n_per_arm": 28,
+          "power": 0.11383090054238297
+        },
+        {
+          "n_per_arm": 32,
+          "power": 0.12353953893807741
+        },
+        {
+          "n_per_arm": 37,
+          "power": 0.13573537463121946
+        },
+        {
+          "n_per_arm": 43,
+          "power": 0.15044268658273255
+        },
+        {
+          "n_per_arm": 50,
+          "power": 0.16767548649609346
+        },
+        {
+          "n_per_arm": 58,
+          "power": 0.18743060949543708
+        },
+        {
+          "n_per_arm": 67,
+          "power": 0.20968088902280121
+        },
+        {
+          "n_per_arm": 77,
+          "power": 0.2343688617746449
+        },
+        {
+          "n_per_arm": 90,
+          "power": 0.2662959155475881
+        },
+        {
+          "n_per_arm": 104,
+          "power": 0.3003203317660109
+        },
+        {
+          "n_per_arm": 120,
+          "power": 0.3385617478127851
+        },
+        {
+          "n_per_arm": 139,
+          "power": 0.3828330893049819
+        },
+        {
+          "n_per_arm": 161,
+          "power": 0.432234434007387
+        },
+        {
+          "n_per_arm": 186,
+          "power": 0.4855965157922709
+        },
+        {
+          "n_per_arm": 216,
+          "power": 0.5453505068057728
+        },
+        {
+          "n_per_arm": 250,
+          "power": 0.6071222179761603
+        },
+        {
+          "n_per_arm": 289,
+          "power": 0.6701063821553442
+        },
+        {
+          "n_per_arm": 334,
+          "power": 0.7326625425710199
+        },
+        {
+          "n_per_arm": 387,
+          "power": 0.7935105961171292
+        },
+        {
+          "n_per_arm": 448,
+          "power": 0.8485293666038032
+        },
+        {
+          "n_per_arm": 519,
+          "power": 0.8959576228789471
+        },
+        {
+          "n_per_arm": 600,
+          "power": 0.9333687052165556
+        },
+        {
+          "n_per_arm": 695,
+          "power": 0.9612790538461047
+        },
+        {
+          "n_per_arm": 804,
+          "power": 0.9797015977705194
+        },
+        {
+          "n_per_arm": 931,
+          "power": 0.9906860985964715
+        },
+        {
+          "n_per_arm": 1078,
+          "power": 0.9963325009909684
+        },
+        {
+          "n_per_arm": 1247,
+          "power": 0.9987857344726138
+        },
+        {
+          "n_per_arm": 1444,
+          "power": 0.9996778650879016
+        },
+        {
+          "n_per_arm": 1671,
+          "power": 0.9999331052845383
+        },
+        {
+          "n_per_arm": 1935,
+          "power": 0.9999897522479972
+        },
+        {
+          "n_per_arm": 2239,
+          "power": 0.9999988795317604
+        },
+        {
+          "n_per_arm": 2592,
+          "power": 0.9999999191446926
+        },
+        {
+          "n_per_arm": 3000,
+          "power": 0.9999999963692481
+        }
+      ],
+      "0.3": [
+        {
+          "n_per_arm": 10,
+          "power": 0.09742459135246898
+        },
+        {
+          "n_per_arm": 12,
+          "power": 0.10829259243893002
+        },
+        {
+          "n_per_arm": 13,
+          "power": 0.11374772640928897
+        },
+        {
+          "n_per_arm": 16,
+          "power": 0.13019136926582964
+        },
+        {
+          "n_per_arm": 18,
+          "power": 0.14121110536296622
+        },
+        {
+          "n_per_arm": 21,
+          "power": 0.157808541639616
+        },
+        {
+          "n_per_arm": 24,
+          "power": 0.174464592646415
+        },
+        {
+          "n_per_arm": 28,
+          "power": 0.19672004124004194
+        },
+        {
+          "n_per_arm": 32,
+          "power": 0.2189769354173464
+        },
+        {
+          "n_per_arm": 37,
+          "power": 0.24671835305820417
+        },
+        {
+          "n_per_arm": 43,
+          "power": 0.2797654967487298
+        },
+        {
+          "n_per_arm": 50,
+          "power": 0.3178022049194619
+        },
+        {
+          "n_per_arm": 58,
+          "power": 0.360347896968029
+        },
+        {
+          "n_per_arm": 67,
+          "power": 0.4067449376092969
+        },
+        {
+          "n_per_arm": 77,
+          "power": 0.4561640374285529
+        },
+        {
+          "n_per_arm": 90,
+          "power": 0.5166416474410904
+        },
+        {
+          "n_per_arm": 104,
+          "power": 0.5766473109072972
+        },
+        {
+          "n_per_arm": 120,
+          "power": 0.6385054295006152
+        },
+        {
+          "n_per_arm": 139,
+          "power": 0.7027538231611884
+        },
+        {
+          "n_per_arm": 161,
+          "power": 0.7653471294918468
+        },
+        {
+          "n_per_arm": 186,
+          "power": 0.8226773340611168
+        },
+        {
+          "n_per_arm": 216,
+          "power": 0.8750840610290868
+        },
+        {
+          "n_per_arm": 250,
+          "power": 0.917380172030671
+        },
+        {
+          "n_per_arm": 289,
+          "power": 0.9495245978025543
+        },
+        {
+          "n_per_arm": 334,
+          "power": 0.9720166003093926
+        },
+        {
+          "n_per_arm": 387,
+          "power": 0.9863767321838611
+        },
+        {
+          "n_per_arm": 448,
+          "power": 0.9942183218735203
+        },
+        {
+          "n_per_arm": 519,
+          "power": 0.9979362720554061
+        },
+        {
+          "n_per_arm": 600,
+          "power": 0.999385405612106
+        },
+        {
+          "n_per_arm": 695,
+          "power": 0.9998575014936335
+        },
+        {
+          "n_per_arm": 804,
+          "power": 0.9999745458373943
+        },
+        {
+          "n_per_arm": 931,
+          "power": 0.9999967483034373
+        },
+        {
+          "n_per_arm": 1078,
+          "power": 0.9999997160718459
+        },
+        {
+          "n_per_arm": 1247,
+          "power": 0.9999999838179551
+        },
+        {
+          "n_per_arm": 1444,
+          "power": 0.999999999464219
+        },
+        {
+          "n_per_arm": 1671,
+          "power": 0.999999999990205
+        },
+        {
+          "n_per_arm": 1935,
+          "power": NaN
+        },
+        {
+          "n_per_arm": 2239,
+          "power": NaN
+        },
+        {
+          "n_per_arm": 2592,
+          "power": NaN
+        },
+        {
+          "n_per_arm": 3000,
+          "power": NaN
+        }
+      ],
+      "0.5": [
+        {
+          "n_per_arm": 10,
+          "power": 0.18509565629116606
+        },
+        {
+          "n_per_arm": 12,
+          "power": 0.21614307348920378
+        },
+        {
+          "n_per_arm": 13,
+          "power": 0.23162783503821793
+        },
+        {
+          "n_per_arm": 16,
+          "power": 0.2777445238106223
+        },
+        {
+          "n_per_arm": 18,
+          "power": 0.30806822256104555
+        },
+        {
+          "n_per_arm": 21,
+          "power": 0.3526772937751874
+        },
+        {
+          "n_per_arm": 24,
+          "power": 0.39599043473105244
+        },
+        {
+          "n_per_arm": 28,
+          "power": 0.4513506237178867
+        },
+        {
+          "n_per_arm": 32,
+          "power": 0.5036381673680057
+        },
+        {
+          "n_per_arm": 37,
+          "power": 0.5643209762369934
+        },
+        {
+          "n_per_arm": 43,
+          "power": 0.6300181048090827
+        },
+        {
+          "n_per_arm": 50,
+          "power": 0.6968934055333837
+        },
+        {
+          "n_per_arm": 58,
+          "power": 0.761110072051846
+        },
+        {
+          "n_per_arm": 67,
+          "power": 0.8193475231115598
+        },
+        {
+          "n_per_arm": 77,
+          "power": 0.8692377661573779
+        },
+        {
+          "n_per_arm": 90,
+          "power": 0.9155872189538261
+        },
+        {
+          "n_per_arm": 104,
+          "power": 0.9483146787351551
+        },
+        {
+          "n_per_arm": 120,
+          "power": 0.9711087800141295
+        },
+        {
+          "n_per_arm": 139,
+          "power": 0.9858759190597897
+        },
+        {
+          "n_per_arm": 161,
+          "power": 0.9940081504821588
+        },
+        {
+          "n_per_arm": 186,
+          "power": 0.9978093017696412
+        },
+        {
+          "n_per_arm": 216,
+          "power": 0.9993691513635787
+        },
+        {
+          "n_per_arm": 250,
+          "power": 0.9998523554732138
+        },
+        {
+          "n_per_arm": 289,
+          "power": 0.9999733197139428
+        },
+        {
+          "n_per_arm": 334,
+          "power": 0.9999964741318771
+        },
+        {
+          "n_per_arm": 387,
+          "power": 0.9999996927100837
+        },
+        {
+          "n_per_arm": 448,
+          "power": 0.9999999825902255
+        },
+        {
+          "n_per_arm": 519,
+          "power": 0.9999999994249728
+        },
+        {
+          "n_per_arm": 600,
+          "power": 0.999999999989093
+        },
+        {
+          "n_per_arm": 695,
+          "power": NaN
+        },
+        {
+          "n_per_arm": 804,
+          "power": NaN
+        },
+        {
+          "n_per_arm": 931,
+          "power": 1.0
+        },
+        {
+          "n_per_arm": 1078,
+          "power": NaN
+        },
+        {
+          "n_per_arm": 1247,
+          "power": 1.0
+        },
+        {
+          "n_per_arm": 1444,
+          "power": 1.0
+        },
+        {
+          "n_per_arm": 1671,
+          "power": NaN
+        },
+        {
+          "n_per_arm": 1935,
+          "power": NaN
+        },
+        {
+          "n_per_arm": 2239,
+          "power": 1.0
+        },
+        {
+          "n_per_arm": 2592,
+          "power": NaN
+        },
+        {
+          "n_per_arm": 3000,
+          "power": NaN
+        }
+      ]
+    }
+  },
+  "censoring": {
+    "budget": 200,
+    "why": "most learners do not master inside the budget, so the mean of items_to_mastery is a lower bound on any difference, not the difference. The uncensored co-primary is knowledge_gain.",
+    "arms": {
+      "fixed_order": {
+        "n": 3000,
+        "events": 243,
+        "censored": 2757,
+        "censoring_rate": 0.919,
+        "mastery_rate": 0.081,
+        "median_items_to_mastery": null,
+        "restricted_mean_items_to_budget": 188.27233333333334,
+        "mean_ignoring_censoring": 188.27233333333334,
+        "mean_knowledge_gain": 0.02733877200122143
+      },
+      "irt_cat_maxinfo": {
+        "n": 3000,
+        "events": 251,
+        "censored": 2749,
+        "censoring_rate": 0.9163333333333333,
+        "mastery_rate": 0.08366666666666667,
+        "median_items_to_mastery": null,
+        "restricted_mean_items_to_budget": 188.092,
+        "mean_ignoring_censoring": 188.092,
+        "mean_knowledge_gain": 0.030415864418282732
+      },
+      "mastery_threshold_bkt": {
+        "n": 3000,
+        "events": 250,
+        "censored": 2750,
+        "censoring_rate": 0.9166666666666666,
+        "mastery_rate": 0.08333333333333333,
+        "median_items_to_mastery": null,
+        "restricted_mean_items_to_budget": 188.4326666666667,
+        "mean_ignoring_censoring": 188.43266666666668,
+        "mean_knowledge_gain": 0.02948483887702507
+      },
+      "model_L0": {
+        "n": 3000,
+        "events": 273,
+        "censored": 2727,
+        "censoring_rate": 0.909,
+        "mastery_rate": 0.091,
+        "median_items_to_mastery": null,
+        "restricted_mean_items_to_budget": 187.17366666666675,
+        "mean_ignoring_censoring": 187.17366666666666,
+        "mean_knowledge_gain": 0.04022826778939141
+      },
+      "model_L1": {
+        "n": 3000,
+        "events": 262,
+        "censored": 2738,
+        "censoring_rate": 0.9126666666666666,
+        "mastery_rate": 0.08733333333333333,
+        "median_items_to_mastery": null,
+        "restricted_mean_items_to_budget": 187.49599999999998,
+        "mean_ignoring_censoring": 187.496,
+        "mean_knowledge_gain": 0.03766758277355556
+      },
+      "model_L3": {
+        "n": 3000,
+        "events": 260,
+        "censored": 2740,
+        "censoring_rate": 0.9133333333333333,
+        "mastery_rate": 0.08666666666666667,
+        "median_items_to_mastery": null,
+        "restricted_mean_items_to_budget": 187.55066666666664,
+        "mean_ignoring_censoring": 187.55066666666667,
+        "mean_knowledge_gain": 0.04023999299614886
+      },
+      "model_L4": {
+        "n": 3000,
+        "events": 265,
+        "censored": 2735,
+        "censoring_rate": 0.9116666666666666,
+        "mastery_rate": 0.08833333333333333,
+        "median_items_to_mastery": null,
+        "restricted_mean_items_to_budget": 187.64399999999998,
+        "mean_ignoring_censoring": 187.644,
+        "mean_knowledge_gain": 0.03929444997941494
+      },
+      "random": {
+        "n": 3000,
+        "events": 261,
+        "censored": 2739,
+        "censoring_rate": 0.913,
+        "mastery_rate": 0.087,
+        "median_items_to_mastery": null,
+        "restricted_mean_items_to_budget": 187.81366666666668,
+        "mean_ignoring_censoring": 187.81366666666668,
+        "mean_knowledge_gain": 0.039370327854094
+      },
+      "rule_improved": {
+        "n": 3000,
+        "events": 245,
+        "censored": 2755,
+        "censoring_rate": 0.9183333333333333,
+        "mastery_rate": 0.08166666666666667,
+        "median_items_to_mastery": null,
+        "restricted_mean_items_to_budget": 188.31566666666671,
+        "mean_ignoring_censoring": 188.31566666666666,
+        "mean_knowledge_gain": 0.03159313715914061
+      },
+      "rule_legacy": {
+        "n": 3000,
+        "events": 240,
+        "censored": 2760,
+        "censoring_rate": 0.92,
+        "mastery_rate": 0.08,
+        "median_items_to_mastery": null,
+        "restricted_mean_items_to_budget": 188.76300000000003,
+        "mean_ignoring_censoring": 188.763,
+        "mean_knowledge_gain": 0.027291097087975322
+      }
+    },
+    "logrank_vs_best": [
+      {
+        "reference": "model_L0",
+        "policy": "model_L4",
+        "logrank_chi2": 0.13043761021010114,
+        "p_value": 0.7179787405248454
+      },
+      {
+        "reference": "model_L0",
+        "policy": "model_L1",
+        "logrank_chi2": 0.23828106104355776,
+        "p_value": 0.6254503888220673
+      },
+      {
+        "reference": "model_L0",
+        "policy": "random",
+        "logrank_chi2": 0.29977491657099453,
+        "p_value": 0.5840235622649986
+      },
+      {
+        "reference": "model_L0",
+        "policy": "model_L3",
+        "logrank_chi2": 0.3357703305021023,
+        "p_value": 0.562280901962164
+      },
+      {
+        "reference": "model_L0",
+        "policy": "irt_cat_maxinfo",
+        "logrank_chi2": 1.0047103835152713,
+        "p_value": 0.31617341103450647
+      },
+      {
+        "reference": "model_L0",
+        "policy": "mastery_threshold_bkt",
+        "logrank_chi2": 1.1283263002981188,
+        "p_value": 0.28813262378301385
+      },
+      {
+        "reference": "model_L0",
+        "policy": "rule_improved",
+        "logrank_chi2": 1.6426725124745594,
+        "p_value": 0.19995918282756353
+      },
+      {
+        "reference": "model_L0",
+        "policy": "fixed_order",
+        "logrank_chi2": 1.848849178773098,
+        "p_value": 0.17391730102268899
+      },
+      {
+        "reference": "model_L0",
+        "policy": "rule_legacy",
+        "logrank_chi2": 2.321736728352206,
+        "p_value": 0.12757751572420628
+      }
+    ],
+    "highest_mastery_rate": "model_L0"
+  },
+  "tables": [
+    "model-comparison",
+    "ablation-ladder",
+    "state-validity",
+    "policy-comparison",
+    "ope",
+    "statistical-tests",
+    "censoring"
+  ]
+}

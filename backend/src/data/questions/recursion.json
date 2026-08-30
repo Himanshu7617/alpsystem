@@ -1,0 +1,821 @@
+{
+  "topic": "recursion",
+  "questions": [
+    {
+      "id": "q1",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "What is the primary role of the base case in a recursive function?",
+      "options": [
+        "To call the function with a modified argument",
+        "To terminate the recursion and prevent infinite loops",
+        "To allocate dynamic memory on the heap",
+        "To increase the execution speed of the program"
+      ],
+      "correctAnswer": "To terminate the recursion and prevent infinite loops",
+      "explanation": "The base case is a critical boundary condition that stops the recursion from proceeding indefinitely, avoiding call stack overflow.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "base case",
+        "recursion termination"
+      ],
+      "tags": [
+        "basics",
+        "recursion-concepts"
+      ],
+      "learningObjective": "Explain the significance and role of a base case in a recursive function.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 1,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q2",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "Which error occurs when a recursive function fails to reach its base case, leading to unlimited calls?",
+      "options": [
+        "NullPointerException",
+        "StackOverflowError",
+        "OutOfMemoryError",
+        "SegmentationFault"
+      ],
+      "correctAnswer": "StackOverflowError",
+      "explanation": "Each recursive call consumes frame space on the call stack. Without a terminating base case, memory limit is exceeded, triggering a StackOverflowError.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "call stack",
+        "recursion errors"
+      ],
+      "tags": [
+        "errors",
+        "stack-overflow"
+      ],
+      "learningObjective": "Identify the primary run-time error associated with infinite recursion.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 1,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q3",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "Which internal data structure is utilized by the runtime environment to track active recursive subroutine calls?",
+      "options": [
+        "Queue",
+        "Heap",
+        "Call Stack",
+        "Binary Tree"
+      ],
+      "correctAnswer": "Call Stack",
+      "explanation": "The call stack manages active subroutines, pushing stack frames containing local variables and return addresses for each recursive execution.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "call stack",
+        "memory management"
+      ],
+      "tags": [
+        "data-structures",
+        "stack"
+      ],
+      "learningObjective": "Describe how the operating system manages memory during recursive calls.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 2,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q4",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "A standard recursive function must contain which two key components?",
+      "options": [
+        "A loop and a break statement",
+        "A base case and a recursive case",
+        "A pointer and an allocation step",
+        "A try block and a catch block"
+      ],
+      "correctAnswer": "A base case and a recursive case",
+      "explanation": "Every proper recursive algorithm requires at least one base case to stop execution, and a recursive step to progress toward the base case.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "structure of recursion",
+        "recursive case"
+      ],
+      "tags": [
+        "basics",
+        "recursion-structure"
+      ],
+      "learningObjective": "Deconstruct a basic recursive function into its essential components.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 2,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q5",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "What is direct recursion?",
+      "options": [
+        "A function calling itself directly",
+        "A function calling another function which then calls the original",
+        "A loop converting itself into a stack frame",
+        "A recursive function optimized to run in O(1) space"
+      ],
+      "correctAnswer": "A function calling itself directly",
+      "explanation": "Direct recursion occurs when a function explicitly contains a call to itself within its own body.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "direct recursion",
+        "recursion types"
+      ],
+      "tags": [
+        "terminology",
+        "recursion-concepts"
+      ],
+      "learningObjective": "Differentiate direct recursion from indirect/mutual recursion.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 2,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q6",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "If a countdown function countdown(n) prints n and then calls countdown(n-1) when n > 0, what will countdown(3) print if the print statement runs before the recursive call?",
+      "options": [
+        "3, 2, 1",
+        "1, 2, 3",
+        "3, 2, 1, 0",
+        "0, 1, 2, 3"
+      ],
+      "correctAnswer": "3, 2, 1",
+      "explanation": "Since the print statement runs before the recursive step, the numbers are printed in descending order: 3, then 2, then 1, stopping when n becomes 0.",
+      "estimatedTimeSeconds": 40,
+      "concepts": [
+        "recursion tracing",
+        "execution order"
+      ],
+      "tags": [
+        "tracing",
+        "basic-algorithms"
+      ],
+      "learningObjective": "Trace a simple recursive execution and determine output sequence.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 2,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q7",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "What is the return value of a recursive factorial function fact(n) for fact(3) if fact(n) = n * fact(n-1) with base case fact(0) = 1?",
+      "options": [
+        "3",
+        "6",
+        "9",
+        "2"
+      ],
+      "correctAnswer": "6",
+      "explanation": "fact(3) evaluates as 3 * fact(2) = 3 * 2 * fact(1) = 3 * 2 * 1 * fact(0) = 3 * 2 * 1 * 1 = 6.",
+      "estimatedTimeSeconds": 40,
+      "concepts": [
+        "factorial recursive execution",
+        "recursion tracing"
+      ],
+      "tags": [
+        "factorial",
+        "math"
+      ],
+      "learningObjective": "Compute the numerical output of a classic recursive mathematical algorithm.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 3,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q8",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "What happens if a recursive function does not make progress toward its base case on each step?",
+      "options": [
+        "It terminates immediately",
+        "It causes an infinite loop / stack overflow",
+        "It automatically switches to an iterative equivalent",
+        "It yields a compiler error"
+      ],
+      "correctAnswer": "It causes an infinite loop / stack overflow",
+      "explanation": "Without progression toward the base case, the termination criteria are never met, resulting in endless recursion and stack depletion.",
+      "estimatedTimeSeconds": 30,
+      "concepts": [
+        "base case progression",
+        "infinite recursion"
+      ],
+      "tags": [
+        "safety",
+        "best-practices"
+      ],
+      "learningObjective": "Recognize the importance of variable modification inside recursive transitions.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 1,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q9",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "In recursive terminology, what is the 'recursive step'?",
+      "options": [
+        "The statement that handles the simplest input directly",
+        "The line of code that frees call stack frames",
+        "The part of the function where the problem is reduced to a smaller subproblem",
+        "The compilation step that optimizes recursive loops"
+      ],
+      "correctAnswer": "The part of the function where the problem is reduced to a smaller subproblem",
+      "explanation": "The recursive step decomposes the primary problem into a smaller, solvable instance of the same problem.",
+      "estimatedTimeSeconds": 35,
+      "concepts": [
+        "recursive step",
+        "subproblems"
+      ],
+      "tags": [
+        "terminology",
+        "basics"
+      ],
+      "learningObjective": "Explain how a recursive step breaks down a problem.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 2,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q10",
+      "difficulty": "easy",
+      "questionType": "mcq",
+      "question": "What is the worst-case space complexity of a linear recursive algorithm processing N elements with a call stack depth of N (assuming no tail-call optimization)?",
+      "options": [
+        "O(1)",
+        "O(log N)",
+        "O(N)",
+        "O(N^2)"
+      ],
+      "correctAnswer": "O(N)",
+      "explanation": "Each frame on the call stack takes up constant O(1) space. For N active recursive calls, the space complexity scales linearly to O(N).",
+      "estimatedTimeSeconds": 45,
+      "concepts": [
+        "space complexity",
+        "linear recursion"
+      ],
+      "tags": [
+        "space-complexity",
+        "analysis"
+      ],
+      "learningObjective": "Calculate the memory and stack footprint of simple linear recursion.",
+      "prerequisiteLevel": 1,
+      "difficultyScore": 3,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q11",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "What is the time complexity of the standard recursive Fibonacci algorithm defined by F(n) = F(n-1) + F(n-2) without optimization?",
+      "options": [
+        "O(log N)",
+        "O(N)",
+        "O(N log N)",
+        "O(2^N)"
+      ],
+      "correctAnswer": "O(2^N)",
+      "explanation": "The recursion tree for naive Fibonacci branches into two subproblems at each step, yielding an exponential growth rate of roughly O(1.618^N), which is bounded by O(2^N).",
+      "estimatedTimeSeconds": 60,
+      "concepts": [
+        "time complexity",
+        "recurrence tree"
+      ],
+      "tags": [
+        "fibonacci",
+        "complexity-analysis"
+      ],
+      "learningObjective": "Analyze the execution performance and complexity of branch recursion.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 5,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q12",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "Which property must a recursive call possess to be classified as 'tail recursive'?",
+      "options": [
+        "It must be the first line of the function",
+        "The recursive call must be the final operation evaluated, with no pending work",
+        "It must occur inside a loop body",
+        "It must return a static variable"
+      ],
+      "correctAnswer": "The recursive call must be the final operation evaluated, with no pending work",
+      "explanation": "Tail recursion requires that the result of the recursive call is directly returned without any further operations (like addition or multiplication) pending.",
+      "estimatedTimeSeconds": 60,
+      "concepts": [
+        "tail recursion",
+        "optimization"
+      ],
+      "tags": [
+        "optimization",
+        "tail-calls"
+      ],
+      "learningObjective": "Identify tail-recursive patterns in code execution flows.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 4,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q13",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "Consider the following Python function:\n\n```python\ndef rev(s):\n    if len(s) <= 1:\n        return s\n    return rev(s[1:]) + s[0]\n```\nWhat does rev('algo') return?",
+      "options": [
+        "algo",
+        "ogla",
+        "laog",
+        "oalg"
+      ],
+      "correctAnswer": "ogla",
+      "explanation": "This algorithm recursively processes the slice s[1:] and appends the first character s[0] at the end, successfully reversing the input string to 'ogla'.",
+      "estimatedTimeSeconds": 75,
+      "concepts": [
+        "string processing",
+        "recursion tracing"
+      ],
+      "tags": [
+        "tracing",
+        "strings"
+      ],
+      "learningObjective": "Trace recursive string manipulation functions step-by-step.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 5,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q14",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "For the Euclidean recursive GCD algorithm:\ngcd(a, b) = gcd(b, a % b) with base case b == 0 returning a.\nHow many recursive calls (excluding the initial call) are made to compute gcd(24, 9)?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "explanation": "Initial call: gcd(24, 9). Call 1: gcd(9, 6). Call 2: gcd(6, 3). Call 3: gcd(3, 0) which hits base case. There are 3 recursive calls.",
+      "estimatedTimeSeconds": 80,
+      "concepts": [
+        "Euclidean algorithm",
+        "recursion execution depth"
+      ],
+      "tags": [
+        "gcd",
+        "math-recursion"
+      ],
+      "learningObjective": "Track stack depth and recursive iterations for historical mathematical routines.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 6,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q15",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "Which recurrence relation describes the worst-case time complexity of a recursive Binary Search on a sorted array of size N?",
+      "options": [
+        "T(N) = 2T(N/2) + O(1)",
+        "T(N) = T(N/2) + O(1)",
+        "T(N) = T(N-1) + O(1)",
+        "T(N) = T(N/2) + O(N)"
+      ],
+      "correctAnswer": "T(N) = T(N/2) + O(1)",
+      "explanation": "Binary search divides the search space in half at each step (T(N/2)) and performs constant-time comparisons (O(1)) at the middle element.",
+      "estimatedTimeSeconds": 70,
+      "concepts": [
+        "divide and conquer",
+        "recurrence relation"
+      ],
+      "tags": [
+        "binary-search",
+        "performance"
+      ],
+      "learningObjective": "Derive recurrence equations for divide-and-conquer searching algorithms.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 5,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q16",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "Consider the following recursive function execution flow:\n\n```\nvoid foo(int x) {\n    if (x <= 0) return;\n    print(x);\n    foo(x - 1);\n    print(x);\n}\n```\nWhat is the exact output sequence for foo(3)?",
+      "options": [
+        "3, 2, 1, 1, 2, 3",
+        "3, 2, 1, 0, 1, 2, 3",
+        "3, 2, 1, 3, 2, 1",
+        "3, 2, 1"
+      ],
+      "correctAnswer": "3, 2, 1, 1, 2, 3",
+      "explanation": "foo(3) prints 3, calls foo(2). foo(2) prints 2, calls foo(1). foo(1) prints 1, calls foo(0) (returns). After return, unwinding executes the remaining print statements: 1, then 2, then 3.",
+      "estimatedTimeSeconds": 90,
+      "concepts": [
+        "call stack unwinding",
+        "execution order"
+      ],
+      "tags": [
+        "tracing",
+        "stack-unwinding"
+      ],
+      "learningObjective": "Explain print operations executed before and after recursive invocation.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 6,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q17",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "How many total calls to fib (including the initial call) are made when calculating the 4th Fibonacci number using: \nfib(n) = fib(n-1) + fib(n-2) with base cases fib(1) = 1 and fib(0) = 0?",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "correctAnswer": "9",
+      "explanation": "Tree of calls: fib(4) -> [fib(3), fib(2)]. fib(3) -> [fib(2), fib(1)]. fib(2) -> [fib(1), fib(0)]. The second fib(2) from fib(4) -> [fib(1), fib(0)]. Total calls: fib(4)[1] + fib(3)[1] + fib(2)[2] + fib(1)[3] + fib(0)[2] = 9.",
+      "estimatedTimeSeconds": 90,
+      "concepts": [
+        "recursive call count",
+        "tree recursion"
+      ],
+      "tags": [
+        "fibonacci",
+        "recursion-analysis"
+      ],
+      "learningObjective": "Construct and analyze call trees for overlapping subproblems.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 6,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q18",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "What optimization technique stores the results of expensive recursive function calls to avoid redundant computations on identical inputs?",
+      "options": [
+        "Garbage Collection",
+        "Memoization",
+        "Tabulation",
+        "Tail Call Optimization"
+      ],
+      "correctAnswer": "Memoization",
+      "explanation": "Memoization caches the output of function calls relative to their parameter states, enabling top-down recursive solutions to achieve optimal lookup times (often O(1)) on repeating subproblems.",
+      "estimatedTimeSeconds": 60,
+      "concepts": [
+        "memoization",
+        "dynamic programming"
+      ],
+      "tags": [
+        "optimization",
+        "dynamic-programming"
+      ],
+      "learningObjective": "Differentiate memoization from naive recursive structures.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 4,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q19",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "Given pow(x, y) = x * pow(x, y-1) with base case pow(x, 0) = 1, what is the runtime of evaluating pow(2, N) linearly, and how can it be optimized recursively to logarithmic time?",
+      "options": [
+        "Linear O(N); optimize using pow(x, y/2) * pow(x, y/2) dividing powers.",
+        "Linear O(N^2); optimize using binary division trees.",
+        "Linear O(N); optimize using Memoized sliding windows.",
+        "Linear O(log N); optimize using tail-call mapping."
+      ],
+      "correctAnswer": "Linear O(N); optimize using pow(x, y/2) * pow(x, y/2) dividing powers.",
+      "explanation": "Evaluating linearly takes O(N) depth. It can be optimized to O(log N) using divide-and-conquer exponentiation: x^y = (x^(y/2))^2 for even y.",
+      "estimatedTimeSeconds": 80,
+      "concepts": [
+        "efficient recursion",
+        "exponentiation"
+      ],
+      "tags": [
+        "algorithms",
+        "math"
+      ],
+      "learningObjective": "Formulate faster recursive strategies using divide-and-conquer methods.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 5,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q20",
+      "difficulty": "medium",
+      "questionType": "mcq",
+      "question": "When recursively computing the height of a binary tree, what is the correct formulation of the recursive case?",
+      "options": [
+        "height = 1 + height(left) + height(right)",
+        "height = max(height(left), height(right))",
+        "height = 1 + max(height(left), height(right))",
+        "height = 1 + min(height(left), height(right))"
+      ],
+      "correctAnswer": "height = 1 + max(height(left), height(right))",
+      "explanation": "The height of a node is 1 (for the current level node) plus the maximum of the heights of its left and right subtrees.",
+      "estimatedTimeSeconds": 70,
+      "concepts": [
+        "tree traversal",
+        "structural recursion"
+      ],
+      "tags": [
+        "trees",
+        "data-structures"
+      ],
+      "learningObjective": "Apply recursive algorithms to evaluate hierarchical data structures.",
+      "prerequisiteLevel": 2,
+      "difficultyScore": 5,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q21",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "For the Tower of Hanoi puzzle with N disks, what is the minimum number of moves required, and what is the recurrence relation governing this problem?",
+      "options": [
+        "2^N - 1 moves, governed by T(N) = 2T(N-1) + 1",
+        "2^N moves, governed by T(N) = 2T(N-1) + 2",
+        "N^2 moves, governed by T(N) = T(N-1) + N",
+        "2^(N-1) moves, governed by T(N) = T(N-1) + 2T(N-2)"
+      ],
+      "correctAnswer": "2^N - 1 moves, governed by T(N) = 2T(N-1) + 1",
+      "explanation": "To move N disks, you must recursively move N-1 disks to an auxiliary peg (T(N-1)), move the largest disk (1 step), and move the N-1 disks to the destination peg (T(N-1)). This yields T(N) = 2T(N-1) + 1, which solves to 2^N - 1.",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "Tower of Hanoi",
+        "mathematical induction"
+      ],
+      "tags": [
+        "puzzles",
+        "induction",
+        "complexity"
+      ],
+      "learningObjective": "Model complex puzzle scenarios with recursive mathematical formulas.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q22",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "In the context of compilation and runtime systems, how does Tail Call Optimization (TCO) prevent Stack Overflow errors during deeply nested tail recursion?",
+      "options": [
+        "It allocates the activation record dynamically on the heap rather than the call stack.",
+        "It compiles recursive calls into iterative loops by reusing the current activation record frame.",
+        "It forks separate threads to handle each cascading recursive frame concurrently.",
+        "It uses an automatic pruning garbage collector to discard previous parent frames."
+      ],
+      "correctAnswer": "It compiles recursive calls into iterative loops by reusing the current activation record frame.",
+      "explanation": "TCO avoids creating new stack frames for tail-recursive calls by overwriting the current frame with the parameters of the child call, running in O(1) stack space.",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "tail call optimization",
+        "compiler optimization"
+      ],
+      "tags": [
+        "compilers",
+        "optimization",
+        "low-level"
+      ],
+      "learningObjective": "Analyze the compilation strategy of tail-call optimization in system design.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q23",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "The Ackermann function is defined recursively as:\nA(m, n) = n + 1 if m = 0;\nA(m, n) = A(m-1, 1) if m > 0, n = 0;\nA(m, n) = A(m-1, A(m, n-1)) if m > 0, n > 0.\nCompute the exact value of A(1, 2).",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "2"
+      ],
+      "correctAnswer": "4",
+      "explanation": "A(1, 2) = A(0, A(1, 1)). Evaluated: A(1, 1) = A(0, A(1, 0)) = A(0, A(0, 1)) = A(0, 2) = 3. Thus, A(1, 2) = A(0, 3) = 4.",
+      "estimatedTimeSeconds": 150,
+      "concepts": [
+        "Ackermann function",
+        "nested recursion"
+      ],
+      "tags": [
+        "computability",
+        "tracing-complex"
+      ],
+      "learningObjective": "Trace deeply nested non-primitive recursive functions manually.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 9,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q24",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "What is mutual (indirect) recursion, and which of the following code blocks demonstrates it?",
+      "options": [
+        "A function calling itself inside a loop",
+        "Two or more functions calling each other in a circular chain",
+        "A recursive function that utilizes a helper method within its base case",
+        "A function calling its own duplicate helper with different parameters"
+      ],
+      "correctAnswer": "Two or more functions calling each other in a circular chain",
+      "explanation": "Mutual recursion is a form of recursion where two or more functions are defined in terms of each other (e.g., function A calls B, and B calls A).",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "mutual recursion",
+        "indirect recursion"
+      ],
+      "tags": [
+        "system-design",
+        "architectures"
+      ],
+      "learningObjective": "Categorize and identify circular dependency cycles in recursive routines.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q25",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "When analyzing the memory usage of Quick Sort in the worst-case scenario where the chosen pivot is always the smallest or largest element, what is the maximum call stack space complexity?",
+      "options": [
+        "O(log N)",
+        "O(N)",
+        "O(N log N)",
+        "O(1)"
+      ],
+      "correctAnswer": "O(N)",
+      "explanation": "In the worst case, the partitioning yields subproblems of size 0 and N-1. The recursion depth goes up to N, consuming O(N) space on the call stack.",
+      "estimatedTimeSeconds": 130,
+      "concepts": [
+        "Quick Sort",
+        "recursion depth",
+        "space complexity"
+      ],
+      "tags": [
+        "sorting",
+        "worst-case",
+        "analysis"
+      ],
+      "learningObjective": "Calculate auxiliary call stack space for sorting algorithms under worst-case inputs.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q26",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "The McCarthy 91 function is defined as: M(n) = n - 10 if n > 100, and M(M(n + 11)) if n <= 100. What is the value of M(95)?",
+      "options": [
+        "91",
+        "95",
+        "101",
+        "85"
+      ],
+      "correctAnswer": "91",
+      "explanation": "For all inputs n <= 100, the McCarthy 91 function returns 91. Tracking M(95) -> M(M(106)) -> M(96) -> M(M(107)) -> M(97)... eventually resolves to 91.",
+      "estimatedTimeSeconds": 160,
+      "concepts": [
+        "McCarthy 91",
+        "nested recursion"
+      ],
+      "tags": [
+        "computability",
+        "recursive-proofs"
+      ],
+      "learningObjective": "Trace nested recursive states where the functional output is constant over defined sets.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 10,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q27",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "In a backtracking algorithm to find all permutations of a unique list of size N, what is the upper-bound execution time complexity and total leaf nodes in the recursion tree?",
+      "options": [
+        "O(2^N) time, 2^N leaf nodes",
+        "O(N!) time, N! leaf nodes",
+        "O(N^2) time, N^2 leaf nodes",
+        "O(N^N) time, N^N leaf nodes"
+      ],
+      "correctAnswer": "O(N!) time, N! leaf nodes",
+      "explanation": "Generating all permutations of size N requires making decisions that scale factorially. There are exactly N! unique permutations, leading to N! leaf nodes in the search tree.",
+      "estimatedTimeSeconds": 130,
+      "concepts": [
+        "backtracking",
+        "permutations",
+        "recursion tree"
+      ],
+      "tags": [
+        "backtracking",
+        "combinatorics"
+      ],
+      "learningObjective": "Evaluate complexity metrics for combinatorial backtracking algorithms.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q28",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "Consider this custom tri-recursive function:\n```python\ndef f(n):\n    if n <= 0:\n        return 1\n    if n == 1:\n        return 2\n    return f(n-1) + f(n-2) + f(n-3)\n```\nWhat is the output value of f(3)?",
+      "options": [
+        "5",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "7",
+      "explanation": "We calculate: f(0)=1, f(1)=2, f(-1)=1. f(2) = f(1) + f(0) + f(-1) = 2 + 1 + 1 = 4. f(3) = f(2) + f(1) + f(0) = 4 + 2 + 1 = 7.",
+      "estimatedTimeSeconds": 140,
+      "concepts": [
+        "multiple recursive calls",
+        "sequence generation"
+      ],
+      "tags": [
+        "tracing",
+        "math-recursion"
+      ],
+      "learningObjective": "Evaluate recurrence outputs involving triple recursive calls.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 9,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q29",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "What is the worst-case space complexity of a Depth-First Search (DFS) algorithm implemented recursively on a graph with V vertices and E edges?",
+      "options": [
+        "O(E)",
+        "O(V)",
+        "O(V + E)",
+        "O(V * E)"
+      ],
+      "correctAnswer": "O(V)",
+      "explanation": "The recursion stack depth is bounded by the maximum path length from the source. In the worst case (a linear path visiting all vertices), the stack will hold up to V frames, resulting in O(V) space complexity.",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "DFS",
+        "graph algorithms",
+        "recursion space analysis"
+      ],
+      "tags": [
+        "graphs",
+        "space-complexity"
+      ],
+      "learningObjective": "Assess worst-case recursion space requirements for graph traversal algorithms.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 8,
+      "sourceType": "generated"
+    },
+    {
+      "id": "q30",
+      "difficulty": "hard",
+      "questionType": "mcq",
+      "question": "Which of the following describes a nested recursion?",
+      "options": [
+        "A function containing multiple recursive calls in sequence",
+        "A recursive function that calls another function inside its base case",
+        "A recursive function where a recursive call is passed as an argument to another recursive call",
+        "A recursive function containing an iterative loop within its body"
+      ],
+      "correctAnswer": "A recursive function where a recursive call is passed as an argument to another recursive call",
+      "explanation": "Nested recursion occurs when a parameter to a recursive call is itself a recursive call (e.g., f(f(n-1))), as seen in the Ackermann and McCarthy 91 functions.",
+      "estimatedTimeSeconds": 120,
+      "concepts": [
+        "nested recursion",
+        "recursion types"
+      ],
+      "tags": [
+        "terminology",
+        "nested-recursion"
+      ],
+      "learningObjective": "Define and identify properties of nested recursive systems.",
+      "prerequisiteLevel": 3,
+      "difficultyScore": 9,
+      "sourceType": "generated"
+    }
+  ]
+}

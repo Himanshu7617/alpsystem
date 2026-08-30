@@ -1,0 +1,39 @@
+{
+  "phase": 12,
+  "generated": "2026-08-28T18:17:25+0530",
+  "all_passed": true,
+  "total_tests": 145,
+  "suites": [
+    {
+      "suite": "backend (jest)",
+      "runner": "npx jest",
+      "passed": true,
+      "seconds": 3.2,
+      "counts": {
+        "passed": 16,
+        "total": 16
+      },
+      "suites": "2 passed, 2 total",
+      "tail": [
+        "Snapshots:   0 total",
+        "Time:        2.422 s",
+        "Ran all test suites."
+      ]
+    },
+    {
+      "suite": "ml-service (pytest)",
+      "runner": "pytest -q [container]",
+      "passed": true,
+      "seconds": 28.1,
+      "counts": {
+        "passed": 129
+      },
+      "tail": [
+        "........................................................................ [ 55%]",
+        ".........................................................                [100%]",
+        "129 passed in 26.65s"
+      ]
+    }
+  ],
+  "note": "the ml-service suite includes the leakage audit, the gate guardrail, the policy conformance checks and the Phase 11 statistics guards; the backend suite drives the live loop end to end against a real database"
+}

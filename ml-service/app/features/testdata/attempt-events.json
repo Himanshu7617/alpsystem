@@ -1,0 +1,43 @@
+{
+  "consent": {"correctness": true, "timing": true, "interaction": true, "motor": true, "probes": true},
+  "item": {"item_id": "ds-e-1", "difficulty": "easy", "difficulty_score": 3, "estimated_time_seconds": 30, "n_options": 4},
+  "attempt": {
+    "attempt_id": "att-0001",
+    "seq": 3,
+    "correct": true,
+    "skipped": false,
+    "selected_index": 1,
+    "response_time_ms": 18500,
+    "presented_at": "2026-08-22T10:00:00.000Z",
+    "submitted_at": "2026-08-22T10:00:18.500Z",
+    "session_started_at": "2026-08-22T09:58:00.000Z"
+  },
+  "events": [
+    {"event_id": "e1", "type": "ITEM_PRESENTED", "seq": 1, "client_ts": "2026-08-22T10:00:00.000Z", "item_id": "ds-e-1", "payload": {"difficulty": "easy"}},
+    {"event_id": "e2", "type": "FIRST_INTERACTION", "seq": 2, "client_ts": "2026-08-22T10:00:04.200Z", "item_id": "ds-e-1", "payload": {"kind": "pointermove"}},
+    {"event_id": "e3", "type": "OPTION_SELECTED", "seq": 3, "client_ts": "2026-08-22T10:00:09.000Z", "item_id": "ds-e-1", "payload": {"to_index": 0, "ms_since_presented": 9000}},
+    {"event_id": "e4", "type": "IDLE_ENTERED", "seq": 4, "client_ts": "2026-08-22T10:00:10.000Z", "item_id": "ds-e-1", "payload": {"threshold_ms": 3000}},
+    {"event_id": "e5", "type": "IDLE_EXITED", "seq": 5, "client_ts": "2026-08-22T10:00:13.500Z", "item_id": "ds-e-1", "payload": {}},
+    {"event_id": "e6", "type": "VISIBILITY_CHANGED", "seq": 6, "client_ts": "2026-08-22T10:00:11.000Z", "item_id": "ds-e-1", "payload": {"visible": false, "focused": false}},
+    {"event_id": "e7", "type": "VISIBILITY_CHANGED", "seq": 7, "client_ts": "2026-08-22T10:00:13.000Z", "item_id": "ds-e-1", "payload": {"visible": true, "focused": true}},
+    {"event_id": "e8", "type": "OPTION_CHANGED", "seq": 8, "client_ts": "2026-08-22T10:00:15.000Z", "item_id": "ds-e-1", "payload": {"from_index": 0, "to_index": 1, "change_number": 1, "ms_since_presented": 15000}},
+    {"event_id": "e9", "type": "OPTION_CHANGED", "seq": 9, "client_ts": "2026-08-22T10:00:16.000Z", "item_id": "ds-e-1", "payload": {"from_index": 1, "to_index": 0, "change_number": 2, "ms_since_presented": 16000}},
+    {"event_id": "e10", "type": "OPTION_CHANGED", "seq": 10, "client_ts": "2026-08-22T10:00:17.000Z", "item_id": "ds-e-1", "payload": {"from_index": 0, "to_index": 1, "change_number": 3, "ms_since_presented": 17000}},
+    {"event_id": "e11", "type": "CURSOR_SEGMENT", "seq": 11, "client_ts": "2026-08-22T10:00:18.400Z", "item_id": "ds-e-1", "payload": {
+      "auc_toward_nonchosen": 412.75,
+      "max_deviation": 61.3,
+      "x_flips": 4,
+      "sample_entropy": 1.42,
+      "velocity_peak": 2.81,
+      "velocity_mean": 0.46,
+      "pause_count": 3,
+      "path_ratio": 1.73,
+      "time_to_first_movement_ms": 4200,
+      "time_to_first_selection_ms": 9000,
+      "hover_time_ms": [2400, 5100, 800, 300],
+      "n_samples": 348,
+      "sample_interval_ms": 50
+    }},
+    {"event_id": "e12", "type": "ANSWER_SUBMITTED", "seq": 12, "client_ts": "2026-08-22T10:00:18.500Z", "item_id": "ds-e-1", "payload": {"selected_index": 1}}
+  ]
+}

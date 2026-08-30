@@ -1,0 +1,69 @@
+# Serving image. Build context is the repository root, same as Dockerfile.
+#
+# Two differences from Dockerfile, and both exist because a free hosting tier
+# has a disk and a memory limit that the research image does not fit:
+#
+# 1. requirements-serve.txt, not requirements.txt — see that file for the
+#    trace of what the serving path imports.
+# 2. The model artifacts are COPYed in. docker-compose mounts ./artifacts as a
+#    volume, which a platform-as-a-service has no equivalent for, so anything
+#    read at request time has to be baked into the image.
+FROM python:3.11-slim
+
+# curl is the healthcheck. libgomp1 is LightGBM's OpenMP runtime: the research
+# image gets it as a transitive dependency of build-essential, and dropping
+# build-essential here takes it with it — `import lightgbm` then dies at
+# startup with "libgomp.so.1: cannot open shared object file".
+#
+# No pango/cairo stack: weasyprint renders the Phase 12 PDFs offline and is not
+# installed in this image.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends curl libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+
+COPY ml-service/requirements-serve.txt ml-service/requirements-serve.txt
+RUN pip install --no-cache-dir --retries 10 --timeout 120 \
+        -r ml-service/requirements-serve.txt
+
+COPY ml-service/app ml-service/app
+
+# The layout has to mirror the repository: predictor.py, registry.py, state.py
+# and online_features.py each resolve `artifacts/` by walking three parents up
+# from their own file, so /workspace/artifacts is not a free choice.
+#
+# artifacts/models is 17 MB and holds the Study 1 artifact, the Phase 7 state
+# encoders and calibrators, the bandit weights, the PPO policy, and
+# item-response-stats.json. That last file is why data/processed is not needed
+# at serve time: online_features.item_response_stats reads the cached JSON and
+# only falls back to the 1.3 GB parquet corpus when it is missing.
+COPY artifacts/models artifacts/models
+
+# validation-gate.json is Phase 7's gate report, and it is load-bearing: without
+# it `validation_gate.load` admits nothing, so `/v1/state` returns an empty
+# state and the rule arms fall back to a default knowledge of 0.5 instead of
+# the estimate. It fails silently — a 200 with fewer fields — so the smoke
+# check in DEPLOY.md compares `admitted` rather than the status code.
+COPY artifacts/evaluation/decision-explanations.json artifacts/evaluation/
+COPY artifacts/evaluation/validation-gate.json artifacts/evaluation/
+
+# The rule arms band on item difficulty, so they read the item bank and its
+# Rasch parameters at construction time (policies.py: BANK_PATH,
+# ITEM_PARAMS_PATH). 160 KB and 6 KB — the rest of data/ and
+# artifacts/datasets/ is the offline corpus and stays out.
+COPY data/items data/items
+COPY artifacts/datasets/item-parameters-v1.csv artifacts/datasets/
+
+ENV PYTHONPATH=/workspace/ml-service \
+    PYTHONHASHSEED=0 \
+    PYTHONUNBUFFERED=1
+
+# One worker. The live slot pool is per-process (see policy/live.py), so a
+# second worker keeps its own pool and re-warms on its first request; on a
+# 512 MB instance a second torch process would not fit anyway.
+#
+# $PORT is injected by the host (Render, Fly, Cloud Run all set it); the
+# default keeps `docker run` and docker-compose working unchanged.
+EXPOSE 8000
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000} --workers 1"]

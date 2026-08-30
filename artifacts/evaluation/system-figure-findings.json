@@ -1,0 +1,82 @@
+{
+  "f10-01": {
+    "policy": "rule_improved",
+    "admitted_states": "knowledge"
+  },
+  "f10-02": {
+    "medians_ms": {
+      "attempt": 25.2,
+      "consent": 2.5,
+      "events": 6.1,
+      "next-item": 15.4,
+      "session": 20.3,
+      "session-end": 4.3
+    }
+  },
+  "f10-03": {
+    "decision_p95_ms": 31.3,
+    "decision_p99_ms": 34.4,
+    "budget_ms": 300,
+    "within_budget": true
+  },
+  "f10-04": {
+    "concurrency": [
+      1,
+      4,
+      8,
+      16
+    ],
+    "decisions_per_second": [
+      53.03,
+      186.31,
+      220.79,
+      231.5
+    ],
+    "decision_p95_ms": [
+      7.9,
+      9.4,
+      13.7,
+      31.3
+    ]
+  },
+  "f10-05": {
+    "captured": 7,
+    "files": [
+      "01-consent.jpg",
+      "02-item-served.jpg",
+      "03-state-panel-and-result.jpg",
+      "04-worked-example.jpg",
+      "05-break-suggestion.jpg",
+      "06-roadmap-and-probe.jpg",
+      "07-researcher-dashboard.jpg"
+    ]
+  },
+  "f10-06": {
+    "session_id": "d0367cd3-217b-4882-945b-7d6f0f9f72df",
+    "items": 20,
+    "knowledge_start": 0.7005,
+    "knowledge_end": 0.5489,
+    "difficulty_served": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      4,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      4,
+      1
+    ]
+  }
+}

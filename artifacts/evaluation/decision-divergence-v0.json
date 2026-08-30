@@ -1,0 +1,12 @@
+{
+  "shadow_of": "model_L0",
+  "shadow_policy": "model_L4",
+  "variant": "V0",
+  "decisions": 36967,
+  "identical_rate": 0.6065950712797901,
+  "same_difficulty_rate": 0.7376038088024455,
+  "same_intervention_rate": 0.7700922444342251,
+  "same_concept_move_rate": 0.9314794275975871,
+  "mean_absolute_difficulty_gap": 0.5609327237806693,
+  "note": "measured on model_L0's own trajectory: what model_L4 would have chosen at the same moment. Rarely diverging bounds any possible outcome difference."
+}

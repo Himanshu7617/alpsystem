@@ -1,0 +1,10 @@
+{
+  "formula": "MASTERY_SCALE * delta_curriculum_success_probability - LAMBDA_TIME * minutes_on_task - MU_FRUSTRATION * frustrated",
+  "mastery_scale": 100.0,
+  "lambda_time": 0.002,
+  "mu_frustration": 0.005,
+  "frustration_streak": 3,
+  "preregistration": "docs/preregistration.md \u00a710.1",
+  "mastery_term_is_latent": true,
+  "note": "the mastery term is the simulator's response model and exists only in simulation; it is a reward, never an observation"
+}

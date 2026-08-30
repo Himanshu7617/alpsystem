@@ -1,0 +1,8 @@
+{
+  "source": "sim-V0",
+  "quantile": 0.75,
+  "thresholds": {
+    "decision_latency": 20.72425079345703,
+    "matched_difficulty_speed_slope": 0.0021831681951880455
+  }
+}

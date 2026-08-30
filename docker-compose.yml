@@ -1,0 +1,116 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: adaptive_learning
+      POSTGRES_USER: adaptive_learning
+      POSTGRES_PASSWORD: adaptive_learning
+    ports:
+      - "54329:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U adaptive_learning -d adaptive_learning"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - adaptive_learning_postgres:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DATABASE_URL: postgresql://adaptive_learning:adaptive_learning@postgres:5432/adaptive_learning?schema=public
+      JWT_SECRET: ${JWT_SECRET:-dev-secret-change-me}
+      # One switch, one name, both services. `rule` | `bandit` | `rl` are
+      # aliases for the arm keys Phases 8 and 9 report.
+      ALP_POLICY: ${ALP_POLICY:-rule_improved}
+      ML_SERVICE_URL: http://ml-service:8000
+      PORT: "4000"
+    ports:
+      - "4000:4000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      ml-service:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:4000/health || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 20s
+
+  ml-service:
+    build:
+      context: .
+      dockerfile: ml-service/Dockerfile
+    environment:
+      SEED: ${SEED:-20260821}
+      # Reproducibility rule: a fixed hash seed so set iteration order is the
+      # same in every process. Also baked into the image; set here too so a
+      # container started from an older image still obeys it.
+      PYTHONHASHSEED: "0"
+      # One thread per process. A worker cap alone does not bound CPU: each
+      # worker's numpy/BLAS spawns a thread per core underneath it, which is
+      # how six workers measured at 997 % of an eight-core allocation.
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      NUMEXPR_NUM_THREADS: "1"
+      VECLIB_MAXIMUM_THREADS: "1"
+      # Workload size for the research pipeline. `smoke` is deliberately the
+      # default — `make full` is how an expensive run gets asked for.
+      ALP_RUN_PROFILE: ${ALP_RUN_PROFILE:-smoke}
+      ALP_MAX_WORKERS: ${ALP_MAX_WORKERS:-}
+      ALP_MAX_STUDENTS: ${ALP_MAX_STUDENTS:-}
+      ALP_MAX_INTERACTIONS: ${ALP_MAX_INTERACTIONS:-}
+      ALP_SEEDS: ${ALP_SEEDS:-}
+      ALP_VARIANTS: ${ALP_VARIANTS:-}
+      ALP_RL_TIMESTEPS: ${ALP_RL_TIMESTEPS:-}
+      ALP_CHECKPOINT_INTERVAL: ${ALP_CHECKPOINT_INTERVAL:-}
+      # Serving: which arm answers /v1/decide, and how many live sessions the
+      # slot pool holds before the least recent one is evicted and replayed.
+      ALP_POLICY: ${ALP_POLICY:-rule_improved}
+      ALP_LIVE_SLOTS: ${ALP_LIVE_SLOTS:-32}
+      MLFLOW_TRACKING_URI: sqlite:///mlruns/mlflow.db
+    ports:
+      - "8000:8000"
+    volumes:
+      # Read-write: the research pipeline writes its outputs straight back to
+      # the host tree so every artifact stays reproducible from `make`.
+      - ./artifacts:/workspace/artifacts
+      - ./mlruns:/workspace/mlruns
+      - ./data:/workspace/data
+      # The research pipeline runs via `docker compose exec ml-service`, so the
+      # code and its two host-side inputs are mounted rather than baked in: an
+      # edit to a research script must not need an image rebuild.
+      - ./ml-service/app:/workspace/ml-service/app
+      - ./backend/src/data:/workspace/backend/src/data:ro
+      # Read-only: `make test` checks that docs/feature-catalogue.md still
+      # matches the catalogue module that generates it. Writing docs stays a
+      # host-side job, so read-only is the whole requirement.
+      - ./docs:/workspace/docs:ro
+      # Read-write, and only this subtree: Phase 12 renders both PDFs inside the
+      # container because weasyprint is a container dependency, and they belong
+      # in docs/reports/. The rest of docs/ stays read-only.
+      - ./docs/reports:/workspace/docs/reports
+      # Phase 12's helper scripts (build_pdf, run_tests, reproduce) run here too.
+      - ./scripts:/workspace/scripts:ro
+      # Read-only, and it must stay that way: the quarantined pre-Phase-0
+      # results are not citable, but figure f04-07 needs the old simulator's
+      # dataset as the "before" side of the mutual-information comparison.
+      - ./artifacts-legacy-invalid:/workspace/artifacts-legacy-invalid:ro
+      # Read-only: dataset manifests record the git SHA of the checkout that
+      # produced them, and the image ships no git binary, so HEAD is read from
+      # the directory directly.
+      - ./.git:/workspace/.git:ro
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8000/health || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 10s
+
+volumes:
+  adaptive_learning_postgres:

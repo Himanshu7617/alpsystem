@@ -1,0 +1,144 @@
+/* Print styling for both Phase 12 PDFs. One stylesheet, two documents. */
+
+@page {
+    size: A4;
+    margin: 20mm 18mm 18mm 18mm;
+    @top-right {
+        content: string(doctitle);
+        font-family: "DejaVu Sans", sans-serif;
+        font-size: 7.5pt;
+        color: #777;
+    }
+    @bottom-center {
+        content: counter(page);
+        font-family: "DejaVu Sans", sans-serif;
+        font-size: 8pt;
+        color: #777;
+    }
+}
+
+@page :first {
+    @top-right { content: none; }
+}
+
+html {
+    font-family: "DejaVu Serif", Georgia, serif;
+    font-size: 10pt;
+    line-height: 1.45;
+    color: #1a1a1a;
+}
+
+body { margin: 0; }
+
+h1, h2, h3, h4 {
+    font-family: "DejaVu Sans", Helvetica, sans-serif;
+    color: #0b2b3c;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 21pt;
+    margin: 0 0 4pt 0;
+    string-set: doctitle content();
+    page-break-before: avoid;
+}
+
+h2 {
+    font-size: 14pt;
+    margin: 20pt 0 6pt 0;
+    padding-bottom: 3pt;
+    border-bottom: 0.6pt solid #cfd8dd;
+    page-break-after: avoid;
+}
+
+h3 { font-size: 11.5pt; margin: 14pt 0 4pt 0; page-break-after: avoid; }
+h4 { font-size: 10pt; margin: 10pt 0 3pt 0; page-break-after: avoid; }
+
+p { margin: 0 0 7pt 0; text-align: justify; }
+
+/* The subtitle block right under the title. */
+h1 + p em { color: #4a5b64; }
+
+a { color: #0072B2; text-decoration: none; }
+
+code, pre {
+    font-family: "DejaVu Sans Mono", monospace;
+    font-size: 8.4pt;
+}
+
+code { background: #f2f4f6; padding: 0 2px; border-radius: 2px; }
+
+pre {
+    background: #f7f8fa;
+    border: 0.5pt solid #dde3e7;
+    border-radius: 3px;
+    padding: 6pt 8pt;
+    white-space: pre-wrap;
+    /* pre-wrap alone breaks only at whitespace, so a long unbroken token — a
+       connection string, a one-line JSON payload — runs off the page edge and
+       is clipped silently. A reader copying that command out of the PDF gets a
+       truncated one. break-word lets the line break mid-token instead. */
+    overflow-wrap: break-word;
+    page-break-inside: avoid;
+}
+
+blockquote {
+    margin: 8pt 0;
+    padding: 6pt 10pt;
+    background: #f4f8fa;
+    border-left: 2.5pt solid #0072B2;
+    page-break-inside: avoid;
+}
+
+blockquote p:last-child { margin-bottom: 0; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8pt 0 10pt 0;
+    font-family: "DejaVu Sans", sans-serif;
+    font-size: 8pt;
+    page-break-inside: avoid;
+}
+
+th {
+    text-align: left;
+    background: #eef2f5;
+    border-bottom: 0.8pt solid #b9c5cc;
+    padding: 3pt 4pt;
+}
+
+td {
+    border-bottom: 0.4pt solid #e1e7ea;
+    padding: 3pt 4pt;
+    vertical-align: top;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 8pt auto 2pt auto;
+    page-break-inside: avoid;
+}
+
+/* A paragraph that holds only an image is the figure; the italic line under it
+   is its caption. */
+p > img + em, p em:only-child {
+    display: block;
+    text-align: center;
+    font-family: "DejaVu Sans", sans-serif;
+    font-size: 7.6pt;
+    color: #55636b;
+}
+
+ul, ol { margin: 0 0 7pt 0; padding-left: 16pt; }
+li { margin-bottom: 2pt; }
+
+hr {
+    border: none;
+    border-top: 0.5pt solid #d6dee2;
+    margin: 14pt 0;
+}
+
+/* Section starts on a new page where the document asks for one. */
+h2.page-break, .page-break { page-break-before: always; }

@@ -1,0 +1,111 @@
+{
+  "phase": 12,
+  "started": "2026-08-28T18:55:54+0530",
+  "profile": "smoke",
+  "checkout": "/private/tmp/claude-501/-Users-himanshu-Documents-alp-system/6013ab26-bf30-4e14-9a85-102cfea2e1ad/scratchpad/cleanroom",
+  "targets": [
+    {
+      "target": "items",
+      "phase": 1,
+      "seconds": 4.0,
+      "ok": true,
+      "wrote": [
+        "wrote: artifacts/figures/01-content/f01-02_concept-dag.png (+ .pdf)",
+        "wrote: artifacts/figures/01-content/f01-03_item-difficulty-distribution.png (+ .pdf)",
+        "wrote: artifacts/figures/01-content/f01-04_difficulty-bin-mapping.png (+ .pdf)"
+      ],
+      "tail": [
+        "wrote: artifacts/figures/01-content/f01-01_item-count-per-concept.png (+ .pdf)",
+        "wrote: artifacts/figures/01-content/f01-02_concept-dag.png (+ .pdf)",
+        "wrote: artifacts/figures/01-content/f01-03_item-difficulty-distribution.png (+ .pdf)",
+        "wrote: artifacts/figures/01-content/f01-04_difficulty-bin-mapping.png (+ .pdf)"
+      ]
+    },
+    {
+      "target": "telemetry",
+      "phase": 2,
+      "seconds": 1.8,
+      "ok": true,
+      "wrote": [
+        "wrote: artifacts/figures/02-telemetry/f02-02_cursor-trajectory-examples.png (+ .pdf)",
+        "wrote: artifacts/figures/02-telemetry/f02-03_trajectory-feature-definitions.png (+ .pdf)",
+        "wrote: artifacts/figures/02-telemetry/f02-04_telemetry-timeline.png (+ .pdf)"
+      ],
+      "tail": [
+        "wrote: artifacts/figures/02-telemetry/f02-01_event-schema.png (+ .pdf)",
+        "wrote: artifacts/figures/02-telemetry/f02-02_cursor-trajectory-examples.png (+ .pdf)",
+        "wrote: artifacts/figures/02-telemetry/f02-03_trajectory-feature-definitions.png (+ .pdf)",
+        "wrote: artifacts/figures/02-telemetry/f02-04_telemetry-timeline.png (+ .pdf)"
+      ]
+    },
+    {
+      "target": "fetch-data",
+      "phase": 3,
+      "seconds": 0.4,
+      "ok": true,
+      "wrote": [
+        "wrote: data/raw/manifest.json (4 sources)"
+      ],
+      "tail": [
+        "ednet_kt1: verified data/raw/ednet-kt1-shard0.parquet (170.7 MB, sha256 ok)",
+        "ednet_questions: data/raw/ednet-questions.parquet present, verifying",
+        "ednet_questions: verified data/raw/ednet-questions.parquet (0.3 MB, sha256 ok)",
+        "wrote: data/raw/manifest.json (4 sources)"
+      ]
+    },
+    {
+      "target": "prep-data",
+      "phase": 3,
+      "seconds": 70.7,
+      "ok": true,
+      "wrote": [
+        "wrote: artifacts/figures/03-archival/f03-04_accuracy-by-attempt-number.png (+ .pdf)",
+        "wrote: artifacts/figures/03-archival/f03-05_rte-distribution.png (+ .pdf)",
+        "wrote: artifacts/figures/03-archival/f03-07_learner-split-balance.png (+ .pdf)"
+      ],
+      "tail": [
+        "wrote: artifacts/figures/03-archival/f03-03_response-time-distribution.png (+ .pdf)",
+        "wrote: artifacts/figures/03-archival/f03-04_accuracy-by-attempt-number.png (+ .pdf)",
+        "wrote: artifacts/figures/03-archival/f03-05_rte-distribution.png (+ .pdf)",
+        "wrote: artifacts/figures/03-archival/f03-07_learner-split-balance.png (+ .pdf)"
+      ]
+    },
+    {
+      "target": "simulate",
+      "phase": 4,
+      "seconds": 163.8,
+      "ok": true,
+      "wrote": [
+        "wrote: artifacts/figures/04-simulator/f04-08_simulated-cursor-paths.png (+ .pdf)",
+        "wrote: artifacts/figures/04-simulator/f04-09_variant-comparison.png (+ .pdf)",
+        "wrote: artifacts/datasets/simulator-recoverability.json"
+      ],
+      "tail": [
+        "wrote: artifacts/datasets/simulator-mi-comparison.csv",
+        "wrote: artifacts/figures/04-simulator/f04-08_simulated-cursor-paths.png (+ .pdf)",
+        "wrote: artifacts/figures/04-simulator/f04-09_variant-comparison.png (+ .pdf)",
+        "wrote: artifacts/datasets/simulator-recoverability.json"
+      ]
+    },
+    {
+      "target": "features",
+      "phase": 5,
+      "seconds": 113.4,
+      "ok": true,
+      "wrote": [
+        "wrote: artifacts/benchmarks/eda-summary.json",
+        "wrote: artifacts/benchmarks/feature-shortlist.json (35 kept, 9 dropped)",
+        "wrote: docs/feature-catalogue.md (44 features, 5 rungs)"
+      ],
+      "tail": [
+        "wrote: artifacts/benchmarks/feature-shortlist.json (35 kept, 9 dropped)",
+        "H2: reduce or drop \u2014 no real source shows a within-session accuracy decline",
+        "PYTHONPATH=ml-service python3 -m app.research.feature_catalogue --write-doc",
+        "wrote: docs/feature-catalogue.md (44 features, 5 rungs)"
+      ]
+    }
+  ],
+  "note": "wall clock per `make` target in one checkout, at the stated run profile. The published artifacts were produced at the profiles each phase's PROGRESS entry records; this run measures reproducibility, not the size of the experiment.",
+  "total_seconds": 354.1,
+  "all_ok": true
+}
