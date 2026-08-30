@@ -47,11 +47,9 @@ services:
     plan: free
     region: oregon
     healthCheckPath: /health
-    # Overrides the image's CMD to seed the question bank on every boot. Free
-    # instances have no shell, so a one-off `prisma db seed` cannot be run by
-    # hand; the seed is idempotent (it upserts the session and replaces only
-    # that session's questions), so running it every boot is safe.
-    dockerCommand: sh -c "npx prisma migrate deploy && npx prisma db seed && node server.js"
+    # The backend Dockerfile CMD runs migrations, seeds the question bank, and
+    # starts the server. Keep that command in the Dockerfile so Render doesn't
+    # have to parse a shell pipeline from this blueprint.
     envVars:
       # Entered in the Render dashboard: the Neon connection string.
       - key: DATABASE_URL
